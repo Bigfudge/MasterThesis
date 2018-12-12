@@ -1,0 +1,46 @@
+  10
+
+
+
+where C(i,t) is radionuclide concentration at position x and time t, R is
+retardation coefficient, C is porosity, 0 is water saturation, D is dif-
+fusivity, h is half-life and +u is water velocity.  Equation (14) is solved
+numerically, e.g., via a finite difference method.  Then Eq. (14) is ap-
+proximated by
+
+
+ where c is a vector of concentrations at nodes {x      i), A is a matrix which
+
+
+
+
+
+               4                                                       b incor-
+ depends on U, R, E, 0 and D and on the discretization.  The term B
+
+
+
+ porates boundary conditions and sinks/sources.  Equation (15) is called a
+
+
+ state-space equation.     If Eq. (15) is discretized in time, a state transi-
+
+
+ tion equation obtains
+
+
+
+ This analysis assumes that A and b are constant over At (perfect temporal
+ correlation); this analysis is only concerned with spatial heterogeneity.
+      Expanding Eq. (16) in Taylor series and taking the expected value leads
+ to the relation for the mean value (see Dettinger and Wilson, 1981)
+
+
+ where the subscript 'loll indicates evaluated at mean value.  Equation (17) is
+ the first-order estimate of the mean and has the same form as Eq. (16).  The
+ second-order estimate has additional terms.
+      The covariance is given by applying Eq. (13) to get
+
+
+ Any single term in Cov(c(t)) is
+

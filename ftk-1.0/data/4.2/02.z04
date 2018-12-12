@@ -1,0 +1,25 @@
+
+  Once the estimation variance has been calculated, one has still to in-
+terpret it for practical uses under the form of conventional error spread.
+This aim is reached by allocating to this variance a probabilistic meaning.
+By implicit reference to a gaussian model, we shall take it that the actual
+average grade of the deposit is included within a 95% probability in the
+range m ~~ 2~, m being the estimated grade. In other cases, particularly if
+2~ is not small towards m, we shall take the spread m exp (~~2~/m), by
+reference to a lognormal model.
+  These implicit references to probabilistic models are mainly arbitrary.
+Actually, the notion itself of statistical distribution of an estimation error
+is doubtlessly meaningless. The only thing which has an objective physical
+meaning is the variance. This is why we speak about conventional spreads.
+Their practical interest resides in the fact that they draw a more intuitive
+picture of the possible errors than variances themselves.
+
+		KRIGING
+
+  A second application of major importance is provided by a geostatistical
+procedure called "kriging." It consists in estimating the grade of a panel by
+computing the weighted average of available samples, some being located
+inside others outside the panel. The grads of these samples being x1,
+x2, ~~~ xn, we attempt to evaluate the unknown grade ~ of the panel with
+a linear estimator ~~ of the form:
+

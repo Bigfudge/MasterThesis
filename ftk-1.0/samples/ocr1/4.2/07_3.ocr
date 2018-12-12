@@ -1,0 +1,125 @@
+moles of components in the inflowing test
+water or groundwater are added to the inven-
+tory of available material.
+
+In sosim experimental  designs sampling is done
+at scheduled intervals.    An option is there-
+fore provided in the model   for the exchange
+of specified fractions of the resident water
+volume on a schedule   listed in the input in-
+struction file.   The exchange intervals are,
+however,  independent of the step timer, so
+that the progress of reactions may be studied
+between exchanges.
+
+7.1.6   Features
+
+    7.1.6.1  Therwdynaulcs of Surface
+             Products
+
+rhe solid materials for which published sta-
+bility data are availabre in the data bases
+of PROTOCOL and other general-purpose chemi-
+cal  codes are mostly crystalline phases with
+well-defined stoichiometries and Gibbs free
+energies of formation.    In the leaching of
+minerals and glasses at   low temperatures,
+however, both crystalline and amorphous solid
+products may be formed at the interface, and
+both may be variable in composition.    Al-
+though the amorphous materials are thought to
+be metastable solid solutions, they can per-
+sist for long periods of time and appear to
+interact reversibly with dissolved species.
+The fact that these apparently metastable
+equilibrium aqueous concentrations can be
+attained after extended leaching under static
+or low flow conditions implies the existence
+of solubility controls on dissolution or re-
+lease.   This is of sufficient Importance
+that,  in addition to a constant aqueous com-
+position,  it is also desirable to secure con-
+firmatory thermochemical evidence of the sta-
+bility of the system.    This requires the
+determination of thermochemical properties of
+the surface material   and their Incorporation
+into the PROTOCOL data base.
+
+In certain simple cases, as in the well-known
+reactions of the metastable phases of silica,
+steady states can be treated thermodynam-
+ically and the activities of dissolved spe-
+cies reflect the structures of the solids in
+a predictable way.     It Is likely that the
+analysis of reactions forming more complex
+metastable phases can also be undertaken by
+thermodynamically-based models, provided that
+the energies of the bonds that are formed are
+characteristic of the solid being leached and
+the temperature, and that the product phases
+do not undergo further alteration at signifi-
+cant rates.
+
+One approach to the chemical modeling of a
+disordered phase is to treat it numerically
+as a mixture of discrete component phases,
+with individual  stabilities.  The advantage
+of this procedure is that each such component
+phase can be treated in simulation as a dis-
+solved solid with a stability that canbe re-
+lated to an equilibrium aqueous composition.
+
+The methodology of Tardy and Garrels (1974)
+i~ a well-known procedure for the estimation
+of the stabilities of layer silicates that
+may be applicable to the  less ordered prod-
+ucts of glass dissolution.   They showed that
+for the  layer silicate structure, the compo-
+nent oxides make constant contributions to
+the total  free energy of the phase.  It was
+possible to make estimates of their stabil-
+ities that were consistent not only with
+those of composite phases, but with solubil-
+ity data,  i.e., the activities of dissolved
+species in equilibrated leachates.   The free
+energies of formation of simple oxides as
+`silicated~ components that ~re determined
+in this way are In many cases very different
+from their standard state values,   reflecting
+their degree of bonding.   Once deter3ined,
+however, they could simply be added and sub-
+tracted to construct other complex phases of
+similar structures but different stoichia-
+metries and previously unknown stabilities.
+
+The concept can be extended to the alteration
+products of specific glass compositions at
+constant temperature if there is sufficient
+regularity in the structures that are formed.
+
+In the present application, we do not exactly
+duplicate the Tardy-Garrels approach,  since
+there is not a comparable set of alteration
+product phases known to be of similar struc-
+ture and with known thermochemical  proper-
+ties.  For our purposes, this set must
+be generated from the reference glass
+composition.
+
+The most direct approach is to measure ex-
+perimentally the concentrations of dissolved
+species.   As they approach steady state, the
+free energies of reaction computed from the
+activity products also become constant.  If
+the solid composition is also known, the
+overall  reaction can be written, and the
+value of the composite solid phase free
+energy computed.   It may also be possible
+to estimate the stabilities for silicated
+components that are otherwise difficult to
+determine by constructing plots of free
+energy of silication versus element
+electronegati vity.
+
+7.7
+
