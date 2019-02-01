@@ -26,6 +26,12 @@ punct = ('.',',','!','?',':',';','\'','"','-','/')
 import sys
 import codecs
 import csv
+import re
+
+def remove_tags(word):
+  cleanr = re.compile('<.*?>')
+  cleantext = re.sub(cleanr, '', word)
+  return cleantext
 
 def worderrors(ocrdrec,mandrec):
 
@@ -434,6 +440,9 @@ def main(mode, ocr_paths, truth_paths, output_filename):
             with codecs.open(mandfile,'r','utf8') as f:
                 mand = f.read().replace('\r\n','\n').replace('\r','\n').strip()
 
+            ocr_words = [word for line in ocrd for word in line.split()]
+            for word in ocr_words:
+                word = remove_tags(word)
             ocrdrec,mandrec = charalign(ocrd,mand)
             chrerrs, chrs, wrderrs, wrds, ua_o_wh, ua_m_wh, a_wh, ocrdlines = score_and_print(ocrdrec,mandrec)
             WErrors, WNoos, WSubs, WDels, WIns, WCount = worderrors(ocrdrec,mandrec)
@@ -464,4 +473,4 @@ def main(mode, ocr_paths, truth_paths, output_filename):
         for item in output:
             f.write(item+"\n")
 
-#main("-sb", ["/Users/simonpersson/Github/MasterThesis/Evaluation-script/OCROutput/Ocropus/Argus/ed_pg_a0002_ocropus_twomodel.txt"], ["/Users/simonpersson/Github/MasterThesis/Evaluation-script/ManuelTranscript/Argus/ed_pg_a0002.txt"], "test.txt")
+main("-sb", ["/Users/simonpersson/Github/MasterThesis/Evaluation-script/OCROutput/Ocropus/Argus/ed_pg_a0002_ocropus_twomodel.txt"], ["/Users/simonpersson/Github/MasterThesis/Evaluation-script/ManuelTranscript/Argus/ed_pg_a0002.txt"], "test.txt")
