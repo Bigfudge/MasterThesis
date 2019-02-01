@@ -473,4 +473,4 @@ def main(mode, ocr_paths, truth_paths, output_filename):
         for item in output:
             f.write(item+"\n")
 
-main("-sb", ["/Users/simonpersson/Github/MasterThesis/Evaluation-script/OCROutput/Ocropus/Argus/ed_pg_a0002_ocropus_twomodel.txt"], ["/Users/simonpersson/Github/MasterThesis/Evaluation-script/ManuelTranscript/Argus/ed_pg_a0002.txt"], "test.txt")
+#main("-sb", ["/Users/simonpersson/Github/MasterThesis/Evaluation-script/OCROutput/Ocropus/Argus/ed_pg_a0002_ocropus_twomodel.txt"], ["/Users/simonpersson/Github/MasterThesis/Evaluation-script/ManuelTranscript/Argus/ed_pg_a0002.txt"], "test.txt")

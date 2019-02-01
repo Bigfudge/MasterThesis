@@ -79,17 +79,17 @@ def main():
 		os.remove('input_vector.csv')
 	add_ground_truth('./Evaluation-script/ManuelTranscript/Argus/', 'input_vector.csv')
 	add_ground_truth('./Evaluation-script/ManuelTranscript/Grepect/', 'input_vector.csv')
-	add_ocr_output("/Users/simonpersson/Github/MasterThesis/Evaluation-script/OCROutput/Ocropus/Argus/",
-					"/Users/simonpersson/Github/MasterThesis/Evaluation-script/ManuelTranscript/Argus/",
+	add_ocr_output("./Evaluation-script/OCROutput/Ocropus/Argus/",
+					"./Evaluation-script/ManuelTranscript/Argus/",
 					'input_vector.csv')
-	add_ocr_output("/Users/simonpersson/Github/MasterThesis/Evaluation-script/OCROutput/Ocropus/Grepect/",
-					"/Users/simonpersson/Github/MasterThesis/Evaluation-script/ManuelTranscript/Grepect/",
+	add_ocr_output("./Evaluation-script/OCROutput/Ocropus/Grepect/",
+					"./Evaluation-script/ManuelTranscript/Grepect/",
 					'input_vector.csv')
-	add_ocr_output("/Users/simonpersson/Github/MasterThesis/Evaluation-script/OCROutput/Tesseract/Argus/",
-					"/Users/simonpersson/Github/MasterThesis/Evaluation-script/ManuelTranscript/Argus/",
+	add_ocr_output("./Evaluation-script/OCROutput/Tesseract/Argus/",
+					"./Evaluation-script/ManuelTranscript/Argus/",
 					'input_vector.csv')
-	add_ocr_output("/Users/simonpersson/Github/MasterThesis/Evaluation-script/OCROutput/Tesseract/Grepect/",
-					"/Users/simonpersson/Github/MasterThesis/Evaluation-script/ManuelTranscript/Grepect/",
+	add_ocr_output("./Evaluation-script/OCROutput/Tesseract/Grepect/",
+					"./Evaluation-script/ManuelTranscript/Grepect/",
 					'input_vector.csv')
 
 main()
