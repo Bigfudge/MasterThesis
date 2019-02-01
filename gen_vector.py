@@ -17,8 +17,12 @@ def contains_non_alfanum(word):
 	return len(errors)
 def get_bigram_freq(word):
 	return 1
-def get_frequency(word):
-	return 1
+def get_frequency_in_page(word, page):
+	count=1
+	for item in page:
+		if(item == word):
+			count+=1
+	return count/len(page)
 def is_actuall_word(word, truth_file):
 	#Returns 1 if 'word' is represented in 'truth_file', otherwise 0
 	return 0
@@ -32,7 +36,7 @@ def add_ground_truth(input_dir, output_filename):
 			csvData.append([remove_tags(word),
 							contains_non_alfanum(word),
 							get_bigram_freq(word),
-							get_frequency(word),
+							get_frequency_in_page(word, words),
 							1])
 
 		with open(output_filename, 'a') as csvFile:
@@ -63,7 +67,7 @@ def add_ocr_output(ocr_dir,truth_dir, output_filename):
 		csvData.append([word,
 						contains_non_alfanum(word),
 						get_bigram_freq(word),
-						get_frequency(word),
+						get_frequency_in_page(word, words),
 						0])
 
 	with open(output_filename, 'a') as csvFile:
@@ -78,18 +82,18 @@ def main():
 	if(os.path.isfile("input_vector.csv")):
 		os.remove('input_vector.csv')
 	add_ground_truth('./Evaluation-script/ManuelTranscript/Argus/', 'input_vector.csv')
-	add_ground_truth('./Evaluation-script/ManuelTranscript/Grepect/', 'input_vector.csv')
+	# add_ground_truth('./Evaluation-script/ManuelTranscript/Grepect/', 'input_vector.csv')
 	add_ocr_output("/Users/simonpersson/Github/MasterThesis/Evaluation-script/OCROutput/Ocropus/Argus/",
 					"/Users/simonpersson/Github/MasterThesis/Evaluation-script/ManuelTranscript/Argus/",
 					'input_vector.csv')
-	add_ocr_output("/Users/simonpersson/Github/MasterThesis/Evaluation-script/OCROutput/Ocropus/Grepect/",
-					"/Users/simonpersson/Github/MasterThesis/Evaluation-script/ManuelTranscript/Grepect/",
-					'input_vector.csv')
-	add_ocr_output("/Users/simonpersson/Github/MasterThesis/Evaluation-script/OCROutput/Tesseract/Argus/",
-					"/Users/simonpersson/Github/MasterThesis/Evaluation-script/ManuelTranscript/Argus/",
-					'input_vector.csv')
-	add_ocr_output("/Users/simonpersson/Github/MasterThesis/Evaluation-script/OCROutput/Tesseract/Grepect/",
-					"/Users/simonpersson/Github/MasterThesis/Evaluation-script/ManuelTranscript/Grepect/",
-					'input_vector.csv')
+	# add_ocr_output("/Users/simonpersson/Github/MasterThesis/Evaluation-script/OCROutput/Ocropus/Grepect/",
+	# 				"/Users/simonpersson/Github/MasterThesis/Evaluation-script/ManuelTranscript/Grepect/",
+	# 				'input_vector.csv')
+	# add_ocr_output("/Users/simonpersson/Github/MasterThesis/Evaluation-script/OCROutput/Tesseract/Argus/",
+	# 				"/Users/simonpersson/Github/MasterThesis/Evaluation-script/ManuelTranscript/Argus/",
+	# 				'input_vector.csv')
+	# add_ocr_output("/Users/simonpersson/Github/MasterThesis/Evaluation-script/OCROutput/Tesseract/Grepect/",
+	# 				"/Users/simonpersson/Github/MasterThesis/Evaluation-script/ManuelTranscript/Grepect/",
+	# 				'input_vector.csv')
 
 main()
