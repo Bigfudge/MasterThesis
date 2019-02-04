@@ -14,12 +14,12 @@ seed = 7
 numpy.random.seed(seed)
 
 # load dataset
-dataframe = pandas.read_csv("sonar.csv", header=None)
+dataframe = pandas.read_csv("input_vector.csv", header=None)
 dataset = dataframe.values
 
 # split into input (X) and output (Y) variables
-X = dataset[:,0:60].astype(float)
-Y = dataset[:,60]
+X = dataset[:,1:5].astype(float)
+Y = dataset[:,4]
 
 # encode class values as integers
 encoder = LabelEncoder()
@@ -30,7 +30,7 @@ encoded_Y = encoder.transform(Y)
 def create_baseline():
 	# create model
 	model = Sequential()
-	model.add(Dense(60, input_dim=60, kernel_initializer='normal', activation='relu'))
+	model.add(Dense(4, input_dim=4, kernel_initializer='normal', activation='relu'))
 	model.add(Dense(1, kernel_initializer='normal', activation='sigmoid'))
 	# Compile model
 	model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
