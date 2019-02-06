@@ -1,24 +1,33 @@
-2018-01-28: Started building indata for SVM. Prob. need align-script to decide
+2019-01-28: Started building indata for SVM. Prob. need align-script to decide
 if word is wrong or not. Meeting with Dana, got feedback for planning report.
 Should fix planning report next time.
 
-2018-01-29: Hopefully fixed all feedback on planning report, can probably send
+2019-01-29: Hopefully fixed all feedback on planning report, can probably send
 back to Dana tomorrow. Tomorrow should I finish the planning report and find and
 use align-script (evaluation-script).
 
-2018-01-30: Sent planning report to Dana and recived feedback. Got a mail from
+2019-01-30: Sent planning report to Dana and recived feedback. Got a mail from
 Runeberg projekt about possible extended dataset. Need to figure out a way to
 retrive and use it.
 
-2018-01-31: Last fixes with planning report. Got the ocr-errors into the cvs-file aswell.
+2019-01-31: Last fixes with planning report. Got the ocr-errors into the cvs-file aswell.
 Tomorrow I need to add the Grepect also. And do everything again for tesseract. Also
 need to download everything from Projekt Runeberg and find a way to use it.
 
-2018-02-01: All words are hopefully in the cvs (except runeberg since I have decided
+2019-02-01: All words are hopefully in the cvs (except runeberg since I have decided
 to wait with that). Calculates the frequency of a word in the corresponding "book"
 (Argus/grepect).
 
-2018-02-04: Planning report handed in. Added tri_grams frequency per word to the
+2019-02-04: Planning report handed in. Added tri_grams frequency per word to the
 .cvs file using a proper db. Need to redo all structure:
     -First build a db with all words and a column for each metric
     -Have a function for each metric and populates the db.
+
+2019-02-05:
+Added so that everything is saved in a db. If one metric needs to be recalculated
+it can be done separately from the others. Need to get the SVM to start produce
+result, maybe use free google cloud thing.
+
+2019-02-06:
+Started to train the svm. Might be good with some additional metric. Something
+that depends on context?

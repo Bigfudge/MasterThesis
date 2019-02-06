@@ -1,88 +1,24 @@
-import numpy
-import pandas
-from keras.models import Sequential
-from keras.layers import Dense
-from keras.wrappers.scikit_learn import KerasClassifier
-from sklearn.model_selection import cross_val_score
-from sklearn.preprocessing import LabelEncoder
-from sklearn.model_selection import StratifiedKFold
-from sklearn.preprocessing import StandardScaler
-from sklearn.pipeline import Pipeline
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.svm import SVC
+from sklearn.metrics import classification_report, confusion_matrix
+#matplotlib inline
 
-# fix random seed for reproducibility
-seed = 7
-numpy.random.seed(seed)
+df = pd.read_csv("input_vector.csv")
+data = df.sample(50000)
 
-# load dataset
-dataframe = pandas.read_csv("input_vector.csv", header=None)
-dataset = dataframe.values
+X=data.drop(df.columns[-1], axis =1)
+X=X.drop(df.columns[0],axis=1)
+y=data[df.columns[-1]]
 
-# split into input (X) and output (Y) variables
-X = dataset[:,1:5].astype(float)
-Y = dataset[:,4]
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.20)
 
-# encode class values as integers
-encoder = LabelEncoder()
-encoder.fit(Y)
-encoded_Y = encoder.transform(Y)
+svclassifier = SVC(kernel='linear')
+svclassifier.fit(X_train, y_train)
 
-# baseline model
-def create_baseline():
-	# create model
-	model = Sequential()
-	model.add(Dense(4, input_dim=4, kernel_initializer='normal', activation='relu'))
-	model.add(Dense(1, kernel_initializer='normal', activation='sigmoid'))
-	# Compile model
-	model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
-	return model
+y_pred = svclassifier.predict(X_test)
 
-
-# # evaluate model with standardized dataset
-# estimator = KerasClassifier(build_fn=create_baseline, epochs=100, batch_size=5, verbose=0)
-# kfold = StratifiedKFold(n_splits=10, shuffle=True, random_state=seed)
-# results = cross_val_score(estimator, X, encoded_Y, cv=kfold)
-# print("Results: %.2f%% (%.2f%%)" % (results.mean()*100, results.std()*100))
-
-#evaluate baseline model with standardized dataset
-numpy.random.seed(seed)
-estimators = []
-estimators.append(('standardize', StandardScaler()))
-estimators.append(('mlp', KerasClassifier(build_fn=create_baseline, epochs=100, batch_size=5, verbose=0)))
-pipeline = Pipeline(estimators)
-kfold = StratifiedKFold(n_splits=10, shuffle=True, random_state=seed)
-results = cross_val_score(pipeline, X, encoded_Y, cv=kfold)
-print("Standardized: %.2f%% (%.2f%%)" % (results.mean()*100, results.std()*100))
-
-# # smaller model
-# def create_smaller():
-# 	# create model
-# 	model = Sequential()
-# 	model.add(Dense(30, input_dim=60, kernel_initializer='normal', activation='relu'))
-# 	model.add(Dense(1, kernel_initializer='normal', activation='sigmoid'))
-# 	# Compile model
-# 	model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
-# 	return model
-# estimators = []
-# estimators.append(('standardize', StandardScaler()))
-# estimators.append(('mlp', KerasClassifier(build_fn=create_smaller, epochs=100, batch_size=5, verbose=0)))
-# pipeline = Pipeline(estimators)
-# kfold = StratifiedKFold(n_splits=10, shuffle=True, random_state=seed)
-# results = cross_val_score(pipeline, X, encoded_Y, cv=kfold)
-# print("Smaller: %.2f%% (%.2f%%)" % (results.mean()*100, results.std()*100))
-# larger model
-# def create_larger():
-# 	# create model
-# 	model = Sequential()
-# 	model.add(Dense(60, input_dim=60, kernel_initializer='normal', activation='relu'))
-# 	model.add(Dense(30, kernel_initializer='normal', activation='relu'))
-# 	model.add(Dense(1, kernel_initializer='normal', activation='sigmoid'))
-# 	# Compile model
-# 	model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
-# 	return model
-# estimators = []
-# estimators.append(('standardize', StandardScaler()))
-# estimators.append(('mlp', KerasClassifier(build_fn=create_larger, epochs=100, batch_size=5, verbose=0)))
-# pipeline = Pipeline(estimators)
-# kfold = StratifiedKFold(n_splits=10, shuffle=True, random_state=seed)
-# results = cross_val_score(pipeline, X, encoded_Y, cv=kfold)
-# print("Larger: %.2f%% (%.2f%%)" % (results.mean()*100, results.std()*100))
+print(confusion_matrix(y_test,y_pred))
+print(classification_report(y_test,y_pred))
