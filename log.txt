@@ -30,4 +30,16 @@ result, maybe use free google cloud thing.
 
 2019-02-06:
 Started to train the svm. Might be good with some additional metric. Something
-that depends on context?
+that depends on context? Got some result from the svm with 2000 random samples,
+precision = 0.59, recall = 0.63, f1-score=0.52, support=400. Start looking at
+error correction step:
+MVP for correction stage:
+    Finding Candidates
+        Take all error-words and set editDistance=1
+        Find all words in the corpus that have that editDistance. If no found
+        then the editDistance is increased until a threashold.
+    Selecting Candidates
+        Select the word with the highest frequency in the corpus.
+
+With sample_size=8000 and 'rbf' we got result  (p,r,f1,s)=(0.59,0.64,0.58,1600)
+It takes ~38min to build the cvs-file.

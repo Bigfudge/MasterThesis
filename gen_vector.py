@@ -53,8 +53,8 @@ def update_metric_non_alfanum(db_path):
     for row in rows:
         count +=1
         word = row[0]
-        errors = list(filter(lambda a: not (a.isalnum() | (a in {'-','å','ä','ö'})), word))
-        cursor.execute('''UPDATE words SET non_alfanum = ? WHERE word = ? ''',(len(errors), word))
+        errors = new_non_alfanum(word)
+        cursor.execute('''UPDATE words SET non_alfanum = ? WHERE word = ? ''',(errors, word))
         print(str(count)+"/"+str(tot))
     cursor.close()
     db.commit()
@@ -226,10 +226,6 @@ def main():
         print("Added words (5/6)")
         add_ocr_output("./Evaluation-script/OCROutput/Tesseract/Grepect/","./Evaluation-script/ManuelTranscript/Grepect/")
         print("Added words (6/6)")
-    # contains_non_alfanum('data/data_set.db')
-    # print("Added metric (1/2)")
-    # get_trigram_freq()
-    # print("Added metric (2/2)")
 
     create_output_file('data/data_set.db','input_vector.csv')
 main()
