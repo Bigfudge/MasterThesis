@@ -204,14 +204,14 @@ def gen_trigram_freq(input_dirs):
 
 
 
-def main():
-    if(os.path.isfile("input_vector.csv")):
-        os.remove('input_vector.csv')
+def get_training_data(input_vector, db_path):
+    if(os.path.isfile(input_vector)):
+        os.remove(input_vector)
 
-    if(not os.path.isfile("data/tri_grams.db")):
+    if(not os.path.isfile(db_path)):
         gen_trigram_freq(['./Evaluation-script/ManuelTranscript/Argus/', './Evaluation-script/ManuelTranscript/Grepect/'])
 
-    if(not os.path.isfile("data/data_set.db")):
+    if(not os.path.isfile(db_path)):
         db_setup()
         print("Database initilized")
         add_ground_truth('./Evaluation-script/ManuelTranscript/Argus/')
@@ -227,5 +227,25 @@ def main():
         add_ocr_output("./Evaluation-script/OCROutput/Tesseract/Grepect/","./Evaluation-script/ManuelTranscript/Grepect/")
         print("Added words (6/6)")
 
-    create_output_file('data/data_set.db','input_vector.csv')
-main()
+    create_output_file(db_path,input_vector)
+
+def get_input(file, output_filename):
+    ocr_output = open(file)
+    words = [word for line in ocr_output for word in line.split()]
+    input_vector=[]
+
+    for word in words:
+        input_vector.append([remove_tags(word),
+                            get_non_alfanum(word),
+                            get_trigram_freq(word),
+                            get_word_frequency(word,words)])
+    ocr_output.close()
+
+    with open(output_filename, 'w') as csvFile:
+        writer=csv.writer(csvFile)
+        writer.writerows(input_vector)
+
+def main():
+    get_training_data()
+    get_input("./Evaluation-script/OCROutput/Ocropus/Argus/ed_pg_a0002_ocropus_twomodel.txt","data/input.csv")
+# main()

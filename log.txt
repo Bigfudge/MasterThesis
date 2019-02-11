@@ -43,3 +43,12 @@ MVP for correction stage:
 
 With sample_size=8000 and 'rbf' we got result  (p,r,f1,s)=(0.59,0.64,0.58,1600)
 It takes ~38min to build the cvs-file.
+
+2019-02-07:
+Linear for 8000 samples (p,r,f1,s)= (0.73,0.67,0.56,1600). With Keras and a 8-8-1 conf.
+got 93.29% accuracy. Started error correction program.
+
+2019-02-08:
+Hopefully completed error correction program and started putting all pieces
+together. Need to be able to save the model so it does not train every time.
+Also construct a main-program that puts everything together.
