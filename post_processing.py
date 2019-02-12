@@ -1,12 +1,15 @@
 import gen_vector
 import word_classifier
 import error_correction
+import os
+import constants
+import sys
+import accuracyScript
 
 def process_file(plain_text, svm_input, output_file):
-    gen_vector.get_training_data("data/input_vector.csv", "data/data_set.db")
+    gen_vector.get_training_data(constants.training_data, constants.main_db)
     gen_vector.get_input(plain_text, svm_input)
-
-    svclassifier = word_classifier.train("models/finalized_model.sav", "data/input_vector.csv")
+    svclassifier = word_classifier.train(constants.svm_model, constants.training_data)
     classified_words = word_classifier.predict(svm_input, svclassifier)
 
     output=[]
@@ -19,8 +22,32 @@ def process_file(plain_text, svm_input, output_file):
 
     with open(output_file, 'w') as f:
         for item in output:
-            f.write("%s\n" % item)
+            f.write("%s " % item)
 
-process_file("./Evaluation-script/OCROutput/Ocropus/Argus/ed_pg_a0002_ocropus_twomodel.txt",
-            "data/input.csv",
-            "output.txt")
+
+def process_dir(input_dir, test):
+    count=1
+    for file in os.listdir(input_dir):
+        plain = input_dir+file
+        svm_input= constants.input
+        output_dir= "Current page: ./output/%s/post_process_%s"%(test,file)
+        print(plain)
+        process_file(plain, svm_input, output_dir)
+        print("Correcting page %i out of %i)" %(count, len(os.listdir(input_dir))))
+        count+=1
+
+process_dir("./Evaluation-script/OCROutput/Ocropus/Argus/", "OcropusArgus")
+
+def main():
+    print("Correcting text (1/4)")
+    process_dir("./Evaluation-script/OCROutput/Ocropus/Argus/", "OcropusArgus")
+    print("Correcting text (2/4)")
+    process_dir("./Evaluation-script/OCROutput/Ocropus/Grepect/", "OcropusGrepect")
+    print("Correcting text (3/4)")
+    process_dir("./Evaluation-script/OCROutput/Tesseract/Argus/", "TesseractArgus")
+    print("Correcting text (4/4)")
+    process_dir("./Evaluation-script/OCROutput/Tesseract/Grepect/", "TesseractGrepect")
+    print("Evaluation started...")
+    accuracyScript.outputEvaluation()
+    print("Evaluation complete!")
+main()

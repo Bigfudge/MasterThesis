@@ -1,6 +1,7 @@
 import xml.etree.ElementTree as ET
 import csv
 import os
+import constants
 
 
 # A Dynamic Programming based Python program for edit
@@ -45,7 +46,7 @@ def correct_word(word):
     edit_dist=1
     candidates=[]
 
-    while (edit_dist < len(word)+2 or edit_dist <= 8):
+    while (edit_dist < len(str(word))+2 or edit_dist <= 8):
         for candidate in freq:
 
             min_word_len = len(candidate[0])-edit_dist
@@ -82,7 +83,7 @@ def extract_words(xml_files):
 
 def calc_freq(words):
     freq = [[]]
-    if (not os.path.isfile("data/word_freq.csv")):
+    if (not os.path.isfile(constants.word_freq_path)):
         for word in words:
             count = 1
             for dup in words:
@@ -90,17 +91,17 @@ def calc_freq(words):
                     words.remove(dup)
                     count+=1
             freq.append([word,count])
-        with open('data/word_freq.csv', 'w') as csvFile:
+        with open(constants.word_freq_path, 'w') as csvFile:
             writer=csv.writer(csvFile)
             writer.writerows(freq)
     else:
-        with open('data/word_freq.csv', 'r') as readFile:
+        with open(constants.word_freq_path, 'r') as readFile:
             reader = csv.reader(readFile)
             freq = list(reader)
     return freq
 
 def main():
-    all_words = extract_words(['data/lag1734.xml','data/tankebok.xml'])
+    all_words = extract_words([constants.corpus_lag,constants.corpus_tank])
     print('Words extracted from .xml')
     word_freq = calc_freq(all_words)
     print('Frequencies calculated')

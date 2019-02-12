@@ -8,6 +8,7 @@ import align
 import uuid
 import collections
 import sqlite3
+import constants
 
 
 
@@ -18,7 +19,7 @@ def remove_tags(word):
   return cleantext
 
 def db_setup():
-	db = sqlite3.connect('data/data_set.db')
+	db = sqlite3.connect(constants.main_db)
 	cursor = db.cursor()
 
 	#Clears previous table
@@ -101,7 +102,7 @@ def get_word_frequency(word, page):
 	return count/len(page)
 
 def get_trigram_freq(word):
-    db_tri = sqlite3.connect('data/tri_grams.db')
+    db_tri = sqlite3.connect(constants.trigrams_db)
     cursor_tri = db_tri.cursor()
     output=1
     for x in range(len(word)):
@@ -121,7 +122,7 @@ def get_trigram_freq(word):
 ############### ADDS WORDS TO DB ###############
 def add_ground_truth(input_dir):
 
-	db = sqlite3.connect('data/data_set.db')
+	db = sqlite3.connect(constants.main_db)
 	cursor = db.cursor()
 
 	for file in os.listdir(input_dir):
@@ -144,7 +145,7 @@ def add_ocr_output(ocr_dir,truth_dir):
 	truth_dirs=[]
 	tmp = ocr_dir.split("/")
 	filename = tmp[-2]+"_"+tmp[-3]+ ".txt"
-	db = sqlite3.connect('data/data_set.db')
+	db = sqlite3.connect(constants.main_db)
 	cursor = db.cursor()
 
 	for file in os.listdir(ocr_dir):
@@ -185,7 +186,7 @@ def gen_trigram_freq(input_dirs):
 	x = zip(output.keys(), output.values())
 
 	# print(list(x))
-	db = sqlite3.connect('data/tri_grams.db')
+	db = sqlite3.connect(constants.trigrams_db)
 	cursor = db.cursor()
 
 	#Clears previous table
@@ -240,7 +241,6 @@ def get_input(file, output_filename):
                             get_trigram_freq(word),
                             get_word_frequency(word,words)])
     ocr_output.close()
-
     with open(output_filename, 'w') as csvFile:
         writer=csv.writer(csvFile)
         writer.writerows(input_vector)

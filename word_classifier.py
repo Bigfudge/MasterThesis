@@ -8,6 +8,11 @@ from sklearn.preprocessing import LabelEncoder
 from numpy import array
 import os
 import pickle
+import constants
+
+def is_non_zero_file(fpath):
+    return True if os.path.isfile(fpath) and os.path.getsize(fpath) > 0 else False
+
 
 def train(path_model, training_data):
     if(not os.path.isfile(path_model)):
@@ -40,7 +45,9 @@ def train(path_model, training_data):
 
 def predict(input, svclassifier):
     label_encoder = LabelEncoder()
-
+    y_pred=[]
+    if( not is_non_zero_file(input)):
+        return y_pred
     input_vector=pd.read_csv(input)
 
     values = input_vector[input_vector.columns[0]].values
@@ -55,7 +62,7 @@ def predict(input, svclassifier):
 
 
 def main(input):
-    svclassifier = train("models/finalized_model.sav", "data/input_vector.csv")
+    svclassifier = train(constants.svm_model, constants.training_data)
     predict(input, svclassifier)
 
-main("data/input.csv")
+# main("data/input.csv")
