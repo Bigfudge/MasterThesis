@@ -108,9 +108,3 @@ def outputEvaluation():
 
 def main():
 	outputEvaluation()
-
-
-
-
-
-main()
