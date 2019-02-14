@@ -52,3 +52,30 @@ got 93.29% accuracy. Started error correction program.
 Hopefully completed error correction program and started putting all pieces
 together. Need to be able to save the model so it does not train every time.
 Also construct a main-program that puts everything together.
+
+2019-02-11:
+Generated first page of post-processed text. Unfourtunatly, had about 20%
+lesser accuracy then without post-proccessing. Next step is to complete the
+production and evaluation chain. First make it possible to postprocess a whole
+directory then eval it with OCR Frontier.
+
+2019-02-12:
+Moved all path-strings to a constant file. Need to find a work around in order
+to be able to post-process and evaluate at the same computer. Put the .txt files
+from align.py in the correct folder. Construct a 5-gram context as a metric
+for the input. This will probably take a long time to calculate. After that the
+error_correction needs to be improved.
+
+Error-detection inprovment:
+- Construct a 5-gram context as a metric for the input.
+
+Error-correction improvement:
+    - Construct a weighted-character correction map.
+    Possible approaches:
+        - Extract letters from fraktur and calculate diff
+        - "Borrow" the one keetunnen uses
+    - Normalized longest common subsequence
+    - Normalized maximal consecutive longest common subsequence
+    - Put all three metrics into a weighted sum and decide candidate based on that.
+
+If I could get {errousWord, correctWord}-pairs I can train a NN to correct it aswell.

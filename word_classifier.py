@@ -33,15 +33,15 @@ def train(path_model, training_data):
         svclassifier.fit(X_train, y_train)
 
         pickle.dump(svclassifier, open(path_model, 'wb'))
-
+        print(confusion_matrix(y_test,y_pred))
+        print(classification_report(y_test,y_pred))
 
         return svclassifier
     else:
         svclassifier = pickle.load(open(path_model, 'rb'))
         return svclassifier
 
-        # print(confusion_matrix(y_test,y_pred))
-        # print(classification_report(y_test,y_pred))
+
 
 def predict(input, svclassifier):
     label_encoder = LabelEncoder()

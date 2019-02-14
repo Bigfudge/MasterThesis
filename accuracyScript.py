@@ -1,3 +1,4 @@
+#!/bin/sh
 from subprocess import call
 import os
 import shutil
@@ -107,4 +108,5 @@ def outputEvaluation():
 
 
 def main():
-	outputEvaluation()
+	completeEvaluation()
+main()

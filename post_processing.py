@@ -4,7 +4,6 @@ import error_correction
 import os
 import constants
 import sys
-import accuracyScript
 
 def process_file(plain_text, svm_input, output_file):
     gen_vector.get_training_data(constants.training_data, constants.main_db)
@@ -30,13 +29,13 @@ def process_dir(input_dir, test):
     for file in os.listdir(input_dir):
         plain = input_dir+file
         svm_input= constants.input
-        output_dir= "Current page: ./output/%s/post_process_%s"%(test,file)
+        output_dir= "./output/%s/post_process_%s"%(test,file)
         print(plain)
-        process_file(plain, svm_input, output_dir)
-        print("Correcting page %i out of %i)" %(count, len(os.listdir(input_dir))))
+        if(not os.path.isfile(output_dir)):
+            process_file(plain, svm_input, output_dir)
+        print("Corrected page %i out of %i)" %(count, len(os.listdir(input_dir))))
         count+=1
 
-process_dir("./Evaluation-script/OCROutput/Ocropus/Argus/", "OcropusArgus")
 
 def main():
     print("Correcting text (1/4)")
@@ -47,7 +46,5 @@ def main():
     process_dir("./Evaluation-script/OCROutput/Tesseract/Argus/", "TesseractArgus")
     print("Correcting text (4/4)")
     process_dir("./Evaluation-script/OCROutput/Tesseract/Grepect/", "TesseractGrepect")
-    print("Evaluation started...")
-    accuracyScript.outputEvaluation()
-    print("Evaluation complete!")
+
 main()

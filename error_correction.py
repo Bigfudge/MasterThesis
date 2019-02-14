@@ -6,7 +6,9 @@ import constants
 
 # A Dynamic Programming based Python program for edit
 # distance problem
-def editDistDP(str1, str2, m, n):
+def editDistDP(word1, word2, m, n):
+    str1= str(word1)
+    str2 = str(word2)
     # Create a table to store results of subproblems
     dp = [[0 for x in range(n+1)] for x in range(m+1)]
 
@@ -48,14 +50,12 @@ def correct_word(word):
 
     while (edit_dist < len(str(word))+2 or edit_dist <= 8):
         for candidate in freq:
-
             min_word_len = len(candidate[0])-edit_dist
             max_word_len = len(candidate[0])+edit_dist
 
-            if(not(min_word_len <= len(word) <= max_word_len)):
+            if(not(min_word_len <= len(str(word)) <= max_word_len)):
                 continue
-
-            if (editDistDP(word,candidate[0],len(word), len(candidate[0])) == edit_dist):
+            if (editDistDP(word,candidate[0],len(str(word)), len(candidate[0])) == edit_dist):
                 candidates.append(candidate)
 
         if(len(candidates)>0):
@@ -77,7 +77,7 @@ def extract_words(xml_files):
             for paragraph in text:
                 for sentence in paragraph:
                     for word in sentence:
-                        all_words.append(word.text)
+                        all_words.append(str(word.text))
 
     return(all_words)
 
@@ -105,5 +105,4 @@ def main():
     print('Words extracted from .xml')
     word_freq = calc_freq(all_words)
     print('Frequencies calculated')
-    print(correct_word("pringa"))
 # main()
