@@ -79,3 +79,17 @@ Error-correction improvement:
     - Put all three metrics into a weighted sum and decide candidate based on that.
 
 If I could get {errousWord, correctWord}-pairs I can train a NN to correct it aswell.
+
+2019-02-14:
+First complete result
+Character accuracy:
+    OcropusArgus: 19.08% (+4.7%)
+    OcropusGrepect: 38.28% (-6.81%)
+    TesseractArgus: --
+    TesseractGrepect: 18.15% (+6,44%)
+
+Word accuracy:
+    OcropusArgus: 11.04% (-4.61%)
+    OcropusGrepect: 14.30% (-17.04%)
+    TesseractArgus: --
+    TesseractGrepect: 5.09 (-1.09%)
