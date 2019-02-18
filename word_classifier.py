@@ -15,22 +15,26 @@ def is_non_zero_file(fpath):
 
 
 def train(path_model, training_data):
-    if(not os.path.isfile(path_model)):
+    if(True):
         label_encoder = LabelEncoder()
 
         df = pd.read_csv(training_data)
-        data = df.sample(4000)
+        data = df.sample(30000)
 
         values = data[data.columns[0]].values
         integer_encoded = label_encoder.fit_transform(values.astype(str))
         X=data.drop(data.columns[-1], axis =1)
         X=X.drop(data.columns[0],axis=1)
+
+        print(X)
         y=data[data.columns[-1]]
         X["words"]=integer_encoded
 
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.20)
         svclassifier = SVC(kernel='linear')
         svclassifier.fit(X_train, y_train)
+
+        y_pred = svclassifier.predict(X_test)
 
         pickle.dump(svclassifier, open(path_model, 'wb'))
         print(confusion_matrix(y_test,y_pred))
@@ -65,4 +69,5 @@ def main(input):
     svclassifier = train(constants.svm_model, constants.training_data)
     predict(input, svclassifier)
 
-# main("data/input.csv")
+
+train(constants.svm_model, constants.training_data)# main("data/input.csv")

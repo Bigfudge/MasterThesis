@@ -28,14 +28,14 @@ def db_setup():
 	#Adds table to db
 	cursor.execute('''
  	CREATE TABLE words(id INTEGER PRIMARY KEY, word TEXT, non_alfanum INTEGER,
-						tri_grams INTEGER, freq_page INTEGER, valid INTEGER)''')
+						tri_grams INTEGER, freq_page INTEGER, vowel INTEGER, valid INTEGER)''')
 	db.commit()
 	db.close()
 
 def create_output_file(db_path, output_filename):
     db = sqlite3.connect(db_path)
     cursor = db.cursor()
-    cursor.execute('''SELECT word, non_alfanum, tri_grams, freq_page, valid FROM words''')
+    cursor.execute('''SELECT word, non_alfanum, tri_grams, freq_page, vowel, valid FROM words''')
     data = cursor.fetchall()
     with open(output_filename, 'w') as csvFile:
         writer=csv.writer(csvFile)
@@ -118,6 +118,17 @@ def get_trigram_freq(word):
     db_tri.commit()
     db_tri.close()
     return output
+def get_word_length(word):
+    return(len(word))
+def get_num_upper(word):
+    return(sum(1 for c in word if c.isupper()))
+def get_num_lower(word):
+        return(sum(1 for c in word if c.islower()))
+def contains_vowel(word):
+    vowels = {"a", "e", "i", "o", "u","å","ä", "ö", "A", "E", "I", "O", "U","Å", "Ä", "Ö"}
+    return any(char in vowels for char in word)
+
+
 
 ############### ADDS WORDS TO DB ###############
 def add_ground_truth(input_dir):
@@ -129,11 +140,12 @@ def add_ground_truth(input_dir):
 		truth = open(input_dir+file)
 		words = [word for line in truth for word in line.split()]
 		for word in words:
-			cursor.execute('''INSERT INTO words(word, non_alfanum, tri_grams, freq_page, valid)
-                  VALUES(?,?,?,?,?)''', (remove_tags(word),
+			cursor.execute('''INSERT INTO words(word, non_alfanum, tri_grams, freq_page, vowel, valid)
+                  VALUES(?,?,?,?,?,?)''', (remove_tags(word),
                                         get_non_alfanum(word),
                                         get_trigram_freq(word),
                                         get_word_frequency(word,words),
+                                        contains_vowel(word),
                                         1))
 
 	db.commit()
@@ -160,10 +172,11 @@ def add_ocr_output(ocr_dir,truth_dir):
 	words = [word for line in ocr_errors for word in line.split()]
 	for word in words:
 		cursor.execute('''INSERT INTO words(word, non_alfanum, tri_grams,
-							freq_page, valid)VALUES(?,?,?,?,?)''', (word,
+							freq_page, vowel, valid)VALUES(?,?,?,?,?,?)''', (word,
                                                                 get_non_alfanum(word),
                                                                 get_trigram_freq(word),
                                                                 get_word_frequency(word, words),
+                                                                contains_vowel(word),
                                                                 0))
 	db.commit()
 	db.close()
@@ -246,6 +259,6 @@ def get_input(file, output_filename):
         writer.writerows(input_vector)
 
 def main():
-    get_training_data()
-    get_input("./Evaluation-script/OCROutput/Ocropus/Argus/ed_pg_a0002_ocropus_twomodel.txt","data/input.csv")
-# main()
+    get_training_data(constants.training_data, constants.main_db)
+    # get_input("./Evaluation-script/OCROutput/Ocropus/Argus/ed_pg_a0002_ocropus_twomodel.txt","data/input.csv")
+main()
