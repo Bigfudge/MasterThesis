@@ -28,6 +28,8 @@ def	run_acc(genPath, truthPath, reportPath, frontierPath, command, engine):
 	if len(os.listdir(reportPath) ) != 0:
 		os.system('rm ' + reportPath+"*")
 	for	item in pairOfPaths:
+		if(len(item)<2):
+			continue
 		call([frontierPath+command,truthPath+item[1],genPath+item[0],
 				reportPath+"accuracy_report_"+str(count)])
 		count += 1
