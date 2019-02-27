@@ -13,7 +13,7 @@ def argus(input_dir, output, truthPath):
         image = input_dir+file
         out=output+os.path.splitext(file)[0]
         print(out)
-        call(["tesseract", image, out,"-l", "swe"])
+        call(["tesseract", image, out,"-l", "swe-frak"])
 
 def grepect(input_dir, output, truthPath):
     truth=[]
@@ -27,8 +27,8 @@ def grepect(input_dir, output, truthPath):
         image = input_dir+file
         out=output+os.path.splitext(file)[0]
         print(out)
-        call(["tesseract", image, out,"-l", "swe"])
+        call(["tesseract", image, out,"-l", "swe-frak"])
 
 
-argus("../Images/Argus/", "./Evaluation-script/OCROutput/Tesseract/Argus/", "./Evaluation-script/ManuelTranscript/Argus")
+#argus("../Images/Argus/", "./Evaluation-script/OCROutput/Tesseract/Argus/", "./Evaluation-script/ManuelTranscript/Argus")
 grepect("../Images/Grepect/", "./Evaluation-script/OCROutput/Tesseract/Grepect/", "./Evaluation-script/ManuelTranscript/Grepect")

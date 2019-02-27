@@ -20,29 +20,27 @@ def main(image_dir, output_dir, source, truth_dir):
             ocropyFolder="%04d" % (count,)
             bookPath= '../ocropy/'+source+'/'+ocropyFolder
 	
-            if(source == 'grepect'):	    
-	        print(os.path.splitext(item)[0])
-	        print(os.path.splitext(image)[0])
+            if(source == 'grepect'):	  
                 if(os.path.splitext(item)[0]==os.path.splitext(image)[0]):
-                    print(ocropyFolder)
-                    print(count)
+		    print("PROCESSING IMAGE"+str(item))
                     ocropyGen(imagePath, source, ocropyFolder, bookPath)
                     saveOCR(bookPath, output_dir, image)
-                    count +=1
+#                    count +=1
                     break
 
             elif(source == 'argus'):
-                if(item[-4:]==image[-4:]):
-                    ocropyGen(imagePath, source, ocropyFolder, bookPath)
+                if(os.path.splitext(item)[0][-4:]==os.path.splitext(image)[0][-4:]):
+                    print("PROCESSING IMAGE"+str(item))
+		    ocropyGen(imagePath, source, ocropyFolder, bookPath)
                     saveOCR(bookPath, output_dir, image)
-                    count +=1
+ #                   count +=1
                     break
 
 
 def ocropyGen(imagePath, source, ocropyFolder, bookPath):
-    ocroOut= '../ocropy/'+source	
+    ocroOut= '../ocropy/'+source
     call(['../ocropy/ocropus-nlbin',imagePath, '-o',ocroOut])
-    call(['../ocropy/ocropus-gpageseg', bookPath+'.bin.png'])
+    call(['../ocropy/ocropus-gpageseg', bookPath+'.bin.png', '-n'])
     call(["../ocropy/ocropus-rpred", "-Q 4", "-m", "../ocropy/models/clean_natural_140420-00024000.pyrnn.gz", bookPath+'/??????.bin.png', "-n"])
 
 def saveOCR(bookPath, output_dir, image):
@@ -57,7 +55,7 @@ def saveOCR(bookPath, output_dir, image):
                     for line in infile:
                         outfile.write(line)
 
-main("../Images/Grepect", "./Evaluation-script/OCROutput/Ocropus/Grepect", "grepect", "./Evaluation-script/ManuelTranscript/Grepect")
+#main("../Images/Grepect", "./Evaluation-script/OCROutput/Ocropus/Grepect", "grepect", "./Evaluation-script/ManuelTranscript/Grepect")
 
 main("../Images/Argus", "./Evaluation-script/OCROutput/Ocropus/Argus", "argus", "./Evaluation-script/ManuelTranscript/Argus")
 
