@@ -133,24 +133,27 @@ def contains_vowel(word):
 ############### ADDS WORDS TO DB ###############
 def add_ground_truth(input_dir):
 
-	db = sqlite3.connect(constants.main_db)
-	cursor = db.cursor()
+    db = sqlite3.connect(constants.main_db)
+    cursor = db.cursor()
 
-	for file in os.listdir(input_dir):
-		truth = open(input_dir+file)
-		words = [word for line in truth for word in line.split()]
-		for word in words:
-			cursor.execute('''INSERT INTO words(word, non_alfanum, tri_grams, freq_page, vowel, valid)
-                  VALUES(?,?,?,?,?,?)''', (remove_tags(word),
-                                        get_non_alfanum(word),
-                                        get_trigram_freq(word),
-                                        get_word_frequency(word,words),
-                                        contains_vowel(word),
-                                        1))
+    for file in os.listdir(input_dir):
+        truth = open(input_dir+file)
+        words = [word for line in truth for word in line.split()]
+        for word in words:
+            if(word[-1] in {'.',',','!','?',':',';','\'','"','-','/'} and len(word)>1):
+                words.append(word[-1])
+                word= word[:-1]
+                cursor.execute('''INSERT INTO words(word, non_alfanum, tri_grams, freq_page, vowel, valid)
+                VALUES(?,?,?,?,?,?)''', (remove_tags(word),
+                get_non_alfanum(word),
+                get_trigram_freq(word),
+                get_word_frequency(word,words),
+                contains_vowel(word),
+                1))
 
-	db.commit()
-	db.close()
-	truth.close()
+    db.commit()
+    db.close()
+    truth.close()
 
 def add_ocr_output(ocr_dir,truth_dir):
 	ocr_dirs=[]
@@ -244,15 +247,16 @@ def get_training_data(input_vector, db_path):
     create_output_file(db_path,input_vector)
 
 def get_input(file, output_filename):
-    ocr_output = open(file)
+    ocr_output = open(file, 'rb')
     words = [word for line in ocr_output for word in line.split()]
     input_vector=[]
 
     for word in words:
-        input_vector.append([remove_tags(word),
-                            get_non_alfanum(word),
-                            get_trigram_freq(word),
-                            get_word_frequency(word,words)])
+        input_vector.append([remove_tags(str(word)),
+                            get_non_alfanum(str(word)),
+                            get_trigram_freq(str(word)),
+                            get_word_frequency(str(word),words),
+                            contains_vowel(str(word))])
     ocr_output.close()
     with open(output_filename, 'w') as csvFile:
         writer=csv.writer(csvFile)
@@ -261,4 +265,4 @@ def get_input(file, output_filename):
 def main():
     get_training_data(constants.training_data, constants.main_db)
     # get_input("./Evaluation-script/OCROutput/Ocropus/Argus/ed_pg_a0002_ocropus_twomodel.txt","data/input.csv")
-main()
+#main()
