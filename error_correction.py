@@ -2,6 +2,7 @@ import xml.etree.ElementTree as ET
 import csv
 import os
 import constants
+from Levenshtein import distance
 
 
 # A Dynamic Programming based Python program for edit
@@ -40,7 +41,7 @@ def editDistDP(word1, word2, m, n):
 
     return dp[m][n]
 
-def correct_word(word):
+def old_correct_word(word):
     freq=[]
     with open('data/word_freq.csv', 'r') as readFile:
         reader = csv.reader(readFile)
@@ -58,6 +59,30 @@ def correct_word(word):
             if (editDistDP(word,candidate[0],len(str(word)), len(candidate[0])) == edit_dist):
                 candidates.append(candidate)
 
+        if(len(candidates)>0):
+            #Select candidate with greatest frequency
+            winning_candidate=max(candidates, key=lambda x: x[1])
+            return winning_candidate[0]
+        else:
+            edit_dist+=1
+    #If no candidate is found the original word is returned
+    return(word)
+
+def correct_word(word):
+    freq=[]
+    with open('data/word_freq.csv', 'r') as readFile:
+        reader = csv.reader(readFile)
+        freq = list(reader)
+    edit_dist=1
+    candidates=[]
+    edit_distances=[]
+
+    for can in freq:
+        edit_distances.append([can,distance(can[0],word)])
+    while (edit_dist < len(str(word))+2 or edit_dist <= 8):
+        for item in edit_distances:
+            if(item[0][1]==edit_dist):
+                candidates.append(item[0])
         if(len(candidates)>0):
             #Select candidate with greatest frequency
             winning_candidate=max(candidates, key=lambda x: x[1])
