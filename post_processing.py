@@ -29,7 +29,7 @@ def process_dir(input_dir, test, sample_size):
     for file in os.listdir(input_dir):
         plain = input_dir+file
         svm_input= constants.input
-        output_dir= "./output/%s/post_process_%s"%(test,file)
+        output_dir= "./output/%s/%s"%(test,file)
         print(plain)
         if(not os.path.isfile(output_dir)):
             process_file(plain, svm_input, output_dir)
