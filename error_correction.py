@@ -90,6 +90,22 @@ def correct_word(word):
     #If no candidate is found the original word is returned
     return(word)
 
+    for can in freq:
+        edit_distances.append([can,distance(can[0],word)])
+    while (edit_dist < len(str(word))+2 or edit_dist <= 8):
+        for item in edit_distances:
+            if(item[0][1]==edit_dist):
+                candidates.append(item[0])
+        if(len(candidates)>0):
+            #Select candidate with greatest frequency
+            winning_candidate=max(candidates, key=lambda x: x[1])
+            return winning_candidate[0]
+        else:
+            edit_dist+=1
+    #If no candidate is found the original word is returned
+    return(word)
+
+
 def extract_words(xml_files):
     all_words=[]
     for file in xml_files:

@@ -29,7 +29,7 @@ def process_dir(input_dir, test, sample_size):
     for file in os.listdir(input_dir):
         plain = input_dir+file
         svm_input= constants.input
-        output_dir= "./output/%s/post_process_%s"%(test,file)
+        output_dir= "./output/%s/%s"%(test,file)
         print(plain)
         if(not os.path.isfile(output_dir)):
             process_file(plain, svm_input, output_dir)
@@ -41,12 +41,12 @@ def process_dir(input_dir, test, sample_size):
 
 def main():
     print("Correcting text (1/4)")
-    process_dir("./Evaluation-script/OCROutput/Ocropus/Argus/", "OcropusArgus",4)
+    process_dir("./Evaluation-script/OCROutput/Ocropus/Argus/", "OcropusArgus",10)
     print("Correcting text (2/4)")
-    process_dir("./Evaluation-script/OCROutput/Ocropus/Grepect/", "OcropusGrepect",4)
+    process_dir("./Evaluation-script/OCROutput/Ocropus/Grepect/", "OcropusGrepect",10)
     print("Correcting text (3/4)")
-    process_dir("./Evaluation-script/OCROutput/Tesseract/Argus/", "TesseractArgus",4)
+    process_dir("./Evaluation-script/OCROutput/Tesseract/Argus/", "TesseractArgus",10)
     print("Correcting text (4/4)")
-    process_dir("./Evaluation-script/OCROutput/Tesseract/Grepect/", "TesseractGrepect",4)
+    process_dir("./Evaluation-script/OCROutput/Tesseract/Grepect/", "TesseractGrepect",10)
 
 main()
