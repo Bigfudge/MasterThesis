@@ -124,4 +124,32 @@ If I could get {errousWord, correctWord}-pairs I can train a NN to correct it as
     Finnally got all OCR-output and have now two working scripts for generating the images again.
 
 2018-02-28:
-	Evaluated the OCR-output.    
+	Evaluated the OCR-output (without Atikva).
+    Result:
+        TesseractArgus: WER: 36.85% CER: 65.01%
+        TesseractGrepect: WER:33.74 CER: 62.93%
+        OcropusArgus: WER:21.33% CER: 6.08%
+        OcropusGrepect: WER:28.92% CER: -43.41%
+
+    Rerun all training and evaluation on the new data(sample_size=30000).
+    Result:
+        TesseractArgus: WER: % CER: %
+        TesseractGrepect: WER: % CER: %
+        OcropusArgus: WER: % CER:  %
+        OcropusGrepect: WER: % CER:  %
+
+    Rerun all training and evaluation on the new data with words and punctiation
+    seperated (sample_size=8000).
+    Result:
+        TesseractArgus: WER: % CER: %
+        TesseractGrepect: WER: % CER: %
+        OcropusArgus: WER: % CER:  %
+        OcropusGrepect: WER: % CER:  %
+
+    Rerun all training and evaluation on the new data with words and punctiation
+    seperated (sample_size=3000).
+    Result:
+        TesseractArgus: WER: % CER: %
+        TesseractGrepect: WER: % CER: %
+        OcropusArgus: WER: % CER:  %
+        OcropusGrepect: WER: % CER:  %

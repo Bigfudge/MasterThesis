@@ -24,7 +24,7 @@ def process_file(plain_text, svm_input, output_file):
             f.write("%s " % item)
 
 
-def process_dir(input_dir, test):
+def process_dir(input_dir, test, sample_size):
     count=1
     for file in os.listdir(input_dir):
         plain = input_dir+file
@@ -35,16 +35,18 @@ def process_dir(input_dir, test):
             process_file(plain, svm_input, output_dir)
         print("Corrected page %i out of %i)" %(count, len(os.listdir(input_dir))))
         count+=1
+        if(sample_size<count):
+            break
 
 
 def main():
     print("Correcting text (1/4)")
-    process_dir("./Evaluation-script/OCROutput/Ocropus/Argus/", "OcropusArgus")
+    process_dir("./Evaluation-script/OCROutput/Ocropus/Argus/", "OcropusArgus",4)
     print("Correcting text (2/4)")
-    process_dir("./Evaluation-script/OCROutput/Ocropus/Grepect/", "OcropusGrepect")
+    process_dir("./Evaluation-script/OCROutput/Ocropus/Grepect/", "OcropusGrepect",4)
     print("Correcting text (3/4)")
-    process_dir("./Evaluation-script/OCROutput/Tesseract/Argus/", "TesseractArgus")
+    process_dir("./Evaluation-script/OCROutput/Tesseract/Argus/", "TesseractArgus",4)
     print("Correcting text (4/4)")
-    process_dir("./Evaluation-script/OCROutput/Tesseract/Grepect/", "TesseractGrepect")
+    process_dir("./Evaluation-script/OCROutput/Tesseract/Grepect/", "TesseractGrepect",4)
 
 main()
