@@ -1,22 +1,161 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-       0   Characters
-    1526   Errors
-  ------%  Accuracy
+     743   Characters
+     421   Errors
+   43.34%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
-  ------%  Characters Marked
-  ------%  Accuracy After Correction
+    0.00%  Characters Marked
+   43.34%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-       0        0     1526     1526   Unmarked
-       0        0     1526     1526   Total
+      43      116      262      421   Unmarked
+      43      116      262      421   Total
 
    Count   Missed   %Right
-       0        0   ------   Total
+     130       40    69.23   ASCII Spacing Characters
+      16        2    87.50   ASCII Special Symbols
+      23        3    86.96   ASCII Uppercase Letters
+     500       76    84.80   ASCII Lowercase Letters
+      37       21    43.24   Latin1 Special Symbols
+      37       17    54.05   Latin1 Uppercase Letters
+     743      159    78.60   Total
 
   Errors   Marked   Correct-Generated
-    1526        0   {}-{Alta ropade-strat- �<85>...}
+     137        0   {}-{)HSSSQSSLLLFSSSQLSQSSQLS...}
+      37        0   {}-{FFFFFZFFFZFZFFFFFFJFIFFF...}
+      14        0   { }-{}
+      10        0   {od}-{MEEWWGM<\n>«}
+      10        0   {}-{» « , , }
+       9        0   {ärd}-{ar-<\n>L· v}
+       8        0   {ä}-{a}
+       7        0   {}-{.. . -<\n>}
+       5        0   {i}-{c}
+       5        0   {n in}-{"tf7m}
+       5        0   {oför}-{ploc}
+       5        0   {s}-{.<\n>«f}
+       5        0   {säij}-{fan}
+       5        0   {}-{-<\n>· }
+       4        0   { }-{<\n>}
+       4        0   { }-{«}
+       4        0   {}-{-<\n>, }
+       4        0   {}-{-<\n>}
+       4        0   {}-{«}
+       4        0   {}-{·}
+       4        0   {å}-{a}
+       3        0   { Sw}-{wa}
+       3        0   { s}-{-<\n>f}
+       3        0   { }-{<\n>«}
+       3        0   { }-{�<80><99>}
+       3        0   { ä}-{n}
+       3        0   {fö}-{so}
+       3        0   {ick}-{ås}
+       3        0   {isi}-{1f1}
+       3        0   {rsk}-{M}
+       3        0   {rä}-{vat}
+       3        0   {t }-{rk-}
+       3        0   {ta }-{en-}
+       3        0   {}-{j}
+       3        0   {�}-{�}
+       3        0   {ör}-{op}
+       2        0   { F}-{gs}
+       2        0   { s}-{j}
+       2        0   { }-{k-}
+       2        0   { }-{sz}
+       2        0   {; }-{z<\n>}
+       2        0   {a }-{qs}
+       2        0   {e }-{}
+       2        0   {en}-{}
+       2        0   {e}-{c}
+       2        0   {ge}-{a}
+       2        0   {ic}-{E}
+       2        0   {in}-{m}
+       2        0   {i}-{t}
+       2        0   {j}-{1}
+       2        0   {lu}-{in}
+       2        0   {ni}-{m;}
+       2        0   {s}-{f}
+       2        0   {t }-{z}
+       2        0   {ti}-{al}
+       2        0   {w}-{iv}
+       2        0   {}-{ -}
+       2        0   {}-{-d}
+       2        0   {}-{.}
+       2        0   {}-{<\n>-}
+       2        0   {}-{<\n>Y}
+       2        0   {}-{<\n>s}
+       2        0   {}-{s<\n>}
+       2        0   {}-{»}
+       2        0   {� }-{�}
+       2        0   {ä}-{cl}
+       2        0   {ä}-{n}
+       2        0   {å}-{an}
+       2        0   {ö}-{o}
+       1        0   { }-{-}
+       1        0   { }-{e}
+       1        0   { }-{s}
+       1        0   {,}-{y}
+       1        0   {I}-{J}
+       1        0   {d}-{b}
+       1        0   {f}-{j}
+       1        0   {g}-{n}
+       1        0   {j}-{I}
+       1        0   {j}-{J}
+       1        0   {k}-{}
+       1        0   {o}-{y}
+       1        0   {r}-{x}
+       1        0   {s}-{F}
+       1        0   {s}-{i}
+       1        0   {t}-{r}
+       1        0   {t}-{x}
+       1        0   {u}-{y}
+       1        0   {}-{g}
+       1        0   {}-{k}
+
+   Count   Missed   %Right
+       1        0   100.00   {<\n>}
+     129       40    68.99   { }
+       1        0   100.00   {!}
+      10        1    90.00   {,}
+       4        0   100.00   {.}
+       1        1     0.00   {;}
+       4        0   100.00   {D}
+       7        0   100.00   {E}
+       1        1     0.00   {F}
+       2        0   100.00   {G}
+       3        1    66.67   {I}
+       1        0   100.00   {K}
+       1        0   100.00   {L}
+       2        1    50.00   {S}
+       1        0   100.00   {V}
+       1        0   100.00   {W}
+      48        2    95.83   {a}
+       2        0   100.00   {b}
+      13        2    84.62   {c}
+      20        3    85.00   {d}
+      55        5    90.91   {e}
+      13        3    76.92   {f}
+      19        2    89.47   {g}
+      17        0   100.00   {h}
+      28       16    42.86   {i}
+       7        5    28.57   {j}
+      23        3    86.96   {k}
+      25        1    96.00   {l}
+      14        0   100.00   {m}
+      45        5    88.89   {n}
+      20        3    85.00   {o}
+       2        0   100.00   {p}
+      43        6    86.05   {r}
+      32       10    68.75   {s}
+      49        6    87.76   {t}
+       7        2    71.43   {u}
+      11        2    81.82   {w}
+       6        0   100.00   {y}
+       1        0   100.00   {z}
+      14       10    28.57   {�}
+      12        7    41.67   {�}
+      11        4    63.64   {�}
+      37       17    54.05   {�}
