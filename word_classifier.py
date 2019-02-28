@@ -15,7 +15,7 @@ def is_non_zero_file(fpath):
 
 
 def train(path_model, training_data):
-    if(True):
+    if(os.isfile(path_model)):
         label_encoder = LabelEncoder()
 
         df = pd.read_csv(training_data)
