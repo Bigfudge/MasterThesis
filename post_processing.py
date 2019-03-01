@@ -35,8 +35,8 @@ def process_dir(input_dir, test, sample_size):
             process_file(plain, svm_input, output_dir)
         print("Corrected page %i out of %i)" %(count, len(os.listdir(input_dir))))
         count+=1
-        if(sample_size<count):
-            break
+        # if(sample_size<count):
+        #     break
 
 
 def main():
