@@ -136,20 +136,12 @@ If I could get {errousWord, correctWord}-pairs I can train a NN to correct it as
         TesseractArgus: WER: % CER: %
         TesseractGrepect: WER: % CER: %
         OcropusArgus: WER: % CER:  %
-        OcropusGrepect: WER: % CER:  %
+        OcropusGrepect: WER: % CER: %
 
     Rerun all training and evaluation on the new data with words and punctiation
-    seperated (sample_size=8000).
+    seperated (sample_size=8000, 10 pages from each source).
     Result:
-        TesseractArgus: WER: % CER: %
-        TesseractGrepect: WER: % CER: %
-        OcropusArgus: WER: % CER:  %
-        OcropusGrepect: WER: % CER:  %
-
-    Rerun all training and evaluation on the new data with words and punctiation
-    seperated (sample_size=3000).
-    Result:
-        TesseractArgus: WER: % CER: %
-        TesseractGrepect: WER: % CER: %
-        OcropusArgus: WER: % CER:  %
-        OcropusGrepect: WER: % CER:  %
+        TesseractArgus: WER: 17.96% CER: 49.03%
+        TesseractGrepect: WER: 15.17% CER: 50.72%
+        OcropusArgus: WER: 13.20% CER:  -57.62%
+        OcropusGrepect: WER: 15.76% CER:  -204.32%
