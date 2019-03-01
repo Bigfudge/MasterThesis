@@ -167,4 +167,4 @@ def main():
     print('Words extracted from .xml')
     word_freq = calc_freq(all_words)
     print('Frequencies calculated')
-# main()
+main()

@@ -29,14 +29,14 @@ def process_dir(input_dir, test, sample_size):
     for file in os.listdir(input_dir):
         plain = input_dir+file
         svm_input= constants.input
-        output_dir= "./output/%s/%s"%(test,file)
+        output_dir= "./output/%s/%s.txt"%(test,file)
         print(plain)
         if(not os.path.isfile(output_dir)):
             process_file(plain, svm_input, output_dir)
         print("Corrected page %i out of %i)" %(count, len(os.listdir(input_dir))))
         count+=1
-#        if(sample_size<count):
- #           break
+        if(sample_size<count):
+            break
 
 
 def main():
