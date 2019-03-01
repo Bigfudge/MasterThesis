@@ -66,45 +66,6 @@ def old_correct_word(word):
             edit_dist+=1
     #If no candidate is found the original word is returned
     return(word)
-def correct_word(word):
-    freq=[]
-    with open('data/word_freq.csv', 'r') as readFile:
-        reader = csv.reader(readFile)
-        freq = list(reader)
-    edit_dist=1
-    candidates=[]
-    edit_distances=[]
-
-    for can in freq:
-        edit_distances.append([can,distance(can[0],word)])
-    while (edit_dist < len(str(word))+2 or edit_dist <= 8):
-        for item in edit_distances:
-            if(item[0][1]==edit_dist):
-                candidates.append(item[0])
-        if(len(candidates)>0):
-            #Select candidate with greatest frequency
-            winning_candidate=max(candidates, key=lambda x: x[1])
-            return winning_candidate[0]
-        else:
-            edit_dist+=1
-    #If no candidate is found the original word is returned
-    return(word)
-
-    for can in freq:
-        edit_distances.append([can,distance(can[0],word)])
-    while (edit_dist < len(str(word))+2 or edit_dist <= 8):
-        for item in edit_distances:
-            if(item[0][1]==edit_dist):
-                candidates.append(item[0])
-        if(len(candidates)>0):
-            #Select candidate with greatest frequency
-            winning_candidate=max(candidates, key=lambda x: x[1])
-            return winning_candidate[0]
-        else:
-            edit_dist+=1
-    #If no candidate is found the original word is returned
-    return(word)
-
 
 def extract_words(xml_files):
     all_words=[]
@@ -129,7 +90,7 @@ def correct_word(word):
     edit_distances=[]
 
     for can in freq:
-        edit_distances.append([can,distance(can[0],word)])
+        edit_distances.append([can,distance(can[0],str(word))])
     while (edit_dist < len(str(word))+2 or edit_dist <= 8):
         for item in edit_distances:
             if(item[0][1]==edit_dist):
@@ -167,4 +128,4 @@ def main():
     print('Words extracted from .xml')
     word_freq = calc_freq(all_words)
     print('Frequencies calculated')
-main()
+
