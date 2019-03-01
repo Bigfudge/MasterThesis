@@ -131,25 +131,32 @@ If I could get {errousWord, correctWord}-pairs I can train a NN to correct it as
         OcropusArgus: WER:21.33% CER: 6.08%
         OcropusGrepect: WER:28.92% CER: -43.41%
 
-    Rerun all training and evaluation on the new data(sample_size=30000).
-    Result:
-        TesseractArgus: WER: % CER: %
-        TesseractGrepect: WER: % CER: %
-        OcropusArgus: WER: % CER:  %
-        OcropusGrepect: WER: % CER:  %
-
     Rerun all training and evaluation on the new data with words and punctiation
-    seperated (sample_size=8000).
+    seperated (sample_size=8000, 10 pages from each source).
     Result:
-        TesseractArgus: WER: % CER: %
-        TesseractGrepect: WER: % CER: %
-        OcropusArgus: WER: % CER:  %
-        OcropusGrepect: WER: % CER:  %
+        TesseractArgus: WER: 17.96% CER: 49.03%
+        TesseractGrepect: WER: 15.17% CER: 50.72%
+        OcropusArgus: WER: 13.20% CER:  -57.62%
+        OcropusGrepect: WER: 15.76% CER:  -204.32%
 
-    Rerun all training and evaluation on the new data with words and punctiation
-    seperated (sample_size=3000).
+    Todo tomorrow:
+        Evaluate the initalSetup and updatedModel.
+        Prepare for Seminar I
+        Send email to Dana
+
+    Todo next week:
+        Remove all extra whitespace from input and output.
+        Extend the word_freq list with extra words.
+        Include the SB-evaluationscript into accruacyScript.py
+        Start writing Half-time report
+
+2018-03-01:
+    Took 157min to compute all pictures. 250min compleatly from scratch.
+
+    Rerun all training and evaluation on the new data with initial setup (sample_size=8000.
+    Yielded bad result probably due to some encoding problem, look at CHARACC report.
     Result:
-        TesseractArgus: WER: % CER: %
-        TesseractGrepect: WER: % CER: %
-        OcropusArgus: WER: % CER:  %
-        OcropusGrepect: WER: % CER:  %
+        TesseractArgus: WER: 30.47% CER: -1.51%
+        TesseractGrepect: WER: 27.05% CER: -7.79%
+        OcropusArgus: WER: 16.13% CER:  -92.47%
+        OcropusGrepect: WER: 14.82% CER:  -210.89%

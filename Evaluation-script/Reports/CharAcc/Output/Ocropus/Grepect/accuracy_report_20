@@ -1,206 +1,447 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-     924   Characters
-     309   Errors
-   66.56%  Accuracy
+    1097   Characters
+    3849   Errors
+ -250.87%  Accuracy
 
-       0   Reject Characters
+       8   Reject Characters
        0   Suspect Markers
        0   False Marks
-    0.00%  Characters Marked
-   66.56%  Accuracy After Correction
+    0.73%  Characters Marked
+ -240.02%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
-       0        0        0        0   Marked
-     112      171       26      309   Unmarked
-     112      171       26      309   Total
+       0        7      112      119   Marked
+      13      518     3199     3730   Unmarked
+      13      525     3311     3849   Total
 
    Count   Missed   %Right
-     149       33    77.85   ASCII Spacing Characters
-      34       28    17.65   ASCII Special Symbols
-       1        1     0.00   ASCII Digits
-      24       20    16.67   ASCII Uppercase Letters
-     594      137    76.94   ASCII Lowercase Letters
+     135       41    69.63   ASCII Spacing Characters
+      62       49    20.97   ASCII Special Symbols
+      51       47     7.84   ASCII Uppercase Letters
+     775      327    57.81   ASCII Lowercase Letters
        3        3     0.00   Latin1 Control Codes
-      58       32    44.83   Latin1 Special Symbols
-      61       29    52.46   Latin1 Uppercase Letters
-     924      283    69.37   Total
+      34       34     0.00   Latin1 Special Symbols
+      37       37     0.00   Latin1 Uppercase Letters
+    1097      538    50.96   Total
 
   Errors   Marked   Correct-Generated
-      16        0   {≈ø}-{s}
-       8        0   {.<\n>Memnon}-{r At}
-       8        0   {en<\n>gr√§s}-{ts til}
-       8        0   {phalu}-{n ro wig}
-       6        0   {Aur}-{st}
-       6        0   {t_z}-{g}
-       6        0   {≈ø}-{}
-       5        0   {.<\n>Tit}-{ Mac}
-       5        0   {<\n>}-{ }
-       5        0   {Au-<\n>r}-{h}
-       5        0   {Ce-<\n>p}-{tax }
-       5        0   {C}-{¬ß. M}
-       5        0   {we=<\n>l}-{ts m}
-       5        0   {§s=<\n>h}-{•ta k}
-       5        0   {≈øk√∂}-{ls}
-       5        0   {≈ø√§g}-{lit}
-       4        0   {a.<\n>T}-{ t}
-       4        0   {wa}-{gi√∂}
-       4        0   {w√§n}-{o}
-       4        0   {}-{s}
-       3        0   {,}-{}
-       3        0   {-<\n>n}-{ v}
-       3        0   {-<\n>r}-{m }
-       3        0   {<\n>J}-{ kI}
-       3        0   {<\n>h}-{s g}
-       3        0   {<\n>p}-{n f}
-       3        0   {=<\n>g}-{t }
-       3        0   {Tit}-{}
-       3        0   {i}-{/}
-       3        0   {jan}-{l}
-       3        0   {l.<\n>}-{ }
-       3        0   {l}-{r}
-       3        0   {s,<\n>}-{m }
-       3        0   {up }-{}
-       3        0   {§rd}-{•ll}
-       3        0   {∂≈ø}-{§}
-       3        0   {√<9F>a}-{n}
-       3        0   {√§r}-{d}
-       3        0   {√∂d}-{ug}
-       3        0   {≈øo}-{fe}
-       3        0   {≈øp}-{d}
-       2        0   { }-{}
-       2        0   {, }-{l}
-       2        0   {3}-{¬ß}
-       2        0   {;}-{ /}
-       2        0   {<\n>D}-{ r}
-       2        0   {<\n>P}-{ }
-       2        0   {<\n>i}-{ /}
-       2        0   {<\n>}-{s }
-       2        0   {=<\n>}-{- }
-       2        0   {Hi}-{Do}
-       2        0   {Pr}-{J}
-       2        0   {Tr}-{}
-       2        0   {_e}-{}
-       2        0   {a}-{es}
-       2        0   {b}-{B}
-       2        0   {c}-{√§}
-       2        0   {e=}-{o}
-       2        0   {e}-{y}
-       2        0   {i}-{}
-       2        0   {k}-{}
-       2        0   {l,}-{i}
-       2        0   {m}-{}
-       2        0   {n }-{ H}
-       2        0   {n,}-{}
-       2        0   {n<\n>}-{ }
-       2        0   {nh}-{p}
-       2        0   {no}-{}
-       2        0   {on}-{t}
-       2        0   {p}-{s}
-       2        0   {r}-{}
-       2        0   {th}-{}
-       2        0   {t}-{T}
-       2        0   {t}-{s}
-       2        0   {un}-{a}
-       2        0   {u}-{}
-       2        0   {w}-{v}
-       2        0   {}-{m}
+      93        0   {}-{b'f\xc3\xa4lia' b'wmaula...}
+      69        0   {}-{b'\xc3\x9f' b'-' b'j' b'...}
+      60       60   {}-{'a' b'Skruhhare' b'L\xc3...}
+      54        0   {}-{b'kolia' b'tnsm' b'4' b'...}
+      50        0   {}-{r' b'Kl\xc3\xa4dets' b'f...}
+      48        0   {}-{as' b'den' b'me' b's' b'...}
+      43        0   {}-{' b'-' b'j-' b'-' b'f' b...}
+      43        0   {}-{\xc3\xa4ng' b'2d' b'\xc3...}
+      41        0   {}-{f' b'j' b'\xc5\xbf\xc3\x...}
+      40        0   {<\n>T}-{' b'Stunkek\xc3\xa4bl.' ...}
+      40        0   {}-{' b'3' b'H\xc3\xa4raf' b...}
+      38        0   {}-{b'Arhets' b'L\xc3\xb6nen...}
+      37        0   {-}-{4' b'rl.' b'1,' b'ked,\x...}
+      35        0   {}-{'efter' b'\xc5\xbfina' b...}
+      34        0   {<\n>g}-{' b'blomma.' b'a' b'\xc5...}
+      34        0   {}-{b'}
+      33        0   {ing.<\n>T}-{n' b'Kj\xc3\xa4-' b'o' b...}
+      33        0   {}-{-' b'-\xc5\xbf\xc3\xa5' ...}
+      32        0   {i}-{et' b'j1' b'0' b'pro' b'...}
+      32        0   {}-{s' b'efter' b'\xc5\xbfk\...}
+      31       31   {i}-{\xc3\x9f-' b'~~31.' b'L\...}
+      31        0   {<\n>}-{kafla,' b'i' b'an-' b'ei...}
+      31        0   {}-{'\xc3\xb6re' b'\xc5\xbf'...}
+      29        0   {/<\n>K}-{-' b'k\xc3\xb6rdiuggsgr\...}
+      29        0   {m}-{nde' b'be\xc5\xbfpar\xc3...}
+      29        0   {oliu}-{\xc3\xb6reg\xc3\xa4ende'...}
+      29        0   {u}-{de' b'lala,' b'Hwijt' b'...}
+      29        0   {}-{' b'\xc5\xbft\xc3\xb6rre...}
+      29        0   {}-{ng\xc5\xbfpenagr\xc3\xa4...}
+      29        0   {}-{r,' b'a?' b'\xc5\xbfeeli...}
+      28        0   {Sk√∂}-{b'etalas' b'ume)' b'1' b...}
+      28        0   {}-{' b'ddt' b'j237' b'pra' ...}
+      27        0   {√<9F>=<\n>√∂}-{ianon' b'wmaa-' b'\xc5\x...}
+      26        0   {k}-{5\xbf' b'w.' b'\xc5\xbfr...}
+      25        0   {.<\n>T}-{\xc3\x9f' b'u\xc3\xa4-ul...}
+      25        0   {Sugor/<\n>Kl√∂f}-{b'\xc3\xa4ent' b'aBa-' b...}
+      25        0   {}-{' b'\xc3\xa5l' b'--j.' b...}
+      25        0   {}-{' b'khar-' b'\xc5\xbfpin...}
+      25        0   {}-{'}
+      24        0   {}-{b'j-s' b'j-j' b'\xc5\xbf}
+      23        0   {La}-{b'i\xc5\xbfom' b'en' b'}
+      23        0   {w}-{b'13' b'prs' b'\xc3\xa4}
+      23        0   {}-{' b'erempel:' b'd\xc3\x}
+      22        0   {E}-{b'Kardare' b'L\xc3\xb6}
+      22        0   {}-{r' b'r\xc3\xb6d' b'wep}
+      21        0   {/<\n>M}-{' b'n\xc3\xa4mde' b'h}
+      21        0   {F}-{b'H\xc3\xa4\xc5\xbfit}
+      21        0   {g}-{b'd\xc3\xa4icla' b'ni}
+      21        0   {ie}-{' b'\xc5\xbf' b'Skogs}
+      21        0   {}-{e' b'Llockormed' b'hw}
+      20        0   {.<\n>v}-{c3\xa5g' b'hade' b't}
+      20        0   {E}-{b'\xc5\xbftr\xc3\xa4}
+      20        0   {}-{b'\xc5\xbfk\xc3\xa5l}
+      19        0   {kl}-{r' b'\xc3\xb6re' b'}
+      19        0   {}-{'warda' b'\xc5\xbfy}
+      19        0   {}-{b'be\xc5\xbft\xc3\x}
+      19        0   {}-{b'hwad' b'an\xc5\xb}
+      19        0   {}-{b'hwarje' b'\xc5\xb}
+      19        0   {}-{lb,' b'\xc3\xa4' b'}
+      18       18   {B}-{b'~a8' b'lah,h' b'}
+      18        0   {gsg}-{' b'af' b'de' b'fy}
+      18        0   {k}-{3\xa5BBaBBBB' b'rm}
+      18        0   {l√•}-{'utr\xc3\xa4knas:'}
+      18        0   {t}-{alaablanngg:' b'ka}
+      18        0   {}-{' b'\xc5\xbf\xc3\x}
+      18        0   {√<9F>}-{' b'1' b'\xc3\x9fa}
+      18        0   {≈ø}-{b'R\xc3\xa4d' b'we}
+      17        0   {Amour.<\n>T}-{b'begge' b'en' b'}
+      17        0   {o<\n>m}-{ki.' b'j254' b'pr}
+      17        0   {}-{b'-' b'j' b'-' b'}
+      16        0   {.}-{l\xc5\xbfatmman'}
+      16        0   {Uvula}-{b';' b'\xc5\xbft}
+      16        0   {}-{.' b'l' b'i' b'l}
+      15        0   {i}-{l-?-' b'\xc5\xb}
+      15        0   {nugino≈øo:}-{' b'\xc3\xb6re'}
+      15        0   {or}-{ypulimw;' b'lut}
+      15        0   {o√§}-{b'chenne' b'b\x}
+      15        0   {p}-{4rde' b'en' b'm}
+      15        0   {}-{-' b'\xc5\xbf--}
+      14        0   {.<\n>T}-{n' b'f\xc3\xb6}
+      14        0   {/}-{atenlealbawm,'}
+      14        0   {<\n>m}-{des,' b'\xc3\x}
+      14        0   {Ak}-{b'blad' b'Engi}
+      14        0   {Sylve≈øt.<\n>H√∂}-{b'e-4' b'-' b'}
+      14        0   {f}-{jt' b'li,' b't}
+      14        0   {opo}-{a' b'\xc5\xbfi}
+      14        0   {um}-{r\xc3\xb6tter'}
+      14        0   {}-{\xc3\xa4' b'bl}
+      14        0   {}-{fm' b'ud' b'Bu}
+      14        0   {}-{gen' b'at' b'j}
+      14        0   {}-{r' b'm\xc3\xa5}
+      14        0   {√§}-{a' b'uti' b'n.}
+      13        0   {cu-<\n>lo≈øo}-{4nna' b'gifwa}
+      13        0   {l}-{b'LArbets' b'}
+      13        0   {p}-{b'\xc3\xb6fwe}
+      13        0   {}-{l\xc3\xb6fmwe}
+      12        0   {ium}-{al\xc3\xa5,'}
+      12        0   {m}-{b'tilk\xc3\x}
+      12        0   {rcifis.<\n>T}-{' b'\xc5\xbf}
+      12        0   {ur}-{:' b'lll' b'}
+      12        0   {}-{' b'\xc5\xbf}
+      12        0   {}-{;' b'ax,' b'}
+      12        0   {}-{b'des' b'w\x}
+      12        0   {}-{kaffande' b'}
+      12        0   {}-{nt' b'j3' b'}
+      12        0   {}-{r\xc5\xbfka'}
+      11        0   {R√∂d}-{b'154' b'pr}
+      11        0   {T}-{b'\xc5\xbfo}
+      11        0   {a}-{b'\xc5\xbfk}
+      11        0   {i}-{ler' b'AMan}
+      11        0   {ppor/<\n>D}-{ch' b'skili}
+      11        0   {upu}-{eklockor-Ha}
+      11        0   {}-{'\xc5\xbfka}
+      11        0   {}-{3\xb6r' b'T}
+      11        0   {}-{b'L\xc3\xb6}
+      11        0   {}-{b'de\xc5\xb}
+      11        0   {}-{blomma-Hafr}
+      11        0   {}-{lh\xc3\xa4r}
+      11        0   {}-{liumtionen'}
+      11        0   {}-{m:' b'attuw}
+      11        0   {}-{u,Backerwep}
+      11        0   {√§gg}-{\xc3\xa4aa'}
+      11        0   {≈ø}-{' b'til' b'}
+      10       10   {=<\n>pur}-{-' b'~~S~'}
+      10        0   {.<\n>T}-{ba,' b'Sto}
+      10        0   {Melilo}-{b'\xc5\xbf}
+      10        0   {frer√∂t}-{gan' b'pra}
+      10        0   {h}-{b'purpareu}
+      10        0   {ing}-{-\xc5\xbf'}
+      10        0   {lo-<\n>≈ø}-{n\xc3\xa4i}
+      10        0   {lo}-{n\xc5\xbfm}
+      10        0   {o}-{aedenata.'}
+      10        0   {u}-{'\xc5\xbfa}
+      10        0   {}-{'\xc5\xbfk}
+      10        0   {}-{liuwm' b'p}
+      10        0   {}-{ng-' b'R\x}
+       9        0   { l√•}-{l\xc3\xa4}
+       9        0   {.}-{e-hafwer'}
+       9        0   {H}-{b'f\xc3\x}
+       9        0   {ed<\n>≈øm√•}-{\xc3\xa4'}
+       9        0   {e}-{r\xc3\xa4}
+       9        0   {fo}-{k\xc3\xb6}
+       9        0   {ium}-{\xc3\xa4'}
+       9        0   {jt}-{uef\xc3\x}
+       9        0   {p}-{w' b'ibie}
+       9        0   {ro}-{'lupuliuw}
+       9        0   {ulo≈øo,}-{3\xa42nt'}
+       9        0   {}-{4s-' b'Fa}
+       9        0   {}-{BB2Baaa\x}
+       9        0   {}-{ad-' b'wu}
+       9        0   {}-{k\xc3\xa5}
+       9        0   {√•}-{\xc3\xa4'}
+       8        0   {/<\n>S}-{\xc5\xbf}
+       8        0   {Sto}-{b'langsa}
+       8        0   {f}-{2,' b'St}
+       8        0   {h}-{5\xbfsnd}
+       8        0   {kot}-{5\xbfpar}
+       8        0   {ng≈øp}-{1' b'cft}
+       8        0   {o}-{' b'kalg}
+       8        0   {pus.<\n>T}-{ff' b'kU}
+       8        0   {t}-{4da' b'S}
+       8        0   {}-{' b'Rike}
+       8        0   {}-{' b'heta}
+       8        0   {}-{' b'}
+       8        0   {√§s/}-{' b'han'}
+       8        0   {√•}-{\xc3\xa4}
+       8        0   {≈øe}-{' b'man'}
+       8        0   {≈ø}-{\xc5\xbf}
+       7        0   { }-{\xc5\xb}
+       7        0   {-<\n>}-{E' b'\x}
+       7        0   {g.<\n>Tri}-{\xc5\xb}
+       7        0   {ij}-{ar' b'u}
+       7        0   {l}-{ch' b'w}
+       7        0   {nd}-{mm' b't}
+       7        0   {n}-{d' b'me}
+       7        0   {u}-{ng-' b'}
+       7        0   {u}-{t' b'ef}
+       7        0   {}-{' b'hel}
+       7        0   {}-{' b'lja}
+       7        0   {}-{'krigxf}
+       7        0   {}-{r,' b'e}
+       7        0   {}-{re' b'b}
+       7        0   {}-{s' b'S\}
+       7        0   {}-{te' b'b}
+       7        0   {}-{y,' b'b}
+       7        0   {√•}-{yundet'}
+       7        0   {≈øp.}-{kalium'}
+       6        0   {,}-{lktil'}
+       6        0   {C}-{b'tlar}
+       6        0   {H}-{b'porr}
+       6        0   {ena}-{a' b'k}
+       6        0   {e}-{' b'mi}
+       6        0   {g}-{' b'Ar}
+       6        0   {i}-{\xc3\x}
+       6        0   {m:}-{lala,'}
+       6        0   {m}-{b'prat}
+       6        0   {n}-{ch'}
+       6        0   {o}-{nnare'}
+       6        0   {p}-{n' b'A}
+       6        0   {r}-{-.' b'}
+       6        0   {}-{' b'\x}
+       6        0   {}-{3\x}
+       6        0   {}-{b'Aker}
+       6        0   {}-{b'cber}
+       6        0   {}-{ckote'}
+       6        0   {}-{e' b'r}
+       6        0   {}-{m' b'm}
+       6        0   {}-{r' b'e}
+       6        0   {}-{ra' b'}
+       6        0   {√•h}-{l' b'a}
+       5        0   { }-{}
+       5        0   {.<\n>T}-{n' b'}
+       5        0   {<\n>c}-{' b'a}
+       5        0   {Fo_}-{b'art}
+       5        0   {ckot}-{t' b'}
+       5        0   {d}-{rwlo'}
+       5        0   {gr√§s}-{5han'}
+       5        0   {lad/}-{'och'}
+       5        0   {m,}-{gore'}
+       5        0   {me}-{b'SSn}
+       5        0   {omm}-{' b'h}
+       5        0   {omm}-{' b'r}
+       5        0   {on}-{jakti}
+       5        0   {ore}-{alas'}
+       5        0   {pr}-{b'hll}
+       5        0   {p}-{b'fle}
+       5        0   {wepli}-{' b'a}
+       5        0   {wijt<\n>}-{be-' }
+       5        0   {}-{' b'S}
+       5        0   {}-{' b'e}
+       5        0   {}-{4lia'}
+       5        0   {}-{b'fle}
+       5        0   {}-{d' b'}
+       5        0   {}-{fter'}
+       5        0   {}-{ikali}
+       5        0   {}-{tldh'}
+       5        0   {}-{umm,'}
+       5        0   {≈øo,}-{mma.'}
+       5        0   {≈ø}-{g' b'}
+       4        0   { r√∂}-{ypan}
+       4        0   {,}-{4ng'}
+       4        0   {Kloc}-{b'yw}
+       4        0   {No}-{b'dl}
+       4        0   {N}-{b'mm}
+       4        0   {R√∂d}-{b'1'}
+       4        0   {S}-{b'be}
+       4        0   {c}-{aror}
+       4        0   {d/}-{5en'}
+       4        0   {ewep}-{fdd}
+       4        0   {e}-{igh'}
+       4        0   {fol}-{b'Sp}
+       4        0   {g/}-{nas'}
+       4        0   {l}-{4,' }
+       4        0   {m}-{b'll}
+       4        0   {ng}-{umm'}
+       4        0   {oco}-{pura}
+       4        0   {om}-{' b'}
+       4        0   {o}-{a}
+       4        0   {porr}-{b'ut}
+       4        0   {r.}-{nle'}
+       4        0   {um}-{en,'}
+       4        0   {}-{' }
+       4        0   {}-{aju2}
+       4        0   {}-{akt'}
+       4        0   {}-{b'oa}
+       4        0   {}-{b'tj}
+       4        0   {}-{ch' }
+       4        0   {}-{hrow}
+       4        0   {}-{ta' }
+       4        0   {}-{wm' }
+       4        0   {}-{w}
+       3        0   {/ H}-{gap}
+       3        0   {/}-{'}
+       3        0   {H}-{b'h}
+       3        0   {Sto}-{b'K}
+       3        0   {Ta}-{b'l}
+       3        0   {W}-{b'c}
+       3        0   {c}-{b'p}
+       3        0   {d}-{5r'}
+       3        0   {go,}-{om'}
+       3        0   {ht}-{3\x}
+       3        0   {la}-{'Re}
+       3        0   {lo}-{t,'}
+       3        0   {mac}-{b'g}
+       3        0   {m}-{nne}
+       3        0   {nus}-{lp'}
+       3        0   {o}-{lfe}
+       3        0   {s f}-{ek}
+       3        0   {um}-{ge'}
+       3        0   {}-{.\x}
+       3        0   {}-{arc}
+       3        0   {}-{arl}
+       3        0   {}-{awm}
+       3        0   {}-{b'a}
+       3        0   {}-{b'w}
+       3        0   {}-{ed'}
+       3        0   {}-{g.'}
+       3        0   {}-{hi'}
+       3        0   {}-{ifw}
+       3        0   {}-{p' }
+       3        0   {}-{s.'}
+       3        0   {}-{t}
+       2        0   {,}-{t'}
+       2        0   {/}-{,'}
+       2        0   {<\n>o}-{' }
+       2        0   {=<\n>}-{}
+       2        0   {H}-{b'}
+       2        0   {K}-{b'}
+       2        0   {cu}-{oa}
+       2        0   {d}-{l'}
+       2        0   {fo}-{b'}
+       2        0   {fo}-{ka}
+       2        0   {f}-{b'}
+       2        0   {g/}-{t'}
+       2        0   {j}-{lb}
+       2        0   {n}-{b'}
+       2        0   {o:}-{e'}
+       2        0   {og}-{ap}
+       2        0   {o}-{a'}
+       2        0   {o}-{at}
+       2        0   {o}-{d}
+       2        0   {o}-{en}
+       2        0   {o}-{g'}
+       2        0   {o}-{ge}
+       2        0   {q}-{cg}
+       2        0   {s}-{.'}
+       2        0   {t}-{nd}
+       2        0   {u}-{an}
+       2        0   {w}-{b'}
+       2        0   {yp}-{bl}
+       2        0   {}-{'i}
+       2        0   {}-{\x}
+       2        0   {}-{al}
+       2        0   {}-{d'}
+       2        0   {}-{da}
+       2        0   {}-{e'}
+       2        0   {}-{fi}
+       2        0   {}-{i'}
+       2        0   {}-{k}
+       2        0   {}-{li}
+       2        0   {}-{pi}
        2        0   {}-{r}
-       2        0   {•}-{§}
-       2        0   {√<9F>}-{ft}
-       2        0   {√<9F>}-{nn}
-       2        0   {√§}-{a}
-       2        0   {√´}-{L}
-       2        0   {≈ø}-{d}
-       2        0   {≈ø}-{v}
-       1        0   { }-{l}
-       1        0   {,}-{a}
-       1        0   {,}-{h}
-       1        0   {.}-{g}
-       1        0   {:}-{}
-       1        0   {M}-{b}
-       1        0   {O}-{o}
-       1        0   {P}-{k}
-       1        0   {P}-{}
-       1        0   {T}-{h}
-       1        0   {b}-{d}
-       1        0   {b}-{h}
-       1        0   {c}-{}
-       1        0   {d}-{n}
-       1        0   {d}-{r}
-       1        0   {e}-{a}
-       1        0   {h}-{M}
-       1        0   {i}-{e}
-       1        0   {k}-{u}
-       1        0   {l}-{}
-       1        0   {n}-{D}
-       1        0   {n}-{r}
-       1        0   {n}-{}
-       1        0   {o}-{i}
-       1        0   {p}-{.}
-       1        0   {p}-{a}
-       1        0   {p}-{f}
-       1        0   {p}-{}
-       1        0   {r}-{h}
-       1        0   {r}-{l}
-       1        0   {s}-{t}
-       1        0   {t}-{v}
-       1        0   {t}-{}
-       1        0   {w}-{p}
-       1        0   {y}-{I}
+       2        0   {}-{t'}
+       2        0   {}-{tt}
+       2        0   {√<9F>}-{s}
+       1        0   {a}-{}
+       1        0   {c}-{d}
+       1        0   {d}-{l}
+       1        0   {m}-{'}
+       1        0   {o}-{0}
+       1        0   {o}-{}
+       1        0   {r}-{}
+       1        0   {s}-{w}
+       1        0   {t}-{n}
+       1        0   {u}-{a}
+       1        0   {u}-{n}
+       1        0   {}-{4}
        1        0   {}-{e}
-       1        0   {§}-{•}
+       1        0   {}-{l}
+       1        0   {}-{u}
 
    Count   Missed   %Right
-      27       27     0.00   {<\n>}
-     122        6    95.08   { }
-      11        9    18.18   {,}
-       4        4     0.00   {-}
-       9        5    44.44   {.}
-       1        1     0.00   {3}
-       1        1     0.00   {:}
-       1        1     0.00   {;}
-       5        5     0.00   {=}
-       4        3    25.00   {A}
-       2        2     0.00   {C}
+      31       31     0.00   {<\n>}
+     104       10    90.38   { }
+      16        7    56.25   {,}
+       6        4    33.33   {-}
+      16       15     6.25   {.}
+      16       16     0.00   {/}
+       4        3    25.00   {:}
+       3        3     0.00   {=}
+       2        2     0.00   {A}
+       3        1    66.67   {B}
+       1        1     0.00   {C}
        1        1     0.00   {D}
-       2        1    50.00   {H}
-       1        1     0.00   {J}
-       3        2    33.33   {M}
-       1        1     0.00   {O}
-       4        4     0.00   {P}
-       6        5    16.67   {T}
-       3        3     0.00   {_}
-      40        6    85.00   {a}
-       9        4    55.56   {b}
-       8        2    75.00   {c}
-      22        4    81.82   {d}
-      74        9    87.84   {e}
-      23        0   100.00   {f}
-      20        3    85.00   {g}
-      31        6    80.65   {h}
-      39       10    74.36   {i}
-       1        1     0.00   {j}
-      15        4    73.33   {k}
-      30        8    73.33   {l}
-      19        3    84.21   {m}
-      64       16    75.00   {n}
-      31        5    83.87   {o}
-      17       11    35.29   {p}
-      56       13    76.79   {r}
-      14        4    71.43   {s}
-      47       11    76.60   {t}
-      17        8    52.94   {u}
-       9        6    33.33   {w}
-       6        1    83.33   {y}
-       2        2     0.00   {z}
+       2        2     0.00   {E}
+       2        2     0.00   {F}
+       6        6     0.00   {H}
+       6        4    33.33   {K}
+       1        1     0.00   {L}
+       2        2     0.00   {M}
+       2        2     0.00   {N}
+       2        2     0.00   {R}
+       7        7     0.00   {S}
+      12       12     0.00   {T}
+       1        1     0.00   {U}
+       1        1     0.00   {W}
+       1        1     0.00   {_}
+      46        9    80.43   {a}
+      17        0   100.00   {b}
+      23       11    52.17   {c}
+      20       10    50.00   {d}
+      66       15    77.27   {e}
+      25       11    56.00   {f}
+      34       19    44.12   {g}
+       7        4    42.86   {h}
+      59       19    67.80   {i}
+       4        4     0.00   {j}
+      13        7    46.15   {k}
+      77       22    71.43   {l}
+      46       24    47.83   {m}
+      44       14    68.18   {n}
+      84       61    27.38   {o}
+      35       18    48.57   {p}
+       1        1     0.00   {q}
+      56       20    64.29   {r}
+      12        9    25.00   {s}
+      28       13    53.57   {t}
+      57       26    54.39   {u}
+       3        3     0.00   {v}
+      15        5    66.67   {w}
+       1        0   100.00   {x}
+       2        2     0.00   {y}
        3        3     0.00   {<9F>}
-      17        8    52.94   {§}
-       4        2    50.00   {•}
-       1        0   100.00   {ß}
-       1        1     0.00   {´}
-      16        3    81.25   {∂}
-      19       18     5.26   {ø}
-       1        0   100.00   {¬}
-      41       11    73.17   {√}
-      19       18     5.26   {≈}
+       5        5     0.00   {§}
+       7        7     0.00   {•}
+       8        8     0.00   {∂}
+      14       14     0.00   {ø}
+      23       23     0.00   {√}
+      14       14     0.00   {≈}

@@ -149,7 +149,7 @@ def add_ground_truth(input_dir):
             get_trigram_freq(word),
             get_word_frequency(word,words),
             contains_vowel(word),
-             1))
+            1))
 
     db.commit()
     db.close()
@@ -247,16 +247,17 @@ def get_training_data(input_vector, db_path):
     create_output_file(db_path,input_vector)
 
 def get_input(file, output_filename):
-    ocr_output = open(file, 'rb')
+    ocr_output = open(file, 'r')
     words = [word for line in ocr_output for word in line.split()]
     input_vector=[]
 
     for word in words:
-        input_vector.append([remove_tags(str(word)),
-                            get_non_alfanum(str(word)),
-                            get_trigram_freq(str(word)),
-                            get_word_frequency(str(word),words),
-                            contains_vowel(str(word))])
+
+        input_vector.append([remove_tags(word),
+                            get_non_alfanum(word),
+                            get_trigram_freq(word),
+                            get_word_frequency(word,words),
+                            contains_vowel(word)])
     ocr_output.close()
     with open(output_filename, 'w') as csvFile:
         writer=csv.writer(csvFile)
@@ -264,5 +265,6 @@ def get_input(file, output_filename):
 
 def main():
     get_training_data(constants.training_data, constants.main_db)
-    # get_input("./Evaluation-script/OCROutput/Ocropus/Argus/ed_pg_a0002_ocropus_twomodel.txt","data/input.csv")
+
+#get_input("./Evaluation-script/output/OcropusArgus/argus_lb3026335_5_0002.txt","data/input.csv")
 #main()
