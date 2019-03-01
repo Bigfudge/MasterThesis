@@ -143,13 +143,13 @@ def add_ground_truth(input_dir):
             if(word[-1] in {'.',',','!','?',':',';','\'','"','-','/'} and len(word)>1):
                 words.append(word[-1])
                 word= word[:-1]
-                cursor.execute('''INSERT INTO words(word, non_alfanum, tri_grams, freq_page, vowel, valid)
-                VALUES(?,?,?,?,?,?)''', (remove_tags(word),
-                get_non_alfanum(word),
-                get_trigram_freq(word),
-                get_word_frequency(word,words),
-                contains_vowel(word),
-                1))
+            cursor.execute('''INSERT INTO words(word, non_alfanum, tri_grams, freq_page, vowel, valid)
+            VALUES(?,?,?,?,?,?)''', (remove_tags(word),
+            get_non_alfanum(word),
+            get_trigram_freq(word),
+            get_word_frequency(word,words),
+            contains_vowel(word),
+             1))
 
     db.commit()
     db.close()
