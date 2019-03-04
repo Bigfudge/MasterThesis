@@ -1,415 +1,362 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
     1630   Characters
-    2277   Errors
-  -39.69%  Accuracy
+    1261   Errors
+   22.64%  Accuracy
 
        2   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.12%  Characters Marked
-  -38.96%  Accuracy After Correction
+   23.19%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
-       0       12        0       12   Marked
-      12     1073     1180     2265   Unmarked
-      12     1085     1180     2277   Total
+       1        6        2        9   Marked
+     216      877      159     1252   Unmarked
+     217      883      161     1261   Total
 
    Count   Missed   %Right
-     270      117    56.67   ASCII Spacing Characters
-      30       24    20.00   ASCII Special Symbols
+     270      107    60.37   ASCII Spacing Characters
+      30       29     3.33   ASCII Special Symbols
        3        3     0.00   ASCII Digits
       46       45     2.17   ASCII Uppercase Letters
-    1135      762    32.86   ASCII Lowercase Letters
+    1135      815    28.19   ASCII Lowercase Letters
        4        4     0.00   Latin1 Control Codes
-      69       69     0.00   Latin1 Special Symbols
-      73       73     0.00   Latin1 Uppercase Letters
-    1630     1097    32.70   Total
+      69       50    27.54   Latin1 Special Symbols
+      73       47    35.62   Latin1 Uppercase Letters
+    1630     1100    32.52   Total
 
   Errors   Marked   Correct-Generated
-      38        0   {}-{'}
-      30        0   {so}-{b'\xc3\xa4rrSApwhEakgifw...}
-      28        0   {}-{b'}
-      26        0   {, ett }-{\xc5\xbf\xc3\xa5\xc5\xbf...}
-      24        0   {ö}-{\xc3\xb6}
-      23        0   { jag säger,}-{ol\xc5\xbft\xc5\xbflut'}
-      23        0   {immelig denna Meningen}-{rpugub\xc5\xbf\xc3\xa5'}
-      22        0   {lig. M}-{' b'\xc3\x9fF\xc3\xa4h}
-      21        0   {i}-{b'h\xc3\xb6g\xc5\xbft}
-      21        0   {ättningar. Anledning}-{' b'\xc5\xbf\xc3\xa5k}
-      19        0   {t t}-{r\xc3\xb6e\xc3\xb6c}
-      17        0   {Correspondent gi}-{b'\xc5\xbfk' b'ha}
-      17        0   {stående Copi}-{igcng' b')m\xc3\x}
-      16        0   {er. Min Herr Ar}-{,' b'd\xc3\xa5jm}
-      16        0   {gus, de}-{\xc5\xbf\xc3\xa5}
-      16        0   {högst }-{b'utkomm\xc3\xa4}
-      16        0   {}-{b'\xc5\xbf\xc3\x}
-      16        0   {}-{b'\xc5\xbfkulloh}
-      16        0   {äs}-{\xc3\xa4\xc5\xbf}
-      16        0   {ä}-{\xc3\xa4}
-      15        0   { är en M}-{\xc5\xbft\xc3\x}
-      15        0   {är}-{b'n\xc3\xb6dugt}
-      14        0   {Herr Argus}-{b'f\xc3\xb6n.'}
-      14        0   {å at wist}-{h\xc3\xb6nom,'}
-      13        0   {honom, lät h}-{b'be\xc5\xbfp}
-      13        0   {ioter den }-{gulaga\xc5\xb}
-      13        0   {ke}-{pj' b'af' b'o}
-      13        0   {l ett}-{gtf\xc3\xb6r'}
-      13        0   {måg}-{se' b'l\xc3\x}
-      13        0   {och med samma}-{b'\xc5\xbfig'}
-      13        0   {ses hwad }-{b'BRan\xc5\xb}
-      13        0   {wå}-{b'\xc3\xa4mie}
-      13        0   {äd}-{F' b'mim' b'L}
-      13        0   {å j}-{tt\xc5\xbftor}
-      12        0   {100 �<96>gon s}-{b'\xc3\xb6ll}
-      12        0   {Argus.<\n>A}-{b'het\xc5\xb}
-      12        0   {Contoir}-{' b'\xc5\xbf}
-      12        0   {det stora C}-{b'hafw\xc3\x}
-      12        0   {räkna efft}-{b'l\xc3\xa5r}
-      12        0   {så}-{b'\xc5\xbfa'}
-      12        0   {ulation war}-{3\x9fHerre.'}
-      12        0   {}-{\xc5\xbfee,'}
-      12        0   {}-{b'likw\xc3\x}
-      12        0   {�<96>ron som}-{b'p\xc3\xa5'}
-      11        0   {Nytta de}-{b'f\xc3\xb6}
-      11        0   {Wän hä}-{b'h\xc3\xb6}
-      11        0   {ef }-{\xc3\xa4ttn}
-      11        0   {h}-{b'\xc5\xbfg}
-      11        0   {ket wälmen}-{5\xbf\xc3\x}
-      11        0   {liga P}-{r' b'\xc3\x}
-      11        0   {na Sak inn}-{' b'tijdetj}
-      11        0   {snar}-{b'twl' b'de}
-      11        0   {}-{' b'h\xc3\x}
-      11        0   {}-{' b'w\xc3\x}
-      11        0   {}-{b'\xc5\xbfo}
-      11        0   {är, så hi}-{b'm\xc3\xa5}
-      10        0   { A}-{tf\xc3\xb6}
-      10        0   {:<\n>Min}-{-' b'ka-.'}
-      10        0   {Amsterdam }-{b'\xc5\xbf}
-      10        0   {To}-{b'\xc3\xa5}
-      10        0   {derigen}-{b'\xc5\xbf}
-      10        0   {er i wäge}-{t\xc5\xbfh}
-      10        0   {gi}-{b'\xc5\xbf}
-      10        0   {in}-{:f\xc3\xa4}
-      10        0   {lät copie}-{b'\xc3\xa4}
-      10        0   {min He}-{b'\xc3\xa4}
-      10        0   {nyttige in}-{b'\xc3\xa5}
-      10        0   {något ny}-{b'ochbadde}
-      10        0   {r}-{at\xc5\xbf}
-      10        0   {s}-{\xc5\xbfka}
-      10        0   {}-{\xc3\xa5r'}
-      10        0   {}-{la,' b'gga}
-      10        0   {}-{ml\xc3\xa4}
-      10        0   {ä}-{b'\xc3\xa4}
-      10        0   {ä}-{b'\xc3\xa5}
-       9        0   {, u}-{r\xc3\xa5}
-       9        0   {-Contoi}-{tprajsEke}
-       9        0   {d ä}-{w\xc3\xa5}
-       9        0   {fwa wi d}-{tdoCtlnlr}
-       9        0   {genom}-{b')' b':'}
-       9        0   {in He}-{f\xc3\xb6}
-       9        0   {i}-{b'af' b'u}
-       9        0   {n hi}-{g\xc5\xbf}
-       9        0   {nerh}-{g\xc3\xa5}
-       9        0   {nå}-{b'ock' b'}
-       9        0   {oc}-{b'3e' b'S}
-       9        0   {ställes }-{b'\xc5\xb}
-       9        0   {utkomm}-{b'Ren' b'}
-       9        0   {w}-{b'l\xc3\x}
-       9        0   {}-{\xc3\xb6d}
-       9        0   {}-{b'\xc5\xb}
-       9        0   {}-{b'ge-' b'}
-       9        0   {}-{b'hSB' b'}
-       9        0   {}-{ldntolrs'}
-       9        0   {}-{w\xc3\xa5}
-       9        0   {ödig}-{\xc3\xb6r}
-       8        0   { Ark, }-{t\xc5\xb}
-       8        0   {Hans }-{b'\xc5\x}
-       8        0   {de som}-{b'atuin'}
-       8        0   {emot }-{b'\xc3\x}
-       8        0   {e}-{\xc3\xa4}
-       8        0   {e}-{ichtig,'}
-       8        0   {förså}-{b'eS' b'}
-       8        0   {för}-{b'hemmg'}
-       8        0   {h hö}-{3\xa4gen}
-       8        0   {hw}-{b'\xc3\x}
-       8        0   {mm}-{an' b'ut}
-       8        0   {o}-{\xc3\xa4}
-       8        0   {skulle h}-{b'\xc3\x}
-       8        0   {u}-{\xc3\xa4}
-       8        0   {yttigt}-{e-irk,j'}
+      21        0   { Assecurantz-Contoirs}-{igtför Fäder ſs af}
+      15        0   {on, är säkert}-{e ſkullohafwa}
+      15        0   {som med 100 �<96>g}-{ölleurandeldnt}
+      13        0   {ställes för}-{EAnlednittgin}
+      12        0   {ut blifwer a}-{lbenratdoCtl}
+      11        0   {edningen ti}-{ſtſ}
+      10        0   {Argus så}-{ee ttrknig}
+      10        0   {Argus.<\n>Af }-{5,1 hetſo}
+      10        0   {och med sa}-{BRanſom}
+      10        0   {årt Land}-{hEakgifwtt}
+       9        0   { försåt}-{han imig}
+       9        0   {Patrioter}-{- , , , .}
+       9        0   {efft}-{)min ,�<9F>H}
+       9        0   {ga, min H}-{te0pierBd}
+       9        0   {han mig}-{beſparas}
+       9        0   {pia af et}-{ch nödug}
+       9        0   {r Argus l}-{hetdenmm}
+       9        0   {t projec}-{ſåſiap}
+       9        0   {ur Amst}-{likwål d}
+       9        0   {wad far}-{oshönom }
+       8        0   { copiera}-{len ſin}
+       8        0   { sålund}-{emot }
+       8        0   { }-{}
+       8        0   {, så hi}-{o}
+       8        0   {-Contoir}-{tpraj}
+       8        0   {Calculat}-{måga mm}
+       8        0   {Correspo}-{ſk haf}
+       8        0   {a så at}-{än les}
+       8        0   {a, h}-{ wälmen}
+       8        0   {besparas}-{-}
+       8        0   {högst }-{utkommä}
+       8        0   {jag säg}-{blifw}
+       8        0   {jecteras}-{mäl hSB}
+       8        0   {n hinder}-{gaſåat}
+       8        0   {nce-Affa}-{gſngers}
+       8        0   {så snar}-{- twl de}
        8        0   {}-{fwet,hwa}
-       8        0   {ä}-{\xc5\xbf}
-       7        7   {fördel}-{b'~ein'}
-       7        0   { wi bå}-{5erhet}
-       7        0   {Herr}-{b'5,1-'}
-       7        0   {a Brefw}-{u-' b'd}
-       7        0   {ce-Aff}-{l\xc3\x}
-       7        0   {jag oc}-{b'Herre}
-       7        0   {likwäl}-{b'Lron'}
-       7        0   {m}-{b'ellat}
-       7        0   {r hos}-{4pital'}
-       7        0   {rättan}-{nas' b'}
-       7        0   {sålund}-{b'arbet}
-       7        0   {twifwel}-{b'Hans'}
-       7        0   {t}-{gdwara'}
-       7        0   {}-{3\xa5go}
-       7        0   {�<96>gon,}-{b'hwad'}
-       6        0   {, hafw}-{\xc3\x}
-       6        0   {Asse}-{b'GB\x}
-       6        0   {Fäd}-{b'will}
-       6        0   {angå}-{b'EAnl}
-       6        0   {arligt}-{ommm,'}
-       6        0   {det s}-{b'rand}
-       6        0   {g}-{' b'HR}
-       6        0   {gå}-{b'Saki}
-       6        0   {här}-{b'men'}
-       6        0   {i St}-{b'bekl}
-       6        0   {inner }-{\xc3\x}
-       6        0   {k}-{\xc3\x}
-       6        0   {med}-{b'ckt'}
-       6        0   {må}-{b'ttrk}
-       6        0   {nesl}-{\xc3\x}
-       6        0   {privat}-{b'les'}
-       6        0   {så}-{b'och'}
-       6        0   {t}-{\xc3\x}
-       6        0   {ur}-{3\x}
-       6        0   {}-{5' b'h}
-       6        0   {ägn}-{\xc3\x}
-       6        0   {är}-{b'Ry-'}
-       6        0   {ä}-{b'tyde}
-       6        0   {å h}-{llbenr}
-       5        5   {käre}-{b'e~'}
-       5        0   { sy}-{fwera}
-       5        0   { }-{}
-       5        0   { �<96>ga}-{nmma'}
-       5        0   {, h}-{4lmen}
-       5        0   {, m}-{5te0p}
-       5        0   {Asse}-{b'F\x}
-       5        0   {Cal}-{b',\x}
-       5        0   {Ehuru}-{b'de'}
-       5        0   {Ny}-{b'ais}
-       5        0   {de de}-{ittgi}
-       5        0   {dt}-{liga'}
-       5        0   {en ob}-{b'hmd}
-       5        0   {ett}-{b'n.'}
-       5        0   {hti}-{3\xa5}
-       5        0   {må}-{b'Lgo}
-       5        0   {o}-{b'w\x}
-       5        0   {ri}-{b'm\x}
-       5        0   {se}-{b'dra}
-       5        0   {så}-{b'ee'}
-       5        0   {us l}-{' b'w}
-       5        0   {wå}-{b'gto}
-       5        0   {}-{'mycl}
-       5        0   {}-{5nge'}
-       5        0   {}-{emot'}
-       5        0   {}-{urand}
-       5        0   {äk}-{ioSde}
-       5        0   {ör}-{dmmm'}
-       4        0   { gio}-{alla}
-       4        0   { in}-{nmma}
-       4        0   { på}-{uad'}
-       4        0   {B}-{b'in}
-       4        0   {He}-{b'wa}
-       4        0   {af e}-{b'ny}
-       4        0   {af }-{' b'}
-       4        0   {as i}-{iv2'}
-       4        0   {det,}-{tta'}
-       4        0   {ed}-{jag'}
-       4        0   {en u}-{b'k-}
-       4        0   {e}-{b'gs}
-       4        0   {fwer}-{mig'}
-       4        0   {för}-{b'-'}
-       4        0   {har }-{b'bl}
-       4        0   {l}-{5de'}
-       4        0   {my}-{b'\x}
-       4        0   {n H}-{erBd}
-       4        0   {ntz}-{4der}
-       4        0   {n}-{4l-'}
-       4        0   {n}-{llg'}
-       4        0   {n}-{ras'}
-       4        0   {och }-{b'de}
-       4        0   {o}-{b'He}
-       4        0   {ref}-{fom'}
-       4        0   {roje}-{tn\x}
-       4        0   {s}-{4l.'}
-       4        0   {säk}-{b'Sw}
-       4        0   {så}-{b'-'}
-       4        0   {tyck}-{b'BR}
-       4        0   {t}-{fwa'}
-       4        0   {t}-{ige'}
-       4        0   {wa}-{b'Ro}
-       4        0   {}-{'ing}
-       4        0   {}-{5lum}
-       4        0   {}-{b'ho}
-       4        0   {}-{b'lS}
-       4        0   {}-{b'me}
-       4        0   {}-{b'ny}
-       4        0   {}-{dc.'}
-       4        0   {}-{del'}
-       4        0   {}-{han'}
-       4        0   {}-{ig,'}
-       4        0   {}-{ige'}
-       4        0   {}-{it.'}
-       4        0   {}-{len'}
-       4        0   {}-{lhge}
-       4        0   {}-{min'}
-       4        0   {}-{n}
-       4        0   {}-{t'}
-       4        0   {ä}-{b'He}
-       3        0   { ko}-{sis}
+       7        7   {käre}-{e~ lSFF}
+       7        0   { Herre}-{tetſå}
+       7        0   {Capital}-{,}
+       7        0   {Ehuru o}-{de Her}
+       7        0   {Herre}-{ſomjag}
+       7        0   {Sak inn}-{ärgul}
+       7        0   {dt en u}-{liga k-}
+       7        0   {fägnad}-{-}
+       7        0   {gus, de}-{ſåtſ}
+       7        0   {gående}-{lror Rm}
+       7        0   {hos hon}-{dttſt}
+       7        0   {hwilket}-{llpj af}
+       7        0   {ichtig,}-{ekallar}
+       7        0   {in Her}-{förwå}
+       7        0   {likwäl}-{ſonm}
+       7        0   {refwet,}-{ånlär}
+       7        0   {rer. Mi}-{smmtſh}
+       7        0   {sdag ut}-{ſ}
+       7        0   {see k}-{inrått}
+       7        0   {t ny}-{chbadde}
+       7        0   {yttigt}-{e-irk,j}
+       7        0   {�got th}-{�eöchm}
+       7        0   {ärliga}-{- . - ,}
+       7        0   {ående}-{nyttigt}
+       6        0   { denna}-{ubſå}
+       6        0   { til}-{något}
+       6        0   {Landet}-{}
+       6        0   {de som}-{atuin}
+       6        0   {det se}-{i rand}
+       6        0   {en obe}-{hmder}
+       6        0   {hwaraf}-{dåjmg}
+       6        0   {immeli}-{pu}
+       6        0   {nyttig}-{ſåk}
+       6        0   {r i sy}-{ngåe}
+       6        0   {skulle}-{Herr}
+       6        0   {som �<96>}-{Sweri}
+       6        0   {t för}-{ hemmg}
+       6        0   {til }-{)mång}
+       6        0   {unders}-{högſ}
+       5        0   { Ark,}-{ligit}
+       5        0   { någ}-{ſee }
+       5        0   {,}-{ ſå}
+       5        0   {:<\n>Min}-{rbeta}
+       5        0   {Fäd}-{mim L}
+       5        0   {Men a}-{gtord}
+       5        0   {a wi}-{äiot}
+       5        0   {dam}-{igcng}
+       5        0   {elig.}-{mmm}
+       5        0   {es }-{lagdw}
+       5        0   {genom}-{) :}
+       5        0   {hafwa}-{- . -}
+       5        0   {höra}-{,}
+       5        0   {inte}-{nwår}
+       5        0   {mm}-{an ut}
+       5        0   {rhet }-{}
+       5        0   {stora}-{.}
+       5        0   {t mig}-{ dock}
+       5        0   {t som}-{ikmt}
+       5        0   {tning}-{ }
+       5        0   {}-{latia}
+       5        0   {�<96>ron}-{Srdel}
+       5        0   {äkni}-{ioSde}
+       5        0   {är e}-{Ry gs}
+       5        0   {ätta}-{agfin}
+       4        0   { A}-{tfö}
+       4        0   { gio}-{lä}
+       4        0   { hä}-{uga}
+       4        0   { }-{rSAp}
+       4        0   { �<96>g}-{nmm}
+       4        0   {Ass}-{tijd}
+       4        0   {Fäd}-{will}
+       4        0   {Hans}-{de}
+       4        0   {Herr}-{fön}
+       4        0   {Herr}-{ka-}
+       4        0   {Meni}-{må}
+       4        0   {arb}-{mycl}
+       4        0   {bref}-{ſom}
+       4        0   {dent}-{wa}
+       4        0   {deri}-{L}
+       4        0   {dock}-{- .}
+       4        0   {dras}-{}
+       4        0   {dt,}-{når}
+       4        0   {då}-{ſte}
+       4        0   {ecur}-{l}
+       4        0   {er m}-{icht}
+       4        0   {för}-{-}
+       4        0   {för}-{at}
+       4        0   {gå}-{Saki}
+       4        0   {hwar}-{kand}
+       4        0   {här}-{men}
+       4        0   {i St}-{bekl}
+       4        0   {jag}-{Hgon}
+       4        0   {jag}-{äru}
+       4        0   {mot}-{ år}
+       4        0   {m}-{se l}
+       4        0   {nesl}-{äkn}
+       4        0   {n}-{glor}
+       4        0   {oc}-{3e S}
+       4        0   {r}-{atſ}
+       4        0   {som}-{ſig}
+       4        0   {s}-{ſ}
+       4        0   {wist}-{för}
+       4        0   {wår}-{gga}
+       4        0   {yck}-{t BR}
+       4        0   {�kna}-{�rer}
+       4        0   {� hw}-{�gu}
+       4        0   {�}-{�mie}
+       3        0   { de}-{u}
+       3        0   { in}-{Eke}
+       3        0   { in}-{}
        3        0   { k}-{shw}
-       3        0   { }-{wsl}
-       3        0   {Ass}-{b'n}
-       3        0   {La}-{b'R}
-       3        0   {Sw}-{b'H}
-       3        0   {af}-{en'}
-       3        0   {ant}-{om'}
-       3        0   {as}-{er'}
-       3        0   {a}-{b'g}
-       3        0   {a}-{eli}
-       3        0   {a}-{m-'}
-       3        0   {cur}-{sl}
-       3        0   {d}-{b'H}
-       3        0   {en }-{b'o}
-       3        0   {et}-{0g'}
-       3        0   {e}-{a:'}
-       3        0   {e}-{ri'}
-       3        0   {e}-{tig}
-       3        0   {f}-{5l'}
-       3        0   {fö}-{b'u}
-       3        0   {g}-{'}
-       3        0   {hwi}-{b'l}
-       3        0   {hw}-{b'k}
-       3        0   {ige}-{r'}
-       3        0   {ja}-{b'H}
-       3        0   {je}-{m\x}
-       3        0   {ka}-{b'i}
-       3        0   {l}-{fwe}
-       3        0   {lä}-{b'h}
-       3        0   {m}-{b'w}
-       3        0   {m}-{ck'}
-       3        0   {n}-{rt'}
-       3        0   {o}-{b')}
-       3        0   {r}-{f-'}
-       3        0   {r}-{nd'}
-       3        0   {s }-{agf}
-       3        0   {sed}-{b'g}
-       3        0   {so}-{b'R}
-       3        0   {spa}-{niy}
-       3        0   {s}-{b'd}
-       3        0   {s}-{b'm}
-       3        0   {s}-{b'n}
-       3        0   {t }-{nde}
-       3        0   {t<\n>}-{ff'}
-       3        0   {ter}-{3\x}
-       3        0   {}-{aw'}
-       3        0   {}-{b'a}
-       3        0   {}-{b't}
-       3        0   {}-{en'}
-       3        0   {}-{er'}
-       3        0   {}-{ikm}
-       3        0   {}-{in'}
-       3        0   {}-{on'}
-       3        0   {}-{re'}
-       3        0   {}-{t}
-       3        0   {ä}-{b'S}
-       3        0   {ör}-{in'}
+       3        0   { om}-{re}
+       3        0   { pr}-{er }
+       3        0   { s}-{ytt}
+       3        0   {, h}-{}
+       3        0   {Man}-{ckt}
+       3        0   {Ny}-{ais}
+       3        0   {W}-{inr}
+       3        0   {ant}-{om}
+       3        0   {at<\n>}-{-}
+       3        0   {cur}-{tj}
+       3        0   {de.}-{as}
+       3        0   {den}-{.}
+       3        0   {det}-{,}
+       3        0   {dig}-{r}
+       3        0   {en}-{nom}
+       3        0   {ett}-{n}
+       3        0   {f}-{ur }
+       3        0   {g p}-{:f}
+       3        0   {gif}-{}
+       3        0   {gio}-{ä}
+       3        0   {g}-{ HR}
+       3        0   {haf}-{är}
+       3        0   {h}-{ſg}
+       3        0   {jag}-{osh}
+       3        0   {lä}-{eS }
+       3        0   {lä}-{war}
+       3        0   {med}-{ock}
+       3        0   {n s}-{lhg}
+       3        0   {nde}-{eff}
+       3        0   {ner}-{}
+       3        0   {nge}-{r}
+       3        0   {ng}-{ hw}
+       3        0   {nna}-{rr}
+       3        0   {n}-{llg}
+       3        0   {n}-{lrs}
+       3        0   {och}-{,}
+       3        0   {och}-{:}
+       3        0   {ock}-{det}
+       3        0   {omm}-{}
+       3        0   {see}-{,}
+       3        0   {ses}-{war}
+       3        0   {ska}-{ſ}
+       3        0   {som}-{: ,}
+       3        0   {så}-{, :}
+       3        0   {så}-{ſa}
+       3        0   {ta}-{åe}
+       3        0   {twi}-{hre}
+       3        0   {wa}-{hö}
+       3        0   {}-{<9F>F�}
+       3        0   {}-{n}
+       3        0   {}-{öd}
+       3        0   {är}-{mig}
+       2        2   {Sw}-{~}
+       2        0   { H}-{å}
+       2        0   { m}-{}
+       2        0   { p}-{iy}
        2        0   { s}-{l}
+       2        0   { }-{r}
        2        0   {, }-{im}
-       2        0   {,}-{'}
-       2        0   {,}-{a'}
-       2        0   {La}-{b'}
-       2        0   {a}-{'}
-       2        0   {ck}-{r'}
-       2        0   {d }-{5}
-       2        0   {de}-{'}
-       2        0   {de}-{b'}
-       2        0   {dr}-{g}
-       2        0   {d}-{5r}
-       2        0   {d}-{g}
-       2        0   {d}-{t'}
-       2        0   {es}-{t'}
-       2        0   {f}-{4r}
-       2        0   {ga}-{r'}
-       2        0   {ge}-{,'}
+       2        0   {, }-{nw}
+       2        0   {,}-{dc}
+       2        0   {,}-{}
+       2        0   {An}-{to}
+       2        0   {As}-{ne}
+       2        0   {Ny}-{Rn}
+       2        0   {To}-{å}
+       2        0   {an}-{}
+       2        0   {as}-{er}
+       2        0   {at}-{-}
+       2        0   {at}-{2}
+       2        0   {at}-{ge}
+       2        0   {b}-{}
+       2        0   {ck}-{d}
+       2        0   {de}-{en}
+       2        0   {d}-{H}
+       2        0   {ef}-{as}
+       2        0   {el}-{}
+       2        0   {en}-{a}
+       2        0   {es}-{t}
+       2        0   {et}-{0g}
+       2        0   {e}-{ny}
+       2        0   {fi}-{Re}
+       2        0   {f}-{ra}
        2        0   {ge}-{na}
-       2        0   {hw}-{b'}
-       2        0   {il}-{:'}
-       2        0   {il}-{e'}
-       2        0   {in}-{h'}
-       2        0   {it}-{a'}
+       2        0   {ge}-{n}
+       2        0   {ig}-{ä}
        2        0   {kl}-{nn}
+       2        0   {ko}-{}
        2        0   {ll}-{df}
-       2        0   {ly}-{b'}
-       2        0   {m}-{b'}
-       2        0   {nd}-{r'}
-       2        0   {n}-{a'}
-       2        0   {pr}-{b'}
-       2        0   {re}-{y'}
+       2        0   {ll}-{fw}
+       2        0   {ly}-{}
+       2        0   {m,}-{ra}
+       2        0   {m}-{}
+       2        0   {nd}-{r}
+       2        0   {n}-{ge}
+       2        0   {om}-{}
+       2        0   {o}-{ä}
+       2        0   {r.}-{t}
        2        0   {r}-{dj}
+       2        0   {r}-{l}
+       2        0   {r}-{}
        2        0   {sl}-{bw}
-       2        0   {so}-{b'}
-       2        0   {s}-{b'}
-       2        0   {s}-{f'}
        2        0   {ti}-{ja}
-       2        0   {t}-{5'}
-       2        0   {un}-{b'}
-       2        0   {}-{' }
-       2        0   {}-{-'}
-       2        0   {}-{4k}
-       2        0   {}-{5e}
-       2        0   {}-{5}
-       2        0   {}-{:'}
-       2        0   {}-{a'}
+       2        0   {ut}-{H}
+       2        0   {wa}-{He}
+       2        0   {wa}-{Ro}
+       2        0   {wi}-{.}
+       2        0   {w}-{ſ}
+       2        0   {}-{al}
        2        0   {}-{de}
-       2        0   {}-{d}
-       2        0   {}-{ff}
-       2        0   {}-{g'}
-       2        0   {}-{ga}
-       2        0   {}-{n'}
-       2        0   {}-{r}
-       2        0   {}-{ti}
+       2        0   {}-{en}
+       2        0   {}-{he}
+       2        0   {}-{ht}
+       2        0   {}-{la}
+       2        0   {}-{me}
+       2        0   {}-{pi}
+       2        0   {}-{re}
+       2        0   {}-{tt}
+       2        0   {�}-{�}
+       2        0   {ä}-{L}
+       2        0   {ä}-{}
+       2        0   {ä}-{ſ}
        1        0   { }-{g}
-       1        0   { }-{o}
-       1        0   { }-{r}
-       1        0   {.}-{'}
+       1        0   {,}-{a}
+       1        0   {,}-{r}
+       1        0   {,}-{t}
+       1        0   {B}-{d}
+       1        0   {C}-{}
+       1        0   {a}-{g}
+       1        0   {a}-{m}
+       1        0   {a}-{}
+       1        0   {b}-{h}
        1        0   {c}-{d}
-       1        0   {d}-{a}
+       1        0   {d}-{g}
        1        0   {d}-{t}
-       1        0   {e}-{'}
-       1        0   {e}-{t}
-       1        0   {i}-{4}
-       1        0   {l}-{'}
+       1        0   {e}-{a}
+       1        0   {e}-{g}
+       1        0   {e}-{o}
+       1        0   {e}-{}
+       1        0   {f}-{}
+       1        0   {i}-{,}
+       1        0   {i}-{u}
        1        0   {l}-{i}
+       1        0   {m}-{p}
+       1        0   {m}-{t}
+       1        0   {n}-{d}
+       1        0   {n}-{g}
        1        0   {n}-{r}
-       1        0   {p}-{4}
-       1        0   {s}-{'}
-       1        0   {t}-{'}
-       1        0   {t}-{4}
-       1        0   {}-{4}
+       1        0   {n}-{}
+       1        0   {o}-{}
+       1        0   {s}-{f}
+       1        0   {t}-{r}
+       1        0   {t}-{w}
+       1        0   {w}-{ }
+       1        0   {}-{ }
+       1        0   {}-{G}
        1        0   {}-{a}
-       1        0   {}-{i}
+       1        0   {}-{d}
+       1        0   {}-{f}
+       1        0   {}-{g}
        1        0   {}-{l}
-       1        0   {}-{m}
        1        0   {}-{o}
+       1        0   {}-{s}
+       1        0   {}-{t}
+       1        0   {}-{u}
        1        0   {}-{y}
+       1        0   {�}-{�}
 
    Count   Missed   %Right
        3        3     0.00   {<\n>}
-     267      114    57.30   { }
-      21       16    23.81   {,}
-       3        2    33.33   {-}
+     267      104    61.05   { }
+      21       20     4.76   {,}
+       3        3     0.00   {-}
        5        5     0.00   {.}
        2        2     0.00   {0}
        1        1     0.00   {1}
        1        1     0.00   {:}
       12       12     0.00   {A}
-       2        2     0.00   {B}
+       2        1    50.00   {B}
        6        6     0.00   {C}
        1        1     0.00   {E}
-       2        1    50.00   {F}
+       2        2     0.00   {F}
        8        8     0.00   {H}
        2        2     0.00   {L}
        5        5     0.00   {M}
@@ -418,32 +365,32 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        3        3     0.00   {S}
        1        1     0.00   {T}
        1        1     0.00   {W}
-     108       47    56.48   {a}
-       9        2    77.78   {b}
-      21       10    52.38   {c}
+     108       67    37.96   {a}
+       9        8    11.11   {b}
+      21       18    14.29   {c}
       55       40    27.27   {d}
-     138       88    36.23   {e}
-      33       21    36.36   {f}
-      51       39    23.53   {g}
-      33       26    21.21   {h}
-      68       53    22.06   {i}
+     138       89    35.51   {e}
+      33       25    24.24   {f}
+      51       40    21.57   {g}
+      33       25    24.24   {h}
+      68       52    23.53   {i}
        7        6    14.29   {j}
       22       18    18.18   {k}
-      44       34    22.73   {l}
-      43       28    34.88   {m}
-     107       67    37.38   {n}
-      48       39    18.75   {o}
-       9        8    11.11   {p}
-     114       61    46.49   {r}
-      68       61    10.29   {s}
-     101       63    37.62   {t}
-      18       17     5.56   {u}
-       1        1     0.00   {v}
-      26       23    11.54   {w}
-      10        9    10.00   {y}
+      44       30    31.82   {l}
+      43       32    25.58   {m}
+     107       69    35.51   {n}
+      48       40    16.67   {o}
+       9        9     0.00   {p}
+     114       72    36.84   {r}
+      68       62     8.82   {s}
+     101       66    34.65   {t}
+      18       18     0.00   {u}
+       1        0   100.00   {v}
+      26       20    23.08   {w}
+      10        8    20.00   {y}
        1        1     0.00   {z}
        4        4     0.00   {<96>}
-      34       34     0.00   {�}
-      22       22     0.00   {�}
-      13       13     0.00   {�}
-      73       73     0.00   {�}
+      34       24    29.41   {�}
+      22       17    22.73   {�}
+      13        9    30.77   {�}
+      73       47    35.62   {�}
