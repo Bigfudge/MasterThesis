@@ -1,13 +1,165 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
+<<<<<<< HEAD
+     918   Characters
+     249   Errors
+   72.88%  Accuracy
+=======
      640   Characters
      829   Errors
   -29.53%  Accuracy
+>>>>>>> master
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
+<<<<<<< HEAD
+   72.88%  Accuracy After Correction
+
+     Ins    Subst      Del   Errors
+       0        0        0        0   Marked
+      57      118       74      249   Unmarked
+      57      118       74      249   Total
+
+   Count   Missed   %Right
+     162       29    82.10   ASCII Spacing Characters
+      18        7    61.11   ASCII Special Symbols
+       2        0   100.00   ASCII Digits
+      14        5    64.29   ASCII Uppercase Letters
+     628       70    88.85   ASCII Lowercase Letters
+       1        0   100.00   Latin1 Control Codes
+      46       33    28.26   Latin1 Special Symbols
+      47       31    34.04   Latin1 Uppercase Letters
+     918      175    80.94   Total
+
+  Errors   Marked   Correct-Generated
+      16        0   {ö}-{o}
+      12        0   {å}-{a}
+      11        0   { }-{}
+      10        0   {ä}-{a}
+       9        0   { säija e}-{}
+       9        0   {.<\n>}-{ - �<80><94> Xx}
+       8        0   {ås}-{a- » -f}
+       7        0   {jag ick}-{}
+       6        0   {iö}-{ro}
+       6        0   {s}-{« . f}
+       6        0   {}-{�<80><94> . }
+       5        0   {i}-{e}
+       5        0   {t äf}-{xas}
+       5        0   {år P}-{aresp}
+       4        0   { fö}-{so}
+       4        0   {.<\n>J}-{ " I}
+       4        0   {h}-{»lz}
+       4        0   {}-{- - }
+       4        0   {}-{«}
+       3        0   { }-{-}
+       3        0   { }-{�<80><94>}
+       3        0   {få}-{ja}
+       3        0   {ig}-{xkk}
+       3        0   {io}-{k 9}
+       3        0   {man}-{Mem}
+       3        0   {o}-{»v}
+       3        0   {sse}-{ck-}
+       3        0   {}-{-; }
+       3        0   {}-{ar }
+       3        0   {}-{ha-}
+       3        0   {}-{» }
+       3        0   {�m}-{�nt}
+       3        0   {ä}-{a- }
+       3        0   {å }-{ fa}
+       3        0   {ö}-{e- }
+       2        0   { P}-{ls}
+       2        0   { j}-{g}
+       2        0   { k}-{kj}
+       2        0   { u}-{n}
+       2        0   {,}-{-}
+       2        0   {da}-{, }
+       2        0   {et}-{-}
+       2        0   {hw}-{by}
+       2        0   {i}-{ne}
+       2        0   {i}-{r}
+       2        0   {l}-{. }
+       2        0   {si}-{fe}
+       2        0   {ti}-{kc}
+       2        0   {}-{ }
+       2        0   {}-{, }
+       2        0   {}-{- }
+       2        0   {}-{. }
+       2        0   {}-{s }
+       2        0   {}-{x }
+       2        0   {}-{»}
+       2        0   {ä}-{oa}
+       1        0   { }-{s}
+       1        0   {,}-{j}
+       1        0   {.}-{z}
+       1        0   {.}-{}
+       1        0   {H}-{W}
+       1        0   {J}-{I}
+       1        0   {b}-{h}
+       1        0   {d}-{o}
+       1        0   {e}-{c}
+       1        0   {g}-{H}
+       1        0   {i}-{c}
+       1        0   {j}-{J}
+       1        0   {k}-{ }
+       1        0   {l}-{i}
+       1        0   {l}-{x}
+       1        0   {q}-{g}
+       1        0   {s}-{f}
+       1        0   {t}-{;}
+       1        0   {t}-{r}
+       1        0   {u}-{n}
+       1        0   {y}-{v}
+       1        0   {}-{.}
+       1        0   {}-{s}
+       1        0   {�}-{�}
+
+   Count   Missed   %Right
+       2        2     0.00   {<\n>}
+     160       27    83.12   { }
+      10        3    70.00   {,}
+       8        4    50.00   {.}
+       1        0   100.00   {0}
+       1        0   100.00   {3}
+       1        0   100.00   {A}
+       2        0   100.00   {C}
+       2        0   100.00   {D}
+       1        0   100.00   {F}
+       1        1     0.00   {H}
+       2        2     0.00   {J}
+       2        0   100.00   {N}
+       2        2     0.00   {P}
+       1        0   100.00   {S}
+      77        4    94.81   {a}
+       9        1    88.89   {b}
+      14        1    92.86   {c}
+      34        2    94.12   {d}
+      65        4    93.85   {e}
+      18        3    83.33   {f}
+      25        3    88.00   {g}
+      24        2    91.67   {h}
+      34       17    50.00   {i}
+       4        4     0.00   {j}
+      17        3    82.35   {k}
+      31        3    90.32   {l}
+      30        2    93.33   {m}
+      56        1    98.21   {n}
+      24        2    91.67   {o}
+       6        0   100.00   {p}
+       1        1     0.00   {q}
+      52        1    98.08   {r}
+      28        7    75.00   {s}
+      51        5    90.20   {t}
+       9        2    77.78   {u}
+      15        1    93.33   {w}
+       4        1    75.00   {y}
+       1        0   100.00   {<84>}
+      15       10    33.33   {�}
+      17       11    35.29   {�}
+      14       12    14.29   {�}
+      47       31    34.04   {�}
+=======
   -29.53%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
@@ -174,3 +326,4 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       10       10     0.00   {�}
       10       10     0.00   {�}
       40       40     0.00   {�}
+>>>>>>> master

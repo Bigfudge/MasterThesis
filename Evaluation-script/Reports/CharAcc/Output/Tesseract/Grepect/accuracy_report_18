@@ -1,25 +1,90 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
      423   Characters
+<<<<<<< HEAD
+     165   Errors
+   60.99%  Accuracy
+=======
      455   Errors
    -7.57%  Accuracy
+>>>>>>> master
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
+<<<<<<< HEAD
+   60.99%  Accuracy After Correction
+
+     Ins    Subst      Del   Errors
+       0        0        0        0   Marked
+      46      100       19      165   Unmarked
+      46      100       19      165   Total
+=======
    -7.57%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
       14      142      299      455   Unmarked
       14      142      299      455   Total
+>>>>>>> master
 
    Count   Missed   %Right
       62       21    66.13   ASCII Spacing Characters
       27       21    22.22   ASCII Special Symbols
        1        1     0.00   ASCII Digits
       21        4    80.95   ASCII Uppercase Letters
+<<<<<<< HEAD
+     256       56    78.12   ASCII Lowercase Letters
+      28       22    21.43   Latin1 Special Symbols
+      28       21    25.00   Latin1 Uppercase Letters
+     423      146    65.48   Total
+
+  Errors   Marked   Correct-Generated
+      19        0   {och diarrhea,<\n>nÃ¤r...}-{Â»;Â·"--:Ikz Â« -}
+      10        0   {fÃ¶ror=<\n>Å¿}-{s Â« " s}
+      10        0   {Ã¤}-{a}
+      10        0   {Å¿}-{s}
+       8        0   {lepÅ¿ie,}-{k-FAQ}
+       7        0   { Å¿lag,}-{Â»Â» !}
+       7        0   {<\n>}-{ Â« Â« }
+       7        0   {moder=<\n>}-{s }
+       7        0   {olique,}-{ana;}
+       6        0   {e=<\n>del}-{as }
+       6        0   {Å¿e=<\n>}-{se- ? }
+       5        0   {c_t,<\n>}-{Ã¥z }
+       4        0   {H}-{Â» G}
+       4        0   {S.<\n>A}-{s }
+       4        0   {Å¿Å¿}-{ll}
+       3        0   {,}-{-.-}
+       3        0   {1.<\n>}-{}
+       3        0   {; v}-{kB}
+       3        0   {a_e}-{Ã¦}
+       3        0   {ch}-{tÃ¶}
+       3        0   {Å¿y}-{del}
+       2        0   { }-{}
+       2        0   {-<\n>}-{s }
+       2        0   {<\n>I}-{ K}
+       2        0   {<\n>r}-{ s}
+       2        0   {<\n>}-{ }
+       2        0   {=<\n>}-{- }
+       2        0   {=}-{- }
+       2        0   {n}-{mm}
+       2        0   {r,}-{xy}
+       2        0   {Ã¶}-{o}
+       2        0   {Å¿}-{f}
+       1        0   {,}-{}
+       1        0   {.}-{}
+       1        0   {f}-{}
+       1        0   {i}-{I}
+       1        0   {i}-{s}
+       1        0   {r}-{k}
+       1        0   {}-{ }
+       1        0   {}-{"}
+       1        0   {}-{-}
+       1        0   {}-{I}
+       1        0   {¥}-{¤}
+=======
      256       53    79.30   ASCII Lowercase Letters
       28       28     0.00   Latin1 Special Symbols
       28       28     0.00   Latin1 Uppercase Letters
@@ -83,6 +148,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {r}-{k}
        1        0   {}-{-}
        1        0   {}-{I}
+>>>>>>> master
 
    Count   Missed   %Right
       16       16     0.00   {<\n>}
@@ -111,11 +177,19 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   100.00   {U}
        1        0   100.00   {V}
        2        2     0.00   {_}
+<<<<<<< HEAD
+      25        4    84.00   {a}
+       3        0   100.00   {b}
+      11        3    72.73   {c}
+       9        3    66.67   {d}
+      38        9    76.32   {e}
+=======
       25        2    92.00   {a}
        3        0   100.00   {b}
       11        1    90.91   {c}
        9        3    66.67   {d}
       38       10    73.68   {e}
+>>>>>>> master
        7        2    71.43   {f}
        5        1    80.00   {g}
       14        3    78.57   {h}
@@ -134,9 +208,17 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        1    50.00   {v}
        1        0   100.00   {w}
        3        1    66.67   {y}
+<<<<<<< HEAD
+       9        6    33.33   {¤}
+       2        1    50.00   {¥}
+       4        2    50.00   {¶}
+      13       13     0.00   {¿}
+      15        8    46.67   {Ã}
+=======
        9        9     0.00   {¤}
        2        2     0.00   {¥}
        4        4     0.00   {¶}
       13       13     0.00   {¿}
       15       15     0.00   {Ã}
+>>>>>>> master
       13       13     0.00   {Å}

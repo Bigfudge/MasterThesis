@@ -1,24 +1,126 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
     1513   Characters
+<<<<<<< HEAD
+     285   Errors
+   81.16%  Accuracy
+=======
     1465   Errors
     3.17%  Accuracy
+>>>>>>> master
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
+<<<<<<< HEAD
+   81.16%  Accuracy After Correction
+
+     Ins    Subst      Del   Errors
+       0        0        0        0   Marked
+      48      203       34      285   Unmarked
+      48      203       34      285   Total
+=======
     3.17%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
       12      351     1102     1465   Unmarked
       12      351     1102     1465   Total
+>>>>>>> master
 
    Count   Missed   %Right
      233       31    86.70   ASCII Spacing Characters
       43       15    65.12   ASCII Special Symbols
       25        1    96.00   ASCII Uppercase Letters
+<<<<<<< HEAD
+     994       96    90.34   ASCII Lowercase Letters
+       1        0   100.00   Latin1 Control Codes
+     108       57    47.22   Latin1 Special Symbols
+     109       51    53.21   Latin1 Uppercase Letters
+    1513      251    83.41   Total
+
+  Errors   Marked   Correct-Generated
+      48        0   {ſ}-{s}
+      12        0   {<\n>}-{ }
+      12        0   {<\n>ſ}-{ s}
+      12        0   {=<\n>}-{- }
+      11        0   {t}-{k}
+       7        0   {<\n>}-{ . E 2 }
+       7        0   {ut.<\n>}-{" · " }
+       6        0   {må}-{t:n«i}
+       6        0   {}-{« 67 }
+       6        0   {ſwär}-{smal-}
+       5        0   {=wär}-{-mal}
+       5        0   {t}-{r}
+       5        0   {�}-{�}
+       5        0   {ſom<\n>}-{font }
+       4        0   {=<\n>}-{-« }
+       4        0   {ö}-{o}
+       4        0   {ſit}-{sär}
+       4        0   {ſyn}-{sim}
+       4        0   {ſö}-{fis}
+       3        0   {e}-{c}
+       3        0   {fne}-{er}
+       3        0   {ftr}-{ln-}
+       3        0   {gt:}-{le}
+       3        0   {ig<\n>}-{g -}
+       3        0   {n}-{xs.}
+       3        0   {ren}-{vor}
+       3        0   {rſ}-{es}
+       3        0   {rſ}-{lsf}
+       3        0   {t i}-{kl}
+       3        0   {tſ}-{ks}
+       3        0   {wä}-{ma}
+       3        0   {wö}-{ino}
+       3        0   {ſi}-{st}
+       3        0   {ſl}-{si}
+       3        0   {ſt}-{ll}
+       3        0   {ſw}-{siv}
+       2        0   {<\n>t}-{ k}
+       2        0   {=<\n>}-{i }
+       2        0   {=<\n>}-{s }
+       2        0   {f}-{s}
+       2        0   {h}-{Ev}
+       2        0   {h}-{H}
+       2        0   {h}-{lg}
+       2        0   {i}-{l}
+       2        0   {ks}-{lu}
+       2        0   {m}-{nk}
+       2        0   {n,}-{m}
+       2        0   {ro}-{n}
+       2        0   {r}-{l-}
+       2        0   {ti}-{kl}
+       2        0   {tw}-{km}
+       2        0   {t}-{l}
+       2        0   {u}-{n}
+       2        0   {w}-{m}
+       2        0   {}-{js}
+       2        0   {}-{uk}
+       2        0   {}-{«}
+       2        0   {å}-{el}
+       2        0   {ſ}-{f}
+       2        0   {ſ}-{sn}
+       1        0   {=}-{-}
+       1        0   {?}-{s}
+       1        0   {R}-{N}
+       1        0   {d}-{b}
+       1        0   {e}-{r}
+       1        0   {f}-{}
+       1        0   {g}-{n}
+       1        0   {g}-{q}
+       1        0   {h}-{d}
+       1        0   {i}-{e}
+       1        0   {k}-{l}
+       1        0   {n}-{}
+       1        0   {r}-{e}
+       1        0   {s}-{S}
+       1        0   {t}-{s}
+       1        0   {u}-{U}
+       1        0   {}-{-}
+       1        0   {}-{s}
+       1        0   {�}-{�}
+=======
      994       98    90.14   ASCII Lowercase Letters
        1        1     0.00   Latin1 Control Codes
      108      108     0.00   Latin1 Special Symbols
@@ -134,6 +236,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {t}-{l}
        1        0   {t}-{r}
        1        0   {t}-{s}
+>>>>>>> master
 
    Count   Missed   %Right
       30       30     0.00   {<\n>}
@@ -165,6 +268,25 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       54        8    85.19   {i}
        9        0   100.00   {j}
       28        2    92.86   {k}
+<<<<<<< HEAD
+      62        1    98.39   {l}
+      26        3    88.46   {m}
+     115        6    94.78   {n}
+      36        2    94.44   {o}
+       5        0   100.00   {p}
+      69        9    86.96   {r}
+      19        2    89.47   {s}
+      68       29    57.35   {t}
+      24        4    83.33   {u}
+      26        8    69.23   {w}
+       8        1    87.50   {y}
+       1        0   100.00   {<9F>}
+      23        9    60.87   {�}
+      15        2    86.67   {�}
+      28        4    85.71   {�}
+      42       42     0.00   {�}
+      67        9    86.57   {�}
+=======
       62        2    96.77   {l}
       26        3    88.46   {m}
      115        6    94.78   {n}
@@ -182,4 +304,5 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       28       28     0.00   {�}
       42       42     0.00   {�}
       67       67     0.00   {�}
+>>>>>>> master
       42       42     0.00   {�}
