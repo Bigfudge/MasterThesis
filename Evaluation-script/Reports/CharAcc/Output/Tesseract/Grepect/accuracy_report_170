@@ -1,13 +1,20 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
+<<<<<<< HEAD
      866   Characters
      521   Errors
    39.84%  Accuracy
+=======
+    1111   Characters
+    1169   Errors
+   -5.22%  Accuracy
+>>>>>>> master
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
+<<<<<<< HEAD
    39.84%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
@@ -207,3 +214,223 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       15       15     0.00   {�}
       36       14    61.11   {�}
       15       15     0.00   {�}
+=======
+   -5.22%  Accuracy After Correction
+
+     Ins    Subst      Del   Errors
+       0        0        0        0   Marked
+      25      342      802     1169   Unmarked
+      25      342      802     1169   Total
+
+   Count   Missed   %Right
+     180       43    76.11   ASCII Spacing Characters
+      46       22    52.17   ASCII Special Symbols
+       3        2    33.33   ASCII Digits
+      21        6    71.43   ASCII Uppercase Letters
+     753      186    75.30   ASCII Lowercase Letters
+       1        1     0.00   Latin1 Control Codes
+      53       53     0.00   Latin1 Special Symbols
+      54       54     0.00   Latin1 Uppercase Letters
+    1111      367    66.97   Total
+
+  Errors   Marked   Correct-Generated
+     154        0   {}-{b'}
+      96        0   {}-{'}
+      37        0   {<\n>}-{' b'\xc2\xbb' b'\xe2\x80...}
+      34        0   {t}-{b'\xc2\xab)' b'IO' b'c('...}
+      32        0   {t}-{b'.' b'\xc2\xb7,' b'-' b...}
+      24        0   {ä}-{\xc3\xa4}
+      24        0   {ö}-{\xc3\xb6}
+      21        0   {ſ}-{b's}
+      20        0   {ing<\n>uhr}-{\xc3\xa4s-.' b'Lok-'}
+      20        0   {}-{b'\xc2\xab}
+      20        0   {ſi}-{b'\xc3\xbc}
+      16        0   {-<\n>}-{\xe2\x80\x94' b'}
+      16        0   {r}-{tu' b'-' b',' b'}
+      16        0   {}-{' b'}
+      15        0   {&<\n>Mer}-{b'\xc3\xa4' b'M}
+      14        0   {för }-{b's\xc3\xb6ts-}
+      14        0   {ſ}-{s}
+      13        0   {<\n>3:}-{' b'\xc2\xbb'}
+      13        0   {watnet hafwa }-{b'UM.W-}
+      13        0   {ſkan ä}-{t' b'\xc3\xa4}
+      13        0   {ſå=<\n>ledes}-{b's\xc3\xa4-'}
+      12        0   {S}-{b's}
+      12        0   {u}-{b'U}
+      12        0   {}-{\xc2\xb7' b'}
+      12        0   {ſär=<\n>ſk}-{b'kik-' b'st}
+      11        0   {ſå}-{b's\xc3\xa5}
+      10        0   {<\n>p}-{' b'-' b'P}
+      10        0   {<\n>}-{-' b'"' b'}
+      10        0   {=<\n>}-{-' b'}
+      10        0   {uchtſamt<\n>}-{wmne' b'}
+      10        0   {ä}-{'b\xc3\xa4}
+      10        0   {ä}-{b'\xc3\xa4}
+      10        0   {ſtö}-{st\xc3\xb6}
+       9        0   {:}-{\x80\x94'}
+       9        0   {k}-{b'f\xc3\x}
+       9        0   {n.<\n>}-{up' b'\xe}
+       9        0   {�<9F>}-{\xc3\x9f'}
+       9        0   {ſedt}-{b'W' b'W'}
+       8        0   {<\n>}-{' b'}
+       8        0   {i}-{\xc3\xa4}
+       8        0   {är, }-{b'\xc3\x}
+       8        0   {é}-{\xc3\xb6}
+       8        0   {ë}-{\xc3\xb6}
+       7        0   {<\n>1: m}-{' b'Inn}
+       7        0   {<\n>fe}-{-' b'Ch}
+       7        0   {<\n>med}-{' b'MB'}
+       7        0   {}-{b',' b'}
+       7        0   {öfwe}-{b'skivo}
+       6        0   { }-{}
+       6        0   {<\n>w}-{' b'iv}
+       6        0   {<\n>}-{' b'\x}
+       6        0   {=<\n>d}-{z' b'v}
+       6        0   {föllj}-{b'fdui}
+       6        0   {}-{'b}
+       6        0   {}-{\xc3\x}
+       6        0   {ſåſ}-{b'sas}
+       5        0   {<\n>c}-{' b'r}
+       5        0   {Sul}-{b'sgs}
+       5        0   {_t}-{3\xa4}
+       5        0   {cut }-{es-dr}
+       5        0   {e}-{s' b'}
+       5        0   {in}-{b'sju}
+       5        0   {ju}-{b'in'}
+       5        0   {no}-{b'fre}
+       5        0   {ri-<\n>}-{j' b'}
+       5        0   {}-{b'ig:}
+       5        0   {}-{s' b'}
+       4        0   { des}-{DSH'}
+       4        0   { ſa}-{sq}
+       4        0   {det}-{b'M'}
+       4        0   {ett}-{b'm'}
+       4        0   {eſt}-{b'c'}
+       4        0   {hur}-{kmk'}
+       4        0   {j}-{b'si}
+       4        0   {ren}-{b'tm}
+       4        0   {t}-{4k,'}
+       4        0   {w}-{b'is}
+       4        0   {w}-{b'sv}
+       4        0   {wä}-{b'Wa}
+       4        0   {ſt}-{xtk'}
+       3        0   { er}-{sss}
+       3        0   { }-{-}
+       3        0   {att}-{b'e}
+       3        0   {c_t}-{sk'}
+       3        0   {d}-{ck'}
+       3        0   {f}-{b's}
+       3        0   {is,}-{st'}
+       3        0   {o}-{b'O}
+       3        0   {pr}-{b'k}
+       3        0   {ra}-{ts'}
+       3        0   {rdt}-{wt'}
+       3        0   {r}-{k}
+       3        0   {ut}-{b'M}
+       3        0   {}-{b's}
+       3        0   {}-{ren}
+       3        0   {}-{tv'}
+       3        0   {ſt}-{st'}
+       3        0   {ſ}-{b'f}
+       3        0   {ſ}-{b'l}
+       2        0   { o}-{.p}
+       2        0   {,}-{-'}
+       2        0   {:}-{T'}
+       2        0   {:}-{x'}
+       2        0   {_e}-{6'}
+       2        0   {a}-{es}
+       2        0   {c}-{es}
+       2        0   {er}-{ck}
+       2        0   {e}-{p'}
+       2        0   {f}-{s'}
+       2        0   {g}-{b'}
+       2        0   {g}-{s'}
+       2        0   {il}-{a'}
+       2        0   {i}-{-j}
+       2        0   {i}-{j'}
+       2        0   {i}-{j}
+       2        0   {l}-{k'}
+       2        0   {na}-{m'}
+       2        0   {nd}-{uv}
+       2        0   {ru}-{m}
+       2        0   {r}-{c'}
+       2        0   {r}-{t'}
+       2        0   {s}-{n'}
+       2        0   {t,}-{v'}
+       2        0   {tn}-{ar}
+       2        0   {tn}-{m'}
+       2        0   {tt}-{kk}
+       2        0   {t}-{k}
+       2        0   {um}-{j'}
+       2        0   {ur}-{ko}
+       2        0   {us}-{s-}
+       2        0   {w}-{iv}
+       2        0   {yt}-{'k}
+       2        0   {}-{' }
+       2        0   {}-{-}
+       2        0   {}-{s'}
+       1        0   {.}-{'}
+       1        0   {i}-{s}
+       1        0   {j}-{i}
+       1        0   {l}-{t}
+       1        0   {o}-{d}
+       1        0   {t}-{'}
+       1        0   {u}-{j}
+       1        0   {}-{4}
+       1        0   {}-{f}
+       1        0   {}-{r}
+       1        0   {}-{s}
+
+   Count   Missed   %Right
+      23       23     0.00   {<\n>}
+     157       20    87.26   { }
+       1        1     0.00   {&}
+      17        4    76.47   {,}
+       7        2    71.43   {-}
+       7        2    71.43   {.}
+       1        1     0.00   {1}
+       1        0   100.00   {2}
+       1        1     0.00   {3}
+       6        5    16.67   {:}
+       5        5     0.00   {=}
+       4        0   100.00   {A}
+       1        0   100.00   {C}
+       2        0   100.00   {L}
+       3        1    66.67   {M}
+       1        0   100.00   {N}
+       9        5    44.44   {S}
+       1        0   100.00   {U}
+       3        3     0.00   {_}
+      75       10    86.67   {a}
+       7        0   100.00   {b}
+      23        5    78.26   {c}
+      31        9    70.97   {d}
+      80       18    77.50   {e}
+      23        7    69.57   {f}
+      17        3    82.35   {g}
+      20        4    80.00   {h}
+      59       13    77.97   {i}
+       8        4    50.00   {j}
+       9        3    66.67   {k}
+      40        7    82.50   {l}
+      28        4    85.71   {m}
+      52       11    78.85   {n}
+      40        4    90.00   {o}
+      14        2    85.71   {p}
+       3        0   100.00   {q}
+      71       21    70.42   {r}
+      10        5    50.00   {s}
+      92       31    66.30   {t}
+      36       16    55.56   {u}
+      12        8    33.33   {w}
+       3        1    66.67   {y}
+       1        1     0.00   {<9F>}
+       9        9     0.00   {�}
+       3        3     0.00   {�}
+       1        1     0.00   {�}
+       1        1     0.00   {�}
+       7        7     0.00   {�}
+      32       32     0.00   {�}
+      22       22     0.00   {�}
+      32       32     0.00   {�}
+>>>>>>> master

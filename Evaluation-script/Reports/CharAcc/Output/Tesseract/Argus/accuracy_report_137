@@ -1,13 +1,20 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
+<<<<<<< HEAD
      649   Characters
      181   Errors
    72.11%  Accuracy
+=======
+     366   Characters
+     391   Errors
+   -6.83%  Accuracy
+>>>>>>> master
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
+<<<<<<< HEAD
    72.11%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
@@ -148,3 +155,112 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       12       11     8.33   {�}
        2        1    50.00   {�}
       23       11    52.17   {�}
+=======
+   -6.83%  Accuracy After Correction
+
+     Ins    Subst      Del   Errors
+       0        0        0        0   Marked
+       5       98      288      391   Unmarked
+       5       98      288      391   Total
+
+   Count   Missed   %Right
+      66       14    78.79   ASCII Spacing Characters
+      10        3    70.00   ASCII Special Symbols
+       8        3    62.50   ASCII Uppercase Letters
+     250       51    79.60   ASCII Lowercase Letters
+      16       16     0.00   Latin1 Special Symbols
+      16       16     0.00   Latin1 Uppercase Letters
+     366      103    71.86   Total
+
+  Errors   Marked   Correct-Generated
+      86        0   {}-{b'}
+      41        0   {}-{'}
+      20        0   {.<\n>}-{2\x80\x94' b',' b'!'}
+      16        0   {ä}-{\xc3\xa4}
+      14        0   {ng}-{.' b'z--' b'\x}
+      11        0   {Intet fö}-{b'f\xc3\xb6}
+      10        0   {wä}-{tv\xc3\xa4}
+      10        0   {äij}-{\xc3\xa4tt}
+      10        0   {ä}-{b'\xc3\xa4}
+       9        0   {}-{\xc2\xbb'}
+       9        0   {ä}-{\xc3\xa4x}
+       9        0   {år }-{\xc3\xa4v}
+       9        0   {å}-{\xc3\xa5'}
+       9        0   {ö}-{' b'.' b'}
+       8        0   {äm}-{\xc3\xa4}
+       8        0   {ö}-{\xc3\xb6}
+       7        0   {am}-{mu-' b'}
+       7        0   {}-{b'.' b'}
+       5        0   {ho}-{b'twa}
+       5        0   {ll }-{' b'j}
+       5        0   {}-{-' b'}
+       4        0   { }-{ok-t}
+       4        0   {I}-{b'J'}
+       4        0   {en }-{' b'}
+       4        0   {om }-{' b'}
+       4        0   {}-{' b'}
+       4        0   {}-{'b}
+       4        0   {}-{b'ry}
+       3        0   { Eh}-{Elz}
+       3        0   { hw}-{tms}
+       3        0   { }-{}
+       3        0   {be}-{lzc}
+       3        0   {ka,}-{m,'}
+       3        0   {son}-{fdy}
+       3        0   {t d}-{ifz}
+       3        0   {äs}-{af}
+       3        0   {ä}-{b'a}
+       3        0   {å,}-{a,'}
+       3        0   {ån}-{og'}
+       2        0   {ag}-{q'}
+       2        0   {e}-{c'}
+       2        0   {g}-{s'}
+       2        0   {ja}-{m'}
+       2        0   {ti}-{m}
+       2        0   {t}-{r'}
+       2        0   {we}-{b'}
+       2        0   {}-{mg}
+       1        0   { }-{m}
+       1        0   {e}-{z}
+       1        0   {i}-{t}
+       1        0   {m}-{y}
+       1        0   {n}-{y}
+       1        0   {}-{-}
+
+   Count   Missed   %Right
+       1        1     0.00   {<\n>}
+      65       13    80.00   { }
+       8        2    75.00   {,}
+       2        1    50.00   {.}
+       2        1    50.00   {E}
+       1        0   100.00   {F}
+       3        2    33.33   {I}
+       1        0   100.00   {J}
+       1        0   100.00   {P}
+      32        4    87.50   {a}
+       3        1    66.67   {b}
+       2        0   100.00   {c}
+       5        1    80.00   {d}
+      24        6    75.00   {e}
+       4        1    75.00   {f}
+      10        3    70.00   {g}
+      13        3    76.92   {h}
+      10        3    70.00   {i}
+       7        2    71.43   {j}
+       8        1    87.50   {k}
+       2        2     0.00   {l}
+      13        4    69.23   {m}
+      34        6    82.35   {n}
+      11        3    72.73   {o}
+       3        0   100.00   {p}
+      18        1    94.44   {r}
+      17        2    88.24   {s}
+      22        5    77.27   {t}
+       5        0   100.00   {u}
+       6        3    50.00   {w}
+       1        0   100.00   {y}
+       9        9     0.00   {�}
+       4        4     0.00   {�}
+       3        3     0.00   {�}
+      16       16     0.00   {�}
+>>>>>>> master

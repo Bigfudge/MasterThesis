@@ -1,13 +1,19 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
     1767   Characters
+<<<<<<< HEAD
      357   Errors
    79.80%  Accuracy
+=======
+    1900   Errors
+   -7.53%  Accuracy
+>>>>>>> master
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
+<<<<<<< HEAD
    79.80%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
@@ -102,11 +108,149 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {}-{o}
        1        0   {�}-{�}
        1        0   {�}-{�}
+=======
+   -7.53%  Accuracy After Correction
+
+     Ins    Subst      Del   Errors
+       0        0        0        0   Marked
+      26      431     1443     1900   Unmarked
+      26      431     1443     1900   Total
+
+   Count   Missed   %Right
+     279       52    81.36   ASCII Spacing Characters
+      64       18    71.88   ASCII Special Symbols
+      19        3    84.21   ASCII Uppercase Letters
+    1086       65    94.01   ASCII Lowercase Letters
+       3        3     0.00   Latin1 Control Codes
+     157      157     0.00   Latin1 Special Symbols
+     158      158     0.00   Latin1 Uppercase Letters
+       1        1     0.00   Latin1 Lowercase Letters
+    1767      457    74.14   Total
+
+  Errors   Marked   Correct-Generated
+     334        0   {}-{b'}
+     197        0   {}-{'}
+     128        0   {ä}-{\xc3\xa4}
+     120        0   {å}-{\xc3\xa5}
+      84        0   {ſå}-{b's\xc3\xa5'}
+      72        0   {ö}-{\xc3\xb6}
+      63        0   {å}-{\xc3\xa5'}
+      60        0   {ſ}-{b's}
+      58        0   {<\n>}-{' b'\xc2\xb7\xc2\xab' b'...}
+      33        0   {ſå}-{b's\xc3\xa5}
+      29        0   {<\n>}-{' b'\xc2\xab-' b'\xc2\xa...}
+      28        0   {ſ}-{s}
+      22        0   {få}-{b's\xc3\xa5}
+      20        0   {ä}-{b'\xc3\xa5}
+      19        0   {=<\n>}-{-' b'ki\xc2\xab' b'}
+      18        0   {n=<\n>d}-{vs' b'\xc2\xbb' b'}
+      18        0   {åſ}-{\xc3\xa5s}
+      15        0   {Spaſ}-{b'37' b'"' b'si}
+      15        0   {o=<\n>}-{d-' b';\xc2\xab}
+      15        0   {ſå<\n>}-{b's\xc3\xa5' b'}
+      14        0   {<\n>ſå}-{' b's\xc3\xa5'}
+      14        0   {=<\n>drö}-{-' b'L\xc3\xb6}
+      14        0   {=<\n>}-{s' b'k\xc3\xa5}
+      13        0   {d�<80><99>}-{b'\xc3\xa5ks-}
+      13        0   {å<\n>}-{\xc3\xa5' b's}
+      12        0   {<\n>rä}-{' b'\xc3\xa4}
+      12        0   {}-{'b}
+      12        0   {ſåſ}-{b's\xc3\xa5s}
+      11        0   {=<\n>m}-{-' b'-i' b'}
+      11        0   {}-{nxses\xc3\x}
+      11        0   {ä}-{b's\xc3\xa4}
+      11        0   {ſo}-{b's\xc3\xb6}
+      11        0   {ſå få}-{b'f\xc3\xa5}
+      11        0   {ſö}-{b'f\xc3\xa4}
+      10        0   { gå}-{g\xc3\xa5'}
+      10        0   {=<\n>g}-{-' b';' b'}
+      10        0   {ö}-{'b\xc3\xb6}
+      10        0   {ſtö}-{st\xc3\xb6}
+       9        0   { hö}-{h\xc3\xb6}
+       9        0   {.}-{\xc2\xab'}
+       9        0   {<\n>D}-{' b'sisit}
+       9        0   {<\n>h}-{' b'i' b'}
+       9        0   {<\n>}-{' b'.' b'}
+       9        0   {}-{\xc2\xab'}
+       9        0   {äf}-{\xc3\xa4s}
+       9        0   {ä}-{o\xc3\xa4}
+       9        0   {öſ}-{\xc3\xb6s}
+       8        0   {<\n>uti}-{' b'Hel-}
+       8        0   {<\n>}-{' b'}
+       8        0   {}-{' b'}
+       8        0   {�<9F>}-{\xc3\x9f}
+       8        0   {å }-{\xc3\xa5}
+       8        0   {é}-{\xc3\xb6}
+       8        0   {ſ}-{b'-' b's}
+       7        0   {<\n>de}-{' b's' }
+       7        0   {<\n>i}-{' b'sz'}
+       7        0   {}-{\xc3\x9}
+       7        0   {}-{b'T' b'}
+       7        0   {ſſa<\n>d}-{ssa' b'}
+       7        0   {ſſe<\n>d}-{sse' b'}
+       6        0   { }-{}
+       6        0   {<\n>ar}-{' b'di}
+       6        0   {<\n>a}-{' b'Ho}
+       6        0   {=<\n>}-{-' b's}
+       6        0   {wara}-{b'WUW'}
+       6        0   {åſ}-{\xc3\x}
+       6        0   {ſ}-{b'f}
+       5        0   {<\n>nå}-{' b'a}
+       5        0   {<\n>}-{' b'"}
+       5        0   {=<\n>}-{-' b'}
+       5        0   {må}-{b'Ma'}
+       4        0   {<\n>a}-{' b'}
+       4        0   {<\n>d}-{' b'}
+       4        0   {uc}-{tt-s}
+       4        0   {ſe,}-{st,'}
+       4        0   {ſ}-{' b'}
+       4        0   {ſ}-{b',s}
+       3        0   { lu}-{-1U}
+       3        0   { re}-{-FC}
+       3        0   { ſ}-{-s}
+       3        0   {=ſ}-{-s}
+       3        0   {S}-{b's}
+       3        0   {f}-{b's}
+       3        0   {}-{'ch}
+       3        0   {}-{'sb}
+       3        0   {}-{5sa}
+       3        0   {}-{b's}
+       3        0   {ſe}-{se'}
+       2        0   { }-{-}
+       2        0   { }-{s}
+       2        0   {, }-{z}
+       2        0   {,}-{5'}
+       2        0   {:}-{-'}
+       2        0   {:}-{x'}
+       2        0   {<\n>}-{' }
+       2        0   {=}-{-'}
+       2        0   {ff}-{c}
+       2        0   {ff}-{ss}
+       2        0   {f}-{s}
+       2        0   {h}-{b'}
+       2        0   {i }-{b'}
+       2        0   {ll}-{st}
+       2        0   {t}-{k'}
+       2        0   {}-{1'}
+       2        0   {}-{i'}
+       2        0   {ſ}-{f}
+       2        0   {ſ}-{l}
+       1        0   { }-{"}
+       1        0   {,}-{'}
+       1        0   {i}-{t}
+       1        0   {o}-{a}
+       1        0   {t}-{k}
+       1        0   {x}-{r}
+>>>>>>> master
 
    Count   Missed   %Right
       32       32     0.00   {<\n>}
      247       20    91.90   { }
+<<<<<<< HEAD
       39        3    92.31   {,}
+=======
+      39        4    89.74   {,}
+>>>>>>> master
        1        0   100.00   {-}
        6        1    83.33   {.}
        6        2    66.67   {:}
@@ -123,6 +267,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   100.00   {T}
        1        0   100.00   {W}
      106        7    93.40   {a}
+<<<<<<< HEAD
       11        1    90.91   {b}
       15        1    93.33   {c}
       46        7    84.78   {d}
@@ -131,6 +276,16 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       46        1    97.83   {g}
       22        2    90.91   {h}
       59        3    94.92   {i}
+=======
+      11        0   100.00   {b}
+      15        1    93.33   {c}
+      46        7    84.78   {d}
+     134        5    96.27   {e}
+      35       11    68.57   {f}
+      46        2    95.65   {g}
+      22        3    86.36   {h}
+      59        4    93.22   {i}
+>>>>>>> master
       12        0   100.00   {j}
       21        0   100.00   {k}
       72        3    95.83   {l}
@@ -141,7 +296,11 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        0   100.00   {q}
      111        5    95.50   {r}
        4        0   100.00   {s}
+<<<<<<< HEAD
       94        3    96.81   {t}
+=======
+      94        4    95.74   {t}
+>>>>>>> master
       22        3    86.36   {u}
        5        0   100.00   {v}
       18        1    94.44   {w}
@@ -149,6 +308,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        8        0   100.00   {y}
        1        1     0.00   {<80>}
        1        1     0.00   {<99>}
+<<<<<<< HEAD
        1        0   100.00   {<9F>}
       22        2    90.91   {�}
       47        2    95.74   {�}
@@ -156,5 +316,14 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       15        1    93.33   {�}
       72       72     0.00   {�}
       86        2    97.67   {�}
+=======
+       1        1     0.00   {<9F>}
+      22       22     0.00   {�}
+      47       47     0.00   {�}
+       1        1     0.00   {�}
+      15       15     0.00   {�}
+      72       72     0.00   {�}
+      86       86     0.00   {�}
+>>>>>>> master
       72       72     0.00   {�}
        1        1     0.00   {�}

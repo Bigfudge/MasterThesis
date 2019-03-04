@@ -1,13 +1,19 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
      973   Characters
+<<<<<<< HEAD
      300   Errors
    69.17%  Accuracy
+=======
+    1033   Errors
+   -6.17%  Accuracy
+>>>>>>> master
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
+<<<<<<< HEAD
    69.17%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
@@ -17,10 +23,22 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
 
    Count   Missed   %Right
      161       23    85.71   ASCII Spacing Characters
+=======
+   -6.17%  Accuracy After Correction
+
+     Ins    Subst      Del   Errors
+       0        0        0        0   Marked
+      13      267      753     1033   Unmarked
+      13      267      753     1033   Total
+
+   Count   Missed   %Right
+     161       24    85.09   ASCII Spacing Characters
+>>>>>>> master
       44       18    59.09   ASCII Special Symbols
       17        6    64.71   ASCII Digits
       29        7    75.86   ASCII Uppercase Letters
      598      101    83.11   ASCII Lowercase Letters
+<<<<<<< HEAD
       62       41    33.87   Latin1 Special Symbols
       62       36    41.94   Latin1 Uppercase Letters
      973      232    76.16   Total
@@ -101,10 +119,125 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {�}-{�}
        2        0   {�}-{�}
        2        0   {ö}-{o}
+=======
+      62       62     0.00   Latin1 Special Symbols
+      62       62     0.00   Latin1 Uppercase Letters
+     973      280    71.22   Total
+
+  Errors   Marked   Correct-Generated
+     178        0   {}-{b'}
+     108        0   {}-{'}
+      50        0   {ä}-{b'\xc3\xa4}
+      40        0   {ä}-{\xc3\xa4}
+      35        0   {}-{xias' b'.' b't' b't' b'I...}
+      24        0   {ö}-{\xc3\xb6}
+      21        0   {ſ}-{b's}
+      20        0   {-<\n>ſk}-{.X' b'\xe2\x80\x99st}
+      16        0   {<\n>}-{' b'\xc2\xab' b'}
+      16        0   {ä}-{\xc3\xa5}
+      13        0   {äfw}-{b'\xc3\xa5siv}
+      12        0   {<\n>ä}-{' b'\xc3\xb6}
+      12        0   {olumella}-{OLOMELLA' b'}
+      12        0   {}-{zm' b'\xc2\x}
+      11        0   { anfö}-{msf\xc3\xb6}
+      11        0   {ſä}-{b's\xc3\xa4}
+      10        0   {<\n>}-{' b'X.' b'}
+      10        0   {=<\n>}-{-' b':' b'}
+      10        0   {=<\n>}-{-' b'}
+      10        0   {li}-{1\xc2\xabt}
+      10        0   {än}-{\xc3\xa4tz}
+      10        0   {ä}-{b'\xc3\xb6}
+      10        0   {ö}-{b'\xc3\xb6}
+       9        0   {<\n>}-{' b'.' b'}
+       9        0   {@ö}-{s\xc3\xb6}
+       9        0   {t}-{b'k}
+       9        0   {}-{\xc2\xab'}
+       9        0   {}-{\xc2\xb7'}
+       9        0   {ſ}-{b'f}
+       9        0   {ſätt,<\n>}-{b'f\xc3\x}
+       9        0   {ſä}-{s\xc3\xa4}
+       8        0   { }-{\xc2\xab}
+       8        0   {}-{'ar' b'b}
+       8        0   {}-{b'\xc3\x}
+       8        0   {å}-{\xc3\xa5}
+       6        0   {=<\n>}-{-' b'.}
+       6        0   {f}-{b's}
+       6        0   {n<\n>}-{b.' b'}
+       6        0   {w}-{b'm}
+       6        0   {}-{\xc3\x}
+       6        0   {ſom}-{b'ssM'}
+       6        0   {ſt ſ}-{n' b's}
+       5        0   {<\n>a}-{' b'u}
+       5        0   {<\n>ni}-{' b'm}
+       5        0   {<\n>}-{"' b'}
+       5        0   {<\n>}-{-' b'}
+       5        0   {<\n>ſ}-{' b's}
+       5        0   {II.}-{b'll'}
+       5        0   {fl.}-{b'st'}
+       5        0   {n}-{k' b'}
+       5        0   {wå}-{b'svo}
+       5        0   {}-{' b'k}
+       5        0   {ſiſ}-{b'fcs}
+       5        0   {ſå}-{b'fa'}
+       4        0   {.<\n>}-{' b'}
+       4        0   {.}-{'}
+       4        0   {11}-{b'is}
+       4        0   {32}-{b'zo}
+       4        0   {90}-{b'go}
+       4        0   {<\n>}-{' b'}
+       4        0   {I.}-{b'l'}
+       4        0   {liu}-{s-ko}
+       4        0   {o}-{v'}
+       4        0   {ttn.}-{kkm'}
+       4        0   {t}-{c'}
+       4        0   {}-{-'}
+       4        0   {}-{b'Vi}
+       4        0   {}-{gili}
+       4        0   {ſo}-{b'fe}
+       4        0   {ſ}-{s}
+       3        0   {III}-{b'W}
+       3        0   {att}-{mk}
+       3        0   {a}-{b'd}
+       3        0   {a}-{b'g}
+       3        0   {d}-{b's}
+       3        0   {h}-{b'H}
+       3        0   {ll}-{4kt}
+       3        0   {lſ}-{ts}
+       3        0   {n }-{tt-}
+       3        0   {nns}-{ms'}
+       3        0   {nom}-{mm'}
+       3        0   {n}-{st'}
+       3        0   {n}-{tx'}
+       3        0   {rſ}-{vf}
+       3        0   {t}-{b's}
+       3        0   {ut}-{b'm}
+       3        0   {ån}-{an'}
+       3        0   {ſt}-{st'}
+       2        0   {_e}-{6}
+       2        0   {e}-{a-}
+       2        0   {g}-{s'}
+       2        0   {g}-{zx}
+       2        0   {n.}-{m'}
+       2        0   {n}-{tj}
+       2        0   {rg}-{nc}
+       2        0   {ta}-{m}
+       2        0   {t}-{i'}
+       2        0   {t}-{k'}
+       2        0   {t}-{r'}
+       2        0   {w}-{iv}
+       2        0   {}-{'b}
+       2        0   {}-{4k}
+       2        0   {}-{x}
+       2        0   {å}-{a'}
+       2        0   {å}-{a}
+       2        0   {ö}-{o}
+       2        0   {ſ}-{f}
+>>>>>>> master
        2        0   {ſ}-{st}
        2        0   {ſ}-{t}
        1        0   { }-{"}
        1        0   { }-{-}
+<<<<<<< HEAD
        1        0   {@}-{s}
        1        0   {I}-{l}
        1        0   {a}-{d}
@@ -114,6 +247,11 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {e}-{}
        1        0   {g}-{s}
        1        0   {h}-{H}
+=======
+       1        0   {I}-{l}
+       1        0   {e}-{d}
+       1        0   {e}-{}
+>>>>>>> master
        1        0   {i}-{a}
        1        0   {i}-{k}
        1        0   {i}-{l}
@@ -123,13 +261,23 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {o}-{c}
        1        0   {r}-{c}
        1        0   {r}-{t}
+<<<<<<< HEAD
        1        0   {t}-{i}
        1        0   {t}-{s}
+=======
+       1        0   {t}-{r}
+       1        0   {w}-{m}
+       1        0   {}-{-}
+>>>>>>> master
        1        0   {}-{.}
 
    Count   Missed   %Right
       18       18     0.00   {<\n>}
+<<<<<<< HEAD
      143        5    96.50   { }
+=======
+     143        6    95.80   { }
+>>>>>>> master
        1        0   100.00   {(}
        1        0   100.00   {)}
       13        1    92.31   {,}
@@ -161,12 +309,20 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        3        0   100.00   {V}
        6        0   100.00   {W}
        1        1     0.00   {_}
+<<<<<<< HEAD
       70       11    84.29   {a}
+=======
+      70        7    90.00   {a}
+>>>>>>> master
        4        0   100.00   {b}
        6        0   100.00   {c}
       35        1    97.14   {d}
       62        5    91.94   {e}
+<<<<<<< HEAD
       29        4    86.21   {f}
+=======
+      29        5    82.76   {f}
+>>>>>>> master
       11        3    72.73   {g}
       13        1    92.31   {h}
       37        7    81.08   {i}
@@ -174,19 +330,36 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       23        1    95.65   {k}
       34       12    64.71   {l}
       29        3    89.66   {m}
+<<<<<<< HEAD
       57       14    75.44   {n}
       29        7    75.86   {o}
        4        0   100.00   {p}
       56        4    92.86   {r}
       16        0   100.00   {s}
       46       19    58.70   {t}
+=======
+      57       15    73.68   {n}
+      29        7    75.86   {o}
+       4        0   100.00   {p}
+      56        4    92.86   {r}
+      16        1    93.75   {s}
+      46       20    56.52   {t}
+>>>>>>> master
       14        3    78.57   {u}
        1        0   100.00   {v}
       17        6    64.71   {w}
        4        0   100.00   {y}
+<<<<<<< HEAD
       19        5    73.68   {�}
        6        5    16.67   {�}
        7        1    85.71   {�}
       30       30     0.00   {�}
       32        6    81.25   {�}
+=======
+      19       19     0.00   {�}
+       6        6     0.00   {�}
+       7        7     0.00   {�}
+      30       30     0.00   {�}
+      32       32     0.00   {�}
+>>>>>>> master
       30       30     0.00   {�}

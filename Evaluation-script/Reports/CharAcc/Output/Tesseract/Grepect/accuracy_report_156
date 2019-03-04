@@ -1,13 +1,20 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
+<<<<<<< HEAD
     1546   Characters
      555   Errors
    64.10%  Accuracy
+=======
+    1030   Characters
+    1177   Errors
+  -14.27%  Accuracy
+>>>>>>> master
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
+<<<<<<< HEAD
    64.10%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
@@ -232,3 +239,202 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       46       46     0.00   {�}
       57       32    43.86   {�}
       46       46     0.00   {�}
+=======
+  -14.27%  Accuracy After Correction
+
+     Ins    Subst      Del   Errors
+       0        0        0        0   Marked
+      15      330      832     1177   Unmarked
+      15      330      832     1177   Total
+
+   Count   Missed   %Right
+     161       41    74.53   ASCII Spacing Characters
+      35       26    25.71   ASCII Special Symbols
+      43       10    76.74   ASCII Uppercase Letters
+     665      142    78.65   ASCII Lowercase Letters
+       1        1     0.00   Latin1 Control Codes
+      62       62     0.00   Latin1 Special Symbols
+      63       63     0.00   Latin1 Uppercase Letters
+    1030      345    66.50   Total
+
+  Errors   Marked   Correct-Generated
+     168        0   {}-{b'}
+      81        0   {}-{'}
+      64        0   {ä}-{\xc3\xa4}
+      56        0   {ö}-{\xc3\xb6}
+      43        0   {=<\n>ſ}-{-' b'IQ' b'I-' b'\xc2\xb...}
+      29        0   {<\n>�<96>gn}-{o' b'SF' b'.' b'FAQ' b'\...}
+      24        0   {<\n>}-{' b'}
+      22        0   {ä<\n>fäfängi}-{el' b'.' b"'" b'\xc2\x}
+      18        0   {<\n>tä}-{' b'!' b'k\xc3\xa4}
+      18        0   {ſ}-{b's}
+      16        0   {å}-{\xc3\xa5}
+      16        0   {ſö=<\n>}-{b'f\xc3\xb6-' b'}
+      15        0   {=<\n>}-{bv' b'\xc2\xab'}
+      15        0   {Wäkt}-{b'.' b'M-\xc2\x}
+      14        0   {}-{b'\xc2\xb7' b'}
+      13        0   {de<\n>Starka}-{b'-\xc2\xb7z'}
+      13        0   {itſko}-{t\xc2\xabcst0}
+      12        0   {rrarna}-{s;' b'Swwws'}
+      12        0   {uren}-{i-\xc2\xab-'}
+      11        0   {at<\n>}-{cn' b';' b'}
+      11        0   {}-{b'mest' b'c}
+      11        0   {ſmä}-{stn\xc3\xa4}
+      10        0   {<\n>}-{' b'.-' b'}
+      10        0   {<\n>ſ}-{' b'.' b's}
+      10        0   {=<\n>}-{-' b';' b'}
+      10        0   {hwilka}-{b'.-' b'g'}
+      10        0   {r}-{bMg' b'-Ma}
+      10        0   {ubler}-{sse-\xc3\x}
+      10        0   {y<\n>}-{d' b'.' b'}
+      10        0   {ä}-{b'\xc3\xa4}
+      10        0   {å}-{b'\xc3\xa4}
+      10        0   {ſe/}-{s\xc2\xbb'}
+      10        0   {ſtå}-{st\xc3\xa4}
+       9        0   { }-{\xc2\xab"}
+       9        0   {/<\n>Coro}-{x' b'seki}
+       9        0   {<\n>}-{' b'1' b'}
+       9        0   {<\n>}-{' b'E' b'}
+       9        0   {id}-{s-se' b'T}
+       9        0   {ni}-{m\xc2\xab}
+       9        0   {t/<\n>å}-{4kan' b'F}
+       9        0   {}-{\xc2\xab'}
+       9        0   {}-{b's\xc3\x}
+       9        0   {å}-{\xc3\xa4'}
+       9        0   {å}-{\xc3\xa5'}
+       8        0   {kröki}-{b'\xc2\x}
+       8        0   {}-{PWI' b'M}
+       8        0   {ärn}-{b'\xc3\x}
+       8        0   {å }-{\xc3\xa4}
+       8        0   {å}-{\xc3\xa4}
+       7        0   { Fontan}-{sxwew}
+       7        0   {/<\n>ſå}-{-' b';'}
+       7        0   {<\n>Sot}-{' b'Myr}
+       7        0   {r<\n>uti}-{k' b'.'}
+       7        0   {}-{5' b'ar}
+       7        0   {}-{b'-' b'}
+       7        0   {ſig}-{b'seve'}
+       6        0   { loco}-{e-' b'}
+       6        0   {/}-{-'}
+       6        0   {/}-{x'}
+       6        0   {y}-{'d' b'}
+       6        0   {}-{'b}
+       5        0   {=<\n>}-{-' b'}
+       5        0   {Ruin}-{b'M-'}
+       5        0   {a H}-{cksjp}
+       5        0   {lnar}-{a-ugn}
+       5        0   {}-{5kn-'}
+       5        0   {åkk}-{b'Z,'}
+       5        0   {ſe }-{n' b'}
+       4        0   {/ ſ}-{xs}
+       4        0   {/}-{b'}
+       4        0   {J}-{b'I'}
+       4        0   {Na}-{b'Us}
+       4        0   {en}-{b'M'}
+       4        0   {het }-{' b'}
+       4        0   {j}-{b'i'}
+       4        0   {kwä}-{nvck}
+       4        0   {t}-{e'}
+       4        0   {war}-{lfls}
+       3        0   {/ t}-{U}
+       3        0   {/}-{'}
+       3        0   {=<\n>}-{-' }
+       3        0   {a}-{b'n}
+       3        0   {dig}-{ng'}
+       3        0   {fſ}-{ss}
+       3        0   {rop}-{ey-}
+       3        0   {t/}-{ex'}
+       3        0   {tt }-{e}
+       3        0   {t}-{b'e}
+       3        0   {u}-{b'U}
+       3        0   {}-{b'W}
+       3        0   {}-{b'd}
+       3        0   {}-{b'x}
+       3        0   {ſe}-{se'}
+       3        0   {ſk}-{si}
+       3        0   {ſ}-{b'f}
+       2        0   {/ }-{-}
+       2        0   {Sp}-{b'}
+       2        0   {am}-{sw}
+       2        0   {a}-{n'}
+       2        0   {dd}-{vp}
+       2        0   {en}-{m'}
+       2        0   {m}-{b'}
+       2        0   {n.}-{m'}
+       2        0   {r }-{t-}
+       2        0   {w}-{iv}
+       2        0   {}-{s'}
+       2        0   {ä}-{ck}
+       2        0   {ö}-{a}
+       2        0   {ö}-{d}
+       2        0   {ſ}-{s}
+       1        0   { }-{e}
+       1        0   { }-{}
+       1        0   {a}-{'}
+       1        0   {a}-{q}
+       1        0   {b}-{h}
+       1        0   {o}-{d}
+       1        0   {r}-{t}
+       1        0   {t}-{'}
+       1        0   {t}-{e}
+       1        0   {t}-{r}
+       1        0   {}-{e}
+
+   Count   Missed   %Right
+      27       27     0.00   {<\n>}
+     134       14    89.55   { }
+       3        0   100.00   {(}
+       3        0   100.00   {)}
+       3        1    66.67   {.}
+      19       19     0.00   {/}
+       1        0   100.00   {:}
+       6        6     0.00   {=}
+       1        0   100.00   {A}
+       2        0   100.00   {B}
+       1        1     0.00   {C}
+       2        0   100.00   {D}
+       4        0   100.00   {E}
+       4        1    75.00   {F}
+       1        0   100.00   {G}
+       3        1    66.67   {H}
+       2        1    50.00   {J}
+       3        0   100.00   {K}
+       2        0   100.00   {L}
+       2        0   100.00   {M}
+       1        1     0.00   {N}
+       2        0   100.00   {O}
+       2        0   100.00   {P}
+       2        1    50.00   {R}
+       6        3    50.00   {S}
+       1        0   100.00   {T}
+       2        1    50.00   {W}
+      67       16    76.12   {a}
+       8        2    75.00   {b}
+       1        1     0.00   {c}
+      43        5    88.37   {d}
+      79        9    88.61   {e}
+      11        3    72.73   {f}
+      31        4    87.10   {g}
+      12        2    83.33   {h}
+      47       10    78.72   {i}
+       3        1    66.67   {j}
+      40       10    75.00   {k}
+      42        4    90.48   {l}
+      19        3    84.21   {m}
+      75       13    82.67   {n}
+      23        9    60.87   {o}
+      12        2    83.33   {p}
+      55       16    70.91   {r}
+       7        0   100.00   {s}
+      46       21    54.35   {t}
+      19        5    73.68   {u}
+      17        4    76.47   {w}
+       8        2    75.00   {y}
+       1        1     0.00   {<96>}
+      18       18     0.00   {�}
+      11       11     0.00   {�}
+      11       11     0.00   {�}
+      22       22     0.00   {�}
+      41       41     0.00   {�}
+      22       22     0.00   {�}
+>>>>>>> master
