@@ -160,3 +160,26 @@ If I could get {errousWord, correctWord}-pairs I can train a NN to correct it as
         TesseractGrepect: WER: 27.05% CER: -7.79%
         OcropusArgus: WER: 16.13% CER:  -92.47%
         OcropusGrepect: WER: 14.82% CER:  -210.89%
+
+2018-03-04:
+    Rerun all training and evaluation on the new data with initial setup (sample_size=8000.
+    Fixed decoding problem.
+    Result:
+        TesseractArgus: WER: 36.74% CER: 65.76%%
+        TesseractGrepect: WER: 33.56% CER: 61.23%
+        OcropusArgus: WER: 21.30% CER:  -7.41%
+        OcropusGrepect: WER: 28.90% CER:  -42.97%
+    Rerun all training and evaluation on the new data with updated setup setup (sample_size=8000.
+    Fixed decoding problem.
+    Result:
+        TesseractArgus: WER: 36.74% CER: 61.64%%
+        TesseractGrepect: WER: 33.72% CER: 56.91%
+        OcropusArgus: WER: 21.30% CER:  4.19%
+        OcropusGrepect: WER: 28.90% CER:  -47.91%
+
+    Todo this week:
+        Look over CharAcc and WordAcc to see common problems.
+            Remove all extra whitespace from input and output.
+        Extend the word_freq list with extra words.
+        Include the SB-evaluationscript into accruacyScript.py
+        Start writing Half-time report

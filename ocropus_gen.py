@@ -19,8 +19,8 @@ def main(image_dir, output_dir, source, truth_dir):
             imagePath = image_dir+'/'+image
             ocropyFolder="%04d" % (count,)
             bookPath= '../ocropy/'+source+'/'+ocropyFolder
-	
-            if(source == 'grepect'):	  
+
+            if(source == 'grepect'):
                 if(os.path.splitext(item)[0]==os.path.splitext(image)[0]):
 		    print("PROCESSING IMAGE"+str(item))
                     ocropyGen(imagePath, source, ocropyFolder, bookPath)
@@ -49,7 +49,7 @@ def saveOCR(bookPath, output_dir, image):
             if file.endswith(".txt"):
                 filenames.append(bookPath+"/"+file)
     name = os.path.splitext(image)[0]
-    with open(output_dir+"/"+str(name), 'w') as outfile:
+    with open(output_dir+"/"+str(name)+'.txt', 'w') as outfile:
             for fname in filenames:
                 with open(fname) as infile:
                     for line in infile:
@@ -58,8 +58,3 @@ def saveOCR(bookPath, output_dir, image):
 #main("../Images/Grepect", "./Evaluation-script/OCROutput/Ocropus/Grepect", "grepect", "./Evaluation-script/ManuelTranscript/Grepect")
 
 main("../Images/Argus", "./Evaluation-script/OCROutput/Ocropus/Argus", "argus", "./Evaluation-script/ManuelTranscript/Argus")
-
-
-
-
-
