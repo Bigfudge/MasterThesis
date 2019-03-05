@@ -135,4 +135,5 @@ def outputEvaluation():
 
 def main():
 	completeEvaluation()
-sbEvaluation(c.genOcropusArgus, c.truthArgus, "Argus")
+#sbEvaluation(c.genOcropusArgus, c.truthArgus, "Argus")
+main()
