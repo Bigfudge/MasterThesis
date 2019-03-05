@@ -287,8 +287,8 @@ def score_and_print(ocrdrec,mandrec):
 #        return charactererrors, characters, worderrors, words, unaligned_ocr_whitespaces, unaligned_man_whitespaces, aligned_whitespaces
 
     newlines = [i for i,char in enumerate(ocrdrec) if char=='\n']
-    if not newlines or not newlines[-1] == len(ocrdrec)-1:
-        newlines.append(len(ocrdrec)-1)
+#    if not newlines or not newlines[-1] == len(ocrdrec)-1:
+ #       newlines.append(len(ocrdrec)-1)
     i0 = 0
     charactererrors = 0
     characters = 0
