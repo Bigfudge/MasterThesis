@@ -169,7 +169,8 @@ def add_ocr_output(ocr_dir,truth_dir):
 		truth_dirs.append(truth_dir+file)
 
 	if(not os.path.isfile(filename)):
-		align.main("-sb",ocr_dirs,truth_dirs, filename)
+                print(ocr_dirs)
+                align.main("-sb",ocr_dirs,truth_dirs, filename)
 
 	ocr_errors = open(filename)
 	words = [word for line in ocr_errors for word in line.split()]
