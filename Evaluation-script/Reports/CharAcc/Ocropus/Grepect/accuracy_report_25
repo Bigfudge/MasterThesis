@@ -1,28 +1,28 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
     1394   Characters
-    2114   Errors
-  -51.65%  Accuracy
+    2111   Errors
+  -51.43%  Accuracy
 
        3   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.22%  Characters Marked
-  -49.93%  Accuracy After Correction
+  -49.71%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        7       17       24   Marked
-      25      617     1448     2090   Unmarked
-      25      624     1465     2114   Total
+      25      614     1448     2087   Unmarked
+      25      621     1465     2111   Total
 
    Count   Missed   %Right
      219       67    69.41   ASCII Spacing Characters
-      42       38     9.52   ASCII Special Symbols
+      42       35    16.67   ASCII Special Symbols
       16       15     6.25   ASCII Uppercase Letters
      927      454    51.02   ASCII Lowercase Letters
       95       43    54.74   Latin1 Special Symbols
       95       32    66.32   Latin1 Uppercase Letters
-    1394      649    53.44   Total
+    1394      646    53.66   Total
 
   Errors   Marked   Correct-Generated
       20        0   {ghet}-{-<\n>BaBB2BaaaåBBaBBBB}
@@ -72,8 +72,8 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       10        0   {}-{n- den fö}
       10        0   {}-{nt<\n>aBa-<\n>we}
        9        0   { }-{}
+       9        0   {-<\n>}-{t j3 pra }
        9        0   {/}-{kkmeterne}
-       9        0   {=<\n>}-{t j3 pra }
        9        0   {di}-{ntnharpa.}
        9        0   {flagg}-{räkenſk}
        9        0   {myckenhe}-{Lopparumy}
@@ -112,11 +112,11 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        7        0   { alf}-{f-<\n>des }
        7        0   { hw}-{äncker}
        7        0   { ſ}-{rwågem}
+       7        0   {-<\n>ha}-{<\n>cller }
        7        0   {/ den }-{twälö}
        7        0   {/ }-{ öre<\n>i}
        7        0   {/}-{ rånna}
        7        0   {<\n>mind}-{o ſtö}
-       7        0   {=<\n>ha}-{<\n>cller }
        7        0   {alt wä}-{ö-R-me}
        7        0   {annars}-{hufm ud}
        7        0   {ch }-{nun�<9F>.<\n>}
@@ -147,9 +147,9 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        6        0   { bog}-{ſnwmm}
        6        0   { }-{renår}
        6        0   {,<\n>och}-{undrik}
+       6        0   {-<\n>mod-}-{etſin}
        6        0   {/}-{ efter}
        6        0   {<\n>Vice-}-{nmmes<\n>}
-       6        0   {=<\n>mod=}-{etſin}
        6        0   {Harp}-{SRRt2 }
        6        0   {Hippoc}-{-<\n>ggå}
        6        0   {bö}-{etn ſ}
@@ -202,7 +202,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        5        0   {e}-{asudi}
        5        0   {ffa}-{s it-}
        5        0   {g}-{ alt }
-       5        0   {gö=}-{i an-}
        5        0   {h}-{räkn}
        5        0   {i}-{däha}
        5        0   {i}-{trän}
@@ -233,13 +232,14 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        0   {.}-{ och}
        4        0   {/}-{alas}
        4        0   {Gud/}-{ynte}
-       4        0   {al=<\n>}-{1 a}
+       4        0   {al-<\n>}-{1 a}
        4        0   {b}-{at<\n>L}
        4        0   {d ha}-{tmat}
        4        0   {dä }-{Skru}
        4        0   {en }-{2lbe}
        4        0   {ep}-{sän}
        4        0   {f}-{bogn}
+       4        0   {gö}-{i an}
        4        0   {ig }-{attt}
        4        0   {ig}-{kaps}
        4        0   {j}-{fint}
@@ -336,9 +336,8 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        3        0   {ſ}-{bon}
        2        0   { b}-{la}
        2        0   { }-{we}
+       2        0   {-<\n>}-{he}
        2        0   {/<\n>}-{p }
-       2        0   {=<\n>}-{he}
-       2        0   {=}-{-}
        2        0   {Al}-{be}
        2        0   {Pa}-{cf}
        2        0   {R}-{Ar}
@@ -438,12 +437,11 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       31       17    45.16   {<\n>}
      188       50    73.40   { }
        6        3    50.00   {,}
-       4        4     0.00   {-}
+      13       10    23.08   {-}
        3        3     0.00   {.}
       17       17     0.00   {/}
        1        1     0.00   {:}
        2        1    50.00   {;}
-       9        9     0.00   {=}
        1        1     0.00   {A}
        1        1     0.00   {C}
        1        1     0.00   {D}

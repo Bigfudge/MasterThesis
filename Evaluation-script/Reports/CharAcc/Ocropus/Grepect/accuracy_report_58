@@ -1,30 +1,30 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
      866   Characters
-    2135   Errors
- -146.54%  Accuracy
+    2133   Errors
+ -146.30%  Accuracy
 
        3   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.35%  Characters Marked
- -142.03%  Accuracy After Correction
+ -141.80%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0       39       39   Marked
-       7      337     1752     2096   Unmarked
-       7      337     1791     2135   Total
+       7      335     1752     2094   Unmarked
+       7      335     1791     2133   Total
 
    Count   Missed   %Right
      135       18    86.67   ASCII Spacing Characters
-      47       38    19.15   ASCII Special Symbols
+      47       36    23.40   ASCII Special Symbols
       13       12     7.69   ASCII Digits
       14       12    14.29   ASCII Uppercase Letters
      557      230    58.71   ASCII Lowercase Letters
        2        1    50.00   Latin1 Control Codes
       47       20    57.45   Latin1 Special Symbols
       51       13    74.51   Latin1 Uppercase Letters
-     866      344    60.28   Total
+     866      342    60.51   Total
 
   Errors   Marked   Correct-Generated
      101        0   {}-{j j1a j åj--j---1je j-j...}
@@ -52,7 +52,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       17        0   {}-{yti bränwin, tte}
       16       16   {}-{s 45.~ 50. 1 ſe}
       16        0   {Nor}-{änklinga ſtån}
-      16        0   {er=watten;}-{2w0F-skSSl<\n>-ſå}
       16        0   {}-{s längd, ochbet}
       15        0   {}-{Therhoshåller<\n>}
       15        0   {}-{ſto ſtörre b}
@@ -63,14 +62,15 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       12        0   {t}-{ Hårfwa Ear}
       12        0   {}-{efter Lif-dl}
       12        0   {}-{�<9F>lap<\n>Trarkr}
+      11        0   {-}-{ukas hos ba}
       11        0   {.<\n>M}-{tas för hw}
-      11        0   {=}-{ukas hos ba}
       11        0   {hwad}-{barnſäng,}
       11        0   {jölck,}-{edan Rouung}
+      11        0   {watten;}-{skSSl<\n>-ſå}
       11        0   {}-{för en<\n>)ma}
       11        0   {�r}-{�lp: lll<\n>e }
       10        0   {enhei}-{ löt för}
-      10        0   {f=Me}-{lj1d) pro }
+      10        0   {f-Me}-{lj1d) pro }
       10        0   {ka}-{ret dläge}
       10        0   {pp}-{ -B<\n>Häraf}
       10        0   {}-{ j<\n>Spinnar}
@@ -165,7 +165,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        5        0   {ho}-{är r}
        5        0   {l,}-{ Lön}
        5        0   {o}-{3 L.<\n>}
-       5        0   {t=t}-{l<\n>fö}
+       5        0   {t-t}-{l<\n>fö}
        5        0   {}-{ l lR}
        5        0   {}-{ mode}
        5        0   {}-{ råk}
@@ -186,6 +186,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        0   {c}-{neſ}
        4        0   {dag}-{fnll}
        4        0   {d}-{manl}
+       4        0   {er}-{2w0F}
        4        0   {e}-{L - }
        4        0   {e}-{cs i}
        4        0   {h}-{llel}
@@ -309,7 +310,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {,}-{t}
        1        0   {.}-{,}
        1        0   {.}-{-}
-       1        0   {=}-{-}
        1        0   {L}-{t}
        1        0   {b}-{e}
        1        0   {d}-{t}
@@ -343,6 +343,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       23        9    60.87   {<\n>}
      112        9    91.96   { }
       18       11    38.89   {,}
+       5        3    40.00   {-}
       21       20     4.76   {.}
        1        1     0.00   {0}
        2        2     0.00   {1}
@@ -352,7 +353,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        2     0.00   {5}
        1        1     0.00   {6}
        3        2    33.33   {;}
-       5        5     0.00   {=}
        1        0   100.00   {A}
        3        3     0.00   {D}
        1        0   100.00   {E}

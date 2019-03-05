@@ -1,32 +1,32 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
      815   Characters
-     271   Errors
-   66.75%  Accuracy
+     267   Errors
+   67.24%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   66.75%  Accuracy After Correction
+   67.24%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-      55      149       67      271   Unmarked
-      55      149       67      271   Total
+      57      141       69      267   Unmarked
+      57      141       69      267   Total
 
    Count   Missed   %Right
-     110       13    88.18   ASCII Spacing Characters
-      28       27     3.57   ASCII Special Symbols
+     110       12    89.09   ASCII Spacing Characters
+      28       23    17.86   ASCII Special Symbols
       20        2    90.00   ASCII Uppercase Letters
-     535       51    90.47   ASCII Lowercase Letters
+     535       50    90.65   ASCII Lowercase Letters
        3        3     0.00   Latin1 Control Codes
       58       55     5.17   Latin1 Special Symbols
       61       53    13.11   Latin1 Uppercase Letters
-     815      204    74.97   Total
+     815      198    75.71   Total
 
   Errors   Marked   Correct-Generated
-      32        0   {ä}-{a}
+      34        0   {ä}-{a}
       26        0   {ock}-{k· - « . d<\n>·<\n>s....}
       20        0   {ſ}-{s}
       10        0   {�}-{� �<80><94><\n>Esta}
@@ -38,7 +38,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        6        0   {ö}-{o}
        6        0   {ſ}-{Dcdica}
        5        0   {/ fö}-{xso}
-       5        0   {är=}-{ar-«}
        5        0   {ålle}-{anc}
        5        0   {ſlä}-{sta}
        4        0   {/ }-{l}
@@ -50,9 +49,8 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        0   {}-{k }
        4        0   {�}-{�}
        4        0   {�<84>}-{A}
-       3        0   {f=<\n>}-{-<\n>z}
        3        0   {het}-{w}
-       3        0   {ä=}-{ejs}
+       3        0   {ä-}-{ejs}
        3        0   {än}-{au}
        3        0   {ö}-{k o}
        3        0   {ſk}-{si}
@@ -62,7 +60,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {/ }-{j}
        2        0   {/}-{ !}
        2        0   {/}-{ -}
-       2        0   {=}-{-}
        2        0   {Bl}-{Vc}
        2        0   {ff}-{ss}
        2        0   {iu}-{m}
@@ -73,6 +70,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {}-{F }
        2        0   {}-{I }
        2        0   {}-{sE}
+       2        0   {}-{«}
        2        0   {�<96>}-{O}
        2        0   {å}-{a}
        2        0   {ſ}-{fs}
@@ -80,13 +78,14 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {ſ}-{si}
        1        0   { }-{t}
        1        0   { }-{}
+       1        0   {-}-{i}
+       1        0   {-}-{s}
        1        0   {/}-{J}
-       1        0   {=}-{i}
-       1        0   {=}-{s}
        1        0   {T}-{F}
        1        0   {e}-{c}
        1        0   {f}-{s}
        1        0   {f}-{t}
+       1        0   {f}-{}
        1        0   {i}-{c}
        1        0   {i}-{t}
        1        0   {i}-{x}
@@ -96,13 +95,14 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {}-{j}
        1        0   {}-{k}
        1        0   {}-{x}
+       1        0   {}-{z}
 
    Count   Missed   %Right
-      21        3    85.71   {<\n>}
+      21        2    90.48   {<\n>}
       89       10    88.76   { }
+       7        3    57.14   {-}
        1        0   100.00   {.}
       20       20     0.00   {/}
-       7        7     0.00   {=}
        1        0   100.00   {A}
        2        1    50.00   {B}
        4        0   100.00   {F}
@@ -130,7 +130,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       41        5    87.80   {n}
       20        1    95.00   {o}
        2        0   100.00   {p}
-      51        3    94.12   {r}
+      51        2    96.08   {r}
       13        0   100.00   {s}
       37        2    94.59   {t}
        8        2    75.00   {u}

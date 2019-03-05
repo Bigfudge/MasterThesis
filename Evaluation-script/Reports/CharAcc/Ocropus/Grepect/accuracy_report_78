@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
     1058   Characters
-    1936   Errors
-  -82.99%  Accuracy
+    1933   Errors
+  -82.70%  Accuracy
 
        4   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.38%  Characters Marked
-  -76.37%  Accuracy After Correction
+  -76.09%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0       16       54       70   Marked
-       8      397     1461     1866   Unmarked
-       8      413     1515     1936   Total
+       8      394     1461     1863   Unmarked
+       8      410     1515     1933   Total
 
    Count   Missed   %Right
      174       23    86.78   ASCII Spacing Characters
-      34       27    20.59   ASCII Special Symbols
+      34       24    29.41   ASCII Special Symbols
       29       24    17.24   ASCII Uppercase Letters
      651      283    56.53   ASCII Lowercase Letters
        1        1     0.00   Latin1 Control Codes
       84       35    58.33   Latin1 Special Symbols
       85       28    67.06   Latin1 Uppercase Letters
-    1058      421    60.21   Total
+    1058      418    60.49   Total
 
   Errors   Marked   Correct-Generated
       48        0   {}-{yper han en af ſit<\n>l...}
@@ -42,10 +42,10 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       20        0   {}-{ei begätt? Man wil }
       20        0   {}-{l et ſkålp: lll<\n>ha}
       19        0   {}-{a början warit i d}
-      18        0   {=}-{te han, i förhop-}
       17        0   {}-{ efter<\n>s2, ſin S}
       17        0   {}-{SRan har i förſ}
       17        0   {}-{ta honom- i ſynn}
+      17        0   {}-{te han, i förhop}
       16        0   {Ly-<\n>c}-{l.<\n>af århen lxw}
       16        0   {}-{, ochbetatas fö}
       16        0   {}-{af alla andra, g}
@@ -56,8 +56,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       14        0   {äkt}-{2 j-ſ--j--j 2}
       13        0   {i}-{å höll på }
       13        0   {}-{n ſträng ſ}
-      13        0   {ån hög=<\n>den}-{e Lopparumyt,}
-      12        0   {, gior=}-{a-aBBBaa2-2.}
+      13        0   {ån hög-<\n>den}-{e Lopparumyt,}
       12        0   {Lycaon}-{ſ å -j--ſ}
       12        0   {s}-{ then<\n>fande,}
       12        0   {t}-{ - j h j F.<\n>}
@@ -73,6 +72,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       10        0   {}-{ Rat j<\n>Spi}
       10        0   {}-{pet-ſsm h}
       10        0   {ſ}-{yck hans t}
+       9        0   {, gior}-{a-aBBBaa2}
        9        0   {Hw}-{noblliter}
        9        0   {d,}-{iltotiene}
        9        0   {onis Hof.}-{n ſkulle}
@@ -193,7 +193,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        0   {och}-{i tn}
        4        0   {oc}-{ſå}
        4        0   {od}-{erna}
-       4        0   {op=}-{ög-}
        4        0   {re}-{s af}
        4        0   {r}-{<\n>lja}
        4        0   {su}-{n ſ}
@@ -237,6 +236,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        3        0   {in}-{tor}
        3        0   {ky}-{tod}
        3        0   {n}-{lti}
+       3        0   {op}-{ög}
        3        0   {på}-{yre}
        3        0   {rw}-{n<\n>h}
        3        0   {s}-{<\n>ej}
@@ -295,6 +295,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {}-{ a}
        2        0   {}-{ d}
        2        0   {}-{ t}
+       2        0   {}-{2.}
        2        0   {}-{<\n>k}
        2        0   {}-{a }
        2        0   {}-{d,}
@@ -346,11 +347,10 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       28        9    67.86   {<\n>}
      146       14    90.41   { }
       18       13    27.78   {,}
-       1        1     0.00   {-}
+       5        2    60.00   {-}
        7        5    28.57   {.}
        1        1     0.00   {/}
        1        1     0.00   {;}
-       4        4     0.00   {=}
        1        1     0.00   {?}
        1        1     0.00   {@}
        2        2     0.00   {A}

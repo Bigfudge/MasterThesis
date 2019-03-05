@@ -1,30 +1,30 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
     1319   Characters
-    1980   Errors
-  -50.11%  Accuracy
+    1978   Errors
+  -49.96%  Accuracy
 
        5   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.38%  Characters Marked
-  -46.47%  Accuracy After Correction
+  -46.32%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0       13       35       48   Marked
-      11      564     1357     1932   Unmarked
-      11      577     1392     1980   Total
+      11      562     1357     1930   Unmarked
+      11      575     1392     1978   Total
 
    Count   Missed   %Right
-     192       28    85.42   ASCII Spacing Characters
-      52       42    19.23   ASCII Special Symbols
+     192       27    85.94   ASCII Spacing Characters
+      52       40    23.08   ASCII Special Symbols
        6        6     0.00   ASCII Digits
       46       39    15.22   ASCII Uppercase Letters
-     837      388    53.64   ASCII Lowercase Letters
+     837      389    53.52   ASCII Lowercase Letters
        3        3     0.00   Latin1 Control Codes
       90       47    47.78   Latin1 Special Symbols
       93       35    62.37   Latin1 Uppercase Letters
-    1319      588    55.42   Total
+    1319      586    55.57   Total
 
   Errors   Marked   Correct-Generated
       37        0   {}-{,<\n>�<9F> - j --- s - j...}
@@ -41,8 +41,9 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       15        0   {Hwa}-{ſkålp: lll<\n>bu}
       15        0   {}-{ rl. 1, ked,ä,}
       15        0   {}-{2d öre Lopparu}
-      14       14   {utgof=}-{Lön<\n>a~.00.2..}
+      14       14   {utgof-}-{Lön<\n>a~.00.2..}
       14        0   {h}-{me s öre; ſp}
+      14        0   {}-{ati de äro ſ}
       14        0   {}-{ord-<\n>BaBB2Baaa}
       14        0   {ſå<\n>måſt}-{änckande hafw}
       13        0   {k}-{räs,<\n>Spinnar}
@@ -64,8 +65,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       11        0   {t}-{ bljfwa be-}
       11        0   {}-{las ſklyun}
       11        0   {}-{res. il ere}
-      10        0   {=Ord}-{BBaBBBB<\n>ho}
-      10        0   {I}-{i an-<\n>ati }
+      10        0   {-Ord}-{BBaBBBB<\n>ho}
       10        0   {andragas;}-{mäl, ſom}
       10        0   {b}-{kalgndes, }
       10        0   {j}-{a<\n>noga und}
@@ -78,7 +78,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       10        0   {ön}-{ 15 j-f-j-}
        9        9   {hos m}-{B<\n>~~31.<\n>L}
        9        0   {.<\n>(*) Man}-{än, ſom}
-       9        0   {=<\n>}-{e äro ſ}
        9        0   {Fö}-{at ju fle}
        9        0   {inkomm}-{22N.<\n>Här}
        9        0   {la<\n>Riket.}-{t<\n>Od) Man}
@@ -94,7 +93,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        8        0   {cktig,}-{-<\n>o öre}
        8        0   {c}-{mma, bwl}
        8        0   {m}-{ch i nä}
-       8        0   {ord=<\n>ni}-{a ſträ}
+       8        0   {ord-<\n>ni}-{a ſträ}
        8        0   {u}-{egäende}
        8        0   {widare, }-{o�<9F>�<9F> tr}
        8        0   {}-{ ſkåly}
@@ -108,7 +107,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        8        0   {}-{rter må}
        8        0   {örſtå}-{inhet, i}
        7        0   { hos}-{ken<\n>e-4}
-       7        0   {=<\n>k}-{ge ? Hw}
+       7        0   {-<\n>k}-{ge ? Hw}
        7        0   {I}-{ywklfer}
        7        0   {Ja}-{kt, lge}
        7        0   {S. Cron}-{funnos }
@@ -204,6 +203,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        0   { }-{mkck}
        4        0   {,}-{gof-}
        4        0   {; Al}-{,<\n>be}
+       4        0   {Id}-{i an}
        4        0   {J}-{j237}
        4        0   {ar d}-{ eft}
        4        0   {bor}-{Klä}
@@ -224,7 +224,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        0   {tils}-{ en}
        4        0   {tt}-{n ſ}
        4        0   {t}-{pel:}
-       4        0   {up=<\n>}-{anſ}
+       4        0   {up-<\n>}-{anſ}
        4        0   {}-{ Lö}
        4        0   {}-{an m}
        4        0   {}-{be}
@@ -249,7 +249,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        3        0   {Sk}-{Fö}
        3        0   {Sw}-{all}
        3        0   {Så}-{man}
-       3        0   {be=}-{j}
+       3        0   {be-}-{j}
        3        0   {bur}-{ſp}
        3        0   {b}-{ſt}
        3        0   {dan}-{ſt}
@@ -359,7 +359,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   { }-{<\n>}
        1        0   {,}-{f}
        1        0   {<\n>}-{g}
-       1        0   {=}-{-}
        1        0   {?}-{t}
        1        0   {O}-{o}
        1        0   {W}-{t}
@@ -388,20 +387,20 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-      31       11    64.52   {<\n>}
+      31       10    67.74   {<\n>}
      161       17    89.44   { }
        1        1     0.00   {!}
        2        2     0.00   {(}
        2        2     0.00   {)}
        2        2     0.00   {*}
       24       14    41.67   {,}
+       8        6    25.00   {-}
        7        7     0.00   {.}
        3        3     0.00   {1}
        1        1     0.00   {2}
        1        1     0.00   {6}
        1        1     0.00   {7}
        3        3     0.00   {;}
-       8        8     0.00   {=}
        3        3     0.00   {?}
        4        3    25.00   {A}
        2        2     0.00   {C}
@@ -426,7 +425,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       83       27    67.47   {a}
       13        9    30.77   {b}
       12        5    58.33   {c}
-      57       27    52.63   {d}
+      57       28    50.88   {d}
      106       39    63.21   {e}
       18       11    38.89   {f}
       27       15    44.44   {g}

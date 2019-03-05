@@ -1,30 +1,30 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
     1568   Characters
-     593   Errors
-   62.18%  Accuracy
+     585   Errors
+   62.69%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   62.18%  Accuracy After Correction
+   62.69%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-     115      367      111      593   Unmarked
-     115      367      111      593   Total
+     115      359      111      585   Unmarked
+     115      359      111      585   Total
 
    Count   Missed   %Right
      249       23    90.76   ASCII Spacing Characters
-      58       50    13.79   ASCII Special Symbols
+      58       42    27.59   ASCII Special Symbols
        7        0   100.00   ASCII Digits
       20        1    95.00   ASCII Uppercase Letters
      992      215    78.33   ASCII Lowercase Letters
        2        0   100.00   Latin1 Control Codes
      119      100    15.97   Latin1 Special Symbols
      121       93    23.14   Latin1 Uppercase Letters
-    1568      482    69.26   Total
+    1568      474    69.77   Total
 
   Errors   Marked   Correct-Generated
       32        0   {ſ}-{s}
@@ -35,13 +35,11 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       12        0   {jag}-{« ; Z- JAS<\n>}
       10        0   {a}-{o}
        7        0   {/ ſå }-{-fä�<80><94>}
-       7        0   {haf=}-{logs-«}
+       7        0   {}-{s}
        7        0   {ſäga.}-{fogo »}
        6        0   {/}-{ -}
        6        0   {t är/}-{pavx}
        6        0   {tjaga.}-{g-ISO}
-       6        0   {}-{s}
-       6        0   {ſam=}-{sinsi-}
        6        0   {ſkär}-{iqu}
        6        0   {ſwår}-{smak}
        6        0   {ſåſ}-{s os}
@@ -49,13 +47,13 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        5        0   {/}-{�<80><94>-z}
        5        0   {ant f}-{omj}
        5        0   {ch ä}-{eljo}
-       5        0   {h=}-{l)- "}
        5        0   {jn }-{1ps·}
        5        0   {wijſ}-{kväs}
+       5        0   {ſam}-{sinsi}
        5        0   {ſpij}-{Pa}
-       4        0   {=}-{-}
        4        0   {er/ }-{a-s}
        4        0   {flä}-{sto}
+       4        0   {haf}-{logs}
        4        0   {lfre}-{ssa}
        4        0   {lill}-{W}
        4        0   {lär}-{tsxz}
@@ -116,7 +114,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {/ }-{ H}
        2        0   {/}-{ x}
        2        0   {/}-{s-}
-       2        0   {=}-{-s}
        2        0   {Gu}-{ka}
        2        0   {a }-{o}
        2        0   {al}-{os}
@@ -131,6 +128,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {e }-{zo}
        2        0   {el}-{kk}
        2        0   {g }-{s}
+       2        0   {h}-{l)}
        2        0   {if}-{st}
        2        0   {i}-{t}
        2        0   {jn}-{io}
@@ -152,9 +150,11 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {t}-{c}
        2        0   {t}-{e}
        2        0   {u}-{a}
+       2        0   {}-{ "}
        2        0   {}-{-.}
        2        0   {}-{-}
        2        0   {}-{i}
+       2        0   {}-{«}
        2        0   {}-{·}
        2        0   {�f}-{�i}
        2        0   {�l}-{�g}
@@ -172,10 +172,10 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   { }-{.}
        1        0   { }-{o}
        1        0   {,}-{k}
+       1        0   {-}-{s}
        1        0   {.}-{,}
        1        0   {/}-{g}
        1        0   {/}-{z}
-       1        0   {=}-{s}
        1        0   {f}-{s}
        1        0   {g}-{s}
        1        0   {g}-{}
@@ -217,6 +217,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
      217       23    89.40   { }
        1        1     0.00   {&}
        1        1     0.00   {,}
+       9        1    88.89   {-}
       12        4    66.67   {.}
       35       35     0.00   {/}
        1        0   100.00   {1}
@@ -224,7 +225,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   100.00   {4}
        2        0   100.00   {6}
        2        0   100.00   {9}
-       9        9     0.00   {=}
        2        0   100.00   {B}
        1        0   100.00   {D}
        2        0   100.00   {E}

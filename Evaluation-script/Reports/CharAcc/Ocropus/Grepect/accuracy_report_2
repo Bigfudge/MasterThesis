@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1097   Characters
-    1944   Errors
-  -77.21%  Accuracy
+    1096   Characters
+    1942   Errors
+  -77.19%  Accuracy
 
        8   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.73%  Characters Marked
-  -72.01%  Accuracy After Correction
+  -71.99%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        7       50       57   Marked
-      22      514     1351     1887   Unmarked
-      22      521     1401     1944   Total
+      22      511     1352     1885   Unmarked
+      22      518     1402     1942   Total
 
    Count   Missed   %Right
      135       31    77.04   ASCII Spacing Characters
-      62       49    20.97   ASCII Special Symbols
+      61       46    24.59   ASCII Special Symbols
       51       47     7.84   ASCII Uppercase Letters
      775      383    50.58   ASCII Lowercase Letters
        3        2    33.33   Latin1 Control Codes
       34       19    44.12   Latin1 Special Symbols
       37       12    67.57   Latin1 Uppercase Letters
-    1097      543    50.50   Total
+    1096      540    50.73   Total
 
   Errors   Marked   Correct-Generated
       46        0   {}-{fälia wmaula-<\n>ling....}
@@ -50,10 +50,10 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       14        0   {}-{r,<\n>a?<\n>ſeelio }
       14        0   {}-{s efter ſkål}
       13       13   {i}-{�<9F>-<\n>~~31.<\n>Lö}
-      13        0   {<9F>=}-{�lianon wmaa-}
       13        0   {}-{ khar-<\n>ſpinn}
       13        0   {}-{ler AManoch H}
       12       12   {}-{g.<\n>~a8<\n>lah,h}
+      12        0   {<9F>}-{�lianon wmaa}
       12        0   {ck}-{.ſ w.<\n>ſrif}
       12        0   {}-{-<\n>-ſå -<\n>ea}
       12        0   {}-{h efter ſin}
@@ -105,7 +105,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        8        0   {}-{ſpares.}
        7        0   {.<\n>T}-{ba, Sto}
        7        0   {/}-{a äent}
-       7        0   {Fo_}-{Hwijt w}
+       7        0   {Fo}-{Hwijt w}
        7        0   {T}-{uä-ula}
        7        0   {blad/}-{f - f -}
        7        0   {flore}-{lgapu-.}
@@ -280,8 +280,8 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        3        0   {}-{ten}
        3        0   {�da}-{�nt}
        3        0   {åh}-{l a}
+       2        0   {-<\n>}-{}
        2        0   {.}-{�<9F>}
-       2        0   {=<\n>}-{}
        2        0   {H}-{pr}
        2        0   {No}-{dl}
        2        0   {N}-{mm}
@@ -330,7 +330,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {.}-{h}
        1        0   {.}-{n}
        1        0   {/}-{,}
-       1        0   {=}-{-}
        1        0   {H}-{h}
        1        0   {H}-{}
        1        0   {K}-{F}
@@ -366,11 +365,10 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       31        8    74.19   {<\n>}
      104       23    77.88   { }
       16        8    50.00   {,}
-       6        4    33.33   {-}
+       9        5    44.44   {-}
       16       14    12.50   {.}
       16       16     0.00   {/}
        4        3    25.00   {:}
-       3        3     0.00   {=}
        2        2     0.00   {A}
        3        1    66.67   {B}
        1        1     0.00   {C}
@@ -387,7 +385,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       12       12     0.00   {T}
        1        1     0.00   {U}
        1        1     0.00   {W}
-       1        1     0.00   {_}
       46       14    69.57   {a}
       17       15    11.76   {b}
       23       18    21.74   {c}

@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
     1030   Characters
-    2157   Errors
- -109.42%  Accuracy
+    2155   Errors
+ -109.22%  Accuracy
 
        3   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.29%  Characters Marked
- -106.70%  Accuracy After Correction
+ -106.50%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        5       23       28   Marked
-       6      424     1699     2129   Unmarked
-       6      429     1722     2157   Total
+       6      422     1699     2127   Unmarked
+       6      427     1722     2155   Total
 
    Count   Missed   %Right
      161       29    81.99   ASCII Spacing Characters
-      35       33     5.71   ASCII Special Symbols
+      35       31    11.43   ASCII Special Symbols
       43       35    18.60   ASCII Uppercase Letters
      665      293    55.94   ASCII Lowercase Letters
        1        1     0.00   Latin1 Control Codes
       62       27    56.45   Latin1 Special Symbols
       63       17    73.02   Latin1 Uppercase Letters
-    1030      435    57.77   Total
+    1030      433    57.96   Total
 
   Errors   Marked   Correct-Generated
       30        0   {i}-{ en<\n>a<\n>ſä att man...}
@@ -31,11 +31,11 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       29        0   {}-{BaBB2BaaaåBBaBBBB<\n>2...}
       25        0   {r/}-{nnalkandestilSolenn,och...}
       22        0   {P}-{äkk läggcn gtnom Ede}
-      21        0   {=}-{fheten afſenoträar-}
       21        0   {W}-{Krops Byggning<\n>drg)...}
       21        0   {}-{e-4 -<\n>g Kardare Lön...}
       21        0   {}-{hwilken jikke<\n>Jär rn}
       20        0   {T}-{ſig krökta FRolnat}
+      20        0   {}-{fheten afſenoträar}
       20        0   {}-{il et ſkålp: lll<\n>h}
       20        0   {}-{pares. il erempel: d}
       18       18   {}-{olil0.<\n>j h-22~å (}
@@ -108,9 +108,9 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        9        0   {�kk Sp}-{�rſnwmmn}
        9        0   {ſ}-{ifrän hw}
        8        0   {/}-{ Matkar-}
-       8        0   {a=}-{ henmmes}
+       8        0   {a-}-{ henmmes}
        8        0   {a}-{esFullbo}
-       8        0   {e be=<\n>g}-{anknippa}
+       8        0   {e be-<\n>g}-{anknippa}
        8        0   {en<\n>m}-{uti för}
        8        0   {f}-{ ſluta-}
        8        0   {g}-{den allw}
@@ -128,7 +128,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        8        0   {� ed}-{�r-hwilk}
        8        0   {�kk}-{�nd?<\n>ſe}
        7        0   {(Fa}-{at ju f}
-       7        0   {=<\n>by}-{däjeli}
+       7        0   {-<\n>by}-{däjeli}
        7        0   {L}-{anſenl}
        7        0   {Mo}-{efter K}
        7        0   {Ob}-{och Arh}
@@ -180,7 +180,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        6        0   {ſin K}-{härda}
        5        0   {.}-{ ny<\n>f}
        5        0   {/}-{ blif}
-       5        0   {=}-{- t,,}
        5        0   {E}-{hllan}
        5        0   {Matka}-{af de}
        5        0   {Pryd}-{ud Bu}
@@ -236,6 +235,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        0   {r Fo}-{<\n>lja}
        4        0   {r K}-{;hwa}
        4        0   {r}-{la R}
+       4        0   {}-{ t,,}
        4        0   {}-{-ſo}
        4        0   {}-{an}
        4        0   {}-{cket}
@@ -352,9 +352,9 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   { }-{f}
        1        0   { }-{i}
        1        0   {(}-{c}
+       1        0   {-}-{n}
        1        0   {.}-{d}
        1        0   {/}-{e}
-       1        0   {=}-{n}
        1        0   {B}-{b}
        1        0   {B}-{m}
        1        0   {a}-{e}
@@ -397,10 +397,10 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
      134       20    85.07   { }
        3        3     0.00   {(}
        3        3     0.00   {)}
+       6        4    33.33   {-}
        3        2    33.33   {.}
       19       19     0.00   {/}
        1        0   100.00   {:}
-       6        6     0.00   {=}
        1        0   100.00   {A}
        2        2     0.00   {B}
        1        1     0.00   {C}

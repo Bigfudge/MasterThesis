@@ -1,30 +1,30 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
     1556   Characters
-    2170   Errors
-  -39.46%  Accuracy
+    2165   Errors
+  -39.14%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-  -39.46%  Accuracy After Correction
+  -39.14%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-      27      730     1413     2170   Unmarked
-      27      730     1413     2170   Total
+      27      725     1413     2165   Unmarked
+      27      725     1413     2165   Total
 
    Count   Missed   %Right
      254       55    78.35   ASCII Spacing Characters
-      49       45     8.16   ASCII Special Symbols
+      49       40    18.37   ASCII Special Symbols
        4        4     0.00   ASCII Digits
       35       31    11.43   ASCII Uppercase Letters
      942      495    47.45   ASCII Lowercase Letters
        3        2    33.33   Latin1 Control Codes
      133       74    44.36   Latin1 Special Symbols
      136       51    62.50   Latin1 Uppercase Letters
-    1556      757    51.35   Total
+    1556      752    51.67   Total
 
   Errors   Marked   Correct-Generated
       47        0   {}-{er tilj1d) pro dat j ps ...}
@@ -37,12 +37,12 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       16        0   {}-{alle galläplen }
       16        0   {}-{ngd, ochbetatas }
       16        0   {ät}-{the Twkiſke; hw}
-      15        0   {=}-{--j --ſ 1kf--j}
       15        0   {h}-{kſing<\n>ſyaring}
       15        0   {}-{af-<\n>prof ähr 1}
       14        0   {wil wara<\n>gaa}-{s -ſ--h--j 2-}
       14        0   {}-{ w.<\n>ſä ſnar}
       14        0   {}-{, beſpares. i}
+      14        0   {}-{-j --ſ 1kf--j}
       14        0   {}-{och ett diur h}
       13        0   {}-{Suurbrunn.<\n>sE}
       13        0   {}-{ålp: lll<\n>ſk}
@@ -121,7 +121,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        8        0   {}-{rks-omko}
        7        0   { }-{ålp.-<\n>}
        7        0   {/ och}-{ia.<\n>rar}
-       7        0   {Mat=<\n>k}-{ju fler}
+       7        0   {Mat-<\n>k}-{ju fler}
        7        0   {ad/}-{if j<\n>ſ}
        7        0   {e; h}-{uhlorup}
        7        0   {gg på }-{ſto ſ}
@@ -216,7 +216,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        5        0   {ſ}-{förb}
        4        0   {.}-{ på}
        4        0   {<\n>ſ}-{rnef}
-       4        0   {=<\n>}-{wj- }
        4        0   {M}-{Eron}
        4        0   {M}-{j s<\n>}
        4        0   {afwa}-{ohl}
@@ -271,7 +270,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        3        0   {/}-{ne-}
        3        0   {/}-{}
        3        0   {<\n>}-{ ſ}
-       3        0   {=}-{-}
        3        0   {H}-{-<\n>r}
        3        0   {M}-{hll}
        3        0   {Tu}-{Rä}
@@ -351,7 +349,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {ki}-{<\n>a}
        2        0   {l}-{ a}
        2        0   {l}-{ta}
-       2        0   {m=}-{ch}
+       2        0   {m-}-{ch}
        2        0   {m}-{tr}
        2        0   {ni}-{, }
        2        0   {n}-{<\n>e}
@@ -389,6 +387,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {}-{s }
        2        0   {}-{u}
        2        0   {}-{wi}
+       2        0   {}-{wj}
        2        0   {}-{ſ}
        2        0   {�}-{<9F>-}
        2        0   {�}-{�}
@@ -403,6 +402,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {/}-{e}
        1        0   {/}-{r}
        1        0   {/}-{t}
+       1        0   {<\n>}-{ }
        1        0   {C}-{k}
        1        0   {M}-{K}
        1        0   {T}-{t}
@@ -450,13 +450,13 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
    Count   Missed   %Right
       32       16    50.00   {<\n>}
      222       39    82.43   { }
+       7        2    71.43   {-}
       14       10    28.57   {.}
       27       27     0.00   {/}
        2        2     0.00   {1}
        1        1     0.00   {3}
        1        1     0.00   {7}
        1        1     0.00   {;}
-       7        7     0.00   {=}
        1        1     0.00   {A}
        1        1     0.00   {C}
        1        0   100.00   {D}

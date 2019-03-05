@@ -1,38 +1,39 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1380   Characters
-    2002   Errors
-  -45.07%  Accuracy
+    1379   Characters
+    1997   Errors
+  -44.82%  Accuracy
 
        4   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.29%  Characters Marked
-  -41.09%  Accuracy After Correction
+  -40.83%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0       10       45       55   Marked
-      22      620     1305     1947   Unmarked
-      22      630     1350     2002   Total
+      22      614     1306     1942   Unmarked
+      22      624     1351     1997   Total
 
    Count   Missed   %Right
-     223       53    76.23   ASCII Spacing Characters
-      54       50     7.41   ASCII Special Symbols
+     223       54    75.78   ASCII Spacing Characters
+      53       44    16.98   ASCII Special Symbols
        3        3     0.00   ASCII Digits
       26       24     7.69   ASCII Uppercase Letters
      892      443    50.34   ASCII Lowercase Letters
       91       48    47.25   Latin1 Special Symbols
-      91       31    65.93   Latin1 Uppercase Letters
-    1380      652    52.75   Total
+      91       30    67.03   Latin1 Uppercase Letters
+    1379      646    53.15   Total
 
   Errors   Marked   Correct-Generated
       30       30   {}-{s timmcliga hemt,<\n>ae~...}
       26        0   {oc}-{af de fyra uti n.s nämd...}
       24        0   {w}-{ataigen ſom barnoch uhr}
-      23        0   {ij}-{na<\n>BaBB2BaaaåBBaBBBB...}
       22        0   {k}-{j254 pra ddt j237 pra }
+      21        0   {}-{nen ſ<\n>t<\n>4<\n>a ſ...}
+      21        0   {}-{och wil ſtrax;merpå}
       20        0   {}-{pares. il erempel: d}
-      18        0   {ge}-{t<\n>4<\n>a ſkålp.-...}
+      18        0   {ltijd}-{BB2BaaaåBBaBBBB<\n>B}
       18        0   {mm}-{rre blif j<\n>ſökt }
       18        0   {nnen?<\n>HWada}-{myt, ſou1 cfter e}
       18        0   {ſ}-{j3 pra let j1 0 pr}
@@ -41,15 +42,14 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       15        0   {o}-{pinnas etalas u}
       15        0   {}-{f h2rtalam2h<\n>ma}
       15        0   {}-{kafla, i an-<\n>ge}
-      15        0   {}-{r<\n>-ſå -<\n>yropp}
       15        0   {}-{ſklp warda ſy}
       14        0   {XVI.<\n>Hwa}-{ſpinnas ; ſt}
-      14        0   {af=<\n>ſ}-{öAecl0n, hwil}
+      14        0   {af-<\n>ſ}-{öAecl0n, hwil}
       14        0   {}-{ magen och äd}
       14        0   {}-{ſom kallashun}
       14        0   {�nnu}-{�tde<\n>wodis<\n>e-4}
       13        0   { kalla til ſ}-{hen<\n>rwmineral}
-      13        0   {tholoma_}-{ är änn ick}
+      13        0   {tholoma}-{ är änn ick}
       13        0   {ſla}-{ 1 13 prs äe}
       12        0   {ch Meden, h}-{nun�<9F>.<\n>käll}
       12        0   {wodis}-{ſsmm tan1,<\n>}
@@ -89,12 +89,12 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        9        0   {}-{hun-<\n>när}
        9        0   {}-{ju flera }
        9        0   {}-{nne, deſ}
+       9        0   {�ga/ }-{� -<\n>yropp}
        9        0   {�g}-{�fwer hel}
        8        8   {gan}-{ hh-<\n>B~B}
        8        8   {kant}-{rſer:<\n>~}
        8        0   { }-{-ſkulle}
        8        0   { }-{}
-       8        0   {/}-{full-och}
        8        0   {hoo}-{uträkna}
        8        0   {h}-{d Bunkte}
        8        0   {ick}-{ywåntar}
@@ -105,19 +105,18 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        8        0   {}-{eblifwer}
        8        0   {}-{längan }
        8        0   {}-{s öre; }
-       8        0   {}-{wil ſtr}
        8        0   {�}-{�-<\n>dknö}
        7        0   { wil}-{forſka}
        7        0   { }-{a-<\n>Hwar}
+       7        0   {-B}-{e Loppa}
        7        0   {/<\n>uvw}-{. Therf}
        7        0   {/}-{<\n>nlien,}
-       7        0   {=B}-{e Loppa}
        7        0   {ff}-{m-<\n>kän}
        7        0   {från}-{och af-}
        7        0   {hen äg}-{ylofwan}
        7        0   {hlofwan}-{er Klä}
        7        0   {ig/<\n>}-{apandes}
-       7        0   {kom=<\n>}-{förnä}
+       7        0   {kom-<\n>}-{förnä}
        7        0   {käl}-{Af BAde}
        7        0   {lii}-{e Redſ}
        7        0   {ll}-{ äent<\n>}
@@ -136,10 +135,9 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        7        0   {ö}-{wa, hwa}
        6        0   {.}-{ltſä}
        6        0   {/}-{ klart}
-       6        0   {=}-{nen ſ}
        6        0   {b}-{ochand}
        6        0   {e}-{ ſina}
-       6        0   {f=}-{e Lön}
+       6        0   {f-}-{e Lön}
        6        0   {har}-{lgenom}
        6        0   {h}-{man br}
        6        0   {ijd/}-{ſägg}
@@ -154,6 +152,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        6        0   {ri}-{an hun}
        6        0   {uthaf}-{ſan<\n>F}
        6        0   {}-{-<\n>o ö}
+       6        0   {}-{gafull}
        6        0   {}-{n för}
        6        0   {}-{s efte}
        6        0   {}-{war ha}
@@ -163,7 +162,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        5        0   {Indie}-{het y}
        5        0   {Suu}-{2d ö}
        5        0   {Syr}-{uthſ}
-       5        0   {a=}-{erpå}
        5        0   {agan}-{inut,}
        5        0   {a}-{ſkå}
        5        0   {er/ }-{ſtal}
@@ -174,7 +172,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        5        0   {hfor}-{watn }
        5        0   {hun}-{före}
        5        0   {ilkom}-{atnet}
-       5        0   {ltijd}-{thela}
        5        0   {m}-{ änt}
        5        0   {r}-{gotaf}
        5        0   {r}-{ng ſ}
@@ -194,13 +191,13 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        5        0   {}-{wil m}
        5        0   {}-{�rem�}
        5        0   {}-{ätit}
+       5        0   {}-{ſin }
        5        0   {}-{ſnſ}
        5        0   {ä}-{at hu}
-       5        0   {ä}-{in ma}
        5        0   {å}-{athlu}
        4        0   {, }-{ bek}
+       4        0   {-<\n>}-{llie}
        4        0   {/}-{-}
-       4        0   {=<\n>}-{llie}
        4        0   {Aſi}-{tomm}
        4        0   {and}-{efte}
        4        0   {deh}-{ſki}
@@ -209,6 +206,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        0   {g}-{nint}
        4        0   {h}-{o ſ}
        4        0   {h}-{ſtr}
+       4        0   {ij }-{na<\n>B}
        4        0   {läk}-{gnag}
        4        0   {lå}-{grie}
        4        0   {m}-{Såd}
@@ -226,6 +224,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        0   {}-{ }
        4        0   {}-{Rike}
        4        0   {}-{d}
+       4        0   {}-{hela}
        4        0   {}-{le}
        4        0   {}-{n ha}
        4        0   {}-{n<\n>.4}
@@ -241,17 +240,16 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        0   {ſ}-{folc}
        3        0   { t}-{<\n>hw}
        3        0   { }-{åg}
+       3        0   {-}-{ket}
        3        0   {/}-{ me}
        3        0   {/}-{ter}
        3        0   {/}-{t}
-       3        0   {=}-{ket}
        3        0   {The}-{hä}
        3        0   {a}-{Lö}
        3        0   {bå}-{äg}
        3        0   {ck}-{ſt}
        3        0   {d}-{rig}
        3        0   {en.}-{ä,}
-       3        0   {h=}-{il-}
        3        0   {l/}-{te-}
        3        0   {m}-{ann}
        3        0   {m}-{eij}
@@ -283,6 +281,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        3        0   {}-{mak}
        3        0   {}-{n u}
        3        0   {}-{nde}
+       3        0   {}-{r<\n>-}
        3        0   {}-{ufm}
        3        0   {}-{utf}
        3        0   {}-{wlo}
@@ -299,7 +298,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {,}-{te}
        2        0   {/ }-{-}
        2        0   {/ }-{r}
-       2        0   {=}-{-}
        2        0   {Ba}-{me}
        2        0   {Ty}-{1.}
        2        0   {af}-{en}
@@ -310,9 +308,11 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {e}-{wi}
        2        0   {ff}-{ k}
        2        0   {g }-{nn}
+       2        0   {ge}-{ta}
        2        0   {g}-{ m}
        2        0   {g}-{er}
        2        0   {h}-{<\n>S}
+       2        0   {h}-{il}
        2        0   {h}-{}
        2        0   {ig}-{d}
        2        0   {i}-{Ko}
@@ -323,7 +323,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {r.}-{ts}
        2        0   {r}-{nd}
        2        0   {r}-{t,}
-       2        0   {t }-{x;}
        2        0   {t/}-{de}
        2        0   {u}-{a}
        2        0   {u}-{ef}
@@ -402,15 +401,14 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
 
    Count   Missed   %Right
       30       12    60.00   {<\n>}
-     193       41    78.76   { }
+     193       42    78.24   { }
        3        3     0.00   {,}
-       1        1     0.00   {-}
+      12        7    41.67   {-}
       12        8    33.33   {.}
       25       25     0.00   {/}
        1        1     0.00   {0}
        1        1     0.00   {2}
        1        1     0.00   {5}
-      11       11     0.00   {=}
        1        1     0.00   {?}
        1        1     0.00   {A}
        4        4     0.00   {B}
@@ -425,14 +423,13 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        1     0.00   {V}
        1        1     0.00   {W}
        1        1     0.00   {X}
-       1        1     0.00   {_}
       97       38    60.82   {a}
        8        6    25.00   {b}
       16        8    50.00   {c}
       25       16    36.00   {d}
       94       32    65.96   {e}
       24       17    29.17   {f}
-      40       21    47.50   {g}
+      40       22    45.00   {g}
       55       28    49.09   {h}
       40       23    42.50   {i}
        3        3     0.00   {j}
@@ -444,7 +441,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       13        8    38.46   {p}
       75       27    64.00   {r}
       12        5    58.33   {s}
-      88       33    62.50   {t}
+      88       32    63.64   {t}
       26       18    30.77   {u}
        1        1     0.00   {v}
       12       11     8.33   {w}
@@ -454,5 +451,5 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       27       21    22.22   {�}
       11        5    54.55   {�}
       27       10    62.96   {�}
-      64       21    67.19   {�}
+      64       20    68.75   {�}
       27       10    62.96   {�}

@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-     990   Characters
-     587   Errors
-   40.71%  Accuracy
+     987   Characters
+     584   Errors
+   40.83%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   40.71%  Accuracy After Correction
+   40.83%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-     105      392       90      587   Unmarked
-     105      392       90      587   Total
+     102      392       90      584   Unmarked
+     102      392       90      584   Total
 
    Count   Missed   %Right
      140       29    79.29   ASCII Spacing Characters
-      38       28    26.32   ASCII Special Symbols
+      35       25    28.57   ASCII Special Symbols
       40       19    52.50   ASCII Uppercase Letters
      668      344    48.50   ASCII Lowercase Letters
        2        0   100.00   Latin1 Control Codes
       50       41    18.00   Latin1 Special Symbols
       52       36    30.77   Latin1 Uppercase Letters
-     990      497    49.80   Total
+     987      494    49.95   Total
 
   Errors   Marked   Correct-Generated
       16        0   {hlärde Philippu}-{ tsk-Myk- }
@@ -36,7 +36,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       10        0   {ſ}-{s}
        9        0   { annum ſ}-{jzsgsst<\n>O}
        9        0   {<\n>Et nun@q}-{ «<\n>BMW-,}
-       9        0   {quen=<\n>@em}-{MjZiJPwMM}
+       9        0   {quen-<\n>@em}-{MjZiJPwMM}
        8        0   {:<\n>Spar}-{ IT «<\n>n}
        8        0   {}-{.z « ·}
        7        0   { ſägh}-{ckglz}
@@ -56,7 +56,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        6        0   {ſk}-{si}
        5        0   { ſub}-{yxå}
        5        0   {:}-{-; «}
-       5        0   {a_eta}-{}
        5        0   {bella}-{XML-}
        5        0   {etes.}-{m-«}
        5        0   {jn}-{sm-ta}
@@ -68,9 +67,8 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        5        0   {ſſt}-{ss-}
        4        0   {Com}-{szch}
        4        0   {Ille}-{läk}
+       4        0   {aeta}-{}
        4        0   {anus}-{««}
-       4        0   {co_e}-{afs}
-       4        0   {co_e}-{m}
        4        0   {e ma}-{cm«}
        4        0   {ha}-{s-«}
        4        0   {iniu}-{yw- }
@@ -91,6 +89,8 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        3        0   {H}-{- B}
        3        0   {a@q}-{-}
        3        0   {ato}-{xm}
+       3        0   {coe}-{afs}
+       3        0   {coe}-{m}
        3        0   {dit}-{-}
        3        0   {dt?}-{s}
        3        0   {d}-{ixs}
@@ -202,11 +202,10 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
      115       23    80.00   { }
        1        1     0.00   {(}
        3        1    66.67   {,}
-       1        0   100.00   {-}
+       2        1    50.00   {-}
       12        6    50.00   {.}
        6        6     0.00   {/}
        4        3    25.00   {:}
-       1        1     0.00   {=}
        1        1     0.00   {?}
        6        6     0.00   {@}
        1        0   100.00   {A}
@@ -226,7 +225,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        3        1    66.67   {S}
        3        0   100.00   {T}
        2        1    50.00   {V}
-       3        3     0.00   {_}
       58       41    29.31   {a}
        4        3    25.00   {b}
       16        8    50.00   {c}

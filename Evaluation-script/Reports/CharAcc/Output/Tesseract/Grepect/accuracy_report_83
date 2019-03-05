@@ -1,54 +1,38 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
     1264   Characters
-<<<<<<< HEAD
-     179   Errors
-   85.84%  Accuracy
-=======
-    1170   Errors
-    7.44%  Accuracy
->>>>>>> master
+     172   Errors
+   86.39%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-<<<<<<< HEAD
-   85.84%  Accuracy After Correction
+   86.39%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-      52      109       18      179   Unmarked
-      52      109       18      179   Total
-=======
-    7.44%  Accuracy After Correction
-
-     Ins    Subst      Del   Errors
-       0        0        0        0   Marked
-      14      246      910     1170   Unmarked
-      14      246      910     1170   Total
->>>>>>> master
+      52      102       18      172   Unmarked
+      52      102       18      172   Total
 
    Count   Missed   %Right
      194       28    85.57   ASCII Spacing Characters
-      41       12    70.73   ASCII Special Symbols
+      41        5    87.80   ASCII Special Symbols
       17        2    88.24   ASCII Uppercase Letters
-<<<<<<< HEAD
      814       18    97.79   ASCII Lowercase Letters
        2        0   100.00   Latin1 Control Codes
       97       56    42.27   Latin1 Special Symbols
       99       45    54.55   Latin1 Uppercase Letters
-    1264      161    87.26   Total
+    1264      154    87.82   Total
 
   Errors   Marked   Correct-Generated
       66        0   {ſ}-{s}
+      14        0   {<\n>}-{ }
       11        0   {�}-{�}
       10        0   {<\n>åli}-{ i i s . a}
-       9        0   {<\n>}-{ }
        8        0   {ö}-{o}
-       7        0   {enſk=<\n>}-{mle- }
-       6        0   {=<\n>}-{- }
        6        0   {en,<\n>}-{m, lx }
+       5        0   {enſk}-{mle}
        4        0   {Min }-{}
        4        0   {lån}-{ch}
        4        0   {ſ}-{f}
@@ -57,85 +41,20 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        3        0   {<\n>ö}-{ o}
        3        0   {<\n>ſ}-{ .f}
        3        0   {<\n>ſ}-{- s}
-       3        0   {=<\n>}-{- ,}
-       3        0   {e=<\n>}-{os }
-       3        0   {l=<\n>}-{t- }
+       3        0   {e-<\n>}-{os }
        2        0   {.}-{}
        2        0   {.}-{»}
        2        0   {<\n>w}-{ m}
+       2        0   {<\n>}-{ ,}
        2        0   {<\n>}-{ L}
        2        0   {<\n>}-{- }
-       2        0   {=}-{g-}
        2        0   {rl}-{n}
        2        0   {}-{-}
        1        0   { }-{}
        1        0   {e}-{c}
        1        0   {f}-{s}
-=======
-     814       20    97.54   ASCII Lowercase Letters
-       2        2     0.00   Latin1 Control Codes
-      97       97     0.00   Latin1 Special Symbols
-      99       99     0.00   Latin1 Uppercase Letters
-    1264      260    79.43   Total
-
-  Errors   Marked   Correct-Generated
-     252        0   {}-{b'}
-     156        0   {}-{'}
-     104        0   {å}-{\xc3\xa5}
-      72        0   {ö}-{\xc3\xb6}
-      48        0   {ä}-{\xc3\xa5}
-      48        0   {ſ}-{b's}
-      40        0   {ä}-{\xc3\xa4}
-      40        0   {ä}-{b'\xc3\xa5}
-      32        0   {<\n>}-{' b'}
-      24        0   {ſå}-{b's\xc3\xa5'}
-      20        0   {}-{' b'i' b's' b'.' b'a}
-      20        0   {ö}-{'b\xc3\xb6}
-      18        0   {å}-{\xc3\xa5'}
-      18        0   {öſ}-{\xc3\xb6s}
-      16        0   {}-{'b}
-      16        0   {�<9F>}-{\xc3\x9f}
-      15        0   {ö=<\n>}-{'b\xc3\xb6-' b'}
-      14        0   {ſ}-{s}
-      12        0   {<\n>}-{' b'\xc2\xbb}
-      12        0   {en,<\n>}-{m,' b'lx' b'}
-      12        0   {ſå}-{b'f\xc3\xa5'}
-      12        0   {ſåſ}-{b's\xc3\xa5s}
-      11        0   {ſå}-{b's\xc3\xa5}
-      10        0   {å}-{b'\xc3\xa5}
-      10        0   {ſtä}-{st\xc3\xa5}
-       9        0   { rö}-{r\xc3\xb6}
-       9        0   {.}-{\xc2\xbb'}
-       8        0   {e=<\n>}-{'bos' b'}
-       6        0   {<\n>U}-{' b'll}
-       6        0   {<\n>ſ}-{' b'.f}
-       6        0   {<\n>ſ}-{-' b's}
-       6        0   {=<\n>}-{-' b',}
-       6        0   {l=<\n>}-{t-' b'}
-       6        0   {nſk=<\n>}-{-' b'}
-       6        0   {ö}-{b'o}
-       5        0   {<\n>w}-{' b'm}
-       5        0   {<\n>}-{' b'L}
-       5        0   {<\n>}-{-' b'}
-       5        0   {<\n>ö}-{' b'o}
-       5        0   {=<\n>}-{-' b'}
-       4        0   {<\n>ål}-{' b'}
-       4        0   {Min }-{b'}
-       4        0   {lån}-{b'ch}
-       4        0   {ö}-{o}
-       3        0   {=<\n>}-{-' }
-       3        0   {=}-{g-'}
-       3        0   {f}-{b's}
-       3        0   {ſa}-{sa'}
-       3        0   {ſe}-{se'}
-       2        0   {.}-{'}
-       2        0   {<\n>}-{' }
-       2        0   {rl}-{n}
-       2        0   {}-{-}
-       2        0   {}-{ml}
-       2        0   {ſ}-{f}
-       1        0   {e}-{c}
->>>>>>> master
+       1        0   {l}-{t}
+       1        0   {}-{g}
        1        0   {}-{o}
 
    Count   Missed   %Right
@@ -143,8 +62,8 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
      168        2    98.81   { }
        1        0   100.00   {!}
       26        1    96.15   {,}
+       8        1    87.50   {-}
        5        3    40.00   {.}
-       8        8     0.00   {=}
        1        0   100.00   {?}
        3        0   100.00   {D}
        1        0   100.00   {E}
@@ -155,11 +74,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   100.00   {S}
        2        0   100.00   {T}
        1        1     0.00   {U}
-<<<<<<< HEAD
       76        0   100.00   {a}
-=======
-      76        1    98.68   {a}
->>>>>>> master
       14        0   100.00   {b}
       12        0   100.00   {c}
       47        0   100.00   {d}
@@ -167,11 +82,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       34        1    97.06   {f}
       44        0   100.00   {g}
       22        0   100.00   {h}
-<<<<<<< HEAD
       51        2    96.08   {i}
-=======
-      51        1    98.04   {i}
->>>>>>> master
        4        0   100.00   {j}
       22        1    95.45   {k}
       47        4    91.49   {l}
@@ -179,7 +90,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       60        4    93.33   {n}
       47        0   100.00   {o}
        6        0   100.00   {p}
-<<<<<<< HEAD
       70        1    98.57   {r}
       11        0   100.00   {s}
       77        0   100.00   {t}
@@ -192,18 +102,4 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       20        5    75.00   {�}
       38       38     0.00   {�}
       61        7    88.52   {�}
-=======
-      70        2    97.14   {r}
-      11        0   100.00   {s}
-      77        1    98.70   {t}
-       4        0   100.00   {u}
-      24        1    95.83   {w}
-       7        0   100.00   {y}
-       2        2     0.00   {<9F>}
-      16       16     0.00   {�}
-      23       23     0.00   {�}
-      20       20     0.00   {�}
-      38       38     0.00   {�}
-      61       61     0.00   {�}
->>>>>>> master
       38       38     0.00   {�}

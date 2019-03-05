@@ -1,52 +1,49 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
     1984   Characters
-     578   Errors
-   70.87%  Accuracy
+     569   Errors
+   71.32%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   70.87%  Accuracy After Correction
+   71.32%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-     111      328      139      578   Unmarked
-     111      328      139      578   Total
+     112      317      140      569   Unmarked
+     112      317      140      569   Total
 
    Count   Missed   %Right
-     292       38    86.99   ASCII Spacing Characters
-      62       42    32.26   ASCII Special Symbols
+     292       37    87.33   ASCII Spacing Characters
+      62       32    48.39   ASCII Special Symbols
       24        5    79.17   ASCII Digits
       88       12    86.36   ASCII Uppercase Letters
-    1262      165    86.93   ASCII Lowercase Letters
+    1262      166    86.85   ASCII Lowercase Letters
        1        0   100.00   Latin1 Control Codes
      127       93    26.77   Latin1 Special Symbols
      128       84    34.38   Latin1 Uppercase Letters
-    1984      439    77.87   Total
+    1984      429    78.38   Total
 
   Errors   Marked   Correct-Generated
-      64        0   {ſ}-{s}
+      68        0   {ſ}-{s}
       29        0   {}-{«-<\n>14 " - xxxi-JA,NU...}
       23        0   {Cölln}-{«.)««<\n>, .<\n>N-,...}
        9        0   { }-{}
        9        0   {/}-{-}
        9        0   {ſk}-{st}
-       8        0   {=wäſen}-{W}
+       8        0   {-wäſen}-{W}
        8        0   {krike/}-{ces-säg}
        7        0   {t/ ſå}-{rner}
        7        0   {u}-{n}
        7        0   {}-{ " « .}
        7        0   {älſka}-{atstn}
        6        0   { ſ}-{s}
-       6        0   {=}-{-}
-       6        0   {=ſtyg}-{n-sina}
        6        0   {Preſt}-{kynn}
        6        0   {illiga}-{eman}
        6        0   {å}-{a}
-       6        0   {ſ=<\n>ſ}-{s-<\n>- s}
-       5        0   {Chri=}-{Edets}
+       5        0   {Chri-}-{Edets}
        5        0   {Lärj}-{kar-k}
        5        0   {i}-{r}
        5        0   {liſk}-{ust}
@@ -55,6 +52,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        5        0   {rius }-{nns«}
        5        0   {}-{» , }
        5        0   {ſt/}-{st-.-}
+       5        0   {ſtyg}-{sina}
        5        0   {ſä/}-{sa-}
        4        0   { 800}-{soo}
        4        0   {/}-{-«-}
@@ -77,8 +75,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        3        0   { }-{-}
        3        0   {/}-{«-}
        3        0   {;}-{-·}
-       3        0   {=}-{-»}
-       3        0   {=ſ}-{-s}
        3        0   {er }-{cxz}
        3        0   {ia)}-{teu}
        3        0   {i}-{r«}
@@ -104,6 +100,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        3        0   {ſk}-{sto}
        3        0   {ſt}-{Al}
        3        0   {ſt}-{si}
+       3        0   {ſ}-{- s}
        2        0   { O}-{o}
        2        0   { g}-{a}
        2        0   { h}-{n}
@@ -120,6 +117,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {Kl}-{M}
        2        0   {a}-{s}
        2        0   {ch}-{a)}
+       2        0   {do}-{on}
        2        0   {h}-{dt}
        2        0   {i}-{e}
        2        0   {li}-{n}
@@ -142,6 +140,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {}-{" }
        2        0   {}-{-'}
        2        0   {}-{; }
+       2        0   {}-{»}
        2        0   {ä}-{ar}
        2        0   {ä}-{a}
        2        0   {ä}-{s}
@@ -152,22 +151,21 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {ſ}-{r}
        1        0   { }-{"}
        1        0   { }-{.}
+       1        0   {-}-{i}
+       1        0   {-}-{s}
+       1        0   {-}-{x}
        1        0   {-}-{}
        1        0   {.}-{x}
        1        0   {/}-{s}
        1        0   {/}-{z}
        1        0   {;}-{-}
        1        0   {<\n>}-{ }
-       1        0   {=}-{i}
-       1        0   {=}-{s}
-       1        0   {=}-{x}
        1        0   {D}-{H}
        1        0   {K}-{F}
        1        0   {a}-{o}
        1        0   {b}-{d}
        1        0   {c}-{e}
        1        0   {c}-{h}
-       1        0   {d}-{}
        1        0   {e}-{o}
        1        0   {g}-{a}
        1        0   {g}-{o}
@@ -199,12 +197,12 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-      36        2    94.44   {<\n>}
+      36        1    97.22   {<\n>}
      256       36    85.94   { }
        1        0   100.00   {(}
        1        1     0.00   {)}
        7        0   100.00   {,}
-       1        1     0.00   {-}
+      16        6    62.50   {-}
       11        1    90.91   {.}
       21       21     0.00   {/}
        2        2     0.00   {0}
@@ -218,7 +216,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        1     0.00   {9}
        2        0   100.00   {:}
        3        3     0.00   {;}
-      15       15     0.00   {=}
        5        1    80.00   {A}
        4        0   100.00   {B}
        6        2    66.67   {C}
@@ -253,7 +250,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       55       23    58.18   {l}
       29        2    93.10   {m}
      127        6    95.28   {n}
-      81        1    98.77   {o}
+      81        2    97.53   {o}
       17        3    82.35   {p}
      114       10    91.23   {r}
       29        2    93.10   {s}

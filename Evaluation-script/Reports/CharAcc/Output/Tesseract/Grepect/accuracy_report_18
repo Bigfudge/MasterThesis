@@ -1,76 +1,60 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-     423   Characters
-<<<<<<< HEAD
-     165   Errors
-   60.99%  Accuracy
-=======
-     455   Errors
-   -7.57%  Accuracy
->>>>>>> master
+     421   Characters
+     160   Errors
+   62.00%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-<<<<<<< HEAD
-   60.99%  Accuracy After Correction
+   62.00%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-      46      100       19      165   Unmarked
-      46      100       19      165   Total
-=======
-   -7.57%  Accuracy After Correction
-
-     Ins    Subst      Del   Errors
-       0        0        0        0   Marked
-      14      142      299      455   Unmarked
-      14      142      299      455   Total
->>>>>>> master
+      45       95       20      160   Unmarked
+      45       95       20      160   Total
 
    Count   Missed   %Right
       62       21    66.13   ASCII Spacing Characters
-      27       21    22.22   ASCII Special Symbols
+      25       16    36.00   ASCII Special Symbols
        1        1     0.00   ASCII Digits
       21        4    80.95   ASCII Uppercase Letters
-<<<<<<< HEAD
-     256       56    78.12   ASCII Lowercase Letters
+     256       55    78.52   ASCII Lowercase Letters
       28       22    21.43   Latin1 Special Symbols
       28       21    25.00   Latin1 Uppercase Letters
-     423      146    65.48   Total
+     421      140    66.75   Total
 
   Errors   Marked   Correct-Generated
       19        0   {och diarrhea,<\n>när...}-{»;·"--:Ikz « -}
-      10        0   {föror=<\n>ſ}-{s « " s}
+      12        0   {ſ}-{s}
+      10        0   {föror-<\n>ſ}-{s « " s}
       10        0   {ä}-{a}
-      10        0   {ſ}-{s}
        8        0   {lepſie,}-{k-FAQ}
        7        0   { ſlag,}-{»» !}
        7        0   {<\n>}-{ « « }
-       7        0   {moder=<\n>}-{s }
+       7        0   {moder-<\n>}-{s }
        7        0   {olique,}-{ana;}
-       6        0   {e=<\n>del}-{as }
-       6        0   {ſe=<\n>}-{se- ? }
-       5        0   {c_t,<\n>}-{åz }
+       6        0   {e-<\n>del}-{as }
        4        0   {H}-{» G}
        4        0   {S.<\n>A}-{s }
+       4        0   {ct,<\n>}-{åz }
        4        0   {ſſ}-{ll}
        3        0   {,}-{-.-}
        3        0   {1.<\n>}-{}
        3        0   {; v}-{kB}
-       3        0   {a_e}-{æ}
+       3        0   {<\n>}-{ ? }
+       3        0   {<\n>}-{ }
        3        0   {ch}-{tö}
        3        0   {ſy}-{del}
        2        0   { }-{}
        2        0   {-<\n>}-{s }
        2        0   {<\n>I}-{ K}
        2        0   {<\n>r}-{ s}
-       2        0   {<\n>}-{ }
-       2        0   {=<\n>}-{- }
-       2        0   {=}-{- }
+       2        0   {ae}-{æ}
        2        0   {n}-{mm}
        2        0   {r,}-{xy}
+       2        0   {}-{ }
        2        0   {ö}-{o}
        2        0   {ſ}-{f}
        1        0   {,}-{}
@@ -79,86 +63,19 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {i}-{I}
        1        0   {i}-{s}
        1        0   {r}-{k}
-       1        0   {}-{ }
        1        0   {}-{"}
        1        0   {}-{-}
        1        0   {}-{I}
        1        0   {�}-{�}
-=======
-     256       53    79.30   ASCII Lowercase Letters
-      28       28     0.00   Latin1 Special Symbols
-      28       28     0.00   Latin1 Uppercase Letters
-     423      156    63.12   Total
-
-  Errors   Marked   Correct-Generated
-      54        0   {}-{b'}
-      30        0   {}-{'}
-      28        0   {<\n>}-{' b'\xc2\xab' b'\xc2\xab...}
-      22        0   {olique, och}-{2\xbb;\xc2\xb7"--:Ikz'}
-      17        0   { ſlag,}-{\xc2\xbb\xc2\xbb'}
-      16        0   {ä}-{\xc3\xa4}
-      16        0   {ö}-{\xc3\xb6}
-      15        0   {H}-{b'\xc2\xbb' b'G}
-      15        0   {lepſie,}-{k-FAQ' b'cana;'}
-      13        0   {föror=<\n>ſ}-{b's' b'\xc2\x}
-      12        0   {moder=<\n>}-{b'!' b's' b'}
-      12        0   {}-{b' b'"' b'sa}
-      12        0   {ſe=<\n>}-{se-' b'?' b'}
-      11        0   {ſä}-{b's\xc3\xa4}
-      10        0   {_t,<\n>}-{3\xa5z' b'}
-       8        0   {<\n>}-{' b'}
-       8        0   {diarrhe}-{b'\xc2\x}
-       8        0   {ä}-{a}
-       8        0   {å}-{\xc3\xa4}
-       8        0   {å}-{\xc3\xa5}
-       7        0   {,<\n>när<\n>}-{b' b'-'}
-       7        0   {S.<\n>A}-{b's' b'}
-       6        0   {e=<\n>del}-{as' b'}
-       6        0   {h}-{3\xb6'}
-       6        0   {}-{\xc3\x}
-       6        0   {ſ}-{b's}
-       5        0   {-<\n>}-{s' b'}
-       5        0   {<\n>I}-{' b'K}
-       5        0   {<\n>r}-{' b's}
-       5        0   {=<\n>}-{-' b'}
-       5        0   {=}-{-' b'}
-       5        0   {ſy}-{b'del}
-       4        0   {,}-{-.-'}
-       4        0   {i}-{b's'}
-       4        0   {}-{' b'}
-       4        0   {}-{'b}
-       4        0   {}-{b'\x}
-       4        0   {ſ}-{s}
-       4        0   {ſſ}-{ll}
-       3        0   {1.<\n>}-{b'}
-       3        0   {; v}-{kB}
-       3        0   {fe}-{e\x}
-       3        0   {r,}-{xy'}
-       3        0   {}-{t\x}
-       3        0   {ä}-{b'a}
-       2        0   { }-{}
-       2        0   {_e}-{6'}
-       2        0   {n}-{mm}
-       2        0   {}-{"'}
-       2        0   {ö}-{o}
-       2        0   {ſ}-{f}
-       1        0   {,}-{'}
-       1        0   {.}-{'}
-       1        0   {i}-{I}
-       1        0   {r}-{k}
-       1        0   {}-{-}
-       1        0   {}-{I}
->>>>>>> master
 
    Count   Missed   %Right
       16       16     0.00   {<\n>}
       46        5    89.13   { }
        9        8    11.11   {,}
-       3        1    66.67   {-}
+       9        4    55.56   {-}
        6        3    50.00   {.}
        1        1     0.00   {1}
        1        1     0.00   {;}
-       6        6     0.00   {=}
        2        1    50.00   {A}
        1        0   100.00   {B}
        1        0   100.00   {D}
@@ -176,20 +93,11 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   100.00   {T}
        1        0   100.00   {U}
        1        0   100.00   {V}
-       2        2     0.00   {_}
-<<<<<<< HEAD
       25        4    84.00   {a}
        3        0   100.00   {b}
       11        3    72.73   {c}
        9        3    66.67   {d}
-      38        9    76.32   {e}
-=======
-      25        2    92.00   {a}
-       3        0   100.00   {b}
-      11        1    90.91   {c}
-       9        3    66.67   {d}
-      38       10    73.68   {e}
->>>>>>> master
+      38        8    78.95   {e}
        7        2    71.43   {f}
        5        1    80.00   {g}
       14        3    78.57   {h}
@@ -208,17 +116,9 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        1    50.00   {v}
        1        0   100.00   {w}
        3        1    66.67   {y}
-<<<<<<< HEAD
        9        6    33.33   {�}
        2        1    50.00   {�}
        4        2    50.00   {�}
       13       13     0.00   {�}
       15        8    46.67   {�}
-=======
-       9        9     0.00   {�}
-       2        2     0.00   {�}
-       4        4     0.00   {�}
-      13       13     0.00   {�}
-      15       15     0.00   {�}
->>>>>>> master
       13       13     0.00   {�}

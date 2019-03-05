@@ -1,30 +1,30 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
     1698   Characters
-    2505   Errors
-  -47.53%  Accuracy
+    2503   Errors
+  -47.41%  Accuracy
 
        1   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.06%  Characters Marked
-  -47.35%  Accuracy After Correction
+  -47.23%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        3        3   Marked
-      26      755     1721     2502   Unmarked
-      26      755     1724     2505   Total
+      26      753     1721     2500   Unmarked
+      26      753     1724     2503   Total
 
    Count   Missed   %Right
      263       50    80.99   ASCII Spacing Characters
-      57       45    21.05   ASCII Special Symbols
+      57       43    24.56   ASCII Special Symbols
        3        2    33.33   ASCII Digits
       15       15     0.00   ASCII Uppercase Letters
     1100      563    48.82   ASCII Lowercase Letters
        3        3     0.00   Latin1 Control Codes
      127       61    51.97   Latin1 Special Symbols
      130       42    67.69   Latin1 Uppercase Letters
-    1698      781    54.00   Total
+    1698      779    54.12   Total
 
   Errors   Marked   Correct-Generated
       49        0   {•}-{∂r≈ønwmmna√§rkkmeterne k...}
@@ -43,7 +43,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       14        0   {}-{eLclutmatian, }
       14        0   {§}-{•BBaBBBB<\n>tycks}
       13        0   {(Œ≤Œ¨œ<91>Œøœ<82>,}-{j1 0 pro √§nt}
-      13        0   {=}-{tre, ≈øom ne-}
       13        0   {}-{cht h√§lla ku}
       13        0   {}-{f√∂rn√∂tande }
       13        0   {}-{lrw√•gemotBla}
@@ -56,7 +55,8 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       12        0   {}-{d≈øima√§luta}
       12        0   {}-{ge kderkden }
       12        0   {}-{i EEuds wisd}
-      11        0   {hurumyc=<\n>ke}-{≈øtille≈ø}
+      12        0   {}-{tre, ≈øom ne}
+      11        0   {hurumyc-<\n>ke}-{≈øtille≈ø}
       11        0   {o}-{il belyis h}
       11        0   {up≈ø}-{g√•ngiwid<\n>c}
       11        0   {}-{den af hono}
@@ -223,7 +223,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        5        0   {o.<\n>A}-{ be≈ø}
        5        0   {o≈øt}-{ramad}
        5        0   {p}-{t√§nd}
-       5        0   {ri=<\n>k}-{L√∂n}
+       5        0   {ri-<\n>k}-{L√∂n}
        5        0   {t}-{<\n>L√∂n}
        5        0   {ut}-{af ≈ø}
        5        0   {wirr}-{n√∂tn}
@@ -315,9 +315,9 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        0   {≈ø}-{ch b}
        3        3   {}-{<\n>~.}
        3        0   {(hw}-{hiy}
+       3        0   {-<\n>l}-{ ka}
        3        0   {. }-{nt<\n>}
        3        0   {7:}-{til}
-       3        0   {=<\n>l}-{ ka}
        3        0   {af<\n>}-{Red}
        3        0   {af}-{och}
        3        0   {as,}-{iga}
@@ -386,7 +386,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        3        0   {§l}-{• g}
        3        0   {§l}-{•≈ø}
        3        0   {•}-{§√§}
-       3        0   {∂=}-{• -}
        3        0   {∂ta}-{§e}
        3        0   {√§m}-{il }
        3        0   {√•}-{ ta}
@@ -474,6 +473,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {•}-{§n}
        2        0   {•}-{§r}
        2        0   {∂}-{§}
+       2        0   {∂}-{• }
        2        0   {√•}-{wi}
        2        0   {≈ø}-{de}
        1        0   { }-{}
@@ -481,8 +481,8 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {,}-{s}
        1        0   {,}-{t}
        1        0   {,}-{}
+       1        0   {-}-{k}
        1        0   {;}-{,}
-       1        0   {=}-{k}
        1        0   {b}-{h}
        1        0   {b}-{k}
        1        0   {b}-{p}
@@ -538,13 +538,12 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        2     0.00   {(}
        2        2     0.00   {)}
       31       20    35.48   {,}
-       1        1     0.00   {-}
+       7        5    28.57   {-}
        9        8    11.11   {.}
        2        1    50.00   {3}
        1        1     0.00   {7}
        2        2     0.00   {:}
        2        2     0.00   {;}
-       6        6     0.00   {=}
        1        1     0.00   {?}
        1        1     0.00   {@}
        2        2     0.00   {A}

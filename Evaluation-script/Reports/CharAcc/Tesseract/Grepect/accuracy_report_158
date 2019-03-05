@@ -1,23 +1,23 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
     1453   Characters
-     802   Errors
-   44.80%  Accuracy
+     795   Errors
+   45.29%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   44.80%  Accuracy After Correction
+   45.29%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-     170      323      309      802   Unmarked
-     170      323      309      802   Total
+     170      316      309      795   Unmarked
+     170      316      309      795   Total
 
    Count   Missed   %Right
      231       41    82.25   ASCII Spacing Characters
-      53       40    24.53   ASCII Special Symbols
+      53       33    37.74   ASCII Special Symbols
       14        6    57.14   ASCII Digits
       36       10    72.22   ASCII Uppercase Letters
      946      284    69.98   ASCII Lowercase Letters
@@ -25,30 +25,29 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       86       63    26.74   Latin1 Special Symbols
       85       48    43.53   Latin1 Uppercase Letters
        1        1     0.00   Latin1 Lowercase Letters
-    1453      493    66.07   Total
+    1453      486    66.55   Total
 
   Errors   Marked   Correct-Generated
       53        0   {}-{· . pis- ka s. gr. i tr...}
-      44        0   {<\n>hoos ſigh hade/ ob�...}-{-}
+      43        0   {<\n>hoos ſigh hade/ ob�...}-{}
       41        0   {}-{t hassua lu-<\n>Finfs ge...}
       34        0   {ſ}-{s}
       27        0   {til 8. gr. j itt dygn/ o...}-{}
       27        0   {ſ}-{y hoos sigh wdexobstrver...}
       17        0   {r}-{- HAIK ·«z J, e}
       16        0   {}-{s-y-<\n>· �<80><94> - -...}
-      15        0   {=}-{ han medh Affi-}
       14        0   {K}-{Hisi- bkiw fyn}
+      14        0   {}-{ han medh Affi}
       14        0   {}-{s han icke - t}
       13        0   {thẽ<\n>10}-{ryk<\n>« xxx - }
       13        0   {}-{· ADNX kg» }
       12        0   {/}-{ -}
       12        0   {t}-{e}
       10        0   {ſ}-{f}
-       9        0   {Octo=<\n>bri}-{nw - }
        9        0   {}-{ s . « -}
        9        0   {ſödher<\n>}-{-<\n>T· " }
        8        0   {/ ſynes}-{om}
-       8        0   {dh Aff=<\n>}-{co-<\n>KWY }
+       8        0   {dh Aff-<\n>}-{co-<\n>KWY }
        8        0   {r}-{�<80><94> d) t}
        7        0   {cturum.}-{-skam»}
        7        0   {ffter n}-{}
@@ -76,7 +75,9 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        5        0   {är t}-{d}
        4        0   { Men}-{«}
        4        0   {/ ſ}-{-f}
+       4        0   {<\n>bri}-{ }
        4        0   {Hiſ}-{Zots}
+       4        0   {Octo}-{nw }
        4        0   {dher}-{«·}
        4        0   {e/}-{ums<\n>}
        4        0   {ffu}-{ss-J}
@@ -95,7 +96,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        0   {ſ}-{i}
        3        0   {/ v}-{}
        3        0   {14.}-{Men}
-       3        0   {=}-{-}
        3        0   {a }-{«"}
        3        0   {a/}-{-»}
        3        0   {aſ}-{qs}
@@ -117,7 +117,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        3        0   {uch}-{neb}
        3        0   {wer}-{Iva}
        3        0   {}-{"- }
-       3        0   {�g=}-{� -}
        3        0   {ſa}-{sie}
        3        0   {ſk}-{st}
        2        0   { J}-{I}
@@ -149,6 +148,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {}-{0.}
        2        0   {}-{ke}
        2        0   {}-{«}
+       2        0   {�g}-{� }
        2        0   {�r}-{�t}
        2        0   {�}-{�}
        2        0   {�r}-{�t}
@@ -190,6 +190,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   100.00   {(}
        2        2     0.00   {)}
        1        0   100.00   {,}
+       8        1    87.50   {-}
       14        4    71.43   {.}
       25       25     0.00   {/}
        1        1     0.00   {0}
@@ -199,7 +200,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   100.00   {5}
        1        0   100.00   {7}
        2        1    50.00   {8}
-       8        8     0.00   {=}
        1        1     0.00   {@}
        5        1    80.00   {A}
        2        0   100.00   {B}

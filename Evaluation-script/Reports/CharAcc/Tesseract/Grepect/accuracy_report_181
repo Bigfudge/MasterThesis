@@ -1,43 +1,42 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-     814   Characters
-     230   Errors
-   71.74%  Accuracy
+     811   Characters
+     226   Errors
+   72.13%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   71.74%  Accuracy After Correction
+   72.13%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-      47      108       75      230   Unmarked
-      47      108       75      230   Total
+      44      107       75      226   Unmarked
+      44      107       75      226   Total
 
    Count   Missed   %Right
-     125       15    88.00   ASCII Spacing Characters
-      26       20    23.08   ASCII Special Symbols
+     125       16    87.20   ASCII Spacing Characters
+      23       15    34.78   ASCII Special Symbols
       22        2    90.91   ASCII Uppercase Letters
      545       53    90.28   ASCII Lowercase Letters
       48       33    31.25   Latin1 Special Symbols
       48       32    33.33   Latin1 Uppercase Letters
-     814      155    80.96   Total
+     811      151    81.38   Total
 
   Errors   Marked   Correct-Generated
       38        0   {ſ}-{s}
-      10        0   {}-{-. » « s}
       10        0   {ä}-{a}
        9        0   { }-{}
+       9        0   {<\n>}-{. » « s}
        8        0   {}-{joc .<\n>st}
        6        0   {/}-{z�<80><99> -}
        6        0   {ſ}-{Dedjca}
-       5        0   {tt_z }-{s-}
        4        0   { all}-{-tig}
        4        0   {/}-{ t}
-       4        0   {:t_z}-{s-s}
        4        0   {:tt}-{s-·}
        4        0   {der}-{V«k}
+       4        0   {ttz }-{s-}
        4        0   {}-{-}
        4        0   {}-{s ·}
        4        0   {öſ}-{ss}
@@ -45,6 +44,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        3        0   { E:}-{ske}
        3        0   { mi}-{nn}
        3        0   {/}-{-«}
+       3        0   {:tz}-{s-s}
        3        0   {:t}-{s-.}
        3        0   {Nå}-{Ra}
        3        0   {a;}-{en-}
@@ -53,14 +53,13 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        3        0   {ff}-{ s<\n>}
        3        0   {fw}-{sip}
        3        0   {fw}-{siv}
-       3        0   {m_m}-{tn}
        3        0   {}-{k, }
        3        0   {}-{kf }
+       3        0   {}-{ss<\n>}
        3        0   {}-{· }
        3        0   {ſ}-{E s}
        2        0   { }-{«}
        2        0   {/}-{t}
-       2        0   {=}-{ss}
        2        0   {d}-{zy}
        2        0   {er}-{st}
        2        0   {ff}-{ss}
@@ -69,6 +68,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {l.}-{t}
        2        0   {l:}-{b}
        2        0   {l}-{t-}
+       2        0   {mm}-{tn}
        2        0   {rr}-{U}
        2        0   {s}-{ .}
        2        0   {}-{( }
@@ -78,9 +78,8 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {}-{·}
        2        0   {ñ}-{fx}
        1        0   { }-{x}
+       1        0   {-}-{t}
        1        0   {:}-{x}
-       1        0   {=}-{-}
-       1        0   {=}-{t}
        1        0   {a}-{s}
        1        0   {f}-{s}
        1        0   {h}-{y}
@@ -95,13 +94,13 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-      22        0   100.00   {<\n>}
+      22        1    95.45   {<\n>}
      103       15    85.44   { }
+       3        1    66.67   {-}
        5        1    80.00   {.}
        6        6     0.00   {/}
        8        6    25.00   {:}
        1        1     0.00   {;}
-       3        3     0.00   {=}
        1        0   100.00   {B}
        5        1    80.00   {E}
        1        0   100.00   {H}
@@ -111,7 +110,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   100.00   {O}
        1        0   100.00   {T}
        1        0   100.00   {W}
-       3        3     0.00   {_}
       52        3    94.23   {a}
        7        0   100.00   {b}
       11        0   100.00   {c}
