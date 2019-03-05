@@ -1,72 +1,58 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
      713   Characters
-    1226   Errors
-  -71.95%  Accuracy
+     356   Errors
+   50.07%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-  -71.95%  Accuracy After Correction
+   50.07%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-      28       72     1126     1226   Unmarked
-      28       72     1126     1226   Total
+      47       78      231      356   Unmarked
+      47       78      231      356   Total
 
    Count   Missed   %Right
-     127       19    85.04   ASCII Spacing Characters
-      23        3    86.96   ASCII Special Symbols
+     127       24    81.10   ASCII Spacing Characters
+      23       18    21.74   ASCII Special Symbols
       12        2    83.33   ASCII Uppercase Letters
-     501       51    89.82   ASCII Lowercase Letters
-      25       13    48.00   Latin1 Special Symbols
+     501       55    89.02   ASCII Lowercase Letters
+      25       14    44.00   Latin1 Special Symbols
       25       12    52.00   Latin1 Uppercase Letters
-     713      100    85.97   Total
+     713      125    82.47   Total
 
   Errors   Marked   Correct-Generated
-     231        0   {}-{biet-betagen Den andra l...}
-     214        0   {}-{pa fangade hennes nåfwk...}
-     107        0   {}-{gapade til atsszvällm m...}
-      98        0   {}-{�pper henne mtet fes-sna...}
-      64        0   {}-{tilkommandexWekzg om " I...}
-      58        0   {}-{2k M , . , , . , - , ; ....}
-      58        0   {}-{taafhcimta isina Arck ut...}
-      40        0   {}-{om " IDE-stegetss,12isp....}
-      30        0   {}-{dgiörelse « Gess- Erra...}
+     103        0   {<\n>}-{tilkommandexWekzg om " I...}
+      29        0   {}-{dgiörelse « Gess Errac...}
       25        0   {}-{mtet fes-snack » » . u...}
-      21        0   {}-{et ickehwem Men en Fr}
-      21        0   {}-{n förskräckelig ges}
-      20        0   {}-{<<<<<<< HEAD<\n>som jag}
-      18        0   {}-{af Ar- ous N:o»22}
-      15        0   {}-{>>>>>>> master<\n>}
-      12        0   {}-{arkfäg jag-}
-      11        0   {}-{nsos som de}
+      17        0   {}-{af Ar ous N:o»22}
       10        0   {}-{rne behage}
       10        0   {}-{taafhcimta}
       10        0   {å}-{a}
        9        0   {s}-{L-« TM l}
-       8        0   {}-{warkfäg}
-       7        0   { }-{}
-       6        0   {}-{�<80><94>}
-       5        0   {}-{-alt }
+       8        0   { }-{}
+       8        0   {,}-{}
+       5        0   {wet, }-{}
        4        0   { i}-{s}
        4        0   { åt}-{-ag}
+       4        0   {.}-{}
        4        0   {ja}-{m}
        4        0   {t ho}-{rvs-}
        4        0   {t}-{r}
        4        0   {}-{ck u}
-       4        0   {}-{jag-}
        3        0   { s}-{«f}
+       3        0   {, s}-{kf}
        3        0   {i}-{c»}
        3        0   {lä}-{ta}
        3        0   {n s}-{m-}
-       3        0   {r}-{k- }
        3        0   {t}-{e}
        3        0   {uhl}-{nys}
-       3        0   {}-{-}
        3        0   {}-{ant}
        3        0   {}-{ume}
+       3        0   {}-{�<80><94>}
        3        0   {ör}-{ox}
        2        0   { R}-{N}
        2        0   { f}-{-j}
@@ -76,6 +62,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {ij}-{ck}
        2        0   {n,}-{gy}
        2        0   {r }-{e}
+       2        0   {r}-{k }
        2        0   {sk}-{E}
        2        0   {w}-{tv}
        2        0   {w}-{zv}
@@ -87,9 +74,11 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {å}-{is}
        2        0   {ö}-{d}
        2        0   {ö}-{o}
+       1        0   { }-{-}
        1        0   { }-{i}
        1        0   { }-{s}
        1        0   {,}-{i}
+       1        0   {;}-{-}
        1        0   {N}-{R}
        1        0   {a}-{n}
        1        0   {d}-{p}
@@ -102,18 +91,18 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {s}-{i}
        1        0   {t}-{k}
        1        0   {}-{ }
-       1        0   {}-{,}
+       1        0   {}-{-}
        1        0   {}-{6}
-       1        0   {}-{t}
        1        0   {�}-{�}
+       1        0   {�}-{�}
 
    Count   Missed   %Right
-       1        0   100.00   {<\n>}
-     126       19    84.92   { }
-      16        3    81.25   {,}
+       1        1     0.00   {<\n>}
+     126       23    81.75   { }
+      16       13    18.75   {,}
        1        0   100.00   {-}
-       5        0   100.00   {.}
-       1        0   100.00   {;}
+       5        4    20.00   {.}
+       1        1     0.00   {;}
        3        0   100.00   {D}
        1        0   100.00   {F}
        1        0   100.00   {G}
@@ -127,7 +116,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   100.00   {b}
        6        0   100.00   {c}
       23        1    95.65   {d}
-      60        2    96.67   {e}
+      60        3    95.00   {e}
       17        2    88.24   {f}
       20        0   100.00   {g}
       21        3    85.71   {h}
@@ -140,14 +129,14 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       27        1    96.30   {o}
       10        0   100.00   {p}
       29        3    89.66   {r}
-      29        5    82.76   {s}
-      52       10    80.77   {t}
+      29        6    79.31   {s}
+      52       11    78.85   {t}
       10        1    90.00   {u}
-      11        2    81.82   {w}
+      11        3    72.73   {w}
        1        0   100.00   {x}
        1        0   100.00   {y}
        1        0   100.00   {z}
        9        3    66.67   {�}
-       9        7    22.22   {�}
+       9        8    11.11   {�}
        7        3    57.14   {�}
       25       12    52.00   {�}
