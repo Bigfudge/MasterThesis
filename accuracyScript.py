@@ -5,9 +5,8 @@ import shutil
 import glob
 import subprocess
 import constants as c
-import SB_evaluation_script
 
-def getFilePairs(genPath, truthPath, source):
+def	run_acc(genPath, truthPath, reportPath, frontierPath, command, source):
 	pairOfPaths= []
 	for gen in os.listdir(genPath):
 		pairOfPaths.append([gen])
@@ -16,22 +15,17 @@ def getFilePairs(genPath, truthPath, source):
 			for	match in pairOfPaths:
 				gen = match[0]
 				if(os.path.splitext(gen)[0]==os.path.splitext(truth)[0]):
-					match.append(truth)
 
+					match.append(truth)
 	elif(source=="Argus"):
 		for truth in os.listdir(truthPath):
 			for	match in pairOfPaths:
 				gen = match[0]
 				if(os.path.splitext(gen)[0][-4:]==os.path.splitext(truth)[0][-4:]):
-					match.append(truth)
 
+					match.append(truth)
 	else:
 		print("Wrong engine")
-	return pairOfPaths
-
-def	run_acc(genPath, truthPath, reportPath, frontierPath, command, source):
-	pairOfPaths= getFilePairs(genPath, truthPath, source)
-
 	count=0
 	if len(os.listdir(reportPath) ) != 0:
 		os.system('rm ' + reportPath+"*")
@@ -52,21 +46,6 @@ def	combinedAcc(reportPath, frontierPath, command, outputFile):
 		print("ERROR", error)
 	with open(outputFile, 'w') as fd:
 		fd.write(output)
-
-def sbEvaluation(genPath, truthPath, source):
-	cers=[]
-	wers=[]
-	pairOfPaths= getFilePairs(genPath, truthPath, source)
-	for pair in pairOfPaths:
-		if(len(pair)<2):
-			continue
-		cer, wer = SB_evaluation_script.main("-sb", [genPath+pair[0]], [truthPath+pair[1]])
-		cers.append(cer)
-		wers.append(wer)
-	print(cers)
-	print(wers)
-
-
 
 def completeEvaluation():
 	run_acc(c.genOcropusArgus, c.truthArgus, c.charReportOcropusArgus, c.frontierPath, "accuracy", "Argus")
@@ -135,5 +114,4 @@ def outputEvaluation():
 
 def main():
 	completeEvaluation()
-#sbEvaluation(c.genOcropusArgus, c.truthArgus, "Argus")
 main()
