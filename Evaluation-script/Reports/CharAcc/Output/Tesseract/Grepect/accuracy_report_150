@@ -2,6 +2,11 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
 <<<<<<< HEAD
     1554   Characters
+     332   Errors
+   78.64%  Accuracy
+=======
+<<<<<<< HEAD
+    1554   Characters
      222   Errors
    85.71%  Accuracy
 =======
@@ -9,11 +14,24 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
      811   Errors
    23.42%  Accuracy
 >>>>>>> master
+>>>>>>> master
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
+<<<<<<< HEAD
+   78.64%  Accuracy After Correction
+
+     Ins    Subst      Del   Errors
+       0        0        0        0   Marked
+      96      125      111      332   Unmarked
+      96      125      111      332   Total
+
+   Count   Missed   %Right
+     252       34    86.51   ASCII Spacing Characters
+      54       46    14.81   ASCII Special Symbols
+=======
 <<<<<<< HEAD
    85.71%  Accuracy After Correction
 
@@ -25,11 +43,25 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
    Count   Missed   %Right
      252       34    86.51   ASCII Spacing Characters
       54       19    64.81   ASCII Special Symbols
+>>>>>>> master
        2        2     0.00   ASCII Digits
       26        2    92.31   ASCII Uppercase Letters
     1028       23    97.76   ASCII Lowercase Letters
       96       59    38.54   Latin1 Special Symbols
       96       55    42.71   Latin1 Uppercase Letters
+<<<<<<< HEAD
+    1554      221    85.78   Total
+
+  Errors   Marked   Correct-Generated
+      86        0   {}-{ . : - ; - , , . - , - -...}
+      82        0   {Å¿}-{s}
+      22        0   {=<\n>}-{ }
+      14        0   {,}-{}
+      13        0   {}-{Swenska Konun}
+       9        0   {<\n>}-{ }
+       9        0   {<\n>Å¿}-{ s}
+       9        0   {rarne,<\n>Å¿}-{mme- Â· s}
+=======
     1554      194    87.52   Total
 
   Errors   Marked   Correct-Generated
@@ -39,19 +71,37 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       12        0   {<\n>}-{ }
       12        0   {<\n>Å¿}-{ s}
       10        0   {rarne,<\n>Å¿}-{mme-, Â· s}
+>>>>>>> master
        7        0   {f}-{s}
        5        0   {}-{ }
        5        0   {}-{ars g}
        5        0   {Å¿Ã¥t}-{sth }
+<<<<<<< HEAD
+       4        0   {.<\n>}-{ }
+       4        0   {.}-{}
+       4        0   {:<\n>Å¿}-{ s}
+       4        0   {=<\n>Å¿}-{ s}
+=======
        4        0   {=<\n>Å¿}-{- s}
        4        0   {=}-{- }
+>>>>>>> master
        4        0   {s=Å¿}-{8-s}
        4        0   {¤}-{¥}
        4        0   {Å¿Å¿}-{ss}
        3        0   { }-{}
+<<<<<<< HEAD
+       3        0   {;}-{}
+       3        0   {f=<\n>}-{s }
+       3        0   {Ã¶r}-{in}
+       2        0   {30}-{Jc}
+       2        0   {:}-{}
+       2        0   {;<\n>}-{ }
+       2        0   {=}-{ }
+=======
        3        0   {f=<\n>}-{s- }
        3        0   {Ã¶r}-{in}
        2        0   {30}-{Jc}
+>>>>>>> master
        2        0   {l=}-{t-}
        2        0   {m}-{tn}
        2        0   {t}-{k}
@@ -65,6 +115,60 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {u}-{n}
        1        0   {y}-{}
        1        0   {}-{y}
+<<<<<<< HEAD
+
+   Count   Missed   %Right
+      30       30     0.00   {<\n>}
+     222        4    98.20   { }
+      21       15    28.57   {,}
+       1        0   100.00   {-}
+       6        6     0.00   {.}
+       1        1     0.00   {0}
+       1        1     0.00   {3}
+       5        4    20.00   {:}
+       4        4     0.00   {;}
+      17       17     0.00   {=}
+       1        0   100.00   {D}
+       8        0   100.00   {E}
+       4        0   100.00   {H}
+       1        1     0.00   {I}
+       1        0   100.00   {J}
+       5        0   100.00   {K}
+       1        0   100.00   {N}
+       1        0   100.00   {P}
+       2        1    50.00   {S}
+       1        0   100.00   {V}
+       1        0   100.00   {X}
+      93        1    98.92   {a}
+      12        0   100.00   {b}
+      13        0   100.00   {c}
+      63        0   100.00   {d}
+     121        1    99.17   {e}
+      32        8    75.00   {f}
+      46        0   100.00   {g}
+      43        0   100.00   {h}
+      77        0   100.00   {i}
+       4        0   100.00   {j}
+      35        0   100.00   {k}
+      55        1    98.18   {l}
+      34        1    97.06   {m}
+     122        2    98.36   {n}
+      55        0   100.00   {o}
+      11        0   100.00   {p}
+      77        3    96.10   {r}
+      15        1    93.33   {s}
+      72        3    95.83   {t}
+      25        1    96.00   {u}
+       1        0   100.00   {v}
+      13        0   100.00   {w}
+       9        1    88.89   {y}
+      19        4    78.95   {¤}
+       9        1    88.89   {¥}
+      16        2    87.50   {¶}
+      52       52     0.00   {¿}
+      44        3    93.18   {Ã}
+      52       52     0.00   {Å}
+=======
 
    Count   Missed   %Right
       30       30     0.00   {<\n>}
@@ -288,4 +392,5 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       19       19     0.00   {¿}
       20       20     0.00   {Ã}
       19       19     0.00   {Å}
+>>>>>>> master
 >>>>>>> master
