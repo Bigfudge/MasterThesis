@@ -183,3 +183,31 @@ If I could get {errousWord, correctWord}-pairs I can train a NN to correct it as
         Extend the word_freq list with extra words.
         Include the SB-evaluationscript into accruacyScript.py
         Start writing Half-time report
+
+2018-03-05:
+    Rerun evaluation with new ground_truth(without long s). OCR-output:
+    Result:
+        TesseractArgus: WER: 36.85% CER: 65.01%%
+        TesseractGrepect: WER: 33.91% CER: 63.40%
+        OcropusArgus: WER: 21.35% CER:  5.83%
+        OcropusGrepect: WER: 29.04% CER:  -43.36%
+
+    Rerun both initial_setup and dot_sep with new ground_truth:
+    InititalSetup:
+        SVM reultat: p=0.74      r=0.70      f1=0.62
+        Resultat:
+            TesseractArgus: WER: 36.85% CER: 65.01%%
+            TesseractGrepect: WER: 33.91% CER: 63.40%
+            OcropusArgus: WER: 21.35% CER:  5.83%
+            OcropusGrepect: WER: 29.04% CER:  -43.36%
+
+    Upgraded_Model_dot_sep:
+        SVM reultat: p=0.73      r=0.70      f1=0.63
+        Resultat:
+            TesseractArgus: WER: 36.85% CER: 65.01%%
+            TesseractGrepect: WER: 33.91% CER: 63.40%
+            OcropusArgus: WER: 21.35% CER:  5.83%
+            OcropusGrepect: WER: 29.04% CER:  -43.36%
+
+    Should tokenize all words before using them instead of pruning for whitespace and so
+    on.
