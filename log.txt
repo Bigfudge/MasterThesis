@@ -196,18 +196,22 @@ If I could get {errousWord, correctWord}-pairs I can train a NN to correct it as
     InititalSetup:
         SVM reultat: p=0.74      r=0.70      f1=0.62
         Resultat:
-            TesseractArgus: WER: 36.85% CER: 65.01%%
-            TesseractGrepect: WER: 33.91% CER: 63.40%
-            OcropusArgus: WER: 21.35% CER:  5.83%
-            OcropusGrepect: WER: 29.04% CER:  -43.36%
+            TesseractArgus: WER: 36.74% CER: 65.76%%
+            TesseractGrepect: WER: 33.73% CER: 61.69%
+            OcropusArgus: WER: 21.30% CER:  7.41%
+            OcropusGrepect: WER: 29.01% CER:  -42.21%
 
     Upgraded_Model_dot_sep:
         SVM reultat: p=0.73      r=0.70      f1=0.63
         Resultat:
-        TesseractArgus: WER: 36.74% CER: 61.64%%
-        TesseractGrepect: WER: 33.89% CER: 57.07%
-        OcropusArgus: WER: 21.34% CER:  3.66%
-        OcropusGrepect: WER: 38.44% CER:  -219.90%
+            TesseractArgus: WER: 36.74% CER: 61.64%%
+            TesseractGrepect: WER: 33.89% CER: 57.07%
+            OcropusArgus: WER: 21.34% CER:  3.66%
+            OcropusGrepect: WER: 38.44% CER:  -219.90%
 
     Should tokenize all words before using them instead of pruning for whitespace and so
     on.
+    Todo tomorrow:
+        Move the reports of Initial and upgraded to folder.
+        complete the extention of accuracy-script
+        Write.
