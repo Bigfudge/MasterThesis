@@ -420,6 +420,7 @@ OPTstripend = False
 OPTnewlines_in_man = False
 def main(mode, ocr_paths, truth_paths, output_filename):
     output = []
+    print(zip(ocr_paths,truth_paths))
     if mode == '-sb':
         OPTstripbeg = True
     elif mode == '-se':
@@ -428,7 +429,8 @@ def main(mode, ocr_paths, truth_paths, output_filename):
         OPTnewlines_in_man = True
 
     if len(ocr_paths) != len(truth_paths):
-        raise BaseException('Different number of ocr_paths to truth_paths, got %s ocr_paths and %s truth_paths' % len(ocr_paths), len(truth_paths))
+        print(len(ocr_paths))
+        print(len(truth_paths))
     else:
         totalchrs = totalchrerrs = totalwrds = totalwrderrs = totalua_m_wh = totalua_o_wh = totala_wh = 0
         tWErrors = tWNoos = tWSubs = tWDels = tWIns = tWCount = 0
