@@ -60,15 +60,13 @@ def sb_eval(genPath, truthPath, source):
 	for item in pairOfPaths:
 		if len(item)<2:
 			continue
-		print("Progress: %s/%s"%(count,len(pairOfPaths)))
 		cer, wer = sb_evaluation.main("-sb",[genPath+"/"+item[1]],[truthPath+"/"+item[0]])
-
 		tot_cer+=100*(1-cer)
 		tot_wer+=100*(1-wer)
 		count+=1
-		
+
 	tmp = genPath.split("/")
-	return("%s_%s: CER %.2f \t WER %.2f"%(tmp[-2],tmp[-3],tot_cer/len(pairOfPaths), tot_wer/len(pairOfPaths)))
+	return("%s_%s: CER %.2f% \t WER %.2f%"%(tmp[-2],tmp[-3],tot_cer/len(pairOfPaths), tot_wer/len(pairOfPaths)))
 
 def print_sb_eval(output_file):
 	lines = []
@@ -151,5 +149,7 @@ def outputEvaluation():
 
 
 def main():
-	completeEvaluation()
-sb_eval(c.genTesseractGrepect, c.truthGrepect, "Grepect")
+	# completeEvaluation()
+	print_sb_eval("SB_Evaluation.txt")
+
+main()
