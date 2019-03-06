@@ -19,7 +19,7 @@ def train(path_model, training_data):
         label_encoder = LabelEncoder()
 
         df = pd.read_csv(training_data)
-        data = df.sample(8000)
+        data = df.sample(30000)
 
         values = data[data.columns[0]].values
         integer_encoded = label_encoder.fit_transform(values.astype(str))
