@@ -159,7 +159,7 @@ def add_ocr_output(ocr_dir,truth_dir):
 	ocr_dirs=[]
 	truth_dirs=[]
 	tmp = ocr_dir.split("/")
-	filename = tmp[-2]+"_"+tmp[-3]+ ".txt"
+	filename = "data/"tmp[-2]+"_"+tmp[-3]+ ".txt"
 	db = sqlite3.connect(constants.main_db)
 	cursor = db.cursor()
 
@@ -169,8 +169,7 @@ def add_ocr_output(ocr_dir,truth_dir):
 		truth_dirs.append(truth_dir+file)
 
 	if(not os.path.isfile(filename)):
-                print(ocr_dirs)
-                align.main("-sb",ocr_dirs,truth_dirs, filename)
+        align.main("-sb",ocr_dirs,truth_dirs, filename)
 
 	ocr_errors = open(filename)
 	words = [word for line in ocr_errors for word in line.split()]
@@ -253,7 +252,9 @@ def get_input(file, output_filename):
     input_vector=[]
 
     for word in words:
-
+        if(word[-1] in {'.',',','!','?',':',';','\'','"','-','/'} and len(word)>1):
+            words.append(word[-1])
+            word= word[:-1]
         input_vector.append([remove_tags(word),
                             get_non_alfanum(word),
                             get_trigram_freq(word),

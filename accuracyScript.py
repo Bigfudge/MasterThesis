@@ -5,8 +5,9 @@ import shutil
 import glob
 import subprocess
 import constants as c
+import sb_evaluation
 
-def	run_acc(genPath, truthPath, reportPath, frontierPath, command, source):
+def get_pair(genPath, truthPath, source):
 	pairOfPaths= []
 	for gen in os.listdir(genPath):
 		pairOfPaths.append([gen])
@@ -26,6 +27,10 @@ def	run_acc(genPath, truthPath, reportPath, frontierPath, command, source):
 					match.append(truth)
 	else:
 		print("Wrong engine")
+	return pairOfPaths
+
+def	run_acc(genPath, truthPath, reportPath, frontierPath, command, source):
+	pairOfPaths= get_pair(genPath, truthPath, source)
 	count=0
 	if len(os.listdir(reportPath) ) != 0:
 		os.system('rm ' + reportPath+"*")
@@ -46,6 +51,37 @@ def	combinedAcc(reportPath, frontierPath, command, outputFile):
 		print("ERROR", error)
 	with open(outputFile, 'w') as fd:
 		fd.write(output)
+
+def sb_eval(genPath, truthPath, source):
+	pairOfPaths= get_pair(genPath, truthPath, source)
+	tot_cer=0
+	tot_wer=0
+	count =0
+	for item in pairOfPaths:
+		if len(item)<2:
+			continue
+		print("Progress: %s/%s"%(count,len(pairOfPaths)))
+		cer, wer = sb_evaluation.main("-sb",[genPath+"/"+item[1]],[truthPath+"/"+item[0]])
+
+		tot_cer+=100*(1-cer)
+		tot_wer+=100*(1-wer)
+		count+=1
+		
+	tmp = genPath.split("/")
+	return("%s_%s: CER %.2f \t WER %.2f"%(tmp[-2],tmp[-3],tot_cer/len(pairOfPaths), tot_wer/len(pairOfPaths)))
+
+def print_sb_eval(output_file):
+	lines = []
+	lines.append(sb_eval(c.genOcropusArgus, c.truthArgus, "Argus"))
+	lines.append(sb_eval(c.genOcropusGrepect, c.truthGrepect, "Grepect"))
+	lines.append(sb_eval(c.genTesseractArgus, c.truthArgus, "Argus"))
+	lines.append(sb_eval(c.genTesseractGrepect, c.truthGrepect, "Grepect"))
+	lines.append(sb_eval(c.outputOcropusArgus, c.truthArgus, "Argus"))
+	lines.append(sb_eval(c.outputOcropusGrepect, c.truthGrepect, "Grepect"))
+	lines.append(sb_eval(c.outputTesseractArgus, c.truthArgus, "Argus"))
+	lines.append(sb_eval(c.outputTesseractGrepect, c.truthGrepect, "Grepect"))
+	with open(outputFile, 'w') as fd:
+		fd.write(lines)
 
 def completeEvaluation():
 	run_acc(c.genOcropusArgus, c.truthArgus, c.charReportOcropusArgus, c.frontierPath, "accuracy", "Argus")
@@ -73,7 +109,7 @@ def completeEvaluation():
 	run_acc(c.genOcropusArgus, c.truthArgus, c.wordReportOcropusArgus, c.frontierPath, "wordacc", "Argus")
 	run_acc(c.genOcropusGrepect, c.truthGrepect, c.wordReportOcropusGrepact, c.frontierPath, "wordacc", "Grepect")
 	run_acc(c.genTesseractArgus, c.truthArgus, c.wordReportTesseractArgus, c.frontierPath, "wordacc", "Argus")
-	run_acc(c.genTesseractGrepect, c.truthGrepect, c.wordReportTesseractGrepect, c.frontierPath, "wordacc","Grepect")
+	run_acc(c.genTesseractGrepect, c.genTesseractGrepectt, c.wordReportTesseractGrepect, c.frontierPath, "wordacc","Grepect")
 
 	run_acc(c.outputOcropusArgus, c.truthArgus, c.outputWordReportOcropusArgus, c.frontierPath, "wordacc", "Argus")
 	run_acc(c.outputOcropusGrepect, c.truthGrepect, c.outputWordReportOcropusGrepact, c.frontierPath, "wordacc", "Grepect")
@@ -89,6 +125,8 @@ def completeEvaluation():
 	combinedAcc(c.outputWordReportOcropusGrepact, c.frontierPath, "wordaccsum", "Output_WordAcc_OcropusGrepect.txt")
 	combinedAcc(c.outputWordReportTesseractArgus, c.frontierPath, "wordaccsum", "Output_WordAcc_TesseractArgus.txt")
 	combinedAcc(c.outputWordReportTesseractGrepect, c.frontierPath, "wordaccsum", "Output_WordAcc_TesseractGrepect.txt")
+
+	print_sb_eval("SB_Evaluation.txt")
 
 def outputEvaluation():
 	run_acc(c.outputOcropusArgus, c.truthArgus, c.outputCharReportOcropusArgus, c.frontierPath, "accuracy", "Argus")
@@ -114,4 +152,4 @@ def outputEvaluation():
 
 def main():
 	completeEvaluation()
-main()
+sb_eval(c.genTesseractGrepect, c.truthGrepect, "Grepect")
