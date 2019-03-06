@@ -1,132 +1,51 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
     1618   Characters
-<<<<<<< HEAD
-     340   Errors
-   78.99%  Accuracy
-=======
-<<<<<<< HEAD
-     220   Errors
-   86.40%  Accuracy
-=======
-    1310   Errors
-   19.04%  Accuracy
->>>>>>> master
->>>>>>> master
+     211   Errors
+   86.96%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-<<<<<<< HEAD
-   78.99%  Accuracy After Correction
+   86.96%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-     104      133      103      340   Unmarked
-     104      133      103      340   Total
+      60      137       14      211   Unmarked
+      60      137       14      211   Total
 
    Count   Missed   %Right
      232       37    84.05   ASCII Spacing Characters
-      60       56     6.67   ASCII Special Symbols
+      60       16    73.33   ASCII Special Symbols
       45        1    97.78   ASCII Uppercase Letters
-=======
-<<<<<<< HEAD
-   86.40%  Accuracy After Correction
-
-     Ins    Subst      Del   Errors
-       0        0        0        0   Marked
-      60      146       14      220   Unmarked
-      60      146       14      220   Total
-=======
-   19.04%  Accuracy After Correction
-
-     Ins    Subst      Del   Errors
-       0        0        0        0   Marked
-      19      286     1005     1310   Unmarked
-      19      286     1005     1310   Total
->>>>>>> master
-
-   Count   Missed   %Right
-     232       37    84.05   ASCII Spacing Characters
-      60       25    58.33   ASCII Special Symbols
-      45        1    97.78   ASCII Uppercase Letters
-<<<<<<< HEAD
->>>>>>> master
     1077       36    96.66   ASCII Lowercase Letters
        1        0   100.00   Latin1 Control Codes
      101       59    41.58   Latin1 Special Symbols
      102       48    52.94   Latin1 Uppercase Letters
-<<<<<<< HEAD
-    1618      237    85.35   Total
-
-  Errors   Marked   Correct-Generated
-      88        0   {}-{ , . , , , , , , , - , ....}
-      66        0   {ſ}-{s}
-      24        0   {,}-{}
-      12        0   {=<\n>}-{ }
-      12        0   {ſ}-{f}
-       9        0   {<\n>}-{ }
-       9        0   {n=<\n>nagifw}-{w MINb}
-       8        0   {.}-{}
-       8        0   {�}-{�}
-       6        0   {<\n>f}-{ A 4 s}
-       5        0   {=<\n>mä}-{ Ma}
-       5        0   {e,<\n>ſ}-{rcd s}
-       4        0   {,<\n>}-{ }
-       4        0   {.<\n>}-{ }
-       4        0   {<\n>}-{ » }
-       4        0   {=<\n>b)}-{ LJ}
-       4        0   {f<\n>}-{s . }
-       4        0   {k=<\n>w}-{b W}
-       4        0   {ut=<\n>}-{nr }
-       4        0   {ö}-{b}
-       4        0   {ſt@}-{sir}
-       3        0   {.<\n>c}-{ e}
-       3        0   {<\n>ſ}-{ s}
-       3        0   {Huf}-{an}
-       3        0   {i,<\n>}-{s }
-       3        0   {u=<\n>}-{ws }
-       3        0   {�}-{�}
-       3        0   {ör}-{or-}
-       3        0   {ſy}-{sn}
-       2        0   { }-{}
-       2        0   {<\n>m}-{ M}
-       2        0   {an}-{m}
-       2        0   {e.}-{a}
-       2        0   {r,}-{}
-       2        0   {t@}-{n-}
-       2        0   {}-{7 }
-       2        0   {}-{s}
-       2        0   {ö}-{s}
-       1        0   { }-{,}
-       1        0   { }-{-}
-=======
-    1618      206    87.27   Total
+    1618      197    87.82   Total
 
   Errors   Marked   Correct-Generated
       66        0   {ſ}-{s}
-      13        0   {<\n>}-{ }
-      12        0   {=<\n>}-{- }
+      20        0   {<\n>}-{ }
       12        0   {ſ}-{f}
-       9        0   {n=<\n>nagifw}-{w MINb}
+       9        0   {n-<\n>nagifw}-{w MINb}
        8        0   {�}-{�}
        6        0   {<\n>f}-{ A 4 s}
-       5        0   {=<\n>mä}-{- Ma}
        5        0   {e,<\n>ſ}-{rcd s}
        4        0   {,}-{-}
+       4        0   {<\n>mä}-{ Ma}
        4        0   {<\n>}-{ » }
-       4        0   {=<\n>b)}-{- LJ}
        4        0   {f<\n>}-{s . }
-       4        0   {k=<\n>w}-{b W}
-       4        0   {ut=<\n>}-{nr- }
+       4        0   {k-<\n>w}-{b W}
        4        0   {ö}-{b}
        4        0   {ſt@}-{sir}
        3        0   {.<\n>c}-{ e}
+       3        0   {<\n>b)}-{ LJ}
        3        0   {<\n>ſ}-{ s}
        3        0   {Huf}-{an}
        3        0   {i,<\n>}-{s }
-       3        0   {u=<\n>}-{ws }
+       3        0   {u-<\n>}-{ws }
        3        0   {�}-{�}
        3        0   {ör}-{or-}
        3        0   {ſy}-{sn}
@@ -136,114 +55,28 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {e.}-{a}
        2        0   {r,}-{}
        2        0   {t@}-{n-}
+       2        0   {ut}-{nr}
        2        0   {}-{7 }
        2        0   {}-{s}
        2        0   {ö}-{s}
        1        0   { }-{,}
        1        0   { }-{-}
        1        0   {.}-{}
-=======
-    1077       38    96.47   ASCII Lowercase Letters
-       1        1     0.00   Latin1 Control Codes
-     101      101     0.00   Latin1 Special Symbols
-     102      102     0.00   Latin1 Uppercase Letters
-    1618      305    81.15   Total
-
-  Errors   Marked   Correct-Generated
-     306        0   {}-{b'}
-     180        0   {}-{'}
-      96        0   {ä}-{\xc3\xa4}
-      64        0   {ö}-{\xc3\xb6}
-      50        0   {ä}-{b'\xc3\xa4}
-      48        0   {<\n>}-{' b'}
-      40        0   {å}-{\xc3\xa4}
-      40        0   {å}-{\xc3\xa5}
-      36        0   {ſ}-{b's}
-      30        0   {=<\n>}-{-' b'}
-      26        0   {ſ}-{s}
-      23        0   {<\n>fö}-{' b'A' b'4' b's\xc3\xb6}
-      22        0   {ſä}-{b's\xc3\xa4}
-      20        0   {å}-{b'\xc3\xa5}
-      16        0   {<\n>}-{' b'\xc2\xbb' b'}
-      16        0   {}-{'b}
-      16        0   {ä}-{\xc3\xa5}
-      12        0   {ſå}-{b'f\xc3\xa4'}
-      12        0   {ſå}-{b's\xc3\xa4'}
-      12        0   {ſåſ}-{b's\xc3\xa5s}
-      11        0   {lik=<\n>wä}-{b'W\xc3\xa5}
-      10        0   {f<\n>}-{s' b'.' b'}
-      10        0   {gifw}-{4w' b'MINb}
-      10        0   {å}-{'b\xc3\xa4}
-      10        0   {ö}-{'b\xc3\xb6}
-      10        0   {ö}-{b'\xc3\xb6}
-      10        0   {ſtä}-{st\xc3\xa4}
-       9        0   {ut=<\n>}-{b'nr-' b'}
-       9        0   {å}-{\xc3\xa5'}
-       9        0   {ſä}-{s\xc3\xa4}
-       8        0   {,}-{-'}
-       8        0   {e,<\n>ſ}-{rcd' b's}
-       8        0   {�<9F>}-{\xc3\x9f}
-       7        0   {=<\n>mä}-{-' b'Ma}
-       7        0   {}-{b'7' b'}
-       6        0   {u=<\n>}-{ws' b'}
-       6        0   {än=<\n>n}-{\xc3\x}
-       6        0   {ö}-{b'b}
-       6        0   {ſ}-{b'f}
-       6        0   {ſ}-{f}
-       5        0   {.<\n>c}-{' b'e}
-       5        0   {<\n>m}-{' b'M}
-       5        0   {<\n>ſ}-{' b's}
-       5        0   {i,<\n>}-{s' b'}
-       5        0   {ſt@}-{b'sir}
-       4        0   {)}-{'LJ'}
-       4        0   {Huf}-{b'an}
-       4        0   {r, }-{' b'}
-       4        0   {}-{lib'}
-       4        0   {}-{s'}
-       3        0   {=<\n>}-{-' }
-       3        0   {ör}-{or-}
-       3        0   {ſe}-{se'}
-       3        0   {ſy}-{sn}
-       2        0   {<\n>}-{' }
-       2        0   {an}-{m'}
-       2        0   {e.}-{a'}
-       2        0   {t@}-{n-}
-       2        0   {t}-{k'}
-       2        0   {ö}-{s}
-       1        0   { }-{,}
-       1        0   { }-{-}
-       1        0   { }-{}
-       1        0   {.}-{'}
->>>>>>> master
->>>>>>> master
        1        0   {a}-{n}
        1        0   {i}-{c}
        1        0   {j}-{l}
        1        0   {l}-{i}
        1        0   {l}-{t}
-<<<<<<< HEAD
        1        0   {t}-{k}
-       1        0   {}-{ }
-=======
-<<<<<<< HEAD
-       1        0   {t}-{k}
-=======
->>>>>>> master
->>>>>>> master
        1        0   {}-{-}
 
    Count   Missed   %Right
       33       33     0.00   {<\n>}
      199        4    97.99   { }
        4        1    75.00   {)}
-<<<<<<< HEAD
-      29       29     0.00   {,}
-      13       12     7.69   {.}
-=======
       29        7    75.86   {,}
+      12        3    75.00   {-}
       13        3    76.92   {.}
->>>>>>> master
-      12       12     0.00   {=}
        2        2     0.00   {@}
        2        0   100.00   {A}
        2        0   100.00   {B}
@@ -262,10 +95,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        0   100.00   {U}
        1        0   100.00   {V}
        1        0   100.00   {Z}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> master
      106        3    97.17   {a}
       16        1    93.75   {b}
       19        1    94.74   {c}
@@ -278,61 +107,21 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        6        1    83.33   {j}
       37        1    97.30   {k}
       65        2    96.92   {l}
-<<<<<<< HEAD
-=======
-=======
-     106        2    98.11   {a}
-      16        0   100.00   {b}
-      19        1    94.74   {c}
-      62        0   100.00   {d}
-     149        3    97.99   {e}
-      40        4    90.00   {f}
-      37        1    97.30   {g}
-      20        0   100.00   {h}
-      56        4    92.86   {i}
-       6        1    83.33   {j}
-      37        1    97.30   {k}
-      65        3    95.38   {l}
->>>>>>> master
->>>>>>> master
       51        2    96.08   {m}
       96        3    96.88   {n}
       40        0   100.00   {o}
        8        0   100.00   {p}
      103        2    98.06   {r}
       13        0   100.00   {s}
-<<<<<<< HEAD
       96        4    95.83   {t}
-=======
-<<<<<<< HEAD
-      96        4    95.83   {t}
-=======
-      96        5    94.79   {t}
->>>>>>> master
->>>>>>> master
       32        3    90.62   {u}
        1        0   100.00   {v}
       14        2    85.71   {w}
       10        1    90.00   {y}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> master
        1        0   100.00   {<9F>}
       26        4    84.62   {�}
       17        8    52.94   {�}
       15        4    73.33   {�}
       43       43     0.00   {�}
       59        5    91.53   {�}
-<<<<<<< HEAD
-=======
-=======
-       1        1     0.00   {<9F>}
-      26       26     0.00   {�}
-      17       17     0.00   {�}
-      15       15     0.00   {�}
-      43       43     0.00   {�}
-      59       59     0.00   {�}
->>>>>>> master
->>>>>>> master
       43       43     0.00   {�}

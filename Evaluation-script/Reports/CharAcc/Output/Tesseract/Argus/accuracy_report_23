@@ -1,60 +1,45 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-<<<<<<< HEAD
     1714   Characters
-     766   Errors
-   55.31%  Accuracy
-=======
-<<<<<<< HEAD
-    1115   Characters
-     242   Errors
-   78.30%  Accuracy
-=======
-    1284   Characters
-    1448   Errors
-  -12.77%  Accuracy
->>>>>>> master
->>>>>>> master
+     711   Errors
+   58.52%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-<<<<<<< HEAD
-   55.31%  Accuracy After Correction
+   58.52%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-     126      403      237      766   Unmarked
-     126      403      237      766   Total
+     114      404      193      711   Unmarked
+     114      404      193      711   Total
 
    Count   Missed   %Right
-     285       76    73.33   ASCII Spacing Characters
-      46       31    32.61   ASCII Special Symbols
+     285       75    73.68   ASCII Spacing Characters
+      46       20    56.52   ASCII Special Symbols
       55       21    61.82   ASCII Uppercase Letters
-    1156      296    74.39   ASCII Lowercase Letters
+    1156      297    74.31   ASCII Lowercase Letters
        2        2     0.00   Latin1 Control Codes
       84       53    36.90   Latin1 Special Symbols
       86       50    41.86   Latin1 Uppercase Letters
-    1714      529    69.14   Total
+    1714      518    69.78   Total
 
   Errors   Marked   Correct-Generated
-      67        0   {n<\n>}-{x a - - , - - - - , - - ...}
       18        0   {å}-{a}
       13        0   { }-{}
       13        0   {Spår}-{WawringmjttgP}
       12        0   {Papper.<\n>}-{T» s « » }
       12        0   {ä}-{a}
+      10        0   {}-{- }
        9        0   {Afwund, A}-{TL}
        9        0   {o flate; }-{pga ;«"d}
        8        0   { mena}-{uar-» t}
-       8        0   {,}-{}
+       8        0   {}-{- · » }
        7        0   { m}-{.·»xn}
        7        0   {för di}-{LEHMn}
        7        0   {r på}-{xzvaMss}
        7        0   {säger,}-{DHCP-»}
-       7        0   {}-{ }
-       7        0   {}-{ · » }
        6        0   { willi}-{-« »}
        6        0   {betä}-{lys-sa}
        6        0   {in}-{m}
@@ -64,17 +49,18 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        6        0   {mitt}-{NTF-TM}
        6        0   {r �<84>}-{ttsszt}
        6        0   {r. }-{n "·,}
-       6        0   {}-{· }
        6        0   {}-{»}
        6        0   {}-{�<80><94> s }
+       5        0   {ckt i}-{. «}
        5        0   {enst}-{gzxü}
        5        0   {hans }-{g}
        5        0   {ru �<84>}-{xYA}
        5        0   {skull}-{Ing}
        5        0   {twär}-{nvaf}
-       5        0   {wärl}-{in k}
+       5        0   {wärl}-{in- k}
        5        0   {wä}-{xxx-a}
        5        0   {wå}-{, sva}
+       5        0   {än }-{- av,}
        4        0   { Ar}-{.«n}
        4        0   { fö}-{sz}
        4        0   { lä}-{fa}
@@ -85,6 +71,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        0   { }-{»}
        4        0   {-Lä}-{stx}
        4        0   {D}-{�<80><94>.}
+       4        0   {Narr}-{agn-}
        4        0   {Sinn}-{jya}
        4        0   {g in}-{nm}
        4        0   {hw}-{i)ty}
@@ -97,10 +84,14 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        0   {t ja}-{cH}
        4        0   {w}-{-» }
        4        0   {wår}-{makt}
+       4        0   {}-{- , }
+       4        0   {}-{- . }
        4        0   {}-{-.»}
        4        0   {}-{-« }
        4        0   {}-{. . }
-       4        0   {än }-{ av,}
+       4        0   {}-{·- }
+       4        0   {äl}-{al- }
+       4        0   {ör}-{ixt-}
        3        0   { A}-{.2i}
        3        0   { E}-{jå}
        3        0   { o}-{Hyt}
@@ -111,12 +102,12 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        3        0   { }-{ise}
        3        0   { }-{s}
        3        0   {Min}-{Emm}
-       3        0   {ckt}-{ «}
        3        0   {ell}-{FB}
        3        0   {en:}-{mz}
        3        0   {er }-{cps}
        3        0   {fly}-{n}
        3        0   {fö}-{e}
+       3        0   {i}-{st,}
        3        0   {k}-{i}
        3        0   {mo}-{xny}
        3        0   {mo}-{xx }
@@ -124,8 +115,8 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        3        0   {n g}-{vga}
        3        0   {n w}-{-}
        3        0   {n.}-{ »}
+       3        0   {n<\n>}-{x a}
        3        0   {re,}-{m}
-       3        0   {rr,}-{gn-}
        3        0   {r}-{k}
        3        0   {s}-{eä}
        3        0   {t f}-{rs}
@@ -133,22 +124,19 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        3        0   {t}-{r}
        3        0   {u}-{xxi}
        3        0   {wu}-{1pa}
-       3        0   {}-{ , }
-       3        0   {}-{ . }
        3        0   {}-{;,v}
        3        0   {}-{g}
        3        0   {}-{z)(}
        3        0   {}-{«.}
+       3        0   {}-{· }
        3        0   {}-{�<80><99>}
        3        0   {äg}-{a }
        3        0   {äl}-{-s}
-       3        0   {äl}-{al }
        3        0   {än}-{h}
        3        0   {äs}-{af}
        3        0   {ä}-{ijx}
        3        0   {ån}-{ati}
        3        0   {öm}-{ xn}
-       3        0   {ör}-{ixt}
        2        0   { a}-{xg}
        2        0   { d}-{y}
        2        0   { j}-{1}
@@ -157,7 +145,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   { }-{k}
        2        0   { }-{x}
        2        0   { }-{·}
-       2        0   {, }-{ L}
        2        0   {F}-{sk}
        2        0   {Hi}-{A}
        2        0   {a}-{ck}
@@ -172,9 +159,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {fl}-{st}
        2        0   {h}-{Mi}
        2        0   {h}-{tj}
-       2        0   {i }-{}
        2        0   {ig}-{t}
-       2        0   {i}-{st}
        2        0   {ja}-{m}
        2        0   {li}-{a}
        2        0   {lj}-{z}
@@ -189,6 +174,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {n}-{ki}
        2        0   {n}-{tj}
        2        0   {n}-{xz}
+       2        0   {n}-{y-}
        2        0   {n}-{}
        2        0   {oc}-{yr}
        2        0   {of}-{pk}
@@ -198,19 +184,21 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {ro}-{w}
        2        0   {r}-{cs}
        2        0   {r}-{x}
-       2        0   {s.}-{å}
        2        0   {sa}-{ }
        2        0   {sk}-{}
+       2        0   {s}-{å}
        2        0   {t }-{h}
        2        0   {t }-{r}
-       2        0   {t,}-{i}
+       2        0   {t,}-{i-}
        2        0   {t}-{k}
        2        0   {wu}-{WU}
        2        0   {w}-{tp}
        2        0   {w}-{tv}
        2        0   {w}-{xv}
+       2        0   {}-{ }
        2        0   {}-{" }
        2        0   {}-{-s}
+       2        0   {}-{;}
        2        0   {}-{a }
        2        0   {}-{a}
        2        0   {}-{ss}
@@ -231,7 +219,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {H}-{}
        1        0   {M}-{V}
        1        0   {M}-{W}
-       1        0   {N}-{}
        1        0   {a}-{}
        1        0   {c}-{r}
        1        0   {d}-{P}
@@ -251,7 +238,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {n}-{,}
        1        0   {n}-{g}
        1        0   {n}-{u}
-       1        0   {n}-{y}
        1        0   {o}-{p}
        1        0   {o}-{q}
        1        0   {o}-{}
@@ -266,8 +252,11 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {t}-{}
        1        0   {u}-{U}
        1        0   {y}-{ }
+       1        0   {}-{"}
+       1        0   {}-{,}
+       1        0   {}-{-}
        1        0   {}-{.}
-       1        0   {}-{;}
+       1        0   {}-{L}
        1        0   {}-{m}
        1        0   {}-{t}
        1        0   {}-{x}
@@ -276,10 +265,10 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
 
    Count   Missed   %Right
        2        2     0.00   {<\n>}
-     283       74    73.85   { }
-      29       21    27.59   {,}
+     283       73    74.20   { }
+      29       11    62.07   {,}
        3        1    66.67   {-}
-       7        7     0.00   {.}
+       7        6    14.29   {.}
        5        1    80.00   {:}
        1        1     0.00   {;}
        1        0   100.00   {?}
@@ -298,7 +287,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        6        2    66.67   {S}
        1        1     0.00   {T}
        2        0   100.00   {W}
-     114       12    89.47   {a}
+     114       13    88.60   {a}
        7        1    85.71   {b}
       13        5    61.54   {c}
       52        6    88.46   {d}
@@ -325,447 +314,3 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       28       22    21.43   {�}
       21        8    61.90   {�}
       86       50    41.86   {�}
-=======
-<<<<<<< HEAD
-   78.30%  Accuracy After Correction
-
-     Ins    Subst      Del   Errors
-       0        0        0        0   Marked
-      55      123       64      242   Unmarked
-      55      123       64      242   Total
-
-   Count   Missed   %Right
-     189       40    78.84   ASCII Spacing Characters
-      34       15    55.88   ASCII Special Symbols
-      37        4    89.19   ASCII Uppercase Letters
-     743       67    90.98   ASCII Lowercase Letters
-      56       28    50.00   Latin1 Special Symbols
-      56       24    57.14   Latin1 Uppercase Letters
-    1115      178    84.04   Total
-
-  Errors   Marked   Correct-Generated
-      22        0   { }-{}
-      18        0   {ä}-{a}
-       9        0   {<\n>}-{ , - e A-}
-       8        0   {å}-{a}
-       5        0   {? Ja}-{s-Lin}
-       4        0   { än}-{ans }
-       4        0   {.<\n>}-{- ·}
-       4        0   {g h}-{dett}
-       4        0   {på }-{xa}
-       4        0   {}-{- , }
-       4        0   {}-{. . }
-       4        0   {}-{�<80><94> }
-       4        0   {äij}-{ats}
-       4        0   {ö}-{o}
-       3        0   { j}-{s-k}
-       3        0   { }-{-}
-       3        0   { }-{�<80><94>}
-       3        0   {Wa}-{- A}
-       3        0   {ck,}-{h}
-       3        0   {e. }-{s f}
-       3        0   {fö}-{scz}
-       3        0   {i}-{j}
-       3        0   {r, }-{sf}
-       3        0   {tiq}-{ch}
-       3        0   {t}-{r}
-       3        0   {w}-{m}
-       3        0   {}-{ }
-       3        0   {}-{« }
-       3        0   {}-{· }
-       3        0   {�}-{�}
-       3        0   {år}-{ar-}
-       3        0   {å}-{psk}
-       3        0   {öf}-{ds}
-       2        0   { j}-{z}
-       2        0   { k}-{kt}
-       2        0   { l}-{sk}
-       2        0   {,}-{-.}
-       2        0   {,}-{-}
-       2        0   {.}-{«}
-       2        0   {.}-{»}
-       2        0   {d,}-{j}
-       2        0   {f}-{s}
-       2        0   {in}-{fa}
-       2        0   {i}-{- }
-       2        0   {ll}-{}
-       2        0   {m}-{kn}
-       2        0   {n }-{u}
-       2        0   {nu}-{m1}
-       2        0   {n}-{m }
-       2        0   {n}-{u}
-       2        0   {o }-{d}
-       2        0   {rj}-{w}
-       2        0   {t:}-{n}
-       2        0   {u}-{kg}
-       2        0   {w}-{ed}
-       2        0   {}-{- }
-       2        0   {}-{i }
-       2        0   {}-{j}
-       2        0   {}-{r}
-       2        0   {}-{s}
-       2        0   {}-{»}
-       2        0   {ä}-{ej}
-       2        0   {ä}-{n}
-       1        0   {,}-{y}
-       1        0   {,}-{z}
-       1        0   {?}-{s}
-       1        0   {N}-{M}
-       1        0   {S}-{s}
-       1        0   {a}-{u}
-       1        0   {b}-{d}
-       1        0   {e}-{s}
-       1        0   {g}-{a}
-       1        0   {h}-{H}
-       1        0   {i}-{t}
-       1        0   {i}-{x}
-       1        0   {j}-{-}
-       1        0   {k}-{t}
-       1        0   {n}-{z}
-       1        0   {r}-{k}
-       1        0   {r}-{p}
-       1        0   {s}-{p}
-       1        0   {t}-{c}
-       1        0   {w}-{}
-       1        0   {}-{;}
-       1        0   {}-{c}
-       1        0   {}-{e}
-       1        0   {}-{l}
-       1        0   {}-{o}
-       1        0   {}-{z}
-       1        0   {�}-{�}
-
-   Count   Missed   %Right
-       2        2     0.00   {<\n>}
-     187       38    79.68   { }
-      21        8    61.90   {,}
-       1        0   100.00   {-}
-       8        4    50.00   {.}
-       2        1    50.00   {:}
-       2        2     0.00   {?}
-       4        0   100.00   {A}
-       2        0   100.00   {C}
-       1        0   100.00   {D}
-       2        0   100.00   {E}
-       2        0   100.00   {F}
-       6        0   100.00   {H}
-       1        0   100.00   {I}
-       2        1    50.00   {J}
-       2        0   100.00   {K}
-       1        0   100.00   {L}
-       3        0   100.00   {M}
-       1        1     0.00   {N}
-       5        0   100.00   {P}
-       1        1     0.00   {S}
-       4        1    75.00   {W}
-      94        3    96.81   {a}
-       7        1    85.71   {b}
-      16        1    93.75   {c}
-      35        1    97.14   {d}
-      79        2    97.47   {e}
-      13        4    69.23   {f}
-      25        2    92.00   {g}
-      22        2    90.91   {h}
-      37        9    75.68   {i}
-       8        5    37.50   {j}
-      22        3    86.36   {k}
-      23        3    86.96   {l}
-      28        1    96.43   {m}
-      69        8    88.41   {n}
-      25        1    96.00   {o}
-      12        1    91.67   {p}
-       1        1     0.00   {q}
-      79        5    93.67   {r}
-      37        1    97.30   {s}
-      74        6    91.89   {t}
-      14        2    85.71   {u}
-      19        5    73.68   {w}
-       1        0   100.00   {x}
-       3        0   100.00   {y}
-      23       13    43.48   {�}
-      17       10    41.18   {�}
-       3        0   100.00   {�}
-       1        1     0.00   {�}
-      12        4    66.67   {�}
-      56       24    57.14   {�}
-=======
-  -12.77%  Accuracy After Correction
-
-     Ins    Subst      Del   Errors
-       0        0        0        0   Marked
-      20      387     1041     1448   Unmarked
-      20      387     1041     1448   Total
-
-   Count   Missed   %Right
-     208       59    71.63   ASCII Spacing Characters
-      32       12    62.50   ASCII Special Symbols
-      38       12    68.42   ASCII Uppercase Letters
-     874      192    78.03   ASCII Lowercase Letters
-      66       66     0.00   Latin1 Special Symbols
-      66       66     0.00   Latin1 Uppercase Letters
-    1284      407    68.30   Total
-
-  Errors   Marked   Correct-Generated
-     186        0   {}-{b'}
-      99        0   {}-{'}
-      65        0   {<\n>}-{' b'\xc2\xab' b'\xc2\xbb...}
-      48        0   {å}-{\xc3\xa5}
-      32        0   {ö}-{\xc3\xb6}
-      31        0   {fö}-{\xc3\xa5' b',' b'\xc2\xa...}
-      24        0   {M}-{b'-' b'\xc2\xabf\xc2\xbb}
-      22        0   {}-{-' b'\xe2\x80\x94' b's}
-      20        0   {}-{' b'}
-      19        0   {}-{b'.' b'\xc2\xbb' b'}
-      18        0   {d}-{\xc2\xb7T-\xc2\xbb}
-      18        0   {ie}-{t\xc3\xa6' b'-' b'}
-      18        0   {}-{b'\xe2\x80\x94' b'}
-      16        0   {ä}-{\xc3\xa4}
-      14        0   {}-{'\xc2\xbb' b'b}
-      14        0   {}-{b'\xc2\xab' b'}
-      12        0   {H}-{b'.chn\xc2\x}
-      12        0   {i}-{b't\xc2\xbb'}
-      12        0   {wå}-{b'tv\xc3\xa4}
-      12        0   {}-{' b'\xc2\xab}
-      11        0   { blä}-{kHE\xc3\x84}
-      11        0   {erpå}-{pw\xc3\xa4'}
-      11        0   {}-{\xc2\xabs-'}
-      10        0   { Swerige }-{sthngk' b'}
-      10        0   {I giör}-{b'\xc2\xb7}
-      10        0   {fåfenga,m}-{b',' b'tzI}
-      10        0   {n}-{m' b',' b'}
-      10        0   {}-{-' b'-' b'}
-      10        0   {}-{-' b'}
-      10        0   {ä}-{b'\xc3\xa5}
-      10        0   {ör}-{\xc3\xb6t'}
-       9        0   { fö}-{t\xc3\xb6}
-       9        0   { ä}-{\xc2\xaba}
-       9        0   {stä}-{t\xc3\xa4}
-       9        0   {s}-{b'f}
-       9        0   {äs}-{\xc3\xa5f}
-       9        0   {å }-{\xc3\xa4s}
-       9        0   {å}-{\xc3\xa5'}
-       8        0   { Ri}-{\xc2\xbb}
-       8        0   { }-{\xc2\xab}
-       8        0   {l}-{b'\xc2\x}
-       8        0   {n e}-{\xc2\xab}
-       8        0   {o}-{b',' b'g}
-       8        0   {}-{\xc2\xab}
-       8        0   {ä}-{a}
-       8        0   {ä}-{b'.' b'a}
-       8        0   {å stor }-{exwa' b'}
-       8        0   {å}-{\xc3\xa4}
-       7        0   { i akt }-{mkt' b'}
-       7        0   { }-{}
-       7        0   {orsak}-{b'Oxng'}
-       7        0   {}-{b';' b'}
-       6        0   { M}-{4Estol}
-       6        0   { j}-{\xc2\x}
-       6        0   { o}-{vchjaf}
-       6        0   {Ehr }-{b'CIA-}
-       6        0   {a}-{q' b's}
-       6        0   {kol}-{\xc3\x}
-       6        0   {skiä}-{b'ffra}
-       6        0   {säij}-{b'jsch}
-       6        0   {}-{'b}
-       6        0   {}-{.'}
-       6        0   {}-{3\xa4c}
-       6        0   {}-{\xc3\x}
-       6        0   {}-{b'-}
-       6        0   {}-{xksm\x}
-       6        0   {år}-{ar'}
-       6        0   {ör}-{ot-}
-       6        0   {ö}-{sn' b'}
-       5        0   {a}-{m' b'}
-       5        0   {få}-{b'sa'}
-       5        0   {hla o}-{lg-vs}
-       5        0   {k wä}-{3\xa4}
-       5        0   {n w}-{b,ttz}
-       5        0   {nta}-{yxoxs}
-       5        0   {r i}-{ts-:'}
-       5        0   {ra,}-{m-;-'}
-       5        0   {rit }-{m' b'}
-       5        0   {t}-{r' b'}
-       5        0   {wa}-{b'tvg}
-       5        0   {}-{b' b'}
-       5        0   {}-{issrc}
-       5        0   {än k}-{b'qut}
-       4        0   { enw}-{smtx}
-       4        0   { må}-{ick'}
-       4        0   { och}-{pth'}
-       4        0   { ä}-{"jck}
-       4        0   {,}-{-'}
-       4        0   {,}-{-s-'}
-       4        0   {I}-{b'J'}
-       4        0   {Lät}-{b'La}
-       4        0   {an}-{civ'}
-       4        0   {et}-{dus'}
-       4        0   {ka}-{b'fu}
-       4        0   {r}-{x'}
-       4        0   {så}-{b';'}
-       4        0   {w}-{b'sv}
-       4        0   {}-{-'}
-       4        0   {}-{bJq-}
-       4        0   {}-{lak'}
-       4        0   {}-{s'}
-       4        0   {äm}-{ams-}
-       4        0   {är }-{b'ax}
-       4        0   {öf}-{b'oj}
-       3        0   { a}-{jck}
-       3        0   { in}-{mte}
-       3        0   { ä}-{-4}
-       3        0   { ä}-{a}
-       3        0   {.}-{-,'}
-       3        0   {:}-{6v'}
-       3        0   {?}-{ss'}
-       3        0   {Bon}-{b'M}
-       3        0   {E}-{b'C}
-       3        0   {an}-{cm'}
-       3        0   {a}-{b'q}
-       3        0   {a}-{sg'}
-       3        0   {en }-{b'm}
-       3        0   {e}-{'bg}
-       3        0   {i }-{b'k}
-       3        0   {ing}-{mg'}
-       3        0   {iö}-{co}
-       3        0   {k}-{b'T}
-       3        0   {n }-{iz.}
-       3        0   {n}-{t-i}
-       3        0   {o}-{b'd}
-       3        0   {r,}-{y-'}
-       3        0   {sn}-{b'M}
-       3        0   {}-{b'H}
-       3        0   {}-{b'T}
-       3        0   {}-{b'c}
-       3        0   {}-{b'i}
-       3        0   {}-{b'v}
-       3        0   {}-{et'}
-       3        0   {ä}-{b'C}
-       3        0   {ä}-{b'o}
-       3        0   {å}-{b'a}
-       3        0   {ör}-{or'}
-       3        0   {ö}-{b'o}
-       2        0   { F}-{s}
-       2        0   { e}-{k}
-       2        0   { w}-{-N}
-       2        0   { }-{-}
-       2        0   { }-{sp}
-       2        0   { }-{s}
-       2        0   {.}-{s'}
-       2        0   {a }-{gs}
-       2        0   {a}-{g'}
-       2        0   {du}-{b'}
-       2        0   {e}-{c}
-       2        0   {e}-{ik}
-       2        0   {e}-{k'}
-       2        0   {e}-{tk}
-       2        0   {h}-{lx}
-       2        0   {in}-{b'}
-       2        0   {i}-{t}
-       2        0   {ki}-{it}
-       2        0   {li}-{tt}
-       2        0   {m}-{pi}
-       2        0   {ne}-{mk}
-       2        0   {n}-{tx}
-       2        0   {r}-{k'}
-       2        0   {r}-{t'}
-       2        0   {r}-{tz}
-       2        0   {s}-{af}
-       2        0   {s}-{fr}
-       2        0   {}-{,'}
-       2        0   {}-{-}
-       2        0   {}-{.}
-       2        0   {}-{s}
-       2        0   {}-{x'}
-       2        0   {}-{yr}
-       2        0   {ä}-{\x}
-       2        0   {ä}-{sq}
-       2        0   {å}-{a'}
-       2        0   {å}-{a}
-       2        0   {å}-{ci}
-       2        0   {å}-{q}
-       2        0   {ö}-{et}
-       2        0   {ö}-{o}
-       1        0   { }-{T}
-       1        0   { }-{Y}
-       1        0   { }-{k}
-       1        0   { }-{t}
-       1        0   { }-{z}
-       1        0   {,}-{'}
-       1        0   {.}-{'}
-       1        0   {a}-{g}
-       1        0   {a}-{q}
-       1        0   {b}-{s}
-       1        0   {d}-{'}
-       1        0   {i}-{c}
-       1        0   {i}-{g}
-       1        0   {i}-{j}
-       1        0   {i}-{n}
-       1        0   {l}-{i}
-       1        0   {l}-{j}
-       1        0   {l}-{k}
-       1        0   {l}-{t}
-       1        0   {n}-{y}
-       1        0   {o}-{p}
-       1        0   {o}-{v}
-       1        0   {r}-{x}
-       1        0   {s}-{f}
-       1        0   {s}-{i}
-       1        0   {t}-{-}
-       1        0   {y}-{v}
-       1        0   {}-{a}
-       1        0   {}-{d}
-       1        0   {}-{n}
-       1        0   {}-{x}
-       1        0   {}-{z}
-
-   Count   Missed   %Right
-       1        1     0.00   {<\n>}
-     207       58    71.98   { }
-      22        7    68.18   {,}
-       6        3    50.00   {.}
-       1        1     0.00   {:}
-       1        0   100.00   {;}
-       2        1    50.00   {?}
-       2        1    50.00   {B}
-       2        0   100.00   {D}
-      10        2    80.00   {E}
-       2        1    50.00   {F}
-       5        1    80.00   {H}
-       5        2    60.00   {I}
-       1        0   100.00   {J}
-       1        0   100.00   {K}
-       1        1     0.00   {L}
-       3        2    33.33   {M}
-       1        0   100.00   {N}
-       1        1     0.00   {R}
-       4        1    75.00   {S}
-      90       19    78.89   {a}
-       7        2    71.43   {b}
-       9        1    88.89   {c}
-      51        3    94.12   {d}
-     108       17    84.26   {e}
-      24        6    75.00   {f}
-      43        4    90.70   {g}
-      20        4    80.00   {h}
-      45       23    48.89   {i}
-       4        2    50.00   {j}
-      30        9    70.00   {k}
-      46        9    80.43   {l}
-      37        4    89.19   {m}
-      80       20    75.00   {n}
-      31       11    64.52   {o}
-       7        1    85.71   {p}
-       1        0   100.00   {q}
-      78       23    70.51   {r}
-      46       15    67.39   {s}
-      76        9    88.16   {t}
-      14        1    92.86   {u}
-       2        0   100.00   {v}
-      19        8    57.89   {w}
-       6        1    83.33   {y}
-      26       26     0.00   {�}
-      23       23     0.00   {�}
-      17       17     0.00   {�}
-      66       66     0.00   {�}
->>>>>>> master
->>>>>>> master
