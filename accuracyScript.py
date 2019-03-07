@@ -79,7 +79,7 @@ def print_sb_eval(output_file):
 	lines.append(sb_eval(c.outputOcropusGrepect, c.truthGrepect, "Grepect"))
 	lines.append(sb_eval(c.outputTesseractArgus, c.truthArgus, "Argus"))
 	lines.append(sb_eval(c.outputTesseractGrepect, c.truthGrepect, "Grepect"))
-	with open(outputFile, 'w') as fd:
+	with open(output_file, 'w') as fd:
 		fd.write(lines)
 
 def completeEvaluation():

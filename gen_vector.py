@@ -9,6 +9,8 @@ import uuid
 import collections
 import sqlite3
 import constants
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
 
 
 
@@ -137,8 +139,8 @@ def add_ground_truth(input_dir):
     cursor = db.cursor()
 
     for file in os.listdir(input_dir):
-        truth = open(input_dir+file)
-        words = [word for line in truth for word in line.split()]
+        truth = open(input_dir+file).read()
+        words=word_tokenize(ocr_output)
         for word in words:
             if(word[-1] in {'.',',','!','?',':',';','\'','"','-','/'} and len(word)>1):
                 words.append(word[-1])
@@ -155,38 +157,37 @@ def add_ground_truth(input_dir):
     db.close()
     truth.close()
 
-def add_ocr_output(ocr_dir,truth_dir):
-	ocr_dirs=[]
-	truth_dirs=[]
-	tmp = ocr_dir.split("/")
-	filename = "data/"tmp[-2]+"_"+tmp[-3]+ ".txt"
-	db = sqlite3.connect(constants.main_db)
-	cursor = db.cursor()
+    def add_ocr_output(ocr_dir,truth_dir):
+        ocr_dirs=[]
+        truth_dirs=[]
+        tmp = ocr_dir.split("/")
+        filename = "data/"+tmp[-2]+"_"+tmp[-3]+ ".txt"
+        db = sqlite3.connect(constants.main_db)
+        cursor = db.cursor()
 
-	for file in os.listdir(ocr_dir):
-		ocr_dirs.append(ocr_dir+file)
-	for file in os.listdir(truth_dir):
-		truth_dirs.append(truth_dir+file)
+        for file in os.listdir(ocr_dir):
+            ocr_dirs.append(ocr_dir+file)
+        for file in os.listdir(truth_dir):
+            truth_dirs.append(truth_dir+file)
 
-	if(not os.path.isfile(filename)):
-        align.main("-sb",ocr_dirs,truth_dirs, filename)
+        if(not os.path.isfile(filename)):
+            align.main("-sb",ocr_dirs,truth_dirs, filename)
 
-	ocr_errors = open(filename)
-	words = [word for line in ocr_errors for word in line.split()]
-	for word in words:
-		cursor.execute('''INSERT INTO words(word, non_alfanum, tri_grams,
-							freq_page, vowel, valid)VALUES(?,?,?,?,?,?)''', (word,
-                                                                get_non_alfanum(word),
-                                                                get_trigram_freq(word),
-                                                                get_word_frequency(word, words),
-                                                                contains_vowel(word),
-                                                                0))
-	db.commit()
-	db.close()
-	ocr_errors.close()
+        ocr_errors = open(filename).read()
+        words=word_tokenize(ocr_output)
+        for word in words:
+            cursor.execute('''INSERT INTO words(word, non_alfanum, tri_grams,
+            freq_page, vowel, valid)VALUES(?,?,?,?,?,?)''', (word,
+            get_non_alfanum(word),
+            get_trigram_freq(word),
+            get_word_frequency(word, words),
+            contains_vowel(word),
+            0))
+        db.commit()
+        db.close()
+        ocr_errors.close()
 
 def gen_trigram_freq(input_dirs):
-
 	tri_grams = []
 	output = collections.defaultdict(int)
 	for input_dir in input_dirs:
@@ -247,9 +248,9 @@ def get_training_data(input_vector, db_path):
     create_output_file(db_path,input_vector)
 
 def get_input(file, output_filename):
-    ocr_output = open(file, 'r')
-    words = [word for line in ocr_output for word in line.split()]
+    ocr_output = open(file, 'r').read()
     input_vector=[]
+    words=word_tokenize(ocr_output)
 
     for word in words:
         if(word[-1] in {'.',',','!','?',':',';','\'','"','-','/'} and len(word)>1):
@@ -260,7 +261,6 @@ def get_input(file, output_filename):
                             get_trigram_freq(word),
                             get_word_frequency(word,words),
                             contains_vowel(word)])
-    ocr_output.close()
     with open(output_filename, 'w') as csvFile:
         writer=csv.writer(csvFile)
         writer.writerows(input_vector)
@@ -268,5 +268,5 @@ def get_input(file, output_filename):
 def main():
     get_training_data(constants.training_data, constants.main_db)
 
-#get_input("./Evaluation-script/output/OcropusArgus/argus_lb3026335_5_0002.txt","data/input.csv")
+get_input("./output/OcropusArgus/argus_lb3026335_5_0002.txt","data/input.csv")
 #main()
