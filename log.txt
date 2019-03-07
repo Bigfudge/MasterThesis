@@ -217,4 +217,29 @@ If I could get {errousWord, correctWord}-pairs I can train a NN to correct it as
         Write.
 
 2019-03-06:
-    
+    Running SB-evaluation. Reports moved.
+    Idea:
+        Implement so that all report automatically gets moved to Gdrive, or maybe
+        e-mailed??
+        Maybe set upp so when a folder called 'output' is uploaded the accuracy-script
+        is executed and the reports is uploaded to another folder.
+
+    The dot_sep is now main conf. i.e. in master.
+
+    Increased samplesize to 30000 with standard conf:
+    SVM reultat: p=0.78      r=0.80      f1=0.72
+
+    Resultat:
+        TesseractArgus: WER: 36.74% CER: 61.64%%
+        TesseractGrepect: WER: 33.89% CER: 57.07%
+        OcropusArgus: WER: 21.34% CER:  3.66%
+        OcropusGrepect: WER: 38.44% CER:  -219.90%
+        
+    Increased samplesize to 100 000 with standard conf:
+    SVM reultat: p=0.78      r=0.80      f1=0.72
+
+    Resultat:
+        TesseractArgus: WER: 36.74% CER: 61.64%%
+        TesseractGrepect: WER: 33.89% CER: 57.07%
+        OcropusArgus: WER: 21.34% CER:  3.66%
+        OcropusGrepect: WER: 38.44% CER:  -219.90%

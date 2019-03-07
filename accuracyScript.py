@@ -60,13 +60,14 @@ def sb_eval(genPath, truthPath, source):
 	for item in pairOfPaths:
 		if len(item)<2:
 			continue
-		cer, wer = sb_evaluation.main("-sb",[genPath+"/"+item[1]],[truthPath+"/"+item[0]])
+		print(count)
+		cer, wer = sb_evaluation.main("-sb",[genPath+item[0]],[truthPath+item[1]])
 		tot_cer+=100*(1-cer)
 		tot_wer+=100*(1-wer)
 		count+=1
 
 	tmp = genPath.split("/")
-	return("%s_%s: CER %.2f% \t WER %.2f%"%(tmp[-2],tmp[-3],tot_cer/len(pairOfPaths), tot_wer/len(pairOfPaths)))
+	return("%s_%s: CER %.2f \t WER %.2f"%(tmp[-2],tmp[-3],tot_cer/len(pairOfPaths), tot_wer/len(pairOfPaths)))
 
 def print_sb_eval(output_file):
 	lines = []
