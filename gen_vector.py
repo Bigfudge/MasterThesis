@@ -134,7 +134,6 @@ def contains_vowel(word):
 
 ############### ADDS WORDS TO DB ###############
 def add_ground_truth(input_dir):
-
     db = sqlite3.connect(constants.main_db)
     cursor = db.cursor()
 
@@ -155,36 +154,36 @@ def add_ground_truth(input_dir):
 
     db.commit()
     db.close()
-    
+
 def add_ocr_output(ocr_dir,truth_dir):
-        ocr_dirs=[]
-        truth_dirs=[]
-        tmp = ocr_dir.split("/")
-        filename = "data/"+tmp[-2]+"_"+tmp[-3]+ ".txt"
-        db = sqlite3.connect(constants.main_db)
-        cursor = db.cursor()
+    ocr_dirs=[]
+    truth_dirs=[]
+    tmp = ocr_dir.split("/")
+    filename = "data/"+tmp[-2]+"_"+tmp[-3]+ ".txt"
+    db = sqlite3.connect(constants.main_db)
+    cursor = db.cursor()
 
-        for file in os.listdir(ocr_dir):
-            ocr_dirs.append(ocr_dir+file)
-        for file in os.listdir(truth_dir):
-            truth_dirs.append(truth_dir+file)
+    for file in os.listdir(ocr_dir):
+        ocr_dirs.append(ocr_dir+file)
+    for file in os.listdir(truth_dir):
+        truth_dirs.append(truth_dir+file)
 
-        if(not os.path.isfile(filename)):
-            align.main("-sb",ocr_dirs,truth_dirs, filename)
+    if(not os.path.isfile(filename)):
+        align.main("-sb",ocr_dirs,truth_dirs, filename)
 
-        ocr_errors = open(filename).read()
-        words=word_tokenize(ocr_output)
-        for word in words:
-            cursor.execute('''INSERT INTO words(word, non_alfanum, tri_grams,
-            freq_page, vowel, valid)VALUES(?,?,?,?,?,?)''', (word,
-            get_non_alfanum(word),
-            get_trigram_freq(word),
-            get_word_frequency(word, words),
-            contains_vowel(word),
-            0))
-        db.commit()
-        db.close()
-        ocr_errors.close()
+    ocr_errors = open(filename).read()
+    words=word_tokenize(ocr_errors)
+    for word in words:
+        cursor.execute('''INSERT INTO words(word, non_alfanum, tri_grams,
+        freq_page, vowel, valid)VALUES(?,?,?,?,?,?)''', (word,
+        get_non_alfanum(word),
+        get_trigram_freq(word),
+        get_word_frequency(word, words),
+        contains_vowel(word),
+        0))
+    db.commit()
+    db.close()
+    ocr_errors.close()
 
 def gen_trigram_freq(input_dirs):
 	tri_grams = []
