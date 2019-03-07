@@ -140,7 +140,7 @@ def add_ground_truth(input_dir):
 
     for file in os.listdir(input_dir):
         truth = open(input_dir+file).read()
-        words=word_tokenize(ocr_output)
+        words=word_tokenize(truth)
         for word in words:
             if(word[-1] in {'.',',','!','?',':',';','\'','"','-','/'} and len(word)>1):
                 words.append(word[-1])
@@ -155,9 +155,8 @@ def add_ground_truth(input_dir):
 
     db.commit()
     db.close()
-    truth.close()
-
-    def add_ocr_output(ocr_dir,truth_dir):
+    
+def add_ocr_output(ocr_dir,truth_dir):
         ocr_dirs=[]
         truth_dirs=[]
         tmp = ocr_dir.split("/")
