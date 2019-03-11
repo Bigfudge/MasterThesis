@@ -183,7 +183,6 @@ def add_ocr_output(ocr_dir,truth_dir):
         0))
     db.commit()
     db.close()
-    ocr_errors.close()
 
 def gen_trigram_freq(input_dirs):
 	tri_grams = []
@@ -266,5 +265,5 @@ def get_input(file, output_filename):
 def main():
     get_training_data(constants.training_data, constants.main_db)
 
-get_input("./output/OcropusArgus/argus_lb3026335_5_0002.txt","data/input.csv")
+#get_input("./output/OcropusArgus/argus_lb3026335_5_0002.txt","data/input.csv")
 #main()
