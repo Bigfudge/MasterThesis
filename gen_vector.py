@@ -9,6 +9,9 @@ import uuid
 import collections
 import sqlite3
 import constants
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+import noise_maker
 
 
 
@@ -156,34 +159,54 @@ def add_ground_truth(input_dir):
     truth.close()
 
 def add_ocr_output(ocr_dir,truth_dir):
-	ocr_dirs=[]
-	truth_dirs=[]
-	tmp = ocr_dir.split("/")
-	filename = "data/"tmp[-2]+"_"+tmp[-3]+ ".txt"
-	db = sqlite3.connect(constants.main_db)
-	cursor = db.cursor()
+    ocr_dirs=[]
+    truth_dirs=[]
+    tmp = ocr_dir.split("/")
+    filename = "data/"+tmp[-2]+"_"+tmp[-3]+ ".txt"
+    db = sqlite3.connect(constants.main_db)
+    cursor = db.cursor()
 
-	for file in os.listdir(ocr_dir):
-		ocr_dirs.append(ocr_dir+file)
-	for file in os.listdir(truth_dir):
-		truth_dirs.append(truth_dir+file)
+    for file in os.listdir(ocr_dir):
+        ocr_dirs.append(ocr_dir+file)
+    for file in os.listdir(truth_dir):
+            truth_dirs.append(truth_dir+file)
 
-	if(not os.path.isfile(filename)):
+    if(not os.path.isfile(filename)):
         align.main("-sb",ocr_dirs,truth_dirs, filename)
 
-	ocr_errors = open(filename)
-	words = [word for line in ocr_errors for word in line.split()]
-	for word in words:
-		cursor.execute('''INSERT INTO words(word, non_alfanum, tri_grams,
-							freq_page, vowel, valid)VALUES(?,?,?,?,?,?)''', (word,
-                                                                get_non_alfanum(word),
-                                                                get_trigram_freq(word),
-                                                                get_word_frequency(word, words),
-                                                                contains_vowel(word),
-                                                                0))
-	db.commit()
-	db.close()
-	ocr_errors.close()
+    ocr_errors = open(filename)
+    words = [word for line in ocr_errors for word in line.split()]
+    for word in words:
+        cursor.execute('''INSERT INTO words(word, non_alfanum, tri_grams,
+        freq_page, vowel, valid)VALUES(?,?,?,?,?,?)''', (word,
+        get_non_alfanum(word),
+        get_trigram_freq(word),
+        get_word_frequency(word, words),
+        contains_vowel(word),
+        0))
+    db.commit()
+    db.close()
+    ocr_errors.close()
+
+def add_noisy_words(truth_dir,output_filename):
+    for file in os.listdir(truth_dir):
+        truth_text = open(truth_dir+file).read()
+        words=word_tokenize(truth_text)
+        noisy_text=[]
+        input_vector=[]
+        for word in words:
+            noisy_text.append(noise_maker.make_noise(word,0.9))
+        output=word_tokenize(' '.join(noisy_text))
+        for word in output:
+            input_vector.append([remove_tags(word),
+                                get_non_alfanum(word),
+                                get_trigram_freq(word),
+                                get_word_frequency(word,words),
+                                contains_vowel(word)])
+        with open(output_filename, 'w') as csvFile:
+            writer=csv.writer(csvFile)
+            writer.writerows(input_vector)
+
 
 def gen_trigram_freq(input_dirs):
 
@@ -270,3 +293,4 @@ def main():
 
 #get_input("./Evaluation-script/output/OcropusArgus/argus_lb3026335_5_0002.txt","data/input.csv")
 #main()
+add_noisy_words(constants.truthArgus,'testArgus.csv')
