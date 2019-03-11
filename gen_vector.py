@@ -188,6 +188,7 @@ def add_ocr_output(ocr_dir,truth_dir):
     db.close()
     ocr_errors.close()
 
+#Not done#
 def add_noisy_words(truth_dir,output_filename):
     for file in os.listdir(truth_dir):
         truth_text = open(truth_dir+file).read()

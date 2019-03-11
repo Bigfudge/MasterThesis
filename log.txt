@@ -238,16 +238,17 @@ If I could get {errousWord, correctWord}-pairs I can train a NN to correct it as
     Increased samplesize to 100 000 with standard conf:
     SVM reultat: p=0.78      r=0.80      f1=0.72
 
-    Resultat:
-        TesseractArgus: WER: 36.74% CER: 61.64%%
-        TesseractGrepect: WER: 33.89% CER: 57.07%
-        OcropusArgus: WER: 21.34% CER:  3.66%
-        OcropusGrepect: WER: 38.44% CER:  -219.90%
 
 2019-03-11:
     Todo:
         Evaluate tokenize output
+        Finish noise_maker(All words should contain error.)
         Prune ManuelTranscript
         Extend wordList
-        Finish noise_maker(All words should contain error.)
-        Use noise_maker insted of align
+        Use noise_maker instead of align
+
+    Resultat tokenize input:
+        TesseractArgus: WER: 36.74% CER: 61.30%
+        TesseractGrepect: WER: 33.89% CER: 57.09%
+        OcropusArgus: WER: 21.34% CER:  3.67%
+        OcropusGrepect: WER: 29.01% CER:  -42.21.90%

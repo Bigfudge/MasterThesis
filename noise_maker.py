@@ -33,6 +33,10 @@ def make_noise(word, threshold):
             else:
                 pass
         i += 1
-    return(''.join(noisy_word))
+    output = ''.join(noisy_word)
 
-# print(new_noise_maker("aaabbbcccddddeee",0.5))
+    if(output==word):
+        output = make_noise(word, threshold)
+    return(output)
+
+# print(make_noise("aaabbbcccddddeee",0.9))
