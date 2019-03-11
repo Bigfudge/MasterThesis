@@ -242,7 +242,7 @@ If I could get {errousWord, correctWord}-pairs I can train a NN to correct it as
 2019-03-11:
     Todo:
         Evaluate tokenize output
-        Finish noise_maker(All words should contain error.)
+        Finish noise_maker(All words should contain error. And two words -> one word)
         Prune ManuelTranscript
         Extend wordList
         Use noise_maker instead of align
@@ -251,4 +251,17 @@ If I could get {errousWord, correctWord}-pairs I can train a NN to correct it as
         TesseractArgus: WER: 36.74% CER: 61.30%
         TesseractGrepect: WER: 33.89% CER: 57.09%
         OcropusArgus: WER: 21.34% CER:  3.67%
-        OcropusGrepect: WER: 29.01% CER:  -42.21.90%
+        OcropusGrepect: WER: 29.01% CER:  -42.90%
+
+    Resultat pruned ManuelTranscript:
+        OCR-output:
+            TesseractArgus: WER: 36.85% CER: 64.92%
+            TesseractGrepect: WER: 33.91% CER: 63.39%
+            OcropusArgus: WER: 21.37% CER:  5.46%
+            OcropusGrepect: WER: 29.04% CER:  -42.63%
+
+        PP-output:
+            TesseractArgus: WER: 36.74% CER: 61.27%
+            TesseractGrepect: WER: 33.89% CER: 57.09%
+            OcropusArgus: WER: 21.34% CER:  3.62%
+            OcropusGrepect: WER: 29.01% CER:  -42.21.90%
