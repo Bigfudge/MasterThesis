@@ -108,7 +108,7 @@ def completeEvaluation():
 	run_acc(c.genOcropusArgus, c.truthArgus, c.wordReportOcropusArgus, c.frontierPath, "wordacc", "Argus")
 	run_acc(c.genOcropusGrepect, c.truthGrepect, c.wordReportOcropusGrepact, c.frontierPath, "wordacc", "Grepect")
 	run_acc(c.genTesseractArgus, c.truthArgus, c.wordReportTesseractArgus, c.frontierPath, "wordacc", "Argus")
-	run_acc(c.genTesseractGrepect, c.genTesseractGrepectt, c.wordReportTesseractGrepect, c.frontierPath, "wordacc","Grepect")
+	run_acc(c.genTesseractGrepect, c.genTesseractGrepect, c.wordReportTesseractGrepect, c.frontierPath, "wordacc","Grepect")
 
 	run_acc(c.outputOcropusArgus, c.truthArgus, c.outputWordReportOcropusArgus, c.frontierPath, "wordacc", "Argus")
 	run_acc(c.outputOcropusGrepect, c.truthGrepect, c.outputWordReportOcropusGrepact, c.frontierPath, "wordacc", "Grepect")
@@ -148,7 +148,7 @@ def outputEvaluation():
 
 
 def main():
-	# completeEvaluation()
-	print_sb_eval("SB_Evaluation.txt")
+	completeEvaluation()
+	#print_sb_eval("SB_Evaluation.txt")
 
 main()
