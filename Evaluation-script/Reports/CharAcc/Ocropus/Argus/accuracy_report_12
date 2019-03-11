@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1891   Characters
-    1568   Errors
-   17.08%  Accuracy
+    1890   Characters
+    1569   Errors
+   16.98%  Accuracy
 
        6   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.32%  Characters Marked
-   19.20%  Accuracy After Correction
+   19.10%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0       33        7       40   Marked
-     100     1150      278     1528   Unmarked
-     100     1183      285     1568   Total
+     100     1150      279     1529   Unmarked
+     100     1183      286     1569   Total
 
    Count   Missed   %Right
-     310      134    56.77   ASCII Spacing Characters
+     309      134    56.63   ASCII Spacing Characters
       61       52    14.75   ASCII Special Symbols
       61       58     4.92   ASCII Uppercase Letters
     1269      920    27.50   ASCII Lowercase Letters
        2        2     0.00   Latin1 Control Codes
       93       67    27.96   Latin1 Special Symbols
       95       50    47.37   Latin1 Uppercase Letters
-    1891     1283    32.15   Total
+    1890     1283    32.12   Total
 
   Errors   Marked   Correct-Generated
       20        0   {Wisor. I någre Hus,}-{ en alwarſamm<\n>triag}
@@ -379,6 +379,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {w}-{F}
        1        0   {w}-{l}
        1        0   {w}-{n}
+       1        0   {}-{<\n>}
        1        0   {}-{K}
        1        0   {}-{d}
        1        0   {}-{e}
@@ -386,7 +387,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {}-{w}
 
    Count   Missed   %Right
-       2        0   100.00   {<\n>}
+       1        0   100.00   {<\n>}
      308      134    56.49   { }
        1        1     0.00   {(}
        1        0   100.00   {)}

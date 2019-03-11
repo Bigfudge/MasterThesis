@@ -1,28 +1,28 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-     702   Characters
-     210   Errors
-   70.09%  Accuracy
+     701   Characters
+     211   Errors
+   69.90%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   70.09%  Accuracy After Correction
+   69.90%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-      25      118       67      210   Unmarked
-      25      118       67      210   Total
+      25      118       68      211   Unmarked
+      25      118       68      211   Total
 
    Count   Missed   %Right
-     114       18    84.21   ASCII Spacing Characters
+     113       18    84.07   ASCII Spacing Characters
       17        5    70.59   ASCII Special Symbols
       26        4    84.62   ASCII Uppercase Letters
      479       78    83.72   ASCII Lowercase Letters
       33       21    36.36   Latin1 Special Symbols
       33       17    48.48   Latin1 Uppercase Letters
-     702      143    79.63   Total
+     701      143    79.60   Total
 
   Errors   Marked   Correct-Generated
        9        0   {}-{ �<80><94> , «}
@@ -52,6 +52,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        3        0   {ro }-{w<\n>}
        3        0   {så}-{fa}
        3        0   {wi }-{M}
+       3        0   {}-{ .<\n>}
        3        0   {}-{"«}
        3        0   {}-{�<80><94>}
        3        0   {ör}-{or }
@@ -72,7 +73,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {t,}-{h}
        2        0   {ti}-{xx}
        2        0   {w}-{sv}
-       2        0   {}-{ .}
        2        0   {}-{"<\n>}
        2        0   {}-{,}
        2        0   {}-{--}
@@ -111,7 +111,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {}-{s}
 
    Count   Missed   %Right
-       2        0   100.00   {<\n>}
+       1        0   100.00   {<\n>}
      112       18    83.93   { }
       10        2    80.00   {,}
        4        1    75.00   {.}

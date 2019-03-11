@@ -1,28 +1,28 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-     849   Characters
-    1221   Errors
-  -43.82%  Accuracy
+     848   Characters
+    1222   Errors
+  -44.10%  Accuracy
 
       12   Reject Characters
        0   Suspect Markers
        0   False Marks
-    1.41%  Characters Marked
-  -23.20%  Accuracy After Correction
+    1.42%  Characters Marked
+  -23.47%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0       26      149      175   Marked
-      12      382      652     1046   Unmarked
-      12      408      801     1221   Total
+      12      382      653     1047   Unmarked
+      12      408      802     1222   Total
 
    Count   Missed   %Right
-     146       38    73.97   ASCII Spacing Characters
+     145       38    73.79   ASCII Spacing Characters
       21       16    23.81   ASCII Special Symbols
       27       23    14.81   ASCII Uppercase Letters
      581      315    45.78   ASCII Lowercase Letters
       37       18    51.35   Latin1 Special Symbols
       37       10    72.97   Latin1 Uppercase Letters
-     849      420    50.53   Total
+     848      420    50.47   Total
 
   Errors   Marked   Correct-Generated
       72       72   {}-{∂kt Herr btriot (ty om l...}
@@ -102,6 +102,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        5        0   {ck!}-{ - ao}
        5        0   {d}-{Tre g}
        5        0   {fr√•n}-{llnad}
+       5        0   {g.}-{lde-<\n>}
        5        0   {h jag}-{k,<\n>ty}
        5        0   {k}-{w√•ge}
        5        0   {ltr}-{dd,≈ø}
@@ -135,7 +136,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        0   {en }-{i√∂r}
        4        0   {en}-{s .B}
        4        0   {et w}-{yrb}
-       4        0   {g.}-{lde-}
        4        0   {g√•n}-{alja}
        4        0   {half}-{-ydd}
        4        0   {kt}-{<\n>eRe}
@@ -235,7 +235,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {•}-{§}
 
    Count   Missed   %Right
-       1        0   100.00   {<\n>}
      145       38    73.79   { }
        1        1     0.00   {!}
        1        1     0.00   {(}

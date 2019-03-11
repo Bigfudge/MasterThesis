@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1468   Characters
-    2146   Errors
-  -46.19%  Accuracy
+    1467   Characters
+    2147   Errors
+  -46.35%  Accuracy
 
        3   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.20%  Characters Marked
-  -44.89%  Accuracy After Correction
+  -45.06%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        4       15       19   Marked
-      27      676     1424     2127   Unmarked
-      27      680     1439     2146   Total
+      27      676     1425     2128   Unmarked
+      27      680     1440     2147   Total
 
    Count   Missed   %Right
-     231       50    78.35   ASCII Spacing Characters
+     230       50    78.26   ASCII Spacing Characters
       46       37    19.57   ASCII Special Symbols
       60       58     3.33   ASCII Uppercase Letters
      955      485    49.21   ASCII Lowercase Letters
        3        2    33.33   Latin1 Control Codes
       85       44    48.24   Latin1 Special Symbols
       88       31    64.77   Latin1 Uppercase Letters
-    1468      707    51.84   Total
+    1467      707    51.81   Total
 
   Errors   Marked   Correct-Generated
       36        0   {Men}-{BaBB2BaaaåBBaBBBB<\n>ſ...}
@@ -126,6 +126,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        6        6   {}-{~. 1.<\n>}
        6        0   {/ t}-{e<\n>aByd}
        6        0   {/}-{ltſå}
+       6        0   {Gudh}-{ölln<\n>}
        6        0   {Midas}-{ſ ål}
        6        0   {afwe}-{onom h}
        6        0   {arna }-{en oeh}
@@ -157,7 +158,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        6        0   {ſigh }-{af Apo}
        5        0   {<\n>A}-{ bbli}
        5        0   {Brö}-{g Kar}
-       5        0   {Gudh}-{ölln}
        5        0   {När}-{borde}
        5        0   {Sp}-{banſ}
        5        0   {Tij}-{hllan}
@@ -422,7 +422,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-      31       14    54.84   {<\n>}
+      30       14    53.33   {<\n>}
      200       36    82.00   { }
        2        2     0.00   {,}
        6        2    66.67   {-}

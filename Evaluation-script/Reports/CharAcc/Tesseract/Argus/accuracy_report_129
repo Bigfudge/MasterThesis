@@ -1,35 +1,35 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1821   Characters
-     424   Errors
-   76.72%  Accuracy
+    1820   Characters
+     425   Errors
+   76.65%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   76.72%  Accuracy After Correction
+   76.65%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-      83      216      125      424   Unmarked
-      83      216      125      424   Total
+      83      216      126      425   Unmarked
+      83      216      126      425   Total
 
    Count   Missed   %Right
-     321       65    79.75   ASCII Spacing Characters
+     320       65    79.69   ASCII Spacing Characters
       58       21    63.79   ASCII Special Symbols
       54        9    83.33   ASCII Uppercase Letters
     1254      125    90.03   ASCII Lowercase Letters
        2        2     0.00   Latin1 Control Codes
       65       40    38.46   Latin1 Special Symbols
       67       37    44.78   Latin1 Uppercase Letters
-    1821      299    83.58   Total
+    1820      299    83.57   Total
 
   Errors   Marked   Correct-Generated
       26        0   {å}-{a}
       20        0   { }-{}
+      15        0   {-}-{x<\n>. « : « we<\n>}
       14        0   {ä}-{a}
-      13        0   {}-{. « : « we<\n>}
       12        0   { }-{<\n>}
       12        0   {}-{-<\n>}
        8        0   {n,}-{m}
@@ -127,7 +127,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {è}-{e}
        2        0   {�<93>}-{æ}
        1        0   { }-{s}
-       1        0   {-}-{x}
        1        0   {:}-{z}
        1        0   {;}-{x}
        1        0   {C}-{g}
@@ -172,7 +171,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       2        0   100.00   {<\n>}
+       1        0   100.00   {<\n>}
      319       65    79.62   { }
        1        1     0.00   {!}
       39       11    71.79   {,}

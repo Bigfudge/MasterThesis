@@ -1,28 +1,28 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    2030   Characters
-     480   Errors
-   76.35%  Accuracy
+    2029   Characters
+     481   Errors
+   76.29%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   76.35%  Accuracy After Correction
+   76.29%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-     122      247      111      480   Unmarked
-     122      247      111      480   Total
+     122      247      112      481   Unmarked
+     122      247      112      481   Total
 
    Count   Missed   %Right
-     324       91    71.91   ASCII Spacing Characters
+     323       91    71.83   ASCII Spacing Characters
       36       16    55.56   ASCII Special Symbols
       44        4    90.91   ASCII Uppercase Letters
     1422      153    89.24   ASCII Lowercase Letters
      102       55    46.08   Latin1 Special Symbols
      102       50    50.98   Latin1 Uppercase Letters
-    2030      369    81.82   Total
+    2029      369    81.81   Total
 
   Errors   Marked   Correct-Generated
       47        0   { }-{}
@@ -69,6 +69,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        3        0   { }-{·<\n>}
        3        0   { ä}-{<\n>a}
        3        0   { å}-{<\n>a}
+       3        0   {-}-{de<\n>}
        3        0   {.}-{s«}
        3        0   {l }-{s-<\n>}
        3        0   {n w}-{ tv}
@@ -91,7 +92,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   { }-{-}
        2        0   { }-{.<\n>}
        2        0   { }-{»}
-       2        0   {-}-{de}
        2        0   {. }-{}
        2        0   {Jo}-{Ia}
        2        0   {a }-{n}
@@ -175,7 +175,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {}-{j}
 
    Count   Missed   %Right
-       1        0   100.00   {<\n>}
      323       91    71.83   { }
       21        8    61.90   {,}
        6        3    50.00   {-}

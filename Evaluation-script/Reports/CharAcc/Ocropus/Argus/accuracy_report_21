@@ -1,22 +1,22 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-     945   Characters
-    1293   Errors
-  -36.83%  Accuracy
+     944   Characters
+    1294   Errors
+  -37.08%  Accuracy
 
       11   Reject Characters
        0   Suspect Markers
        0   False Marks
-    1.16%  Characters Marked
-  -25.40%  Accuracy After Correction
+    1.17%  Characters Marked
+  -25.64%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0       29       79      108   Marked
-      17      434      734     1185   Unmarked
-      17      463      813     1293   Total
+      17      434      735     1186   Unmarked
+      17      463      814     1294   Total
 
    Count   Missed   %Right
-     158       37    76.58   ASCII Spacing Characters
+     157       37    76.43   ASCII Spacing Characters
       24       15    37.50   ASCII Special Symbols
       14       13     7.14   ASCII Digits
       36       28    22.22   ASCII Uppercase Letters
@@ -24,7 +24,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        1     0.00   Latin1 Control Codes
       47       31    34.04   Latin1 Special Symbols
       48       24    50.00   Latin1 Uppercase Letters
-     945      480    49.21   Total
+     944      480    49.15   Total
 
   Errors   Marked   Correct-Generated
      107        0   {}-{et, på det at jag ſkul...}
@@ -215,6 +215,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {si}-{wg}
        2        0   {u}-{ig}
        2        0   {w}-{tm}
+       2        0   {}-{-<\n>}
        2        0   {}-{.<\n>}
        2        0   {}-{d}
        2        0   {}-{g,}
@@ -254,7 +255,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {r}-{t}
        1        0   {s}-{f}
        1        0   {v}-{-}
-       1        0   {}-{-}
        1        0   {}-{R}
        1        0   {}-{f}
        1        0   {}-{g}
@@ -263,7 +263,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {}-{u}
 
    Count   Missed   %Right
-       1        0   100.00   {<\n>}
      157       37    76.43   { }
       16        9    43.75   {,}
        1        0   100.00   {-}

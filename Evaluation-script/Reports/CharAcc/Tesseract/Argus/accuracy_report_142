@@ -1,22 +1,22 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1896   Characters
-     394   Errors
-   79.22%  Accuracy
+    1895   Characters
+     395   Errors
+   79.16%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   79.22%  Accuracy After Correction
+   79.16%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-      77      233       84      394   Unmarked
-      77      233       84      394   Total
+      77      233       85      395   Unmarked
+      77      233       85      395   Total
 
    Count   Missed   %Right
-     319       69    78.37   ASCII Spacing Characters
+     318       69    78.30   ASCII Spacing Characters
       46       14    69.57   ASCII Special Symbols
       13        7    46.15   ASCII Digits
       39       12    69.23   ASCII Uppercase Letters
@@ -24,16 +24,16 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        2     0.00   Latin1 Control Codes
       86       42    51.16   Latin1 Special Symbols
       88       40    54.55   Latin1 Uppercase Letters
-    1896      310    83.65   Total
+    1895      310    83.64   Total
 
   Errors   Marked   Correct-Generated
       32        0   {å}-{a}
       20        0   { }-{}
       14        0   { }-{<\n>}
       12        0   {ä}-{a}
+      10        0   {-}-{x<\n>, s« a<\n>}
        9        0   { tilbaka,}-{abaser-·}
        8        0   { 1733 å}-{uzza}
-       8        0   {}-{, s« a<\n>}
        7        0   {f}-{s}
        7        0   {hälfft}-{Wiss}
        6        0   {i}-{t}
@@ -127,7 +127,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   { }-{o}
        1        0   { }-{s}
        1        0   {,}-{!}
-       1        0   {-}-{x}
        1        0   {E}-{P}
        1        0   {K}-{}
        1        0   {U}-{}
@@ -161,7 +160,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       1        0   100.00   {<\n>}
      318       69    78.30   { }
       32       10    68.75   {,}
        4        1    75.00   {-}

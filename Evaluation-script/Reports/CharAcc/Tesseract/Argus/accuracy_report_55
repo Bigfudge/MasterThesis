@@ -1,28 +1,28 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1497   Characters
-     629   Errors
-   57.98%  Accuracy
+    1496   Characters
+     630   Errors
+   57.89%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   57.98%  Accuracy After Correction
+   57.89%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-     119      409      101      629   Unmarked
-     119      409      101      629   Total
+     119      409      102      630   Unmarked
+     119      409      102      630   Total
 
    Count   Missed   %Right
-     245       92    62.45   ASCII Spacing Characters
+     244       92    62.30   ASCII Spacing Characters
       33       17    48.48   ASCII Special Symbols
       58       16    72.41   ASCII Uppercase Letters
     1019      303    70.26   ASCII Lowercase Letters
       71       51    28.17   Latin1 Special Symbols
       71       49    30.99   Latin1 Uppercase Letters
-    1497      528    64.73   Total
+    1496      528    64.71   Total
 
   Errors   Marked   Correct-Generated
       16        0   {Ã¤}-{a}
@@ -129,6 +129,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   { }-{Â«}
        2        0   {, }-{-<\n>}
        2        0   {,}-{kx}
+       2        0   {.}-{-<\n>}
        2        0   {I }-{sa}
        2        0   {an}-{cm}
        2        0   {ct}-{d-}
@@ -190,7 +191,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   { }-{z}
        1        0   {,}-{-}
        1        0   {,}-{j}
-       1        0   {.}-{-}
        1        0   {:}-{s}
        1        0   {?}-{S}
        1        0   {C}-{c}
@@ -234,7 +234,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {¥}-{¤}
 
    Count   Missed   %Right
-       5        2    60.00   {<\n>}
+       4        2    50.00   {<\n>}
      240       90    62.50   { }
        1        1     0.00   {!}
       13        7    46.15   {,}

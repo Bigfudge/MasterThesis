@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-     902   Characters
-     859   Errors
-    4.77%  Accuracy
+     901   Characters
+     860   Errors
+    4.55%  Accuracy
 
        8   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.89%  Characters Marked
-    9.76%  Accuracy After Correction
+    9.54%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        2       37        6       45   Marked
-      31      525      258      814   Unmarked
-      33      562      264      859   Total
+      31      525      259      815   Unmarked
+      33      562      265      860   Total
 
    Count   Missed   %Right
-     142       37    73.94   ASCII Spacing Characters
+     141       37    73.76   ASCII Spacing Characters
      119       67    43.70   ASCII Special Symbols
       79       78     1.27   ASCII Uppercase Letters
      500      372    25.60   ASCII Lowercase Letters
        2        2     0.00   Latin1 Control Codes
       29       21    27.59   Latin1 Special Symbols
       31       18    41.94   Latin1 Uppercase Letters
-     902      595    34.04   Total
+     901      595    33.96   Total
 
   Errors   Marked   Correct-Generated
       22        0   {ANDSENS. FADER.<\n>Gifwe...}-{ary oe4 jeR hary, til,}
@@ -164,6 +164,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        3        0   {}-{ li}
        3        0   {}-{<\n>Ã¥}
        3        0   {}-{ngt}
+       2        0   {.}-{-<\n>}
        2        0   {.}-{nt}
        2        0   {?}-{n.}
        2        0   {I}-{la}
@@ -204,7 +205,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {Ã¤}-{hh}
        2        0   {Ã¶}-{mu}
        1        0   {.}-{,}
-       1        0   {.}-{-}
        1        0   {.}-{a}
        1        0   {.}-{d}
        1        0   {D}-{u}
@@ -236,7 +236,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {¶}-{¥}
 
    Count   Missed   %Right
-      26       10    61.54   {<\n>}
+      25       10    60.00   {<\n>}
      116       27    76.72   { }
        5        5     0.00   {,}
      109       58    46.79   {.}

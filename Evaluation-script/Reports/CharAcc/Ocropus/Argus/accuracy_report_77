@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1795   Characters
-    1600   Errors
-   10.86%  Accuracy
+    1794   Characters
+    1601   Errors
+   10.76%  Accuracy
 
        1   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.06%  Characters Marked
-   11.14%  Accuracy After Correction
+   11.04%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        3        2        5   Marked
-     159      896      540     1595   Unmarked
-     159      899      542     1600   Total
+     159      896      541     1596   Unmarked
+     159      899      543     1601   Total
 
    Count   Missed   %Right
-     313       96    69.33   ASCII Spacing Characters
+     312       96    69.23   ASCII Spacing Characters
       51       39    23.53   ASCII Special Symbols
       51       49     3.92   ASCII Uppercase Letters
     1242      784    36.88   ASCII Lowercase Letters
        3        3     0.00   Latin1 Control Codes
       66       48    27.27   Latin1 Special Symbols
       69       39    43.48   Latin1 Uppercase Letters
-    1795     1058    41.06   Total
+    1794     1058    41.03   Total
 
   Errors   Marked   Correct-Generated
       22        0   {}-{ter ſkickarochförhå}
@@ -64,6 +64,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        8        0   {art}-{odd,ſom}
        8        0   {fri frå}-{kalla ho}
        8        0   {nderhi}-{ikommand}
+       8        0   {r}-{ftilde-<\n>}
        8        0   {ska}-{intet ti}
        8        0   {som icke}-{ty<\n>ſå}
        8        0   {trackta.}-{ller en}
@@ -82,7 +83,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        7        0   {jag dem}-{ſkull}
        7        0   {r slott}-{ twinga}
        7        0   {ryck de}-{}
-       7        0   {r}-{ftilde-}
        7        0   {t för }-{au}
        7        0   {t, s}-{mig.<\n>ſ}
        7        0   {t; Fast}-{nniſlo}
@@ -422,7 +422,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       2        1    50.00   {<\n>}
+       1        1     0.00   {<\n>}
      311       95    69.45   { }
       28       18    35.71   {,}
        4        4     0.00   {-}

@@ -1,36 +1,36 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1848   Characters
-     778   Errors
-   57.90%  Accuracy
+    1847   Characters
+     779   Errors
+   57.82%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   57.90%  Accuracy After Correction
+   57.82%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-     112      419      247      778   Unmarked
-     112      419      247      778   Total
+     112      419      248      779   Unmarked
+     112      419      248      779   Total
 
    Count   Missed   %Right
-     302      127    57.95   ASCII Spacing Characters
+     301      127    57.81   ASCII Spacing Characters
       40       20    50.00   ASCII Special Symbols
       28        9    67.86   ASCII Uppercase Letters
     1302      261    79.95   ASCII Lowercase Letters
        1        1     0.00   Latin1 Control Codes
       87       60    31.03   Latin1 Special Symbols
       88       53    39.77   Latin1 Uppercase Letters
-    1848      531    71.27   Total
+    1847      531    71.25   Total
 
   Errors   Marked   Correct-Generated
       37        0   { }-{}
       24        0   {ä}-{a}
       22        0   {å}-{a}
       17        0   {i}-{t}
-      13        0   {kän}-{« .- «Isrue}
+      13        0   {kä}-{« .- «Isrue}
        9        0   {}-{.- -<\n>�<80><94>-}
        9        0   {}-{I « « t}
        7        0   { i min }-{ttntukt}
@@ -192,6 +192,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {n }-{t}
        2        0   {n,}-{m}
        2        0   {n:}-{as}
+       2        0   {na}-{-<\n>}
        2        0   {n}-{tx}
        2        0   {n}-{x1}
        2        0   {n}-{y}
@@ -237,7 +238,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {;}-{z}
        1        0   {I}-{a}
        1        0   {N}-{R}
-       1        0   {a}-{-}
        1        0   {a}-{g}
        1        0   {d}-{p}
        1        0   {d}-{v}
@@ -274,7 +274,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       2        0   100.00   {<\n>}
+       1        0   100.00   {<\n>}
      300      127    57.67   { }
       23       10    56.52   {,}
        4        2    50.00   {-}

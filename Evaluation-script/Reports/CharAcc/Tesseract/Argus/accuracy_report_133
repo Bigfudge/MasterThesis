@@ -1,22 +1,22 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1887   Characters
-     624   Errors
-   66.93%  Accuracy
+    1886   Characters
+     625   Errors
+   66.86%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   66.93%  Accuracy After Correction
+   66.86%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-     136      362      126      624   Unmarked
-     136      362      126      624   Total
+     136      362      127      625   Unmarked
+     136      362      127      625   Total
 
    Count   Missed   %Right
-     323      120    62.85   ASCII Spacing Characters
+     322      120    62.73   ASCII Spacing Characters
       55       30    45.45   ASCII Special Symbols
        8        2    75.00   ASCII Digits
       85       17    80.00   ASCII Uppercase Letters
@@ -24,7 +24,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        2     0.00   Latin1 Control Codes
       76       48    36.84   Latin1 Special Symbols
       78       45    42.31   Latin1 Uppercase Letters
-    1887      498    73.61   Total
+    1886      498    73.59   Total
 
   Errors   Marked   Correct-Generated
       46        0   { }-{}
@@ -225,6 +225,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {}-{.}
        1        0   {}-{:}
        1        0   {}-{;}
+       1        0   {}-{<\n>}
        1        0   {}-{I}
        1        0   {}-{c}
        1        0   {}-{d}
@@ -232,7 +233,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {}-{x}
 
    Count   Missed   %Right
-       1        0   100.00   {<\n>}
      322      120    62.73   { }
        1        1     0.00   {!}
       24       10    58.33   {,}

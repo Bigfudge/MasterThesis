@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1661   Characters
+    1660   Characters
     1414   Errors
-   14.87%  Accuracy
+   14.82%  Accuracy
 
        1   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.06%  Characters Marked
-   15.59%  Accuracy After Correction
+   15.54%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        3        9        0       12   Marked
-     108      910      384     1402   Unmarked
-     111      919      384     1414   Total
+     107      911      384     1402   Unmarked
+     110      920      384     1414   Total
 
    Count   Missed   %Right
-     261      126    51.72   ASCII Spacing Characters
+     260      126    51.54   ASCII Spacing Characters
       42       29    30.95   ASCII Special Symbols
       64       59     7.81   ASCII Uppercase Letters
     1144      727    36.45   ASCII Lowercase Letters
        2        2     0.00   Latin1 Control Codes
       73       50    31.51   Latin1 Special Symbols
       75       37    50.67   Latin1 Uppercase Letters
-    1661     1030    37.99   Total
+    1660     1030    37.95   Total
 
   Errors   Marked   Correct-Generated
       14        0   {ligt som det l}-{yſommmpåkorg}
@@ -96,7 +96,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        6        0   { skrik}-{oda ſ}
        6        0   { willa}-{ſå}
        6        0   {, Dumh}-{ irand}
-       6        0   {, äro}-{ilde-}
+       6        0   {, äro}-{ilde-<\n>}
        6        0   {Frih}-{at oar}
        6        0   {Gylle}-{Iag ka}
        6        0   {Jo rä}-{blifwi}
@@ -360,7 +360,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       1        0   100.00   {<\n>}
      260      126    51.54   { }
       32       19    40.62   {,}
        1        1     0.00   {-}

@@ -1,28 +1,28 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1880   Characters
+    1879   Characters
     1592   Errors
-   15.32%  Accuracy
+   15.27%  Accuracy
 
        2   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.11%  Characters Marked
-   15.59%  Accuracy After Correction
+   15.54%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        1        3        1        5   Marked
-     150     1054      383     1587   Unmarked
-     151     1057      384     1592   Total
+     150     1053      384     1587   Unmarked
+     151     1056      385     1592   Total
 
    Count   Missed   %Right
-     304       98    67.76   ASCII Spacing Characters
+     303       97    67.99   ASCII Spacing Characters
       72       62    13.89   ASCII Special Symbols
       66       60     9.09   ASCII Uppercase Letters
     1280      881    31.17   ASCII Lowercase Letters
       79       59    25.32   Latin1 Special Symbols
       79       48    39.24   Latin1 Uppercase Letters
-    1880     1208    35.74   Total
+    1879     1207    35.76   Total
 
   Errors   Marked   Correct-Generated
       19        0   {s öfwer Hufwud, at}-{ſkoch bunden Tiger}
@@ -291,7 +291,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {,}-{t}
        2        0   {,}-{we}
        2        0   {,}-{ä}
-       2        0   {<\n>}-{ ,}
        2        0   {Ku}-{wl}
        2        0   {Ma}-{ä}
        2        0   {Mi}-{ä}
@@ -330,6 +329,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {t}-{ö}
        2        0   {t}-{ſ}
        2        0   {z,}-{es}
+       2        0   {}-{ ,}
        2        0   {}-{ h}
        2        0   {}-{de}
        2        0   {}-{en}
@@ -406,7 +406,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       1        1     0.00   {<\n>}
      303       97    67.99   { }
        5        4    20.00   {(}
        5        3    40.00   {)}

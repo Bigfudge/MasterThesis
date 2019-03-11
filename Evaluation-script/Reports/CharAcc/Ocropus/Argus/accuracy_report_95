@@ -1,22 +1,22 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1931   Characters
-    1666   Errors
-   13.72%  Accuracy
+    1930   Characters
+    1667   Errors
+   13.63%  Accuracy
 
        2   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.10%  Characters Marked
-   15.02%  Accuracy After Correction
+   14.92%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        3       22        0       25   Marked
-     128     1027      486     1641   Unmarked
-     131     1049      486     1666   Total
+     128     1027      487     1642   Unmarked
+     131     1049      487     1667   Total
 
    Count   Missed   %Right
-     337      105    68.84   ASCII Spacing Characters
+     336      105    68.75   ASCII Spacing Characters
       55       41    25.45   ASCII Special Symbols
        4        4     0.00   ASCII Digits
       48       44     8.33   ASCII Uppercase Letters
@@ -24,7 +24,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        6        6     0.00   Latin1 Control Codes
       77       55    28.57   Latin1 Special Symbols
       83       49    40.96   Latin1 Uppercase Letters
-    1931     1180    38.89   Total
+    1930     1180    38.86   Total
 
   Errors   Marked   Correct-Generated
       20       20   { Peruquen, hwaraf ha}-{ång,<\n>~Lälluſie}
@@ -113,6 +113,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        6        0   {d}-{blit<\n>k}
        6        0   {endast}-{öfwer}
        6        0   {h}-{iens R}
+       6        0   {kä-}-{deaff<\n>}
        6        0   {n wis}-{ſpara}
        6        0   {ndra.}-{t<\n>ſte}
        6        0   {nister}-{ wäl}
@@ -143,7 +144,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        5        0   {föll}-{hnar;}
        5        0   {haff}-{<\n>puſ}
        5        0   {han w}-{lorym}
-       5        0   {kä-}-{deaff}
        5        0   {rit}-{gasn,}
        5        0   {s ti}-{gåen}
        5        0   {sig w}-{cy.<\n>b}
@@ -414,7 +414,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       1        0   100.00   {<\n>}
      336      105    68.75   { }
       42       31    26.19   {,}
        2        2     0.00   {-}

@@ -1,28 +1,28 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1880   Characters
+    1879   Characters
     1551   Errors
-   17.50%  Accuracy
+   17.46%  Accuracy
 
        2   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.11%  Characters Marked
-   18.03%  Accuracy After Correction
+   17.99%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        5        5       10   Marked
-     171     1022      348     1541   Unmarked
-     171     1027      353     1551   Total
+     170     1023      348     1541   Unmarked
+     170     1028      353     1551   Total
 
    Count   Missed   %Right
-     304      140    53.95   ASCII Spacing Characters
+     303      140    53.80   ASCII Spacing Characters
       72       48    33.33   ASCII Special Symbols
       66       58    12.12   ASCII Uppercase Letters
     1280      850    33.59   ASCII Lowercase Letters
       79       56    29.11   Latin1 Special Symbols
       79       46    41.77   Latin1 Uppercase Letters
-    1880     1198    36.28   Total
+    1879     1198    36.24   Total
 
   Errors   Marked   Correct-Generated
       30        0   { går Högmod för Fall....}-{hotandefall, atSiälochS...}
@@ -60,7 +60,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        9        0   {som knapt}-{Orſiaken}
        9        0   {älskare }-{h}
        9        0   {ämde}-{g ſiclf,}
-       9        0   {ömmarne.}-{j.4 tsI}
+       9        0   {ömmarne.}-{j.4 tsI<\n>}
        8        0   { fall, a}-{ne}
        8        0   { uprörd}-{}
        8        0   {, at Rum}-{ tåfla }
@@ -371,7 +371,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       1        0   100.00   {<\n>}
      303      140    53.80   { }
        5        3    40.00   {(}
        5        2    60.00   {)}

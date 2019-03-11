@@ -1,28 +1,28 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1864   Characters
-    1546   Errors
-   17.06%  Accuracy
+    1863   Characters
+    1547   Errors
+   16.96%  Accuracy
 
        3   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.16%  Characters Marked
-   18.40%  Accuracy After Correction
+   18.30%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0       15       10       25   Marked
-     157     1016      348     1521   Unmarked
-     157     1031      358     1546   Total
+     157     1016      349     1522   Unmarked
+     157     1031      359     1547   Total
 
    Count   Missed   %Right
-     297      123    58.59   ASCII Spacing Characters
+     296      123    58.45   ASCII Spacing Characters
       56       42    25.00   ASCII Special Symbols
       62       57     8.06   ASCII Uppercase Letters
     1297      870    32.92   ASCII Lowercase Letters
       76       57    25.00   Latin1 Special Symbols
       76       39    48.68   Latin1 Uppercase Letters
-    1864     1188    36.27   Total
+    1863     1188    36.23   Total
 
   Errors   Marked   Correct-Generated
       17        0   {}-{Bohlen. Ingen fic}
@@ -125,6 +125,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        5        0   {Kläd}-{at m}
        5        0   {N}-{Jo, m}
        5        0   {alla }-{Frök}
+       5        0   {de}-{kom-<\n>}
        5        0   {få}-{och<\n>a}
        5        0   {igera}-{ått}
        5        0   {lä}-{ſnar}
@@ -160,7 +161,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        0   {Mag}-{är }
        4        0   {Tass}-{fr}
        4        0   {at}-{ſom}
-       4        0   {de}-{kom-}
        4        0   {e st}-{undr}
        4        0   {en f}-{ſin}
        4        0   {ert}-{na f}
@@ -391,7 +391,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       1        0   100.00   {<\n>}
      296      123    58.45   { }
        2        2     0.00   {(}
        3        3     0.00   {)}

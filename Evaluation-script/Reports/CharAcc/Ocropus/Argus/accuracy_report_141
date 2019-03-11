@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1875   Characters
-    1567   Errors
-   16.43%  Accuracy
+    1874   Characters
+    1568   Errors
+   16.33%  Accuracy
 
        1   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.05%  Characters Marked
-   16.69%  Accuracy After Correction
+   16.60%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        5        0        5   Marked
-     151      997      414     1562   Unmarked
-     151     1002      414     1567   Total
+     151      997      415     1563   Unmarked
+     151     1002      415     1568   Total
 
    Count   Missed   %Right
-     291      101    65.29   ASCII Spacing Characters
+     290      101    65.17   ASCII Spacing Characters
       58       45    22.41   ASCII Special Symbols
       80       68    15.00   ASCII Uppercase Letters
     1318      857    34.98   ASCII Lowercase Letters
        1        1     0.00   Latin1 Control Codes
       63       48    23.81   Latin1 Special Symbols
       64       33    48.44   Latin1 Uppercase Letters
-    1875     1153    38.51   Total
+    1874     1153    38.47   Total
 
   Errors   Marked   Correct-Generated
       18        0   {s}-{ſ}
@@ -143,6 +143,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        5        0   {ef}-{lhaca}
        5        0   {ercu}-{ushä}
        5        0   {g nå}-{dare<\n>}
+       5        0   {g}-{lde-<\n>}
        5        0   {ligt}-{ohade}
        5        0   {me}-{ſig }
        5        0   {m}-{beſk}
@@ -188,7 +189,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        0   {feta}-{hon.}
        4        0   {fr}-{den }
        4        0   {g w}-{ enm}
-       4        0   {g}-{lde-}
        4        0   {hans}-{ſom}
        4        0   {häl}-{en}
        4        0   {kysk}-{ned}
@@ -393,7 +393,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       1        0   100.00   {<\n>}
      290      101    65.17   { }
       40       29    27.50   {,}
        5        5     0.00   {-}

@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1866   Characters
-    1599   Errors
-   14.31%  Accuracy
+    1865   Characters
+    1600   Errors
+   14.21%  Accuracy
 
        3   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.16%  Characters Marked
-   15.86%  Accuracy After Correction
+   15.76%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0       23        6       29   Marked
-     124     1046      400     1570   Unmarked
-     124     1069      406     1599   Total
+     124     1046      401     1571   Unmarked
+     124     1069      407     1600   Total
 
    Count   Missed   %Right
-     288      114    60.42   ASCII Spacing Characters
+     287      114    60.28   ASCII Spacing Characters
       59       45    23.73   ASCII Special Symbols
       73       66     9.59   ASCII Uppercase Letters
     1296      864    33.33   ASCII Lowercase Letters
        3        3     0.00   Latin1 Control Codes
       72       56    22.22   Latin1 Special Symbols
       75       45    40.00   Latin1 Uppercase Letters
-    1866     1193    36.07   Total
+    1865     1193    36.03   Total
 
   Errors   Marked   Correct-Generated
       20        0   {Synd.)<\n>När denna An}-{Reſan ut-<\n>ſläckta}
@@ -88,6 +88,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        7        0   {han lik}-{offra }
        7        0   {hedrad}-{möglot}
        7        0   {ka stor}-{ldenna}
+       7        0   {l hög-}-{af?<\n>}
        7        0   {nna Res}-{ ſig }
        7        0   {om}-{ wackra}
        7        0   {sales, }-{a ſåt}
@@ -95,6 +96,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        7        0   {t Råds}-{ugaſ}
        7        0   {t hwark}-{pyrgſt}
        7        0   {t jag l}-{d<\n>SR}
+       7        0   {tiente}-{acktlig}
        7        0   {upfört}-{Altare,}
        7        0   {wi}-{ äta a}
        7        0   {}-{<\n>dande,}
@@ -144,10 +146,8 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        5        0   {brut}-{kom h}
        5        0   {bub,}-{n ena}
        5        0   {dö}-{alla }
-       5        0   {e all}-{lig}
        5        0   {ed}-{t<\n>han}
        5        0   {felac}-{ſ}
-       5        0   {hög-}-{Slaf?}
        5        0   {ior}-{, än}
        5        0   {kom, }-{det t}
        5        0   {lle h}-{ Kolj}
@@ -203,7 +203,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        0   {st e}-{-<\n>ha}
        4        0   {t s}-{ Fol}
        4        0   {t,}-{iäl}
-       4        0   {tien}-{ack}
        4        0   {werl}-{ut }
        4        0   {wäs}-{om d}
        4        0   {wår}-{dett}
@@ -352,6 +351,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {B}-{}
        1        0   {F}-{w}
        1        0   {a}-{A}
+       1        0   {a}-{S}
        1        0   {a}-{c}
        1        0   {a}-{e}
        1        0   {a}-{r}
@@ -397,7 +397,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       2        1    50.00   {<\n>}
+       1        1     0.00   {<\n>}
      286      113    60.49   { }
        2        2     0.00   {(}
        2        2     0.00   {)}
@@ -434,7 +434,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       67       49    26.87   {i}
        6        6     0.00   {j}
       36       26    27.78   {k}
-      75       53    29.33   {l}
+      75       52    30.67   {l}
       42       36    14.29   {m}
      134       71    47.01   {n}
       52       43    17.31   {o}
@@ -442,7 +442,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        1     0.00   {q}
       91       58    36.26   {r}
       78       71     8.97   {s}
-     111       71    36.04   {t}
+     111       72    35.14   {t}
       36       29    19.44   {u}
        1        1     0.00   {v}
       27       19    29.63   {w}

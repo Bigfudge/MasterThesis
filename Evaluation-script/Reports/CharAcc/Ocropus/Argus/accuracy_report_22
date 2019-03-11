@@ -1,22 +1,22 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1089   Characters
+    1088   Characters
     1164   Errors
-   -6.89%  Accuracy
+   -6.99%  Accuracy
 
       12   Reject Characters
        0   Suspect Markers
        0   False Marks
     1.10%  Characters Marked
-   -2.48%  Accuracy After Correction
+   -2.57%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0       21       27       48   Marked
-      42      523      551     1116   Unmarked
-      42      544      578     1164   Total
+      41      524      551     1116   Unmarked
+      41      545      578     1164   Total
 
    Count   Missed   %Right
-     175       58    66.86   ASCII Spacing Characters
+     174       58    66.67   ASCII Spacing Characters
       23       18    21.74   ASCII Special Symbols
        2        2     0.00   ASCII Digits
       44       43     2.27   ASCII Uppercase Letters
@@ -24,7 +24,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        2     0.00   Latin1 Control Codes
       58       39    32.76   Latin1 Special Symbols
       60       24    60.00   Latin1 Uppercase Letters
-    1089      586    46.19   Total
+    1088      586    46.14   Total
 
   Errors   Marked   Correct-Generated
       16        0   {på}-{Beka ett Arck, o}
@@ -48,7 +48,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        9        9   {}-{of-<\n>~Bij }
        9        0   { för 2.}-{iena ſig}
        9        0   {Wij skole}-{wår}
-       9        0   {e S:Mynt.}-{aftilde-}
+       9        0   {e S:Mynt.}-{aftilde-<\n>}
        9        0   {em. H}-{yrbargåf}
        9        0   {errä}-{d,ſom in}
        9        0   {ofw}-{ler<\n>tryck}
@@ -296,7 +296,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       3        1    66.67   {<\n>}
+       2        1    50.00   {<\n>}
      172       57    66.86   { }
       10        6    40.00   {,}
        2        2     0.00   {-}

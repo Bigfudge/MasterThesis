@@ -1,40 +1,41 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1829   Characters
-     437   Errors
-   76.11%  Accuracy
+    1828   Characters
+     438   Errors
+   76.04%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   76.11%  Accuracy After Correction
+   76.04%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-     107      231       99      437   Unmarked
-     107      231       99      437   Total
+     107      231      100      438   Unmarked
+     107      231      100      438   Total
 
    Count   Missed   %Right
-     318       55    82.70   ASCII Spacing Characters
+     317       54    82.97   ASCII Spacing Characters
       52       15    71.15   ASCII Special Symbols
        2        2     0.00   ASCII Digits
       66       12    81.82   ASCII Uppercase Letters
-    1221      121    90.09   ASCII Lowercase Letters
+    1221      122    90.01   ASCII Lowercase Letters
        4        4     0.00   Latin1 Control Codes
       81       64    20.99   Latin1 Special Symbols
       85       65    23.53   Latin1 Uppercase Letters
-    1829      338    81.52   Total
+    1828      338    81.51   Total
 
   Errors   Marked   Correct-Generated
       38        0   {å}-{a}
       34        0   {ä}-{a}
       18        0   { }-{}
-      17        0   {}-{- « - - » : an<\n>}
+      15        0   {ty}-{« - - » : an<\n>}
       11        0   {}-{ �<80><94> �<80><94> «}
       10        0   { }-{<\n>}
       10        0   {}-{-<\n>}
        9        0   {så}-{fa}
+       8        0   {m,}-{rs-Key<\n>-}
        8        0   {}-{�<80><94> �<80><94> }
        6        0   { säij}-{fay}
        6        0   {n,}-{m}
@@ -43,7 +44,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        5        0   { bo}-{<\n>xhcz}
        5        0   {ifrå}-{m-a}
        5        0   {l Må}-{-<\n>Wa}
-       5        0   {m, t}-{rs-Ke}
        5        0   {mal}-{n1311}
        5        0   {til I}-{ke(1}
        4        0   {, }-{-}
@@ -157,8 +157,8 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {}-{r}
 
    Count   Missed   %Right
-       4        0   100.00   {<\n>}
-     314       55    82.48   { }
+       3        0   100.00   {<\n>}
+     314       54    82.80   { }
        1        0   100.00   {(}
        1        1     0.00   {)}
       32       11    65.62   {,}
@@ -208,7 +208,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       25        1    96.00   {u}
        5        0   100.00   {v}
       25        1    96.00   {w}
-      13        1    92.31   {y}
+      13        2    84.62   {y}
        1        1     0.00   {<84>}
        3        3     0.00   {<96>}
       34       29    14.71   {�}

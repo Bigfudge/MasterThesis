@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-     841   Characters
-    1465   Errors
-  -74.20%  Accuracy
+     840   Characters
+    1466   Errors
+  -74.52%  Accuracy
 
        8   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.95%  Characters Marked
-  -67.66%  Accuracy After Correction
+  -67.98%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0       10       45       55   Marked
-       5      390     1015     1410   Unmarked
-       5      400     1060     1465   Total
+       5      390     1016     1411   Unmarked
+       5      400     1061     1466   Total
 
    Count   Missed   %Right
-     162       30    81.48   ASCII Spacing Characters
+     161       30    81.37   ASCII Spacing Characters
       43       35    18.60   ASCII Special Symbols
       31       29     6.45   ASCII Uppercase Letters
      561      282    49.73   ASCII Lowercase Letters
        1        1     0.00   Latin1 Control Codes
       21       16    23.81   Latin1 Special Symbols
       22       12    45.45   Latin1 Uppercase Letters
-     841      405    51.84   Total
+     840      405    51.79   Total
 
   Errors   Marked   Correct-Generated
       26       26   {}-{n:<\n>GRwEeeSEKKiny-d2RR...}
@@ -53,6 +53,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       11        0   {s}-{Rägrarojad}
       11        0   {t}-{ag och lår}
       11        0   {w}-{på Skrif-P}
+      10        0   {förutan.}-{ſom kom-<\n>}
       10        0   {nnes, G}-{m aflRöcl}
       10        0   {nning}-{ligt, och }
       10        0   {spaker}-{winſåll,}
@@ -62,7 +63,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       10        0   {}-{telſe hä}
       10        0   {ör mig }-{llulAyn<\n>af}
        9        0   {an }-{ärfå<\n>gg}
-       9        0   {förutan.}-{ſom kom-}
        9        0   {min Bön}-{af ettref}
        9        0   {w}-{jgg bad d}
        9        0   {}-{<\n>lbättre}
@@ -325,7 +325,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {}-{w}
 
    Count   Missed   %Right
-       2        1    50.00   {<\n>}
+       1        1     0.00   {<\n>}
      160       29    81.88   { }
       23       15    34.78   {,}
       12       12     0.00   {-}

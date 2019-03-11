@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1808   Characters
+    1807   Characters
     1476   Errors
-   18.36%  Accuracy
+   18.32%  Accuracy
 
        3   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.17%  Characters Marked
-   19.58%  Accuracy After Correction
+   19.54%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0       21        1       22   Marked
-     158      976      320     1454   Unmarked
-     158      997      321     1476   Total
+     157      977      320     1454   Unmarked
+     157      998      321     1476   Total
 
    Count   Missed   %Right
-     308      151    50.97   ASCII Spacing Characters
+     307      151    50.81   ASCII Spacing Characters
       52       40    23.08   ASCII Special Symbols
       71       64     9.86   ASCII Uppercase Letters
     1209      789    34.74   ASCII Lowercase Letters
        1        1     0.00   Latin1 Control Codes
       83       61    26.51   Latin1 Special Symbols
       84       49    41.67   Latin1 Uppercase Letters
-    1808     1155    36.12   Total
+    1807     1155    36.08   Total
 
   Errors   Marked   Correct-Generated
       16        0   { at Eva sade: Hw}-{fengaochglättig}
@@ -117,7 +117,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        6        0   {nu åt}-{jemrad}
        6        0   {olen I}-{lagade}
        6        0   {om han}-{ettref}
-       6        0   {rätt.}-{kom-}
+       6        0   {rätt.}-{kom-<\n>}
        6        0   {sade A}-{ochha}
        6        0   {sielfw}-{undant}
        6        0   {taga}-{<\n>locl2}
@@ -377,7 +377,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       4        3    25.00   {<\n>}
+       3        3     0.00   {<\n>}
      304      148    51.32   { }
       30       21    30.00   {,}
        3        1    66.67   {-}

@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1465   Characters
-    1450   Errors
-    1.02%  Accuracy
+    1464   Characters
+    1451   Errors
+    0.89%  Accuracy
 
        4   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.27%  Characters Marked
-    3.00%  Accuracy After Correction
+    2.87%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0       17       12       29   Marked
-      38      851      532     1421   Unmarked
-      38      868      544     1450   Total
+      39      849      534     1422   Unmarked
+      39      866      546     1451   Total
 
    Count   Missed   %Right
-     229       95    58.52   ASCII Spacing Characters
+     228       95    58.33   ASCII Spacing Characters
       38       30    21.05   ASCII Special Symbols
        9        9     0.00   ASCII Digits
       48       45     6.25   ASCII Uppercase Letters
-    1015      644    36.55   ASCII Lowercase Letters
+    1015      643    36.65   ASCII Lowercase Letters
       63       48    23.81   Latin1 Special Symbols
       63       35    44.44   Latin1 Uppercase Letters
-    1465      906    38.16   Total
+    1464      905    38.18   Total
 
   Errors   Marked   Correct-Generated
       20        0   {-O}-{<\n>lågga ſig iſin E}
@@ -93,6 +93,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        7        0   {äro bo}-{Rk1-Hag}
        6        6   {g för}-{res<\n>~.}
        6        0   { Argu}-{ratian}
+       6        0   { Last.}-{de-<\n>}
        6        0   { giord}-{gaöln}
        6        0   { }-{aarſe}
        6        0   { }-{}
@@ -119,6 +120,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        6        0   {sann}-{ſig d}
        6        0   {s}-{för m}
        6        0   {s}-{ſ}
+       6        0   {}-{dåraf}
        6        0   {}-{og Enb}
        6        0   {}-{ril, d}
        6        0   {}-{sganla}
@@ -129,7 +131,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        5        0   { }-{.<\n>deh}
        5        0   { ä}-{rſta}
        5        0   {,<\n>Edr}-{nhet }
-       5        0   {.}-{ilde-}
        5        0   {a sak}-{erlig}
        5        0   {de}-{at ha}
        5        0   {ekomm}-{ör h}
@@ -142,7 +143,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        5        0   {ri.}-{dnade}
        5        0   {s}-{He ſ}
        5        0   {t, d}-{<\n>anſ}
-       5        0   {til L}-{dår}
        5        0   {tyck}-{allab}
        5        0   {ur}-{til d}
        5        0   {x må}-{rmynt}
@@ -358,7 +358,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {n}-{}
        1        0   {p}-{f}
        1        0   {r}-{k}
-       1        0   {s}-{f}
        1        0   {s}-{i}
        1        0   {s}-{n}
        1        0   {s}-{p}
@@ -377,7 +376,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       6        3    50.00   {<\n>}
+       5        3    40.00   {<\n>}
      223       92    58.74   { }
       21       15    28.57   {,}
        3        2    33.33   {-}
@@ -405,7 +404,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        4     0.00   {S}
        3        3     0.00   {T}
        1        1     0.00   {U}
-      99       45    54.55   {a}
+      99       46    53.54   {a}
       14       11    21.43   {b}
       18       13    27.78   {c}
       60       33    45.00   {d}
@@ -413,10 +412,10 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       28       25    10.71   {f}
       40       32    20.00   {g}
       20       14    30.00   {h}
-      64       39    39.06   {i}
+      64       38    40.62   {i}
        4        4     0.00   {j}
       25       18    28.00   {k}
-      49       37    24.49   {l}
+      49       36    26.53   {l}
       47       37    21.28   {m}
       96       48    50.00   {n}
       48       34    29.17   {o}

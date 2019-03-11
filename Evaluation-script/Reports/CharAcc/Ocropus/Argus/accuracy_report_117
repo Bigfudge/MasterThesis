@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-     891   Characters
-    1044   Errors
-  -17.17%  Accuracy
+     890   Characters
+    1045   Errors
+  -17.42%  Accuracy
 
        6   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.67%  Characters Marked
-  -13.02%  Accuracy After Correction
+  -13.26%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0       16       21       37   Marked
-      11      490      506     1007   Unmarked
-      11      506      527     1044   Total
+      11      490      507     1008   Unmarked
+      11      506      528     1045   Total
 
    Count   Missed   %Right
-     148       40    72.97   ASCII Spacing Characters
+     147       40    72.79   ASCII Spacing Characters
       23       19    17.39   ASCII Special Symbols
       29       26    10.34   ASCII Uppercase Letters
      591      373    36.89   ASCII Lowercase Letters
        1        1     0.00   Latin1 Control Codes
       49       35    28.57   Latin1 Special Symbols
       50       23    54.00   Latin1 Uppercase Letters
-     891      517    41.98   Total
+     890      517    41.91   Total
 
   Errors   Marked   Correct-Generated
       31        0   {}-{de mig kanſkie miſitä...}
@@ -108,6 +108,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        5        0   {itzi}-{ar ja}
        5        0   {mma}-{ndel,}
        5        0   {mm}-{g inn}
+       5        0   {nna}-{lde-<\n>}
        5        0   {och d}-{mifif}
        5        0   {r }-{lſks}
        5        0   {r}-{nkſp}
@@ -138,7 +139,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        0   {h}-{ſa }
        4        0   {ilst}-{a. M}
        4        0   {k}-{l-<\n>r}
-       4        0   {nna}-{lde-}
        4        0   {nus.}-{ och}
        4        0   {n}-{rrar}
        4        0   {o}-{a:<\n>i}
@@ -259,7 +259,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       6        3    50.00   {<\n>}
+       5        3    40.00   {<\n>}
      142       37    73.94   { }
       13       10    23.08   {,}
        1        1     0.00   {-}

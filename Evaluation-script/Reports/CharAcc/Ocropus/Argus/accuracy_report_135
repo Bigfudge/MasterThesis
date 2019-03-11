@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1756   Characters
-    1539   Errors
-   12.36%  Accuracy
+    1755   Characters
+    1540   Errors
+   12.25%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   12.36%  Accuracy After Correction
+   12.25%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-     114      956      469     1539   Unmarked
-     114      956      469     1539   Total
+     114      956      470     1540   Unmarked
+     114      956      470     1540   Total
 
    Count   Missed   %Right
-     285      112    60.70   ASCII Spacing Characters
+     284      112    60.56   ASCII Spacing Characters
       52       40    23.08   ASCII Special Symbols
        5        5     0.00   ASCII Digits
       22       22     0.00   ASCII Uppercase Letters
     1222      790    35.35   ASCII Lowercase Letters
       85       55    35.29   Latin1 Special Symbols
       85       46    45.88   Latin1 Uppercase Letters
-    1756     1070    39.07   Total
+    1755     1070    39.03   Total
 
   Errors   Marked   Correct-Generated
       20        0   {s}-{Å¿}
@@ -306,6 +306,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {st}-{Å¿}
        2        0   {t }-{w}
        2        0   {t,}-{r.}
+       2        0   {t}-{-<\n>}
        2        0   {t}-{ky}
        2        0   {t}-{}
        2        0   {we}-{ef}
@@ -359,7 +360,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {s}-{d}
        1        0   {s}-{h}
        1        0   {s}-{}
-       1        0   {t}-{-}
        1        0   {t}-{n}
        1        0   {t}-{r}
        1        0   {w}-{d}
@@ -374,7 +374,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {¤}-{¥}
 
    Count   Missed   %Right
-       2        1    50.00   {<\n>}
+       1        1     0.00   {<\n>}
      283      111    60.78   { }
        1        1     0.00   {!}
       38       28    26.32   {,}

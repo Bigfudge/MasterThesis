@@ -1,28 +1,28 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1284   Characters
+    1283   Characters
     1079   Errors
-   15.97%  Accuracy
+   15.90%  Accuracy
 
        1   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.08%  Characters Marked
-   16.59%  Accuracy After Correction
+   16.52%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        8        0        8   Marked
-      91      707      273     1071   Unmarked
-      91      715      273     1079   Total
+      91      706      274     1071   Unmarked
+      91      714      274     1079   Total
 
    Count   Missed   %Right
-     208       67    67.79   ASCII Spacing Characters
+     207       66    68.12   ASCII Spacing Characters
       32       30     6.25   ASCII Special Symbols
       38       32    15.79   ASCII Uppercase Letters
      874      596    31.81   ASCII Lowercase Letters
       66       45    31.82   Latin1 Special Symbols
       66       36    45.45   Latin1 Uppercase Letters
-    1284      806    37.23   Total
+    1283      805    37.26   Total
 
   Errors   Marked   Correct-Generated
       45        0   {}-{gi√∂ren ett med mig ≈ø√•...}
@@ -202,7 +202,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {,}-{ I}
        2        0   {,}-{it}
        2        0   {,}-{}
-       2        0   {<\n>}-{ ,}
        2        0   {H}-{Ih}
        2        0   {at}-{-}
        2        0   {at}-{De}
@@ -236,6 +235,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {tt}-{}
        2        0   {t}-{ b}
        2        0   {up}-{r }
+       2        0   {}-{ ,}
        2        0   {}-{de}
        2        0   {}-{en}
        2        0   {}-{i }
@@ -289,7 +289,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {•}-{§}
 
    Count   Missed   %Right
-       1        1     0.00   {<\n>}
      207       66    68.12   { }
       22       21     4.55   {,}
        6        5    16.67   {.}

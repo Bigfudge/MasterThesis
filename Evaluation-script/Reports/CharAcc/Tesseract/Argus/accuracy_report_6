@@ -1,22 +1,22 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1947   Characters
-     614   Errors
-   68.46%  Accuracy
+    1946   Characters
+     615   Errors
+   68.40%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   68.46%  Accuracy After Correction
+   68.40%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-     149      305      160      614   Unmarked
-     149      305      160      614   Total
+     149      305      161      615   Unmarked
+     149      305      161      615   Total
 
    Count   Missed   %Right
-     318       95    70.13   ASCII Spacing Characters
+     317       95    70.03   ASCII Spacing Characters
       46       16    65.22   ASCII Special Symbols
        3        1    66.67   ASCII Digits
       56       14    75.00   ASCII Uppercase Letters
@@ -24,7 +24,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        1     0.00   Latin1 Control Codes
       79       52    34.18   Latin1 Special Symbols
       80       48    40.00   Latin1 Uppercase Letters
-    1947      454    76.68   Total
+    1946      454    76.67   Total
 
   Errors   Marked   Correct-Generated
       40        0   {}-{- . ter nog , jmmdrtkanl...}
@@ -36,10 +36,10 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       11        0   {fÃ¶rblifwer}-{kokk- wek<\n>-}
        9        0   {WÃ¤n H}-{VIZU<\n>sÃ¥p}
        8        0   {ter nog,}-{-<\n>Â»}
+       8        0   {}-{ g fd f<\n>}
        8        0   {}-{-Â« , .<\n>}
        8        0   {Ã¤}-{e}
        7        0   { }-{-â<80><94>â<80><94>}
-       7        0   {}-{ g fd f}
        6        0   {}-{-<\n>-}
        6        0   {}-{â<80><94>}
        5        0   {e}-{c}
@@ -215,7 +215,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {¶}-{¥}
 
    Count   Missed   %Right
-       1        0   100.00   {<\n>}
      317       95    70.03   { }
        1        1     0.00   {!}
       28       11    60.71   {,}

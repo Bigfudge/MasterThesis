@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1136   Characters
-    1633   Errors
-  -43.75%  Accuracy
+    1135   Characters
+    1634   Errors
+  -43.96%  Accuracy
 
        2   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.18%  Characters Marked
-  -41.81%  Accuracy After Correction
+  -42.03%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        2       20       22   Marked
-      22      517     1072     1611   Unmarked
-      22      519     1092     1633   Total
+      22      517     1073     1612   Unmarked
+      22      519     1093     1634   Total
 
    Count   Missed   %Right
-     193       61    68.39   ASCII Spacing Characters
+     192       61    68.23   ASCII Spacing Characters
       22       18    18.18   ASCII Special Symbols
       26       25     3.85   ASCII Uppercase Letters
      781      377    51.73   ASCII Lowercase Letters
        1        1     0.00   Latin1 Control Codes
       56       36    35.71   Latin1 Special Symbols
       57       23    59.65   Latin1 Uppercase Letters
-    1136      541    52.38   Total
+    1135      541    52.33   Total
 
   Errors   Marked   Correct-Generated
       35        0   {}-{-<\n>nia √§r l ropuei et...}
@@ -52,6 +52,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       11        0   {j}-{de icke der}
       11        0   {}-{, Herr dmmi}
       11        0   {}-{uitannaat h}
+      11        0   {¶cus.}-{•raftilde-<\n>}
       10        0   {<84>}-{•mw√•lgi√∂}
       10        0   {T}-{≈økole bet}
       10        0   {n}-{ f√∂ry Dal}
@@ -62,7 +63,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       10        0   {}-{rnch Parad}
       10        0   {}-{smochio dA}
       10        0   {}-{≈øomm<\n>mig }
-      10        0   {¶cus.}-{•raftilde-}
        9        0   {<\n>M}-{≈ø√§kta≈ø}
        9        0   {fas}-{detBr√§≈ø}
        9        0   {f√∂r}-{chkunmma<\n>}
@@ -365,7 +365,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {•}-{§}
 
    Count   Missed   %Right
-       3        1    66.67   {<\n>}
+       2        1    50.00   {<\n>}
      190       60    68.42   { }
       13       10    23.08   {,}
        5        4    20.00   {.}

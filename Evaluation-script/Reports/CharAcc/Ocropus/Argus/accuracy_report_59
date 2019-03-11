@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1931   Characters
-    1573   Errors
-   18.54%  Accuracy
+    1930   Characters
+    1574   Errors
+   18.45%  Accuracy
 
        2   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.10%  Characters Marked
-   19.42%  Accuracy After Correction
+   19.33%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0       11        6       17   Marked
-     182     1006      368     1556   Unmarked
-     182     1017      374     1573   Total
+     182     1006      369     1557   Unmarked
+     182     1017      375     1574   Total
 
    Count   Missed   %Right
-     321      140    56.39   ASCII Spacing Characters
+     320      140    56.25   ASCII Spacing Characters
       47       36    23.40   ASCII Special Symbols
       51       48     5.88   ASCII Uppercase Letters
     1328      862    35.09   ASCII Lowercase Letters
        1        1     0.00   Latin1 Control Codes
       91       68    25.27   Latin1 Special Symbols
       92       44    52.17   Latin1 Uppercase Letters
-    1931     1199    37.91   Total
+    1930     1199    37.88   Total
 
   Errors   Marked   Correct-Generated
       20        0   {bla}-{ckmäſtutpä Kroppe}
@@ -42,9 +42,9 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       11        0   {gick mäst}-{ryktbaraSon}
       11        0   {ille kämpa}-{ad han icke}
       11        0   {så käckt }-{Herr<\n>mitfr}
+      10        0   {kärlek}-{ſom kom-<\n>}
       10        0   {�dedräckt}-{�got fn}
        9        0   {a Konung}-{willſåi}
-       9        0   {kärlek}-{ſom kom-}
        9        0   {la hans H}-{itiſka<\n>d}
        9        0   {lck af me}-{m hangior}
        9        0   {naturliga}-{ſin Hals}
@@ -420,7 +420,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       1        0   100.00   {<\n>}
      320      140    56.25   { }
       33       23    30.30   {,}
        6        5    16.67   {.}

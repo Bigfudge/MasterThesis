@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1764   Characters
-    1471   Errors
-   16.61%  Accuracy
+    1763   Characters
+    1472   Errors
+   16.51%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   16.61%  Accuracy After Correction
+   16.51%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-     161      943      367     1471   Unmarked
-     161      943      367     1471   Total
+     161      943      368     1472   Unmarked
+     161      943      368     1472   Total
 
    Count   Missed   %Right
-     306      108    64.71   ASCII Spacing Characters
+     305      108    64.59   ASCII Spacing Characters
       56       39    30.36   ASCII Special Symbols
       72       68     5.56   ASCII Uppercase Letters
     1192      795    33.31   ASCII Lowercase Letters
        6        6     0.00   Latin1 Control Codes
       63       43    31.75   Latin1 Special Symbols
       69       45    34.78   Latin1 Uppercase Letters
-    1764     1104    37.41   Total
+    1763     1104    37.38   Total
 
   Errors   Marked   Correct-Generated
       18        0   {s}-{Å¿}
@@ -294,6 +294,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {st}-{r,}
        2        0   {sw}-{dl}
        2        0   {sw}-{Å¿}
+       2        0   {t}-{I<\n>}
        2        0   {t}-{n}
        2        0   {t}-{}
        2        0   {ur}-{Ã¥}
@@ -355,7 +356,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {s}-{g}
        1        0   {s}-{l}
        1        0   {s}-{}
-       1        0   {t}-{I}
        1        0   {w}-{h}
        1        0   {w}-{}
        1        0   {}-{,}
@@ -370,7 +370,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {¶}-{¤}
 
    Count   Missed   %Right
-       4        1    75.00   {<\n>}
+       3        1    66.67   {<\n>}
      302      107    64.57   { }
       32       20    37.50   {,}
        6        5    16.67   {-}

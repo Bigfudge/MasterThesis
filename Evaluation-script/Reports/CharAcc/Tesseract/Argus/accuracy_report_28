@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1853   Characters
-    1065   Errors
-   42.53%  Accuracy
+    1852   Characters
+    1066   Errors
+   42.44%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   42.53%  Accuracy After Correction
+   42.44%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-     243      639      183     1065   Unmarked
-     243      639      183     1065   Total
+     243      639      184     1066   Unmarked
+     243      639      184     1066   Total
 
    Count   Missed   %Right
-     288      115    60.07   ASCII Spacing Characters
+     287      114    60.28   ASCII Spacing Characters
       55       42    23.64   ASCII Special Symbols
       41       18    56.10   ASCII Uppercase Letters
-    1301      602    53.73   ASCII Lowercase Letters
+    1301      603    53.65   ASCII Lowercase Letters
        3        3     0.00   Latin1 Control Codes
       81       56    30.86   Latin1 Special Symbols
       84       46    45.24   Latin1 Uppercase Letters
-    1853      882    52.40   Total
+    1852      882    52.38   Total
 
   Errors   Marked   Correct-Generated
       23        0   { }-{}
@@ -43,7 +43,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        9        0   {jag fö}-{« mixde }
        9        0   {ms hu}-{äxxetjxx}
        9        0   {ne beröm}-{dxxi}
-       9        0   {}-{. xvxx x<\n>}
        8        0   { flögo }-{gxxs}
        8        0   {. Några}-{kks «}
        8        0   {en stora}-{<\n>Ofkd}
@@ -57,6 +56,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        7        0   {Några }-{EVer ty}
        7        0   {at äga}-{xxx-Ef}
        7        0   {bättre}-{s« »}
+       7        0   {de}-{xvxx x<\n>}
        7        0   {ta. Nå}-{ixi<\n>}
        7        0   {ussar}-{xx�<9F>xxe}
        7        0   {�iska o}-{�grxxjp}
@@ -76,7 +76,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        5        0   { unga}-{xmgxx}
        5        0   {, dem}-{ exxt}
        5        0   {Europ}-{»<\n>R}
-       5        0   {e}-{x}
        5        0   {flög}-{jid- }
        5        0   {här }-{rbe x}
        5        0   {ikade}-{x}
@@ -91,6 +90,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        5        0   {säll}-{akt}
        5        0   {ung}-{xxxx }
        5        0   {uropa}-{}
+       5        0   {}-{rdx<\n>.}
        4        0   { Or}-{k<\n>Qx}
        4        0   { at}-{<\n>xxx}
        4        0   { hä}-{-sy}
@@ -108,6 +108,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        0   {bli}-{lytt}
        4        0   {en.)}-{äew}
        4        0   {erom}-{ «}
+       4        0   {e}-{x}
        4        0   {fl}-{» x}
        4        0   {gs s}-{tzei}
        4        0   {icke}-{xxx}
@@ -269,7 +270,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {ä}-{xx}
        2        0   {å}-{ej}
        1        0   { }-{-}
-       1        0   { }-{r}
        1        0   { }-{z}
        1        0   {,}-{-}
        1        0   {,}-{;}
@@ -313,8 +313,8 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {}-{w}
 
    Count   Missed   %Right
-       2        0   100.00   {<\n>}
-     286      115    59.79   { }
+       1        0   100.00   {<\n>}
+     286      114    60.14   { }
        2        1    50.00   {(}
        2        2     0.00   {)}
       35       26    25.71   {,}
@@ -340,7 +340,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
      148       95    35.81   {a}
       15       10    33.33   {b}
       23        8    65.22   {c}
-      75       15    80.00   {d}
+      75       16    78.67   {d}
      139       41    70.50   {e}
       39       15    61.54   {f}
       66       24    63.64   {g}

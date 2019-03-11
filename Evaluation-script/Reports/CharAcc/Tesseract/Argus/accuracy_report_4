@@ -1,22 +1,22 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1878   Characters
-     734   Errors
-   60.92%  Accuracy
+    1877   Characters
+     735   Errors
+   60.84%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   60.92%  Accuracy After Correction
+   60.84%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-      90      479      165      734   Unmarked
-      90      479      165      734   Total
+      90      479      166      735   Unmarked
+      90      479      166      735   Total
 
    Count   Missed   %Right
-     299      110    63.21   ASCII Spacing Characters
+     298      110    63.09   ASCII Spacing Characters
       49       21    57.14   ASCII Special Symbols
       52       38    26.92   ASCII Digits
       61       27    55.74   ASCII Uppercase Letters
@@ -24,7 +24,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        2     0.00   Latin1 Control Codes
       56       34    39.29   Latin1 Special Symbols
       58       35    39.66   Latin1 Uppercase Letters
-    1878      569    69.70   Total
+    1877      569    69.69   Total
 
   Errors   Marked   Correct-Generated
       20        0   { }-{}
@@ -46,6 +46,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        7        0   {iorde e}-{eks-Lyt}
        7        0   {ter bli}-{m szsc}
        6        0   { Tuck}-{s(zm√∂}
+       6        0   {.}-{<\n>Mina<\n>}
        6        0   {150000}-{Ixoooo}
        6        0   {N√§r j}-{¬ªMvis}
        6        0   {och fl}-{H}
@@ -57,7 +58,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        5        0   { Rep}-{xx√∂k}
        5        0   { funn}-{de-m}
        5        0   { f√∂r}-{tp}
-       5        0   {.}-{<\n>Mina}
        5        0   {elte}-{ricka}
        5        0   {e}-{c}
        5        0   {fw}-{√<9F><\n>sv}
@@ -268,7 +268,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {•}-{∂}
 
    Count   Missed   %Right
-       2        0   100.00   {<\n>}
+       1        0   100.00   {<\n>}
      297      110    62.96   { }
        1        1     0.00   {'}
       28       11    60.71   {,}

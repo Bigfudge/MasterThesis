@@ -1,35 +1,35 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1747   Characters
-     648   Errors
-   62.91%  Accuracy
+    1746   Characters
+     649   Errors
+   62.83%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   62.91%  Accuracy After Correction
+   62.83%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-     100      352      196      648   Unmarked
-     100      352      196      648   Total
+      99      354      196      649   Unmarked
+      99      354      196      649   Total
 
    Count   Missed   %Right
-     294      103    64.97   ASCII Spacing Characters
-      48       25    47.92   ASCII Special Symbols
+     293      103    64.85   ASCII Spacing Characters
+      48       26    45.83   ASCII Special Symbols
        1        1     0.00   ASCII Digits
       53       18    66.04   ASCII Uppercase Letters
     1201      209    82.60   ASCII Lowercase Letters
        1        1     0.00   Latin1 Control Codes
       74       48    35.14   Latin1 Special Symbols
       75       47    37.33   Latin1 Uppercase Letters
-    1747      452    74.13   Total
+    1746      453    74.05   Total
 
   Errors   Marked   Correct-Generated
+      23        0   {brå-}-{seg-<\n>« j.;».. Y» a...}
       18        0   { }-{}
       18        0   {}-{h « �<80><94> - » 3 -...}
-      18        0   {}-{« j.;».. Y» af<\n>}
       16        0   {å}-{a}
       12        0   {ä}-{a}
        9        0   { }-{<\n>}
@@ -64,7 +64,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        0   { }-{�<80><94>-}
        4        0   {, }-{-<\n>«}
        4        0   {a}-{n}
-       4        0   {brå}-{seg}
        4        0   {en w}-{MU}
        4        0   {en}-{m}
        4        0   {frö}-{sid}
@@ -241,12 +240,12 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {}-{t}
 
    Count   Missed   %Right
-       4        1    75.00   {<\n>}
+       3        1    66.67   {<\n>}
      290      102    64.83   { }
        1        0   100.00   {(}
        1        1     0.00   {)}
       33       16    51.52   {,}
-       5        2    60.00   {-}
+       5        3    40.00   {-}
        5        3    40.00   {.}
        1        1     0.00   {2}
        2        2     0.00   {;}

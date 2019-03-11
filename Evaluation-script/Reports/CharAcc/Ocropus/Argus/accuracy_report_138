@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1707   Characters
-    1443   Errors
-   15.47%  Accuracy
+    1706   Characters
+    1444   Errors
+   15.36%  Accuracy
 
        5   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.29%  Characters Marked
-   17.52%  Accuracy After Correction
+   17.41%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        3       28        4       35   Marked
-     114     1015      279     1408   Unmarked
-     117     1043      283     1443   Total
+     114     1015      280     1409   Unmarked
+     117     1043      284     1444   Total
 
    Count   Missed   %Right
-     283      154    45.58   ASCII Spacing Characters
+     282      154    45.39   ASCII Spacing Characters
       61       50    18.03   ASCII Special Symbols
       77       72     6.49   ASCII Uppercase Letters
     1146      790    31.06   ASCII Lowercase Letters
        5        5     0.00   Latin1 Control Codes
       65       47    27.69   Latin1 Special Symbols
       70       42    40.00   Latin1 Uppercase Letters
-    1707     1160    32.04   Total
+    1706     1160    32.00   Total
 
   Errors   Marked   Correct-Generated
       20        0   {ga, nedriga finna.<\n>S}-{ jiyrkan?<\n>Tror du w}
@@ -98,6 +98,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        7        0   {fwa st}-{,<\n>Huld }
        7        0   {immele}-{ranstro}
        7        0   {skull}-{heprydd}
+       7        0   {wa?}-{tilde-<\n>}
        7        0   {ycka, P}-{n,ſto}
        7        0   {}-{g dåra}
        7        0   {}-{ndemana}
@@ -119,7 +120,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        6        0   {och K}-{du ſe}
        6        0   {som ho}-{ſi}
        6        0   {s}-{ſ}
-       6        0   {wa?}-{tilde-}
        6        0   {yck}-{ningen}
        6        0   {yllene}-{en<\n>Då}
        6        0   {�<85>sn}-{wiktig}
@@ -358,7 +358,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       3        2    33.33   {<\n>}
+       2        2     0.00   {<\n>}
      280      152    45.71   { }
        1        1     0.00   {!}
        1        1     0.00   {'}

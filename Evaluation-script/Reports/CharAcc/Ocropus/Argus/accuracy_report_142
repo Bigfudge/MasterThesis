@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1727   Characters
-    1449   Errors
-   16.10%  Accuracy
+    1726   Characters
+    1450   Errors
+   15.99%  Accuracy
 
        3   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.17%  Characters Marked
-   17.37%  Accuracy After Correction
+   17.27%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0       21        1       22   Marked
-     115      983      329     1427   Unmarked
-     115     1004      330     1449   Total
+     114      985      329     1428   Unmarked
+     114     1006      330     1450   Total
 
    Count   Missed   %Right
-     295      101    65.76   ASCII Spacing Characters
-      49       38    22.45   ASCII Special Symbols
+     294      101    65.65   ASCII Spacing Characters
+      49       39    20.41   ASCII Special Symbols
       45       41     8.89   ASCII Uppercase Letters
     1192      830    30.37   ASCII Lowercase Letters
        1        1     0.00   Latin1 Control Codes
       72       59    18.06   Latin1 Special Symbols
       73       49    32.88   Latin1 Uppercase Letters
-    1727     1119    35.21   Total
+    1726     1120    35.11   Total
 
   Errors   Marked   Correct-Generated
       20        0   {så skall icke jag }-{kundegiörauproroch<\n>}
@@ -121,6 +121,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        5        0   {. Då}-{iyer,}
        5        0   {Byx}-{jag d}
        5        0   {Det}-{ſåg}
+       5        0   {Egen-}-{kom-<\n>}
        5        0   {Fruen}-{pG)<\n>}
        5        0   {Spa}-{bakö}
        5        0   {Stade}-{i ſy}
@@ -152,7 +153,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        0   { wis}-{bör}
        4        0   {, d}-{nerh}
        4        0   {,}-{<\n>len}
-       4        0   {Egen}-{kom}
        4        0   {Her}-{giö}
        4        0   {Hus,}-{med}
        4        0   {M}-{at<\n>R}
@@ -380,11 +380,11 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       3        2    33.33   {<\n>}
+       2        2     0.00   {<\n>}
      292       99    66.10   { }
        1        1     0.00   {!}
       33       24    27.27   {,}
-       2        1    50.00   {-}
+       2        2     0.00   {-}
        9        8    11.11   {.}
        1        1     0.00   {:}
        3        3     0.00   {;}

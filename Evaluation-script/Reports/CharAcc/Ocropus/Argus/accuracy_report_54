@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1849   Characters
-    1517   Errors
-   17.96%  Accuracy
+    1848   Characters
+    1518   Errors
+   17.86%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   17.96%  Accuracy After Correction
+   17.86%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-     114     1024      379     1517   Unmarked
-     114     1024      379     1517   Total
+     114     1024      380     1518   Unmarked
+     114     1024      380     1518   Total
 
    Count   Missed   %Right
-     320      106    66.88   ASCII Spacing Characters
+     319      106    66.77   ASCII Spacing Characters
       58       41    29.31   ASCII Special Symbols
       61       56     8.20   ASCII Uppercase Letters
     1244      820    34.08   ASCII Lowercase Letters
        2        2     0.00   Latin1 Control Codes
       81       62    23.46   Latin1 Special Symbols
       83       51    38.55   Latin1 Uppercase Letters
-    1849     1138    38.45   Total
+    1848     1138    38.42   Total
 
   Errors   Marked   Correct-Generated
       18        0   {mödernet: Jag är}-{Ehrt tilſtånd.<\n>i}
@@ -56,6 +56,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        9        0   {up dörre}-{nytta, ka}
        9        0   {�ng född}-{�r Konung}
        8        0   { Eh}-{aftoup-<\n>}
+       8        0   { åhr,}-{ftilde-<\n>}
        8        0   {,}-{<\n>wiſtas}
        8        0   {Fat}-{in: Hu-<\n>}
        8        0   {hulpit d}-{Berſon}
@@ -64,7 +65,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        8        0   {swarade}-{år<\n>för}
        8        0   {t wå}-{mmma.<\n>He}
        8        0   {}-{ ſå in}
-       7        0   { åhr,}-{ftilde-}
        7        0   {, som }-{<\n>ſade<\n>}
        7        0   {Herr Pa}-{ädlaſ}
        7        0   {Huru st}-{Spenar }
@@ -407,7 +407,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       1        0   100.00   {<\n>}
      319      106    66.77   { }
       40       27    32.50   {,}
        3        3     0.00   {-}

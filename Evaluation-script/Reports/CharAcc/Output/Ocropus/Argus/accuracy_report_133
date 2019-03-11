@@ -1,22 +1,22 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1931   Characters
+    1930   Characters
     1726   Errors
-   10.62%  Accuracy
+   10.57%  Accuracy
 
        2   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.10%  Characters Marked
-   11.76%  Accuracy After Correction
+   11.71%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0       21        1       22   Marked
-     153      990      561     1704   Unmarked
-     153     1011      562     1726   Total
+     153      989      562     1704   Unmarked
+     153     1010      563     1726   Total
 
    Count   Missed   %Right
-     337       77    77.15   ASCII Spacing Characters
+     336       76    77.38   ASCII Spacing Characters
       55       51     7.27   ASCII Special Symbols
        4        4     0.00   ASCII Digits
       48       45     6.25   ASCII Uppercase Letters
@@ -24,7 +24,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        6        6     0.00   Latin1 Control Codes
       77       57    25.97   Latin1 Special Symbols
       83       52    37.35   Latin1 Uppercase Letters
-    1931     1164    39.72   Total
+    1930     1163    39.74   Total
 
   Errors   Marked   Correct-Generated
       17        0   {Adelsman fick ett}-{Lrucntimmer ſom}
@@ -175,7 +175,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        5        0   {ömka}-{i ran}
        4        0   { och}-{lla}
        4        0   {,}-{ på}
-       4        0   {<\n>}-{ , .}
        4        0   {En a}-{Rä}
        4        0   {Kist}-{h}
        4        0   {Koff}-{war }
@@ -217,6 +216,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        0   {t}-{idnn}
        4        0   {u}-{kä }
        4        0   {wäl}-{hnar}
+       4        0   {}-{ , .}
        4        0   {}-{ick }
        4        0   {}-{wa u}
        4        0   {}-{ſå}
@@ -448,7 +448,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       1        1     0.00   {<\n>}
      336       76    77.38   { }
       42       39     7.14   {,}
        2        1    50.00   {-}

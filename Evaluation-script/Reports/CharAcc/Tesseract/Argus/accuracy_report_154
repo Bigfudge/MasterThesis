@@ -1,38 +1,39 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-     987   Characters
-     314   Errors
-   68.19%  Accuracy
+     986   Characters
+     315   Errors
+   68.05%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   68.19%  Accuracy After Correction
+   68.05%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-      55      163       96      314   Unmarked
-      55      163       96      314   Total
+      55      163       97      315   Unmarked
+      55      163       97      315   Total
 
    Count   Missed   %Right
-     153       36    76.47   ASCII Spacing Characters
+     152       35    76.97   ASCII Spacing Characters
       23        5    78.26   ASCII Special Symbols
       34        4    88.24   ASCII Uppercase Letters
-     697      104    85.08   ASCII Lowercase Letters
+     697      105    84.94   ASCII Lowercase Letters
       40       35    12.50   Latin1 Special Symbols
       40       34    15.00   Latin1 Uppercase Letters
-     987      218    77.91   Total
+     986      218    77.89   Total
 
   Errors   Marked   Correct-Generated
       28        0   {ä}-{a}
-      17        0   {}-{4 FF . »<\n>tvära<\n>}
+      13        0   {}-{FF . »<\n>tvär}
       10        0   { }-{}
        9        0   { an}-{asi--<\n>» }
        9        0   { }-{<\n>}
        8        0   {ö}-{o}
        6        0   {ss}-{�<9F>}
        6        0   {}-{-<\n>}
+       6        0   {}-{-at-<\n>4}
        5        0   {ss ä}-{�<9F>a}
        5        0   {}-{-<\n>« }
        5        0   {}-{«�<80><99>}
@@ -59,7 +60,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        3        0   {riv}-{mz}
        3        0   {rä}-{ka}
        3        0   {så}-{fa}
-       3        0   {}-{-}
        3        0   {}-{s}
        3        0   {äl}-{al-}
        3        0   {äs}-{af}
@@ -96,6 +96,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {up}-{av}
        2        0   {u}-{tx}
        2        0   {}-{- }
+       2        0   {}-{-}
        2        0   {}-{.}
        2        0   {}-{<\n>"}
        2        0   {}-{<\n>,}
@@ -103,7 +104,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {�}-{�s}
        2        0   {ä}-{as}
        2        0   {ä}-{ci}
-       1        0   { }-{-}
        1        0   {,}-{-}
        1        0   {,}-{k}
        1        0   {H}-{}
@@ -124,6 +124,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {n}-{}
        1        0   {r}-{k}
        1        0   {s}-{p}
+       1        0   {t}-{<\n>}
        1        0   {t}-{k}
        1        0   {t}-{x}
        1        0   {u}-{o}
@@ -135,8 +136,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {}-{z}
 
    Count   Missed   %Right
-       1        0   100.00   {<\n>}
-     152       36    76.32   { }
+     152       35    76.97   { }
        2        0   100.00   {!}
       16        5    68.75   {,}
        1        0   100.00   {-}
@@ -177,7 +177,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        3        1    66.67   {q}
       55       12    78.18   {r}
       43       16    62.79   {s}
-      47        8    82.98   {t}
+      47        9    80.85   {t}
       21        5    76.19   {u}
        1        1     0.00   {v}
       14        0   100.00   {w}

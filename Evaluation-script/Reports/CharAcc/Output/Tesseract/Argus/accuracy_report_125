@@ -1,28 +1,28 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-     862   Characters
+     861   Characters
      628   Errors
-   27.15%  Accuracy
+   27.06%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   27.15%  Accuracy After Correction
+   27.06%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-     308      201      119      628   Unmarked
-     308      201      119      628   Total
+     308      200      120      628   Unmarked
+     308      200      120      628   Total
 
    Count   Missed   %Right
-     134       57    57.46   ASCII Spacing Characters
+     133       56    57.89   ASCII Spacing Characters
       21       19     9.52   ASCII Special Symbols
       27       15    44.44   ASCII Uppercase Letters
      594      341    42.59   ASCII Lowercase Letters
       43       40     6.98   Latin1 Special Symbols
       43       37    13.95   Latin1 Uppercase Letters
-     862      509    40.95   Total
+     861      508    41.00   Total
 
   Errors   Marked   Correct-Generated
       71        0   {}-{ . « . ill iåd . stigs...}
@@ -48,7 +48,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        7        0   {at wår}-{vis}
        7        0   {många }-{}
        7        0   {utföra}-{}
-       6        0   {<\n>}-{ , - -}
        6        0   {a med }-{}
        6        0   {afwund}-{xviii-}
        6        0   {bärga}-{hami}
@@ -58,6 +57,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        6        0   {s-Näs}-{vMav}
        6        0   {w}-{iv}
        6        0   {wän, }-{}
+       6        0   {}-{ , - -}
        6        0   {}-{�<80><94> s }
        6        0   {örgå}-{-diad}
        5        0   { wår}-{}
@@ -153,7 +153,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {}-{m}
 
    Count   Missed   %Right
-       1        1     0.00   {<\n>}
      133       56    57.89   { }
       11        9    18.18   {,}
        2        2     0.00   {-}

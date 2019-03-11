@@ -1,36 +1,36 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1863   Characters
+    1862   Characters
     1599   Errors
-   14.17%  Accuracy
+   14.12%  Accuracy
 
        2   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.11%  Characters Marked
-   14.60%  Accuracy After Correction
+   14.55%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        5        3        8   Marked
-     109     1121      361     1591   Unmarked
-     109     1126      364     1599   Total
+     109     1120      362     1591   Unmarked
+     109     1125      365     1599   Total
 
    Count   Missed   %Right
-     320      118    63.12   ASCII Spacing Characters
+     319      117    63.32   ASCII Spacing Characters
       60       59     1.67   ASCII Special Symbols
       59       57     3.39   ASCII Uppercase Letters
     1266      884    30.17   ASCII Lowercase Letters
        3        3     0.00   Latin1 Control Codes
       76       62    18.42   Latin1 Special Symbols
       79       52    34.18   Latin1 Uppercase Letters
-    1863     1235    33.71   Total
+    1862     1234    33.73   Total
 
   Errors   Marked   Correct-Generated
       19        0   {på en präcktig S}-{atjagſkullegöraſ}
       15        0   {att och owårds}-{enjagnrkade C}
       15        0   {r? Han log åt }-{lddmplimentenaf}
       13        0   {. Nå, nå, t}-{dochStolar DH}
-      13        0   {oförnufftiga}-{, , , : , , ,}
+      13        0   {oförnufftiga}-{, , : , , , .}
       13        0   {ottet på}-{e ſwaradejag}
       13        0   {wäg}-{annat n bckla}
       12        0   {der henne}-{ ſåbarmadc}
@@ -52,11 +52,11 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        9        0   {ögneblek}-{, - , , ,}
        8        0   { det h}-{ſkkufft}
        8        0   {Bönd}-{äololah}
-       8        0   {Familia:}-{- , , ,}
-       8        0   {Lättias}-{, , , ,}
+       8        0   {Familia:}-{, , , -}
+       8        0   {Lättias}-{, , , -}
        8        0   {T}-{ABurm oc}
        8        0   {ag, du f}-{l�<9F>runsS}
-       8        0   {betrakta}-{: . : ,}
+       8        0   {betrakta}-{. : , -}
        8        0   {curisk P}-{edde af}
        8        0   {det som }-{ hwarig}
        8        0   {et som }-{yrbargå}
@@ -72,7 +72,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        7        0   {<96>}-{�ndtwä}
        7        0   {Derpå}-{, , - ,}
        7        0   {Lufft}-{ån jag}
-       7        0   {Mesen,<\n>}-{. - , -}
        7        0   {at häm}-{ſeende}
        7        0   {derl}-{n okunn}
        7        0   {d}-{ſig ig}
@@ -101,6 +100,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        6        0   {Bläck}-{ſkole}
        6        0   {Cavall}-{wredſ}
        6        0   {Lätt}-{gar ſ}
+       6        0   {Mesen,}-{- , -}
        6        0   {af sig}-{under}
        6        0   {at det}-{dock}
        6        0   {a}-{ſom e}
@@ -222,9 +222,9 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        3        0   {,}-{nes}
        3        0   {,}-{til}
        3        0   {<96>r}-{�le}
-       3        0   {Den}-{- ,}
+       3        0   {Den}-{, ,}
        3        0   {Dö}-{Hc}
-       3        0   {Fru}-{- ,}
+       3        0   {Fru}-{, ,}
        3        0   {Fru}-{a}
        3        0   {Men}-{, ,}
        3        0   {Wu}-{hä}
@@ -232,6 +232,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        3        0   {af }-{me}
        3        0   {af}-{hel}
        3        0   {ar,}-{}
+       3        0   {at}-{. :}
        3        0   {at}-{och}
        3        0   {de}-{ick}
        3        0   {de}-{på}
@@ -301,7 +302,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {St}-{f}
        2        0   {an}-{}
        2        0   {ar}-{ll}
-       2        0   {at}-{.}
        2        0   {ch}-{}
        2        0   {de}-{ga}
        2        0   {de}-{t}
@@ -416,7 +416,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       1        1     0.00   {<\n>}
      319      117    63.32   { }
       41       41     0.00   {,}
        1        1     0.00   {-}

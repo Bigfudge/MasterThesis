@@ -1,36 +1,36 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1862   Characters
-     469   Errors
-   74.81%  Accuracy
+    1861   Characters
+     470   Errors
+   74.74%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   74.81%  Accuracy After Correction
+   74.74%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-      98      253      118      469   Unmarked
-      98      253      118      469   Total
+      98      253      119      470   Unmarked
+      98      253      119      470   Total
 
    Count   Missed   %Right
-     323       84    73.99   ASCII Spacing Characters
+     322       84    73.91   ASCII Spacing Characters
       56       17    69.64   ASCII Special Symbols
       60       11    81.67   ASCII Uppercase Letters
     1297      143    88.97   ASCII Lowercase Letters
        4        4     0.00   Latin1 Control Codes
       59       46    22.03   Latin1 Special Symbols
       63       46    26.98   Latin1 Uppercase Letters
-    1862      351    81.15   Total
+    1861      351    81.14   Total
 
   Errors   Marked   Correct-Generated
       32        0   { }-{}
       30        0   {å}-{a}
       24        0   {ä}-{a}
       17        0   { }-{<\n>}
-      13        0   {}-{s Z· « 2 O<\n>}
+      16        0   {,}-{ä<\n>s Z· « 2 O<\n>}
       10        0   {a:}-{m. « , ,,}
       10        0   {}-{<\n>-}
        8        0   {ss}-{�<9F>}
@@ -93,7 +93,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   { }-{j.}
        2        0   { }-{»}
        2        0   {,}-{«}
-       2        0   {,}-{ä}
        2        0   {. }-{k}
        2        0   {B}-{V}
        2        0   {I }-{J}
@@ -175,7 +174,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       2        0   100.00   {<\n>}
+       1        0   100.00   {<\n>}
      321       84    73.83   { }
       38       11    71.05   {,}
        1        0   100.00   {-}

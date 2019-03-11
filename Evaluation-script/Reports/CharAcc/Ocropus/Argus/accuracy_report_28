@@ -1,28 +1,28 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-     862   Characters
-    1360   Errors
-  -57.77%  Accuracy
+     861   Characters
+    1361   Errors
+  -58.07%  Accuracy
 
        1   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.12%  Characters Marked
-  -56.96%  Accuracy After Correction
+  -57.26%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        2        5        7   Marked
-      11      390      952     1353   Unmarked
-      11      392      957     1360   Total
+      11      390      953     1354   Unmarked
+      11      392      958     1361   Total
 
    Count   Missed   %Right
-     134       25    81.34   ASCII Spacing Characters
+     133       25    81.20   ASCII Spacing Characters
       21       18    14.29   ASCII Special Symbols
       27       25     7.41   ASCII Uppercase Letters
      594      284    52.19   ASCII Lowercase Letters
       43       32    25.58   Latin1 Special Symbols
       43       19    55.81   Latin1 Uppercase Letters
-     862      403    53.25   Total
+     861      403    53.19   Total
 
   Errors   Marked   Correct-Generated
       32        0   {}-{llS och√§hoelle.<\n>Ehur...}
@@ -222,6 +222,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   { e}-{r}
        2        0   { l}-{kr}
        2        0   {, }-{ n}
+       2        0   {,}-{-<\n>}
        2        0   {M}-{kr}
        2        0   {Sm}-{f}
        2        0   {a }-{<\n>w}
@@ -268,7 +269,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {• }-{∂r}
        2        0   {√•}-{a}
        2        0   {√∂}-{d}
-       1        0   {,}-{-}
        1        0   {C}-{T}
        1        0   {N}-{h}
        1        0   {N}-{n}
@@ -307,7 +307,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {§}-{∂}
 
    Count   Missed   %Right
-       1        0   100.00   {<\n>}
      133       25    81.20   { }
       11        9    18.18   {,}
        2        2     0.00   {-}

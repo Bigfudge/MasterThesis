@@ -1,32 +1,32 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1307   Characters
-     409   Errors
-   68.71%  Accuracy
+    1306   Characters
+     410   Errors
+   68.61%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   68.71%  Accuracy After Correction
+   68.61%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-      82      152      175      409   Unmarked
-      82      152      175      409   Total
+      82      152      176      410   Unmarked
+      82      152      176      410   Total
 
    Count   Missed   %Right
-     231       62    73.16   ASCII Spacing Characters
+     230       62    73.04   ASCII Spacing Characters
       34       11    67.65   ASCII Special Symbols
       49        6    87.76   ASCII Uppercase Letters
      877      100    88.60   ASCII Lowercase Letters
        5        4    20.00   Latin1 Control Codes
       53       27    49.06   Latin1 Special Symbols
       58       24    58.62   Latin1 Uppercase Letters
-    1307      234    82.10   Total
+    1306      234    82.08   Total
 
   Errors   Marked   Correct-Generated
-     101        0   {}-{-------Â«-- â<80><94>...}
+     103        0   {.}-{-<\n>-------Â«-- â<80>...}
       33        0   { }-{}
       16        0   {Ã¤}-{a}
        8        0   {}-{â<80><94><\n>}
@@ -73,7 +73,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   { }-{-}
        2        0   { }-{s}
        2        0   {. }-{<\n>}
-       2        0   {.}-{-}
        2        0   {.}-{Â»}
        2        0   {I }-{J}
        2        0   {I}-{TT}
@@ -106,6 +105,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {}-{Â»}
        2        0   {¥}-{¤}
        1        0   {,}-{}
+       1        0   {.}-{-}
        1        0   {.}-{g}
        1        0   {;}-{z}
        1        0   {b}-{p}
@@ -128,7 +128,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {}-{o}
 
    Count   Missed   %Right
-       3        0   100.00   {<\n>}
+       2        0   100.00   {<\n>}
      228       62    72.81   { }
       20        4    80.00   {,}
       11        5    54.55   {.}

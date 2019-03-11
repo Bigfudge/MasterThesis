@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1910   Characters
-     435   Errors
-   77.23%  Accuracy
+    1909   Characters
+     436   Errors
+   77.16%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   77.23%  Accuracy After Correction
+   77.16%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-     110      249       76      435   Unmarked
-     110      249       76      435   Total
+     110      249       77      436   Unmarked
+     110      249       77      436   Total
 
    Count   Missed   %Right
-     326       78    76.07   ASCII Spacing Characters
+     325       78    76.00   ASCII Spacing Characters
       62       22    64.52   ASCII Special Symbols
       43        7    83.72   ASCII Uppercase Letters
     1303      147    88.72   ASCII Lowercase Letters
        4        4     0.00   Latin1 Control Codes
       84       50    40.48   Latin1 Special Symbols
       88       51    42.05   Latin1 Uppercase Letters
-    1910      359    81.20   Total
+    1909      359    81.19   Total
 
   Errors   Marked   Correct-Generated
       34        0   { }-{}
@@ -38,6 +38,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        6        0   {ö}-{o}
        5        0   { Cred}-{cyszz}
        5        0   { är:}-{an}
+       5        0   {}-{<\n>. 2<\n>}
        4        0   { Pa}-{pik<\n>}
        4        0   { så}-{fa}
        4        0   {Ande}-{Qva}
@@ -50,7 +51,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        0   {ten;}-{ws}
        4        0   {}-{-<\n>}
        4        0   {}-{. "<\n>}
-       4        0   {}-{. 2<\n>}
        4        0   {å f}-{a·t}
        4        0   {ömk}-{Zint}
        3        0   { an}-{am<\n>}
@@ -180,7 +180,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       1        0   100.00   {<\n>}
      325       78    76.00   { }
       39       12    69.23   {,}
        2        1    50.00   {-}

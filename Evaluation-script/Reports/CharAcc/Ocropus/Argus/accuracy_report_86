@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1482   Characters
-    1385   Errors
-    6.55%  Accuracy
+    1481   Characters
+    1386   Errors
+    6.41%  Accuracy
 
        3   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.20%  Characters Marked
-    7.35%  Accuracy After Correction
+    7.22%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        2       10       12   Marked
-      78      803      492     1373   Unmarked
-      78      805      502     1385   Total
+      78      803      493     1374   Unmarked
+      78      805      503     1386   Total
 
    Count   Missed   %Right
-     240       85    64.58   ASCII Spacing Characters
+     239       85    64.44   ASCII Spacing Characters
       32       28    12.50   ASCII Special Symbols
       10        7    30.00   ASCII Digits
       50       47     6.00   ASCII Uppercase Letters
     1004      635    36.75   ASCII Lowercase Letters
       73       50    31.51   Latin1 Special Symbols
       73       31    57.53   Latin1 Uppercase Letters
-    1482      883    40.42   Total
+    1481      883    40.38   Total
 
   Errors   Marked   Correct-Generated
       16        0   {ie}-{mögtt kamd, dä}
@@ -85,6 +85,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        7        0   {�fri}-{�n och }
        6        0   { Land,}-{efä2w}
        6        0   { h}-{lt.<\n>ſ}
+       6        0   { må}-{ilde-<\n>}
        6        0   {Bref }-{kiins<\n>}
        6        0   {d}-{ttabll}
        6        0   {enämb}-{isp ſ}
@@ -114,7 +115,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        6        0   {öras,}-{ſt. I}
        5        0   { fö}-{tſto}
        5        0   { int}-{tar d}
-       5        0   { må}-{ilde-}
        5        0   { öfw}-{lenb}
        5        0   {.<\n>J}-{ſåd}
        5        0   {.}-{t och}
@@ -364,7 +364,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       6        4    33.33   {<\n>}
+       5        4    20.00   {<\n>}
      234       81    65.38   { }
       20       16    20.00   {,}
        3        3     0.00   {-}

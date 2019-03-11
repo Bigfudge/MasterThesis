@@ -1,22 +1,22 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-     843   Characters
-     224   Errors
-   73.43%  Accuracy
+     842   Characters
+     225   Errors
+   73.28%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   73.43%  Accuracy After Correction
+   73.28%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-      36      106       82      224   Unmarked
-      36      106       82      224   Total
+      36      106       83      225   Unmarked
+      36      106       83      225   Total
 
    Count   Missed   %Right
-     151       30    80.13   ASCII Spacing Characters
+     150       30    80.00   ASCII Spacing Characters
       27        7    74.07   ASCII Special Symbols
        2        1    50.00   ASCII Digits
       22        6    72.73   ASCII Uppercase Letters
@@ -24,7 +24,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        1     0.00   Latin1 Control Codes
       37       17    54.05   Latin1 Special Symbols
       38       16    57.89   Latin1 Uppercase Letters
-     843      142    83.16   Total
+     842      142    83.14   Total
 
   Errors   Marked   Correct-Generated
       22        0   {}-{-Â«â<80><94>. ...Â« . .-...}
@@ -49,6 +49,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        3        0   {Du}-{. ,}
        3        0   {in }-{m}
        3        0   {ss,}-{H}
+       3        0   {u}-{ e<\n>}
        3        0   {wÃ¤}-{man}
        3        0   {}-{<\n>0V}
        3        0   {}-{eÂ»}
@@ -66,7 +67,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {ss}-{Ã<9F>}
        2        0   {s}-{f}
        2        0   {t}-{r}
-       2        0   {u}-{ e}
        2        0   {w}-{nz}
        2        0   {w}-{tv}
        2        0   {w}-{xo}
@@ -105,7 +105,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {¤}-{¥}
 
    Count   Missed   %Right
-       1        0   100.00   {<\n>}
      150       30    80.00   { }
       19        5    73.68   {,}
        5        1    80.00   {.}

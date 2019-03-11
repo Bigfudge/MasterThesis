@@ -1,28 +1,28 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1861   Characters
-    1595   Errors
-   14.29%  Accuracy
+    1860   Characters
+    1596   Errors
+   14.19%  Accuracy
 
        1   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.05%  Characters Marked
-   14.62%  Accuracy After Correction
+   14.52%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        6        0        6   Marked
-     131     1006      452     1589   Unmarked
-     131     1012      452     1595   Total
+     131     1006      453     1590   Unmarked
+     131     1012      453     1596   Total
 
    Count   Missed   %Right
-     303      118    61.06   ASCII Spacing Characters
+     302      118    60.93   ASCII Spacing Characters
       54       39    27.78   ASCII Special Symbols
       58       54     6.90   ASCII Uppercase Letters
     1282      833    35.02   ASCII Lowercase Letters
       82       56    31.71   Latin1 Special Symbols
       82       43    47.56   Latin1 Uppercase Letters
-    1861     1143    38.58   Total
+    1860     1143    38.55   Total
 
   Errors   Marked   Correct-Generated
       17        0   {}-{ſkulle förckomm}
@@ -100,6 +100,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        6        0   { Miss}-{tbegal}
        6        0   { förs}-{e, a}
        6        0   { lida.}-{ennt-}
+       6        0   {, som}-{ilde-<\n>}
        6        0   {. Huru}-{<\n>wilie}
        6        0   {Om nå}-{rsry}
        6        0   {Oss?}-{Lſ�<9F>r}
@@ -125,7 +126,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        6        0   {}-{s witt}
        6        0   {}-{ywa-<\n>O}
        5        0   { wi}-{<\n>kor,}
-       5        0   {, som}-{ilde-}
        5        0   {. Hw}-{fhör}
        5        0   {?}-{ytta.}
        5        0   {Dessu}-{Furſ}
@@ -405,7 +405,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       2        0   100.00   {<\n>}
+       1        0   100.00   {<\n>}
      301      118    60.80   { }
       28       19    32.14   {,}
        5        3    40.00   {-}

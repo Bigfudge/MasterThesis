@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1536   Characters
-    2323   Errors
-  -51.24%  Accuracy
+    1535   Characters
+    2324   Errors
+  -51.40%  Accuracy
 
        3   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.20%  Characters Marked
-  -50.13%  Accuracy After Correction
+  -50.29%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        6       11       17   Marked
-      22      712     1572     2306   Unmarked
-      22      718     1583     2323   Total
+      22      712     1573     2307   Unmarked
+      22      718     1584     2324   Total
 
    Count   Missed   %Right
-     217       50    76.96   ASCII Spacing Characters
+     216       50    76.85   ASCII Spacing Characters
       68       58    14.71   ASCII Special Symbols
       47       45     4.26   ASCII Uppercase Letters
     1004      510    49.20   ASCII Lowercase Letters
        1        1     0.00   Latin1 Control Codes
       99       42    57.58   Latin1 Special Symbols
      100       34    66.00   Latin1 Uppercase Letters
-    1536      740    51.82   Total
+    1535      740    51.79   Total
 
   Errors   Marked   Correct-Generated
       46        0   {}-{ öre ſ<\n>ſ-j--l jj-l...}
@@ -53,6 +53,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       12        0   {/}-{rilam<\n>frids.}
       12        0   {Kin-Kina Ba}-{deſto ſtö}
       12        0   {d}-{ s öre; ſp}
+      12        0   {}-{ sſſ wäl<\n>}
       12        0   {}-{an bruka<\n>ſp}
       12        0   {}-{et fierdedel}
       12        0   {}-{yt, hywad ſ}
@@ -60,7 +61,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       11        0   {Aqu}-{ſkålp het}
       11        0   {Käll}-{effterſin }
       11        0   {af<\n>otijdigt}-{1400 Alnars}
-      11        0   {}-{ sſſ wäl}
       11        0   {}-{amma gör e}
       11        0   {}-{gckte han e}
       11        0   {}-{kning och b}
@@ -482,7 +482,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-      33       14    57.58   {<\n>}
+      32       14    56.25   {<\n>}
      184       36    80.43   { }
        1        1     0.00   {(}
        1        0   100.00   {)}

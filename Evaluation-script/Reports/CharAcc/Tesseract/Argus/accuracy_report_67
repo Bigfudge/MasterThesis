@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1921   Characters
-     855   Errors
-   55.49%  Accuracy
+    1920   Characters
+     856   Errors
+   55.42%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   55.49%  Accuracy After Correction
+   55.42%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-     124      539      192      855   Unmarked
-     124      539      192      855   Total
+     124      539      193      856   Unmarked
+     124      539      193      856   Total
 
    Count   Missed   %Right
-     309      164    46.93   ASCII Spacing Characters
+     308      164    46.75   ASCII Spacing Characters
       58       41    29.31   ASCII Special Symbols
       54        9    83.33   ASCII Uppercase Letters
     1330      337    74.66   ASCII Lowercase Letters
        5        5     0.00   Latin1 Control Codes
       80       52    35.00   Latin1 Special Symbols
       85       55    35.29   Latin1 Uppercase Letters
-    1921      663    65.49   Total
+    1920      663    65.47   Total
 
   Errors   Marked   Correct-Generated
       19        0   {a}-{n}
@@ -73,6 +73,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        0   {, m}-{knej}
        4        0   {, }-{s--<\n>}
        4        0   {: Ha}-{zsst}
+       4        0   {:}-{x J<\n>}
        4        0   {ar, }-{ny}
        4        0   {da D}-{snst}
        4        0   {dett}-{ils-}
@@ -117,7 +118,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        3        0   {, }-{ssz}
        3        0   {,}-{sjk}
        3        0   {.}-{ixz}
-       3        0   {:}-{x J}
        3        0   {; F}-{st}
        3        0   {;}-{»z}
        3        0   {a }-{sms}
@@ -325,7 +325,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {}-{u}
 
    Count   Missed   %Right
-       2        1    50.00   {<\n>}
+       1        1     0.00   {<\n>}
      307      163    46.91   { }
        1        1     0.00   {)}
       40       27    32.50   {,}

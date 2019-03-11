@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1865   Characters
-     474   Errors
-   74.58%  Accuracy
+    1864   Characters
+     475   Errors
+   74.52%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   74.58%  Accuracy After Correction
+   74.52%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-     102      291       81      474   Unmarked
-     102      291       81      474   Total
+     102      291       82      475   Unmarked
+     102      291       82      475   Total
 
    Count   Missed   %Right
-     313       96    69.33   ASCII Spacing Characters
+     312       96    69.23   ASCII Spacing Characters
       51       21    58.82   ASCII Special Symbols
       46        5    89.13   ASCII Uppercase Letters
     1273      161    87.35   ASCII Lowercase Letters
        1        1     0.00   Latin1 Control Codes
       90       57    36.67   Latin1 Special Symbols
       91       52    42.86   Latin1 Uppercase Letters
-    1865      393    78.93   Total
+    1864      393    78.92   Total
 
   Errors   Marked   Correct-Generated
       25        0   { }-{}
@@ -39,6 +39,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        6        0   {t mÃ¥n}-{fmag-<\n>}
        6        0   {ta o}-{mâ<80><94><\n>D}
        6        0   {}-{-<\n>}
+       6        0   {}-{<\n>.c-,<\n>}
        5        0   { wid }-{de<\n>}
        5        0   { wÃ¥r}-{-svag}
        5        0   { }-{s}
@@ -47,7 +48,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        5        0   {n}-{xk,.<\n>}
        5        0   {rÃ¥n }-{xaa}
        5        0   {wÃ¤rr}-{Marc }
-       5        0   {}-{.c-,<\n>}
        4        0   { }-{Â«Â«}
        4        0   { Ã¤r}-{<\n>ar }
        4        0   {,}-{â<80><94>-}
@@ -186,7 +186,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {¶}-{¥}
 
    Count   Missed   %Right
-       1        0   100.00   {<\n>}
      312       96    69.23   { }
       30        9    70.00   {,}
        4        1    75.00   {-}

@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1106   Characters
-    1245   Errors
-  -12.57%  Accuracy
+    1105   Characters
+    1246   Errors
+  -12.76%  Accuracy
 
        1   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.09%  Characters Marked
-  -11.75%  Accuracy After Correction
+  -11.95%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        9        0        9   Marked
-      45      491      700     1236   Unmarked
-      45      500      700     1245   Total
+      45      491      701     1237   Unmarked
+      45      500      701     1246   Total
 
    Count   Missed   %Right
-     177       45    74.58   ASCII Spacing Characters
+     176       45    74.43   ASCII Spacing Characters
       31       24    22.58   ASCII Special Symbols
       40       34    15.00   ASCII Uppercase Letters
      754      399    47.08   ASCII Lowercase Letters
        1        1     0.00   Latin1 Control Codes
       51       28    45.10   Latin1 Special Symbols
       52       14    73.08   Latin1 Uppercase Letters
-    1106      545    50.72   Total
+    1105      545    50.68   Total
 
   Errors   Marked   Correct-Generated
       25        0   {}-{widdetta Rya√•hreh<\n>br...}
@@ -208,6 +208,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   { s}-{il}
        2        0   { }-{}
        2        0   {,}-{.}
+       2        0   {.}-{-<\n>}
        2        0   {Al}-{fo}
        2        0   {E}-{ss}
        2        0   {W}-{≈ø}
@@ -260,7 +261,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {∂}-{• }
        1        0   {,}-{y}
        1        0   {,}-{}
-       1        0   {.}-{-}
        1        0   {.}-{a}
        1        0   {.}-{y}
        1        0   {.}-{}
@@ -308,7 +308,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {}-{w}
 
    Count   Missed   %Right
-       4        2    50.00   {<\n>}
+       3        2    33.33   {<\n>}
      173       43    75.14   { }
        2        2     0.00   {!}
       11        8    27.27   {,}

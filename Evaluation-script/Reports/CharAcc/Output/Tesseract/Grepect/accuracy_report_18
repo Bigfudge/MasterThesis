@@ -1,52 +1,53 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-     421   Characters
+     420   Characters
      173   Errors
-   58.91%  Accuracy
+   58.81%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   58.91%  Accuracy After Correction
+   58.81%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-      40      108       25      173   Unmarked
-      40      108       25      173   Total
+      35      117       21      173   Unmarked
+      35      117       21      173   Total
 
    Count   Missed   %Right
-      62       20    67.74   ASCII Spacing Characters
+      61       19    68.85   ASCII Spacing Characters
       25       23     8.00   ASCII Special Symbols
        1        1     0.00   ASCII Digits
       21        4    80.95   ASCII Uppercase Letters
-     256       57    77.73   ASCII Lowercase Letters
+     256       62    75.78   ASCII Lowercase Letters
       28       22    21.43   Latin1 Special Symbols
       28       21    25.00   Latin1 Uppercase Letters
-     421      148    64.85   Total
+     420      152    63.81   Total
 
   Errors   Marked   Correct-Generated
-      19        0   {diarrhea,<\n>när<\n>}-{- - . - - - . " - ;}
-      12        0   {colique,}-{»;·"--:Ikz}
+      14        0   {diarrhea,<\n>när}-{- - . " - ;}
+      12        0   {epilepſie,}-{»;·"--:Ikz}
+      11        0   {r-<\n>paſſio}-{pik-FAQ ca}
       10        0   {föror-<\n>ſ}-{s « " s}
-      10        0   {lepſie,}-{k-FAQ cana}
       10        0   {ä}-{a}
       10        0   {ſ}-{s}
-       7        0   { ſlag,}-{»» !}
+       8        0   {colique,}-{« - - -}
        7        0   {<\n>}-{ « « }
-       7        0   {moder-<\n>}-{s }
        6        0   {e-<\n>del}-{as }
+       6        0   {g, mod}-{llion }
        5        0   {ſe-<\n>}-{se ? }
+       5        0   {ſl}-{! s p}
        4        0   {H}-{» G}
        4        0   {S.<\n>A}-{s }
        4        0   {ct,<\n>}-{åz }
-       4        0   {och}-{« -}
-       4        0   {ſſ}-{ll}
+       4        0   {}-{»»}
        3        0   {-<\n>r}-{ s}
        3        0   {.<\n>I}-{ K}
        3        0   {1.<\n>}-{}
        3        0   {; v}-{kB}
        3        0   {ch}-{tö}
+       3        0   {och}-{. -}
        3        0   {ſy}-{del}
        2        0   { }-{}
        2        0   {,}-{-.}
@@ -58,7 +59,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {r,}-{xy}
        2        0   {ö}-{o}
        2        0   {ſ}-{f}
-       1        0   {,}-{}
+       1        0   {,}-{a}
        1        0   {-}-{ }
        1        0   {-}-{}
        1        0   {.}-{}
@@ -72,7 +73,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-      16       16     0.00   {<\n>}
+      15       15     0.00   {<\n>}
       46        4    91.30   { }
        9        8    11.11   {,}
        9        9     0.00   {-}
@@ -104,13 +105,13 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        7        2    71.43   {f}
        5        1    80.00   {g}
       14        3    78.57   {h}
-      15        5    66.67   {i}
+      15        7    53.33   {i}
        5        0   100.00   {k}
       12        4    66.67   {l}
        9        1    88.89   {m}
       21        2    90.48   {n}
-      12        4    66.67   {o}
-       5        1    80.00   {p}
+      12        5    58.33   {o}
+       5        3    40.00   {p}
        1        1     0.00   {q}
       27        9    66.67   {r}
        6        0   100.00   {s}

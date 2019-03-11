@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1865   Characters
-    1514   Errors
-   18.82%  Accuracy
+    1864   Characters
+    1515   Errors
+   18.72%  Accuracy
 
        2   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.11%  Characters Marked
-   19.62%  Accuracy After Correction
+   19.53%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        6        9       15   Marked
-     174     1000      325     1499   Unmarked
-     174     1006      334     1514   Total
+     174     1000      326     1500   Unmarked
+     174     1006      335     1515   Total
 
    Count   Missed   %Right
-     313      125    60.06   ASCII Spacing Characters
+     312      125    59.94   ASCII Spacing Characters
       51       38    25.49   ASCII Special Symbols
       46       46     0.00   ASCII Uppercase Letters
     1273      857    32.68   ASCII Lowercase Letters
        1        1     0.00   Latin1 Control Codes
       90       65    27.78   Latin1 Special Symbols
       91       48    47.25   Latin1 Uppercase Letters
-    1865     1180    36.73   Total
+    1864     1180    36.70   Total
 
   Errors   Marked   Correct-Generated
       19        0   {oc}-{ſin tanka, talade }
@@ -405,6 +405,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {y}-{}
        1        0   {}-{ }
        1        0   {}-{:}
+       1        0   {}-{<\n>}
        1        0   {}-{H}
        1        0   {}-{g}
        1        0   {}-{j}
@@ -414,7 +415,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {}-{w}
 
    Count   Missed   %Right
-       1        0   100.00   {<\n>}
      312      125    59.94   { }
       30       18    40.00   {,}
        4        3    25.00   {-}

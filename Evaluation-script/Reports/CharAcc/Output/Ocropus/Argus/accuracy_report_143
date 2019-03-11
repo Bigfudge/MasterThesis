@@ -1,36 +1,35 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1843   Characters
+    1842   Characters
     1527   Errors
-   17.15%  Accuracy
+   17.10%  Accuracy
 
        2   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.11%  Characters Marked
-   18.12%  Accuracy After Correction
+   18.08%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        8       10       18   Marked
-     141      981      387     1509   Unmarked
-     141      989      397     1527   Total
+     142      978      389     1509   Unmarked
+     142      986      399     1527   Total
 
    Count   Missed   %Right
-     309       80    74.11   ASCII Spacing Characters
-      52       49     5.77   ASCII Special Symbols
+     308       79    74.35   ASCII Spacing Characters
+      52       48     7.69   ASCII Special Symbols
       42       38     9.52   ASCII Uppercase Letters
     1298      869    33.05   ASCII Lowercase Letters
        1        1     0.00   Latin1 Control Codes
       70       55    21.43   Latin1 Special Symbols
       71       38    46.48   Latin1 Uppercase Letters
-    1843     1130    38.69   Total
+    1842     1128    38.76   Total
 
   Errors   Marked   Correct-Generated
       22        0   {kall}-{är bunden wid det Kre}
       19        0   {�n Dubbel-�<96>hl.<\n>Ha}-{�rfilar honom på e}
       15        0   { både löijl}-{ingar hans Redr}
       13       13   {�tskill}-{<9F>För ~ - atr}
-      13        0   {blidi-bragd.<\n>}-{, , , , - . -}
       12        0   {Gubbe, så}-{ätſkilligt}
       11        0   {,}-{}
       11        0   {Hustru, som}-{ſade henne}
@@ -76,6 +75,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        7        0   {et.}-{ ſkall}
        7        0   {frodiga}-{utan}
        7        0   {henne w}-{ſmickr}
+       7        0   {hennes}-{, . - ,}
        7        0   {li}-{ektåde}
        7        0   {löije}-{i hafwa}
        7        0   {plat de}-{beticna}
@@ -90,6 +90,8 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        6        0   {K}-{twå e}
        6        0   {Ut}-{hwarib}
        6        0   {af ett}-{twå}
+       6        0   {blidi}-{, , , }
+       6        0   {bragd.}-{ . -}
        6        0   {delige}-{iuta}
        6        0   {dem ih}-{afhon}
        6        0   {den fe}-{ſam}
@@ -99,7 +101,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        6        0   {ell}-{hhanga}
        6        0   {friska}-{äter}
        6        0   {g. Hwa}-{nmmat }
-       6        0   {hennes}-{, . -}
        6        0   {hon w}-{ätſk}
        6        0   {ig }-{ medel}
        6        0   {jag}-{och}
@@ -410,12 +411,12 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       3        3     0.00   {<\n>}
+       2        2     0.00   {<\n>}
      306       77    74.84   { }
        1        1     0.00   {(}
        1        1     0.00   {)}
       35       32     8.57   {,}
-       4        4     0.00   {-}
+       4        3    25.00   {-}
       10       10     0.00   {.}
        1        1     0.00   {?}
        1        1     0.00   {A}

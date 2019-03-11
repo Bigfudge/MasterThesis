@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1878   Characters
+    1877   Characters
     1628   Errors
-   13.31%  Accuracy
+   13.27%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   13.31%  Accuracy After Correction
+   13.27%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-      86     1139      403     1628   Unmarked
-      86     1139      403     1628   Total
+      86     1138      404     1628   Unmarked
+      86     1138      404     1628   Total
 
    Count   Missed   %Right
-     295      113    61.69   ASCII Spacing Characters
+     294      112    61.90   ASCII Spacing Characters
       47       43     8.51   ASCII Special Symbols
       48       45     6.25   ASCII Uppercase Letters
     1310      902    31.15   ASCII Lowercase Letters
        6        6     0.00   Latin1 Control Codes
       83       66    20.48   Latin1 Special Symbols
       89       50    43.82   Latin1 Uppercase Letters
-    1878     1225    34.77   Total
+    1877     1224    34.79   Total
 
   Errors   Marked   Correct-Generated
       22        0   {-lystnad hos dem, hwil}-{tnnen ſiåtrorſagdoc}
@@ -286,7 +286,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   { }-{}
        2        0   {,}-{at}
        2        0   {,}-{}
-       2        0   {<\n>}-{ -}
        2        0   {Ja}-{no}
        2        0   {Ko}-{ä}
        2        0   {M}-{Kr}
@@ -342,6 +341,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {ut}-{j}
        2        0   {u}-{ni}
        2        0   {we}-{}
+       2        0   {}-{ -}
        2        0   {}-{a}
        2        0   {}-{bl}
        2        0   {}-{cm}
@@ -409,7 +409,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       2        2     0.00   {<\n>}
+       1        1     0.00   {<\n>}
      293      111    62.12   { }
       28       27     3.57   {,}
        6        4    33.33   {-}

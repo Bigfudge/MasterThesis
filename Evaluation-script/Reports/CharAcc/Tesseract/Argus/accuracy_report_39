@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1891   Characters
-     749   Errors
-   60.39%  Accuracy
+    1890   Characters
+     750   Errors
+   60.32%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   60.39%  Accuracy After Correction
+   60.32%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-      96      434      219      749   Unmarked
-      96      434      219      749   Total
+      96      434      220      750   Unmarked
+      96      434      220      750   Total
 
    Count   Missed   %Right
-     318      107    66.35   ASCII Spacing Characters
+     317      107    66.25   ASCII Spacing Characters
       61       36    40.98   ASCII Special Symbols
        2        2     0.00   ASCII Digits
       72       16    77.78   ASCII Uppercase Letters
     1258      276    78.06   ASCII Lowercase Letters
       90       52    42.22   Latin1 Special Symbols
       90       41    54.44   Latin1 Uppercase Letters
-    1891      530    71.97   Total
+    1890      530    71.96   Total
 
   Errors   Marked   Correct-Generated
       20        0   {å}-{a}
@@ -62,6 +62,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        5        0   {n}-{sfcsq}
        5        0   {n}-{stes-}
        5        0   {så w}-{fa kv}
+       5        0   {}-{<\n>ave<\n>}
        5        0   {}-{s}
        5        0   {�rund}-{�me}
        5        0   {åt:}-{utsjr}
@@ -87,7 +88,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        0   {t en}-{rm}
        4        0   {}-{- }
        4        0   {}-{-<\n>}
-       4        0   {}-{ave<\n>}
        4        0   {}-{·«}
        4        0   {än }-{chx}
        4        0   {å}-{�<80><99>a}
@@ -284,7 +284,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       3        1    66.67   {<\n>}
+       2        1    50.00   {<\n>}
      315      106    66.35   { }
        3        3     0.00   {!}
       30       15    50.00   {,}

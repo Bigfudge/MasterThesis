@@ -1,28 +1,28 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1871   Characters
-    1651   Errors
-   11.76%  Accuracy
+    1870   Characters
+    1652   Errors
+   11.66%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   11.76%  Accuracy After Correction
+   11.66%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-     157      978      516     1651   Unmarked
-     157      978      516     1651   Total
+     157      978      517     1652   Unmarked
+     157      978      517     1652   Total
 
    Count   Missed   %Right
-     293      130    55.63   ASCII Spacing Characters
+     292      130    55.48   ASCII Spacing Characters
       50       39    22.00   ASCII Special Symbols
       67       58    13.43   ASCII Uppercase Letters
     1335      826    38.13   ASCII Lowercase Letters
       63       47    25.40   Latin1 Special Symbols
       63       35    44.44   Latin1 Uppercase Letters
-    1871     1135    39.34   Total
+    1870     1135    39.30   Total
 
   Errors   Marked   Correct-Generated
       21        0   {en Bönhås. Han för}-{ſdnm medflit,,<\n>hyſt}
@@ -319,6 +319,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {ss}-{t}
        2        0   {st}-{}
        2        0   {th}-{rd}
+       2        0   {t}-{-<\n>}
        2        0   {ut}-{H}
        2        0   {ut}-{}
        2        0   {}-{ k}
@@ -389,7 +390,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {s}-{h}
        1        0   {s}-{r}
        1        0   {s}-{}
-       1        0   {t}-{-}
        1        0   {w}-{}
        1        0   {z}-{ }
        1        0   {}-{a}
@@ -397,7 +397,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       1        0   100.00   {<\n>}
      292      130    55.48   { }
       29       23    20.69   {,}
        4        4     0.00   {-}

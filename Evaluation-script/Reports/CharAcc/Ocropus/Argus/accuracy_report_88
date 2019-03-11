@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1699   Characters
-    1449   Errors
-   14.71%  Accuracy
+    1698   Characters
+    1450   Errors
+   14.61%  Accuracy
 
        1   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.06%  Characters Marked
-   15.13%  Accuracy After Correction
+   15.02%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        6        1        7   Marked
-      82      986      374     1442   Unmarked
-      82      992      375     1449   Total
+      82      986      375     1443   Unmarked
+      82      992      376     1450   Total
 
    Count   Missed   %Right
-     293       96    67.24   ASCII Spacing Characters
+     292       96    67.12   ASCII Spacing Characters
       46       40    13.04   ASCII Special Symbols
        4        4     0.00   ASCII Digits
       66       55    16.67   ASCII Uppercase Letters
     1172      796    32.08   ASCII Lowercase Letters
       59       47    20.34   Latin1 Special Symbols
       59       36    38.98   Latin1 Uppercase Letters
-    1699     1074    36.79   Total
+    1698     1074    36.75   Total
 
   Errors   Marked   Correct-Generated
       17        0   {ig icke särdel}-{edhen-<\n>�<9F>Kudo<\n>i...}
@@ -62,6 +62,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        8        0   {de fö}-{n-<\n>ggat<\n>}
        8        0   {doch tor}-{jag giö}
        8        0   {go}-{r, då c}
+       8        0   {n: Jag}-{ftilde-<\n>}
        8        0   {on spatz}-{eremot b}
        8        0   {på Lan}-{blifwit }
        8        0   {sin komm}-{t �<9F>oſt}
@@ -81,7 +82,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        7        0   {hwad}-{Dotter,}
        7        0   {med sin}-{ſtattd}
        7        0   {n: Huru}-{fſig,}
-       7        0   {n: Jag}-{ftilde-}
        7        0   {n}-{dygdigt}
        7        0   {roo.}-{ſådan}
        7        0   {som}-{ſådan}
@@ -381,7 +381,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       1        0   100.00   {<\n>}
      292       96    67.12   { }
       29       24    17.24   {,}
        3        3     0.00   {-}

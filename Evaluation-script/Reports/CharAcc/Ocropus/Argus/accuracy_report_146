@@ -1,30 +1,30 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1734   Characters
-    1468   Errors
-   15.34%  Accuracy
+    1733   Characters
+    1469   Errors
+   15.23%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   15.34%  Accuracy After Correction
+   15.23%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-     136      932      400     1468   Unmarked
-     136      932      400     1468   Total
+     135      934      400     1469   Unmarked
+     135      934      400     1469   Total
 
    Count   Missed   %Right
-     275      102    62.91   ASCII Spacing Characters
-      55       43    21.82   ASCII Special Symbols
+     274      102    62.77   ASCII Spacing Characters
+      55       44    20.00   ASCII Special Symbols
       10       10     0.00   ASCII Digits
       69       66     4.35   ASCII Uppercase Letters
     1159      742    35.98   ASCII Lowercase Letters
        1        1     0.00   Latin1 Control Codes
       82       59    28.05   Latin1 Special Symbols
       83       45    45.78   Latin1 Uppercase Letters
-    1734     1068    38.41   Total
+    1733     1069    38.32   Total
 
   Errors   Marked   Correct-Generated
       24        0   {}-{at en<\n>ånnu giäſtr ...}
@@ -143,6 +143,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        5        0   {ne}-{ytigt}
        5        0   {ninga}-{}
        5        0   {ning}-{ hopp}
+       5        0   {ntri-}-{lde-<\n>}
        5        0   {r på}-{de,}
        5        0   {s and}-{.<\n>fö}
        5        0   {sed}-{faſt}
@@ -183,7 +184,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        0   {ig }-{bete}
        4        0   {ig }-{ſka}
        4        0   {l L}-{ar<\n>f}
-       4        0   {ntri}-{lde}
        4        0   {og}-{-<\n>Ru}
        4        0   {pa}-{m ä}
        4        0   {p}-{ oik}
@@ -393,11 +393,11 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       4        1    75.00   {<\n>}
+       3        1    66.67   {<\n>}
      271      101    62.73   { }
        2        2     0.00   {!}
       31       21    32.26   {,}
-       6        5    16.67   {-}
+       6        6     0.00   {-}
       10        9    10.00   {.}
        5        5     0.00   {0}
        1        1     0.00   {3}

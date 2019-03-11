@@ -1,28 +1,28 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-     687   Characters
-    1220   Errors
-  -77.58%  Accuracy
+     686   Characters
+    1221   Errors
+  -77.99%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-  -77.58%  Accuracy After Correction
+  -77.99%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-       6      307      907     1220   Unmarked
-       6      307      907     1220   Total
+       6      307      908     1221   Unmarked
+       6      307      908     1221   Total
 
    Count   Missed   %Right
-     112       26    76.79   ASCII Spacing Characters
+     111       26    76.58   ASCII Spacing Characters
       18       12    33.33   ASCII Special Symbols
       24       21    12.50   ASCII Uppercase Letters
      465      220    52.69   ASCII Lowercase Letters
       34       24    29.41   Latin1 Special Symbols
       34       10    70.59   Latin1 Uppercase Letters
-     687      313    54.44   Total
+     686      313    54.37   Total
 
   Errors   Marked   Correct-Generated
       26        0   {}-{ſka wäl, at han anſt�...}
@@ -61,6 +61,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        8        0   {aremo}-{u tänck}
        8        0   {ifwe}-{as-<\n>ſka}
        8        0   {nk}-{de ut<\n>ſ}
+       8        0   {nus.}-{ftilde-<\n>}
        8        0   {s Trä}-{gmed<\n>wud}
        8        0   {ska}-{gdenmmig}
        8        0   {s}-{Förordn}
@@ -79,7 +80,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        7        0   {g}-{pfyllas}
        7        0   {hw}-{cn o:<\n>l}
        7        0   {lik de}-{förmä}
-       7        0   {nus.}-{ftilde-}
        7        0   {s}-{jag had}
        7        0   {w}-{de Hush}
        7        0   {}-{Borgare}
@@ -256,7 +256,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       4        2    50.00   {<\n>}
+       3        2    33.33   {<\n>}
      108       24    77.78   { }
        1        1     0.00   {(}
        1        0   100.00   {)}

@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1564   Characters
-    1444   Errors
-    7.67%  Accuracy
+    1563   Characters
+    1445   Errors
+    7.55%  Accuracy
 
        4   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.26%  Characters Marked
-    9.21%  Accuracy After Correction
+    9.09%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        1       10       13       24   Marked
-      57      856      507     1420   Unmarked
-      58      866      520     1444   Total
+      57      856      508     1421   Unmarked
+      58      866      521     1445   Total
 
    Count   Missed   %Right
-     248       77    68.95   ASCII Spacing Characters
+     247       77    68.83   ASCII Spacing Characters
       49       35    28.57   ASCII Special Symbols
       51       45    11.76   ASCII Uppercase Letters
     1078      682    36.73   ASCII Lowercase Letters
        2        2     0.00   Latin1 Control Codes
       67       49    26.87   Latin1 Special Symbols
       69       34    50.72   Latin1 Uppercase Letters
-    1564      924    40.92   Total
+    1563      924    40.88   Total
 
   Errors   Marked   Correct-Generated
       24        0   {}-{Förmån frägade mmig, }
@@ -99,6 +99,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        6        0   { see, }-{,<\n>Sklj}
        6        0   {<84>gg,}-{�l. En}
        6        0   {Himmel}-{tyſth}
+       6        0   {Lott.}-{Slaf?<\n>}
        6        0   {gaf}-{winner}
        6        0   {ighet,}-{s, min}
        6        0   {ij hå}-{t ſom}
@@ -124,7 +125,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        5        0   { äro}-{racl.}
        5        0   {Bröd}-{Lottu}
        5        0   {Ingen}-{ſom}
-       5        0   {Lott.}-{Slaf?}
        5        0   {M}-{ſoml}
        5        0   {all}-{rätt}
        5        0   {biud}-{Ehr B}
@@ -373,7 +373,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       1        0   100.00   {<\n>}
      247       77    68.83   { }
        1        1     0.00   {!}
       30       21    30.00   {,}

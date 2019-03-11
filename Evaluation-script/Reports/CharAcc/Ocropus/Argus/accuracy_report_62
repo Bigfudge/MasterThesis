@@ -1,47 +1,48 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-     904   Characters
-    1383   Errors
-  -52.99%  Accuracy
+     903   Characters
+    1384   Errors
+  -53.27%  Accuracy
 
        3   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.33%  Characters Marked
-  -33.41%  Accuracy After Correction
+  -42.30%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
-       0        0      177      177   Marked
-      34      341      831     1206   Unmarked
-      34      341     1008     1383   Total
+       0        0       99       99   Marked
+      34      341      910     1285   Unmarked
+      34      341     1009     1384   Total
 
    Count   Missed   %Right
-     152       32    78.95   ASCII Spacing Characters
-      27       19    29.63   ASCII Special Symbols
+     151       32    78.81   ASCII Spacing Characters
+      27       20    25.93   ASCII Special Symbols
       26       22    15.38   ASCII Uppercase Letters
-     597      260    56.45   ASCII Lowercase Letters
+     597      259    56.62   ASCII Lowercase Letters
        1        1     0.00   Latin1 Control Codes
       50       23    54.00   Latin1 Special Symbols
       51       18    64.71   Latin1 Uppercase Letters
-     904      375    58.52   Total
+     903      375    58.47   Total
 
   Errors   Marked   Correct-Generated
-     115      115   {}-{we-ſot. Ar hon da intor...}
+      73        0   {}-{� fräckoch trefwen ut, ...}
       51       51   {}-{r hennes kuſtoch hela h...}
+      42        0   {.}-{are är en Afſkrifft af...}
       40        0   {}-{når gmildaräſare fäl...}
+      37       37   {}-{d tl annat? lan hon an-...}
       26        0   {}-{han ſkal lefwg.<\n>nat ...}
-      23        0   {}-{dtſå fräckoch trefwe}
+      23        0   {}-{ſag kan förſtä, hwa}
       23        0   {}-{ſå hade en dyfwel, ſ}
-      21        0   {}-{ ut, ſom de ſielfwa}
       20        0   { Sinne eller Upsåt.}-{}
       18        0   {c}-{om.<\n>hon ſå älſ}
+      18        0   {}-{<\n>a pG)<\n>han ſedtſ}
       17        0   {hon så älskar, }-{Redelighetetn, hw}
       16        0   {}-{på faſta-<\n>ſa }
       15        0   {gf}-{r henne en ſki}
       15        0   {}-{ finna ſig oro}
       14        0   {n a}-{r-pu-<\n>e<\n>Oroſt}
       13        0   {ba}-{upſåt.<\n>EAld}
-      13        0   {}-{<\n>a pG)<\n>han ſ}
       12        0   {oli}-{ här<\n>re Ber}
       12        0   {s}-{ſ}
       12        0   {}-{intet jag oc}
@@ -50,10 +51,8 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       11        0   {d}-{-<\n>håpf,t<\n>H}
       11        0   {hon annat }-{Högfård,<\n>}
       11        0   {so}-{ochuprut-<\n>O}
-      11        0   {}-{rſtä, hwa}
       11        0   {}-{tabeſöket}
       11        0   {}-{�farlgt: L�}
-      10        0   {d}-{ſag kan f}
       10        0   {h hela he}-{tgiörmig<\n>}
       10        0   {m}-{panicfarar}
       10        0   {på, måst}-{alla<\n>Sinn}
@@ -125,6 +124,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        5        0   {s}-{äric}
        5        0   {t.}-{ ſom}
        5        0   {}-{ dem }
+       5        0   {}-{t ſe}
        5        0   {}-{war g}
        5        0   {}-{ſatt}
        4        0   { Mo}-{ddö}
@@ -143,7 +143,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        0   {n}-{, ſ}
        4        0   {t D}-{rsbr}
        4        0   {t? K}-{r ut}
-       4        0   {}-{ ten}
        4        0   {}-{ w}
        4        0   {}-{<\n>af.}
        4        0   {}-{Jag }
@@ -265,11 +264,11 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       2        0   100.00   {<\n>}
+       1        0   100.00   {<\n>}
      150       32    78.67   { }
       16       10    37.50   {,}
        3        3     0.00   {-}
-       5        3    40.00   {.}
+       5        4    20.00   {.}
        3        3     0.00   {?}
        2        1    50.00   {B}
        4        4     0.00   {D}
@@ -287,7 +286,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       73       23    68.49   {a}
        5        3    40.00   {b}
       11        5    54.55   {c}
-      30       11    63.33   {d}
+      30       10    66.67   {d}
       64       21    67.19   {e}
       21       11    47.62   {f}
       20        7    65.00   {g}

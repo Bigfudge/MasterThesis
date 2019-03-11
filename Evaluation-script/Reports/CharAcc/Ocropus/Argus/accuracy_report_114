@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1884   Characters
-    1585   Errors
-   15.87%  Accuracy
+    1883   Characters
+    1586   Errors
+   15.77%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   15.87%  Accuracy After Correction
+   15.77%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-     170      967      448     1585   Unmarked
-     170      967      448     1585   Total
+     169      969      448     1586   Unmarked
+     169      969      448     1586   Total
 
    Count   Missed   %Right
-     316      113    64.24   ASCII Spacing Characters
-      59       43    27.12   ASCII Special Symbols
+     315      113    64.13   ASCII Spacing Characters
+      59       44    25.42   ASCII Special Symbols
       41       32    21.95   ASCII Uppercase Letters
     1292      839    35.06   ASCII Lowercase Letters
        3        3     0.00   Latin1 Control Codes
       85       61    28.24   Latin1 Special Symbols
       88       46    47.73   Latin1 Uppercase Letters
-    1884     1137    39.65   Total
+    1883     1138    39.56   Total
 
   Errors   Marked   Correct-Generated
       28        0   {cke Ã¶fwerherren kommo h...}-{ntryckning<\n>Å¿Ã¥ dyrba...}
@@ -317,6 +317,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {n}-{rc}
        2        0   {od}-{w}
        2        0   {o}-{Ba}
+       2        0   {r-}-{-<\n>}
        2        0   {r.}-{n}
        2        0   {ss}-{ d}
        2        0   {s}-{ic}
@@ -389,7 +390,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {r}-{l}
        1        0   {r}-{m}
        1        0   {r}-{t}
-       1        0   {r}-{}
        1        0   {s}-{d}
        1        0   {s}-{}
        1        0   {t}-{d}
@@ -407,11 +407,11 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {¶}-{¤}
 
    Count   Missed   %Right
-       3        2    33.33   {<\n>}
+       2        2     0.00   {<\n>}
      313      111    64.54   { }
        1        1     0.00   {!}
       36       25    30.56   {,}
-       3        1    66.67   {-}
+       3        2    33.33   {-}
       14       11    21.43   {.}
        3        3     0.00   {:}
        2        2     0.00   {;}

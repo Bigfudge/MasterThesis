@@ -1,22 +1,22 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1842   Characters
-    1589   Errors
-   13.74%  Accuracy
+    1841   Characters
+    1590   Errors
+   13.63%  Accuracy
 
        2   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.11%  Characters Marked
-   14.06%  Accuracy After Correction
+   13.96%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        1        5        6   Marked
-     209      903      471     1583   Unmarked
-     209      904      476     1589   Total
+     209      903      472     1584   Unmarked
+     209      904      477     1590   Total
 
    Count   Missed   %Right
-     295      109    63.05   ASCII Spacing Characters
+     294      109    62.93   ASCII Spacing Characters
       47       35    25.53   ASCII Special Symbols
        5        5     0.00   ASCII Digits
       53       51     3.77   ASCII Uppercase Letters
@@ -24,7 +24,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        1     0.00   Latin1 Control Codes
       72       48    33.33   Latin1 Special Symbols
       73       38    47.95   Latin1 Uppercase Letters
-    1842     1113    39.58   Total
+    1841     1113    39.54   Total
 
   Errors   Marked   Correct-Generated
       20        0   {i}-{och<\n>de arbetadefåfe}
@@ -78,6 +78,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        8        0   {ätt}-{inſeſj}
        7        0   { Exempe}-{ar höl}
        7        0   { Papper}-{ugu-Rum}
+       7        0   {.}-{ Slaf?<\n>}
        7        0   {Corpus,}-{allting}
        7        0   {antia}-{föreko}
        7        0   {de på }-{migh}
@@ -97,7 +98,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        6        0   { tomt:}-{åg i}
        6        0   { }-{}
        6        0   {& Acci}-{mig i }
-       6        0   {.}-{ Slaf?}
        6        0   {6000}-{årdas}
        6        0   {Derpå}-{ſina}
        6        0   {Perpet}-{ſig n}
@@ -401,7 +401,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {}-{u}
 
    Count   Missed   %Right
-       3        0   100.00   {<\n>}
+       2        0   100.00   {<\n>}
      292      109    62.67   { }
        3        3     0.00   {&}
       27       18    33.33   {,}

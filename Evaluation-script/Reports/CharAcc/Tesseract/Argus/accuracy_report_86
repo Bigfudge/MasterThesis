@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1880   Characters
-     924   Errors
-   50.85%  Accuracy
+    1879   Characters
+     925   Errors
+   50.77%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   50.85%  Accuracy After Correction
+   50.77%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-     267      507      150      924   Unmarked
-     267      507      150      924   Total
+     267      507      151      925   Unmarked
+     267      507      151      925   Total
 
    Count   Missed   %Right
-     286      141    50.70   ASCII Spacing Characters
+     285      141    50.53   ASCII Spacing Characters
       56       38    32.14   ASCII Special Symbols
       57       25    56.14   ASCII Uppercase Letters
     1329      481    63.81   ASCII Lowercase Letters
        1        1     0.00   Latin1 Control Codes
       75       45    40.00   Latin1 Special Symbols
       76       43    43.42   Latin1 Uppercase Letters
-    1880      774    58.83   Total
+    1879      774    58.81   Total
 
   Errors   Marked   Correct-Generated
       37        0   {män, Drängar, och geme...}-{}
@@ -37,6 +37,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       12        0   {räst, en Bo}-{<\n>}
       12        0   {å}-{a}
       11        0   {n, en Krigs}-{-<\n>-Vu�<9F>}
+      11        0   {}-{ «<\n>�<80><94> ar<\n>}
       10        0   {gare etc. }-{<\n>vis}
       10        0   {tilfällen}-{.}
       10        0   {}-{s}
@@ -53,7 +54,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        7        0   {n}-{-z ·<\n>v}
        7        0   {onen.}-{czcz «}
        7        0   {tc. Nå}-{gs «Ra}
-       7        0   {}-{�<80><94> ar<\n>}
        7        0   {äflare}-{diigpex}
        7        0   {ål och}-{ac<\n>V?"}
        6        0   { Kiort}-{tor12<\n>}
@@ -143,7 +143,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        3        0   {tå}-{ia}
        3        0   {un}-{ixa}
        3        0   {uru}-{izm}
-       3        0   {}-{ «}
        3        0   {}-{<\n>»}
        3        0   {}-{k}
        3        0   {}-{�<80><99>}
@@ -292,7 +291,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {}-{l}
 
    Count   Missed   %Right
-       2        1    50.00   {<\n>}
+       1        1     0.00   {<\n>}
      284      140    50.70   { }
        3        2    33.33   {(}
        2        1    50.00   {)}

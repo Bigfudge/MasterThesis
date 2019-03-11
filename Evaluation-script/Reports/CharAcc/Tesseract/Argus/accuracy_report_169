@@ -1,41 +1,41 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1756   Characters
-     493   Errors
-   71.92%  Accuracy
+    1755   Characters
+     494   Errors
+   71.85%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   71.92%  Accuracy After Correction
+   71.85%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-      77      266      150      493   Unmarked
-      77      266      150      493   Total
+      78      264      152      494   Unmarked
+      78      264      152      494   Total
 
    Count   Missed   %Right
-     285       74    74.04   ASCII Spacing Characters
+     284       73    74.30   ASCII Spacing Characters
       52       22    57.69   ASCII Special Symbols
        5        1    80.00   ASCII Digits
       22        4    81.82   ASCII Uppercase Letters
     1222      153    87.48   ASCII Lowercase Letters
       85       46    45.88   Latin1 Special Symbols
       85       43    49.41   Latin1 Uppercase Letters
-    1756      343    80.47   Total
+    1755      342    80.51   Total
 
   Errors   Marked   Correct-Generated
       42        0   {el}-{as-EIZO . » . - -<\n>HI...}
       18        0   {ä}-{a}
       17        0   { }-{}
       12        0   {<\n>}-{»;-szz« s }
-      11        0   {här intet}-{.<\n>. �<80><94> , ,}
       10        0   { }-{<\n>}
       10        0   {}-{«}
        9        0   {icke wanf}-{talman-<\n>s}
        8        0   {Ann}-{multle h}
        8        0   {är}-{nxtzz<\n>. }
+       7        0   {här}-{.<\n>. �<80><94>}
        7        0   {å offt}-{a<\n>Isr}
        6        0   {J}-{�<80><94> In}
        6        0   {er}-{ �<80><94>-<\n>}
@@ -46,6 +46,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        6        0   {ö}-{o}
        5        0   { blir}-{måkt}
        5        0   { }-{«-«}
+       5        0   {intet}-{, ,<\n>}
        5        0   {rar, }-{mtest}
        5        0   {ter, }-{kfki<\n>}
        5        0   {äro }-{avd<\n>}
@@ -180,8 +181,8 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {}-{z}
 
    Count   Missed   %Right
-       2        1    50.00   {<\n>}
-     283       73    74.20   { }
+       1        1     0.00   {<\n>}
+     283       72    74.56   { }
        1        1     0.00   {!}
       38       15    60.53   {,}
        3        2    33.33   {-}

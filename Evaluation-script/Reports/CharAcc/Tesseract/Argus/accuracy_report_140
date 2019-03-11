@@ -1,34 +1,33 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1777   Characters
-     767   Errors
-   56.84%  Accuracy
+    1776   Characters
+     768   Errors
+   56.76%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   56.84%  Accuracy After Correction
+   56.76%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-      84      425      258      767   Unmarked
-      84      425      258      767   Total
+      84      425      259      768   Unmarked
+      84      425      259      768   Total
 
    Count   Missed   %Right
-     310      104    66.45   ASCII Spacing Characters
+     309      103    66.67   ASCII Spacing Characters
       46       23    50.00   ASCII Special Symbols
       34       10    70.59   ASCII Uppercase Letters
-    1195      298    75.06   ASCII Lowercase Letters
+    1195      299    74.98   ASCII Lowercase Letters
       96       40    58.33   Latin1 Special Symbols
       96       34    64.58   Latin1 Uppercase Letters
-    1777      509    71.36   Total
+    1776      509    71.34   Total
 
   Errors   Marked   Correct-Generated
       24        0   {Wij sprÃ¥ka med dig, LÃ¤}-{sene-FUD<\n>-â<80><94>â...}
       23        0   { }-{}
       19        0   {e.}-{a, Â« Â«- â<80><94> Â« Â...}
-      12        0   {}-{, â<80><94> . god<\n>}
       12        0   {}-{Â«}
       12        0   {¥ finne wij,}-{¤Ikdskkkszso}
       11        0   {la komma i}-{ vkritiskku}
@@ -37,10 +36,12 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       10        0   {Ã¥}-{a}
        9        0   {och ehuru}-{spel-skev}
        9        0   {Ã¥ }-{a}
+       8        0   {ha}-{â<80><94> . go}
        8        0   {mma }-{tnings.<\n>}
        8        0   {}-{Â»}
        7        0   { wij in}-{thm}
        7        0   {detta,}-{xii-Wik}
+       7        0   {}-{t-ode<\n>,}
        6        0   { ma}-{mcp<\n>- }
        6        0   {Men w}-{ist<\n>tv}
        6        0   {are, }-{pssJie}
@@ -99,7 +100,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        0   {Ã¶}-{o}
        3        0   { af}-{ys}
        3        0   { ha}-{hki}
-       3        0   { ha}-{t-o}
        3        0   { sk}-{<\n>J}
        3        0   { }-{,z-}
        3        0   { }-{-}
@@ -227,6 +227,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {a}-{x}
        1        0   {c}-{f}
        1        0   {d}-{v}
+       1        0   {e}-{<\n>}
        1        0   {e}-{a}
        1        0   {e}-{c}
        1        0   {e}-{i}
@@ -265,8 +266,8 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {¶}-{¥}
 
    Count   Missed   %Right
-       3        0   100.00   {<\n>}
-     307      104    66.12   { }
+       2        0   100.00   {<\n>}
+     307      103    66.45   { }
       29       16    44.83   {,}
       13        4    69.23   {.}
        3        2    33.33   {;}
@@ -289,7 +290,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       15        1    93.33   {b}
       14        4    71.43   {c}
       60       10    83.33   {d}
-     129       17    86.82   {e}
+     129       18    86.05   {e}
       38        8    78.95   {f}
       40        3    92.50   {g}
       19        7    63.16   {h}

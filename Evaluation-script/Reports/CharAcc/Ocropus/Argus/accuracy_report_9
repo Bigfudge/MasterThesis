@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1913   Characters
-    1648   Errors
-   13.85%  Accuracy
+    1912   Characters
+    1649   Errors
+   13.76%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   13.85%  Accuracy After Correction
+   13.76%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-     118     1075      455     1648   Unmarked
-     118     1075      455     1648   Total
+     118     1075      456     1649   Unmarked
+     118     1075      456     1649   Total
 
    Count   Missed   %Right
-     322      137    57.45   ASCII Spacing Characters
+     321      137    57.32   ASCII Spacing Characters
       53       45    15.09   ASCII Special Symbols
       46       43     6.52   ASCII Uppercase Letters
     1296      856    33.95   ASCII Lowercase Letters
        1        1     0.00   Latin1 Control Codes
       97       67    30.93   Latin1 Special Symbols
       98       44    55.10   Latin1 Uppercase Letters
-    1913     1193    37.64   Total
+    1912     1193    37.60   Total
 
   Errors   Marked   Correct-Generated
       20        0   {llskapsliks wanryckt}-{ndan:<\n>förnuffttil d}
@@ -43,6 +43,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       11        0   {e hon platt}-{agitſig.}
       11        0   {hökarne, n}-{<\n>ras förm}
       11        0   {}-{ändetharn<\n>}
+      11        0   {�gna.}-{�raftilde-<\n>}
       10        0   {im}-{etderföre}
       10        0   {iuten �<96>rn}-{amfläck,c}
       10        0   {jsen I, a}-{gt atſå<\n>}
@@ -50,7 +51,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       10        0   {ntimmer? K}-{sſållſk}
       10        0   {rhet; och }-{: Jagbe-<\n>l}
       10        0   {s}-{ſ}
-      10        0   {�gna.}-{�raftilde-}
       10        0   {änkt Sak;}-{alas,<\n>ſå}
       10        0   {öfwer, s}-{Renmmiſki}
        9        0   { wo}-{<\n>ſkämta}
@@ -409,7 +409,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       1        0   100.00   {<\n>}
      321      137    57.32   { }
       31       28     9.68   {,}
       15       10    33.33   {.}

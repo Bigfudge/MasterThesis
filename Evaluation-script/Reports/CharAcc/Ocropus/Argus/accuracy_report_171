@@ -1,22 +1,22 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1834   Characters
-    1523   Errors
-   16.96%  Accuracy
+    1833   Characters
+    1524   Errors
+   16.86%  Accuracy
 
        4   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.22%  Characters Marked
-   18.32%  Accuracy After Correction
+   18.22%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0       22        3       25   Marked
-     127      989      382     1498   Unmarked
-     127     1011      385     1523   Total
+     127      989      383     1499   Unmarked
+     127     1011      386     1524   Total
 
    Count   Missed   %Right
-     305      111    63.61   ASCII Spacing Characters
+     304      111    63.49   ASCII Spacing Characters
       58       48    17.24   ASCII Special Symbols
        4        4     0.00   ASCII Digits
       68       63     7.35   ASCII Uppercase Letters
@@ -24,7 +24,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        2     0.00   Latin1 Control Codes
       86       60    30.23   Latin1 Special Symbols
       88       45    48.86   Latin1 Uppercase Letters
-    1834     1138    37.95   Total
+    1833     1138    37.92   Total
 
   Errors   Marked   Correct-Generated
       19        0   {har ock hafft barn:}-{underſtår ſig om}
@@ -69,6 +69,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        8        0   {sk}-{fyra ſt}
        8        0   {s}-{ſlåckt}
        8        0   {tt }-{, rller<\n>}
+       8        0   {x,}-{ftilde-<\n>}
        8        0   {�rnat at}-{�-<\n>ſå}
        7        7   {er Sp}-{a<\n>~~är}
        7        0   { förr}-{siushaw}
@@ -83,7 +84,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        7        0   {ora och}-{åndet.}
        7        0   {r Kon}-{ijas<\n>Eh}
        7        0   {säija,}-{de ſig}
-       7        0   {x,}-{ftilde-}
        6        6   {rit m}-{med<\n>~R}
        6        0   { fre}-{denſi}
        6        0   { med N}-{rit<\n>l}
@@ -399,7 +399,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       3        2    33.33   {<\n>}
+       2        2     0.00   {<\n>}
      302      109    63.91   { }
        2        2     0.00   {(}
        2        2     0.00   {)}

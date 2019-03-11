@@ -1,38 +1,38 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1767   Characters
-     725   Errors
-   58.97%  Accuracy
+    1766   Characters
+     726   Errors
+   58.89%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   58.97%  Accuracy After Correction
+   58.89%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-     108      412      205      725   Unmarked
-     108      412      205      725   Total
+     108      412      206      726   Unmarked
+     108      412      206      726   Total
 
    Count   Missed   %Right
-     275      120    56.36   ASCII Spacing Characters
-      54       33    38.89   ASCII Special Symbols
+     274      119    56.57   ASCII Spacing Characters
+      54       34    37.04   ASCII Special Symbols
        1        1     0.00   ASCII Digits
       42       10    76.19   ASCII Uppercase Letters
     1233      289    76.56   ASCII Lowercase Letters
       81       37    54.32   Latin1 Special Symbols
       81       30    62.96   Latin1 Uppercase Letters
-    1767      520    70.57   Total
+    1766      520    70.55   Total
 
   Errors   Marked   Correct-Generated
       19        0   { }-{}
       17        0   {}-{�<80><94> .- » :.- ; "}
       13        0   {örra Handtw}-{kskmsHiuthi<\n>m}
+      12        0   { i}-{iaxgx<\n>..-»z}
       11        0   { Patrio}-{pajä<\n>- EEI}
       10        0   { }-{<\n>}
       10        0   {rnämsta C}-{ljs Fju!c}
-       9        0   {}-{.-»z «-}
        8        0   { Mammon,}-{<\n>WWW .}
        8        0   {Man. Han}-{GIF-msk-}
        8        0   {ifwa}-{ng , .<\n>t}
@@ -40,7 +40,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        7        0   {stilla }-{MMX<\n>.}
        6        0   { Pr}-{srspsk}
        6        0   { förs}-{soxf}
-       6        0   { i akt}-{iaxgx<\n>}
        6        0   {af 5 p}-{sP}
        6        0   {mena}-{tzxcyg}
        6        0   {}-{-}
@@ -68,6 +67,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        0   {, oc}-{-va}
        4        0   {, t}-{-His}
        4        0   {Catt}-{Sim}
+       4        0   {akt.}-{«-<\n>}
        4        0   {e i }-{sf}
        4        0   {er}-{ s«}
        4        0   {e}-{k -<\n>}
@@ -275,12 +275,12 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {}-{v}
 
    Count   Missed   %Right
-       2        0   100.00   {<\n>}
-     273      120    56.04   { }
+       1        0   100.00   {<\n>}
+     273      119    56.41   { }
        1        1     0.00   {!}
       38       21    44.74   {,}
        2        2     0.00   {-}
-      10        7    30.00   {.}
+      10        8    20.00   {.}
        1        1     0.00   {5}
        1        0   100.00   {:}
        2        2     0.00   {;}

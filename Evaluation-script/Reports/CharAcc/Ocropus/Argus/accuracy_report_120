@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1910   Characters
-    1568   Errors
-   17.91%  Accuracy
+    1909   Characters
+    1569   Errors
+   17.81%  Accuracy
 
        2   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.10%  Characters Marked
-   18.38%  Accuracy After Correction
+   18.28%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        8        1        9   Marked
-     195      978      386     1559   Unmarked
-     195      986      387     1568   Total
+     195      978      387     1560   Unmarked
+     195      986      388     1569   Total
 
    Count   Missed   %Right
-     326      131    59.82   ASCII Spacing Characters
+     325      131    59.69   ASCII Spacing Characters
       62       46    25.81   ASCII Special Symbols
       43       40     6.98   ASCII Uppercase Letters
     1303      860    34.00   ASCII Lowercase Letters
        4        4     0.00   Latin1 Control Codes
       84       55    34.52   Latin1 Special Symbols
       88       45    48.86   Latin1 Uppercase Letters
-    1910     1181    38.17   Total
+    1909     1181    38.14   Total
 
   Errors   Marked   Correct-Generated
       22        0   {}-{ warit ttwidſkiepelig}
@@ -111,6 +111,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        6        0   {odde s}-{ån l0}
        6        0   {pelig,}-{t}
        6        0   {s Mor}-{<\n>triat}
+       6        0   {}-{ kom-<\n>}
        6        0   {}-{<\n>hwars}
        6        0   {�rd de}-{�ſt<\n>}
        6        0   {än Sk}-{}
@@ -146,7 +147,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        5        0   {så s}-{betie}
        5        0   {t }-{minad}
        5        0   {w}-{-<\n>atr}
-       5        0   {}-{ kom-}
        5        0   {}-{ ſkr}
        5        0   {}-{haf-<\n>}
        5        0   {}-{in-<\n>D}
@@ -400,7 +400,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {}-{r}
 
    Count   Missed   %Right
-       1        0   100.00   {<\n>}
      325      131    59.69   { }
       39       27    30.77   {,}
        2        2     0.00   {-}

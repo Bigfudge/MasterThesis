@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1884   Characters
-     537   Errors
-   71.50%  Accuracy
+    1883   Characters
+     538   Errors
+   71.43%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   71.50%  Accuracy After Correction
+   71.43%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-      90      291      156      537   Unmarked
-      90      291      156      537   Total
+      90      291      157      538   Unmarked
+      90      291      157      538   Total
 
    Count   Missed   %Right
-     316       64    79.75   ASCII Spacing Characters
+     315       64    79.68   ASCII Spacing Characters
       59       22    62.71   ASCII Special Symbols
       41        8    80.49   ASCII Uppercase Letters
     1292      162    87.46   ASCII Lowercase Letters
        3        3     0.00   Latin1 Control Codes
       85       62    27.06   Latin1 Special Symbols
       88       60    31.82   Latin1 Uppercase Letters
-    1884      381    79.78   Total
+    1883      381    79.77   Total
 
   Errors   Marked   Correct-Generated
       24        0   {ä}-{a}
@@ -63,6 +63,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        0   {ss}-{�<9F>}
        4        0   {twä}-{irva}
        4        0   {w}-{tv}
+       4        0   {}-{ ·<\n>}
        4        0   {}-{- ,<\n>}
        4        0   {}-{-<\n>.,}
        4        0   {}-{«-.}
@@ -97,7 +98,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        3        0   {wor}-{rm}
        3        0   {wå}-{kva}
        3        0   {ygn}-{th}
-       3        0   {}-{ ·}
        3        0   {}-{"«}
        3        0   {}-{-<\n>i}
        3        0   {}-{-<\n>s}
@@ -204,7 +204,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {}-{x}
 
    Count   Missed   %Right
-       3        0   100.00   {<\n>}
+       2        0   100.00   {<\n>}
      313       64    79.55   { }
        1        1     0.00   {!}
       36       14    61.11   {,}

@@ -1,22 +1,22 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1842   Characters
-     653   Errors
-   64.55%  Accuracy
+    1841   Characters
+     654   Errors
+   64.48%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   64.55%  Accuracy After Correction
+   64.48%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-     110      344      199      653   Unmarked
-     110      344      199      653   Total
+     110      344      200      654   Unmarked
+     110      344      200      654   Total
 
    Count   Missed   %Right
-     295      107    63.73   ASCII Spacing Characters
+     294      107    63.61   ASCII Spacing Characters
       47       18    61.70   ASCII Special Symbols
        5        0   100.00   ASCII Digits
       53       16    69.81   ASCII Uppercase Letters
@@ -24,7 +24,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        1     0.00   Latin1 Control Codes
       72       45    37.50   Latin1 Special Symbols
       73       43    41.10   Latin1 Uppercase Letters
-    1842      454    75.35   Total
+    1841      454    75.34   Total
 
   Errors   Marked   Correct-Generated
       34        0   { }-{}
@@ -32,11 +32,11 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       15        0   {}-{· .. .. . . ·}
       14        0   { }-{<\n>}
       12        0   {i}-{t}
+      10        0   {}-{<\n>· Hwas-<\n>}
       10        0   {}-{«}
       10        0   {ä}-{a}
        9        0   { Ja}-{<\n>».».«}
        9        0   {}-{ - -, » }
-       9        0   {}-{· Hwas-<\n>}
        8        0   {. I}-{,«-;«J}
        8        0   {åfän}-{afan-<\n>, }
        7        0   {}-{s-�<80><94>-<\n>}
@@ -241,7 +241,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       3        0   100.00   {<\n>}
+       2        0   100.00   {<\n>}
      292      107    63.36   { }
        3        3     0.00   {&}
       27        7    74.07   {,}

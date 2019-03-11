@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1807   Characters
-     414   Errors
-   77.09%  Accuracy
+    1806   Characters
+     415   Errors
+   77.02%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   77.09%  Accuracy After Correction
+   77.02%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-      85      235       94      414   Unmarked
-      85      235       94      414   Total
+      85      235       95      415   Unmarked
+      85      235       95      415   Total
 
    Count   Missed   %Right
-     303       62    79.54   ASCII Spacing Characters
+     302       62    79.47   ASCII Spacing Characters
       48       17    64.58   ASCII Special Symbols
       65        9    86.15   ASCII Uppercase Letters
     1215      137    88.72   ASCII Lowercase Letters
        4        4     0.00   Latin1 Control Codes
       84       47    44.05   Latin1 Special Symbols
       88       44    50.00   Latin1 Uppercase Letters
-    1807      320    82.29   Total
+    1806      320    82.28   Total
 
   Errors   Marked   Correct-Generated
       25        0   { }-{}
@@ -33,6 +33,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
       10        0   {i}-{t}
        6        0   {N√∂ij}-{Vist-t}
        6        0   {gl}-{the sm}
+       6        0   {ka.}-{tgich<\n>}
        6        0   {ss}-{√<9F>}
        6        0   {t√•}-{ia}
        5        0   {. √<84>h}-{-<\n>Ay}
@@ -42,7 +43,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        5        0   {e}-{h s- }
        5        0   {f√∂r }-{}
        5        0   {hra}-{cl√•m}
-       5        0   {ka.}-{tgich}
        5        0   {m√§n }-{chu}
        5        0   {r: √<84>}-{w<\n>A}
        5        0   {}-{, ¬ª<\n>}
@@ -163,7 +163,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {§}-{∂}
 
    Count   Missed   %Right
-       1        0   100.00   {<\n>}
      302       62    79.47   { }
        2        1    50.00   {!}
        2        2     0.00   {'}

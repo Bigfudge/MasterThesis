@@ -1,28 +1,28 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-     713   Characters
-    1143   Errors
-  -60.31%  Accuracy
+     712   Characters
+    1144   Errors
+  -60.67%  Accuracy
 
        6   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.84%  Characters Marked
-  -55.54%  Accuracy After Correction
+  -55.90%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        3       31       34   Marked
-       8      318      783     1109   Unmarked
-       8      321      814     1143   Total
+       8      318      784     1110   Unmarked
+       8      321      815     1144   Total
 
    Count   Missed   %Right
-     127       15    88.19   ASCII Spacing Characters
+     126       15    88.10   ASCII Spacing Characters
       23       16    30.43   ASCII Special Symbols
       12       12     0.00   ASCII Uppercase Letters
      501      262    47.70   ASCII Lowercase Letters
       25       13    48.00   Latin1 Special Symbols
       25       11    56.00   Latin1 Uppercase Letters
-     713      329    53.86   Total
+     712      329    53.79   Total
 
   Errors   Marked   Correct-Generated
       23        0   {}-{ſom<\n>Jaog----.<\n>bru...}
@@ -81,6 +81,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        7        0   {}-{logåt }
        7        0   {}-{s: Sij<\n>}
        6        0   { giö}-{,<\n>ſto}
+       6        0   {.}-{ilde-<\n>}
        6        0   {ckelig}-{n och}
        6        0   {de}-{jag wa}
        6        0   {d}-{ i amm}
@@ -100,7 +101,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        6        0   {�lli}-{�FIErr}
        5        5   {p;}-{a~nrd}
        5        0   {,}-{u<\n>han}
-       5        0   {.}-{ilde-}
        5        0   {d}-{blefw}
        5        0   {d}-{twung}
        5        0   {em.}-{ilkrn}
@@ -259,7 +259,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {}-{x}
 
    Count   Missed   %Right
-       1        0   100.00   {<\n>}
      126       15    88.10   { }
       16        9    43.75   {,}
        1        1     0.00   {-}

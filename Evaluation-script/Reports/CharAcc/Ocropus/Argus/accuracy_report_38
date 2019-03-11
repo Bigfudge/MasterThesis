@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1498   Characters
-    1346   Errors
-   10.15%  Accuracy
+    1497   Characters
+    1347   Errors
+   10.02%  Accuracy
 
        4   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.27%  Characters Marked
-   13.22%  Accuracy After Correction
+   13.09%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0       33       13       46   Marked
-     132      704      464     1300   Unmarked
-     132      737      477     1346   Total
+     132      704      465     1301   Unmarked
+     132      737      478     1347   Total
 
    Count   Missed   %Right
-     257      104    59.53   ASCII Spacing Characters
+     256      104    59.38   ASCII Spacing Characters
       42       29    30.95   ASCII Special Symbols
        2        2     0.00   ASCII Digits
       42       41     2.38   ASCII Uppercase Letters
     1029      622    39.55   ASCII Lowercase Letters
       63       42    33.33   Latin1 Special Symbols
       63       29    53.97   Latin1 Uppercase Letters
-    1498      869    41.99   Total
+    1497      869    41.95   Total
 
   Errors   Marked   Correct-Generated
       36       36   {t trifwes intet gerna ho...}-{s<\n>~EEEREEEERSEEEsSEE5...}
@@ -251,6 +251,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {ja}-{re}
        2        0   {l.}-{ng}
        2        0   {ma}-{ku}
+       2        0   {n}-{-<\n>}
        2        0   {n}-{tm}
        2        0   {ri}-{}
        2        0   {rr}-{n}
@@ -299,7 +300,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {i}-{}
        1        0   {l}-{d}
        1        0   {l}-{}
-       1        0   {n}-{-}
        1        0   {n}-{l}
        1        0   {n}-{t}
        1        0   {n}-{}
@@ -328,7 +328,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {¤}-{¶}
 
    Count   Missed   %Right
-       2        1    50.00   {<\n>}
+       1        1     0.00   {<\n>}
      255      103    59.61   { }
        1        1     0.00   {!}
        2        2     0.00   {(}

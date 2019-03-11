@@ -1,35 +1,35 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1717   Characters
-     430   Errors
-   74.96%  Accuracy
+    1716   Characters
+     431   Errors
+   74.88%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   74.96%  Accuracy After Correction
+   74.88%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-      73      219      138      430   Unmarked
-      73      219      138      430   Total
+      73      219      139      431   Unmarked
+      73      219      139      431   Total
 
    Count   Missed   %Right
-     281       45    83.99   ASCII Spacing Characters
+     280       45    83.93   ASCII Spacing Characters
       58       14    75.86   ASCII Special Symbols
       64        9    85.94   ASCII Uppercase Letters
     1164      118    89.86   ASCII Lowercase Letters
       10       10     0.00   Latin1 Control Codes
       65       46    29.23   Latin1 Special Symbols
       75       50    33.33   Latin1 Uppercase Letters
-    1717      292    82.99   Total
+    1716      292    82.98   Total
 
   Errors   Marked   Correct-Generated
       34        0   {ä}-{a}
+      18        0   {t}-{r-<\n>- - "- , , I a<\n>}
       18        0   {å}-{a}
       16        0   { }-{}
-      15        0   {}-{- - "- , , I a<\n>}
       11        0   {etc.}-{« �<80><94> - »}
       10        0   { }-{<\n>}
       10        0   {ss}-{�<9F>}
@@ -102,7 +102,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {se}-{ig}
        2        0   {st}-{tk}
        2        0   {t,}-{h}
-       2        0   {t}-{r-}
        2        0   {u}-{ng}
        2        0   {u}-{ri}
        2        0   {w}-{tv}
@@ -169,7 +168,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {}-{x}
 
    Count   Missed   %Right
-       4        0   100.00   {<\n>}
+       3        0   100.00   {<\n>}
      277       45    83.75   { }
        1        1     0.00   {&}
       28        5    82.14   {,}

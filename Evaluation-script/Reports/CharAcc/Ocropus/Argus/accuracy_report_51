@@ -1,28 +1,28 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1806   Characters
-    1467   Errors
-   18.77%  Accuracy
+    1805   Characters
+    1468   Errors
+   18.67%  Accuracy
 
        3   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.17%  Characters Marked
-   20.27%  Accuracy After Correction
+   20.17%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0       18        9       27   Marked
-     165      975      300     1440   Unmarked
-     165      993      309     1467   Total
+     165      975      301     1441   Unmarked
+     165      993      310     1468   Total
 
    Count   Missed   %Right
-     293      136    53.58   ASCII Spacing Characters
+     292      136    53.42   ASCII Spacing Characters
       63       47    25.40   ASCII Special Symbols
       84       76     9.52   ASCII Uppercase Letters
     1206      779    35.41   ASCII Lowercase Letters
       80       66    17.50   Latin1 Special Symbols
       80       54    32.50   Latin1 Uppercase Letters
-    1806     1158    35.88   Total
+    1805     1158    35.84   Total
 
   Errors   Marked   Correct-Generated
       21        0   { förnäma) och Falsk}-{ls-<\n>Hmsshölldbändig}
@@ -374,6 +374,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {u}-{,}
        1        0   {w}-{h}
        1        0   {}-{,}
+       1        0   {}-{<\n>}
        1        0   {}-{c}
        1        0   {}-{f}
        1        0   {}-{g}
@@ -384,7 +385,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       2        0   100.00   {<\n>}
+       1        0   100.00   {<\n>}
      291      136    53.26   { }
        1        0   100.00   {(}
        1        1     0.00   {)}

@@ -1,22 +1,22 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1219   Characters
-    2390   Errors
-  -96.06%  Accuracy
+    1218   Characters
+    2391   Errors
+  -96.31%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-  -96.06%  Accuracy After Correction
+  -96.31%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-       4      529     1857     2390   Unmarked
-       4      529     1857     2390   Total
+       4      529     1858     2391   Unmarked
+       4      529     1858     2391   Total
 
    Count   Missed   %Right
-     208       22    89.42   ASCII Spacing Characters
+     207       22    89.37   ASCII Spacing Characters
       69       52    24.64   ASCII Special Symbols
       24       21    12.50   ASCII Digits
       78       77     1.28   ASCII Uppercase Letters
@@ -24,7 +24,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        2     0.00   Latin1 Control Codes
       61       21    65.57   Latin1 Special Symbols
       63       19    69.84   Latin1 Uppercase Letters
-    1219      533    56.28   Total
+    1218      533    56.24   Total
 
   Errors   Marked   Correct-Generated
       44        0   {}-{p√• R√∂rbladens gr√•hl√•...}
@@ -388,8 +388,8 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {}-{no}
        2        0   {}-{oc}
        2        0   {}-{r;}
+       2        0   {}-{r<\n>}
        2        0   {}-{rj}
-       2        0   {}-{r}
        2        0   {}-{√∂}
        2        0   {√<85>}-{A}
        2        0   {√<9F>}-{ck}
@@ -427,12 +427,13 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {}-{e}
        1        0   {}-{g}
        1        0   {}-{l}
+       1        0   {}-{r}
        1        0   {}-{u}
        1        0   {§}-{•}
        1        0   {∂}-{§}
 
    Count   Missed   %Right
-      26       11    57.69   {<\n>}
+      25       11    56.00   {<\n>}
      182       11    93.96   { }
        2        2     0.00   {(}
        2        2     0.00   {)}

@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1839   Characters
-    1560   Errors
-   15.17%  Accuracy
+    1838   Characters
+    1561   Errors
+   15.07%  Accuracy
 
        1   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.05%  Characters Marked
-   15.55%  Accuracy After Correction
+   15.45%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        1        6        0        7   Marked
-     131     1033      389     1553   Unmarked
-     132     1039      389     1560   Total
+     131     1033      390     1554   Unmarked
+     132     1039      390     1561   Total
 
    Count   Missed   %Right
-     302      117    61.26   ASCII Spacing Characters
+     301      117    61.13   ASCII Spacing Characters
       58       48    17.24   ASCII Special Symbols
       54       50     7.41   ASCII Uppercase Letters
     1275      852    33.18   ASCII Lowercase Letters
        3        3     0.00   Latin1 Control Codes
       72       53    26.39   Latin1 Special Symbols
       75       48    36.00   Latin1 Uppercase Letters
-    1839     1171    36.32   Total
+    1838     1171    36.29   Total
 
   Errors   Marked   Correct-Generated
       20        0   {Tull-}-{förnöta min tid.<\n>S}
@@ -166,6 +166,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        4        0   {Dock}-{äro}
        4        0   {Penn}-{ſad}
        4        0   {Proc}-{lmae}
+       4        0   {ar}-{de-<\n>}
        4        0   {at j}-{ſk}
        4        0   {der-}-{en. }
        4        0   {dett}-{bör}
@@ -213,7 +214,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        3        0   {Rik}-{en<\n>}
        3        0   {a h}-{<\n>ſ}
        3        0   {a, }-{f d}
-       3        0   {ar}-{de-}
        3        0   {ast}-{ſr}
        3        0   {de,}-{jag}
        3        0   {dit}-{nog}
@@ -404,7 +404,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       1        0   100.00   {<\n>}
      301      117    61.13   { }
        1        1     0.00   {(}
        1        1     0.00   {)}

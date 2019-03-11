@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1818   Characters
+    1817   Characters
     1639   Errors
-    9.85%  Accuracy
+    9.80%  Accuracy
 
        2   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.11%  Characters Marked
-   10.62%  Accuracy After Correction
+   10.57%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        8        6       14   Marked
-     115      981      529     1625   Unmarked
-     115      989      535     1639   Total
+     115      980      530     1625   Unmarked
+     115      988      536     1639   Total
 
    Count   Missed   %Right
-     302       73    75.83   ASCII Spacing Characters
+     301       72    76.08   ASCII Spacing Characters
       65       59     9.23   ASCII Special Symbols
       60       55     8.33   ASCII Uppercase Letters
     1243      824    33.71   ASCII Lowercase Letters
        2        2     0.00   Latin1 Control Codes
       72       49    31.94   Latin1 Special Symbols
       74       42    43.24   Latin1 Uppercase Letters
-    1818     1104    39.27   Total
+    1817     1103    39.30   Total
 
   Errors   Marked   Correct-Generated
       24        0   {betiening}-{, . - , , , - : , , - , }
@@ -292,7 +292,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {,}-{ul}
        2        0   {.}-{t}
        2        0   {.}-{}
-       2        0   {<\n>}-{ -}
        2        0   {Ca}-{kk}
        2        0   {He}-{Ã¥}
        2        0   {Hi}-{E}
@@ -362,6 +361,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {u}-{Ba}
        2        0   {u}-{Å¿}
        2        0   {w}-{ g}
+       2        0   {}-{ -}
        2        0   {}-{ a}
        2        0   {}-{Hi}
        2        0   {}-{Rr}
@@ -438,7 +438,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {¶}-{¥}
 
    Count   Missed   %Right
-       1        1     0.00   {<\n>}
      301       72    76.08   { }
        3        3     0.00   {!}
       39       36     7.69   {,}

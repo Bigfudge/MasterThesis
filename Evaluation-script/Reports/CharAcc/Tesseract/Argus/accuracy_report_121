@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1704   Characters
-     474   Errors
-   72.18%  Accuracy
+    1703   Characters
+     475   Errors
+   72.11%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   72.18%  Accuracy After Correction
+   72.11%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-     103      242      129      474   Unmarked
-     103      242      129      474   Total
+     103      242      130      475   Unmarked
+     103      242      130      475   Total
 
    Count   Missed   %Right
-     292       64    78.08   ASCII Spacing Characters
+     291       64    78.01   ASCII Spacing Characters
       56       20    64.29   ASCII Special Symbols
       84        7    91.67   ASCII Uppercase Letters
     1082      126    88.35   ASCII Lowercase Letters
        6        4    33.33   Latin1 Control Codes
       89       62    30.34   Latin1 Special Symbols
       95       62    34.74   Latin1 Uppercase Letters
-    1704      345    79.75   Total
+    1703      345    79.74   Total
 
   Errors   Marked   Correct-Generated
       44        0   {Ã¤}-{a}
@@ -36,11 +36,11 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        8        0   {}-{- â<80><94>Â· }
        7        0   {iÃ¤lm,}-{Ã¥kan-:}
        7        0   {}-{. ; "- }
+       7        0   {}-{<\n>â<80><94> W<\n>}
        7        0   {Ã¶fwas?}-{-<\n>: - -}
        6        0   { Ã¤}-{a}
        6        0   {}-{ }
        6        0   {}-{<\n>Â«}
-       6        0   {}-{â<80><94> W<\n>}
        6        0   {Ã<84>}-{Â» -<\n>A}
        5        0   { }-{Â«Â«<\n>}
        5        0   {, u}-{iÃ¤mk}
@@ -172,7 +172,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {¤}-{¥}
 
    Count   Missed   %Right
-       3        1    66.67   {<\n>}
+       2        1    50.00   {<\n>}
      289       63    78.20   { }
        1        1     0.00   {'}
        1        0   100.00   {(}

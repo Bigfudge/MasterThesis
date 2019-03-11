@@ -1,29 +1,29 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1897   Characters
-    1511   Errors
-   20.35%  Accuracy
+    1896   Characters
+    1512   Errors
+   20.25%  Accuracy
 
        3   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.16%  Characters Marked
-   22.35%  Accuracy After Correction
+   22.26%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0       29        9       38   Marked
-     120     1032      321     1473   Unmarked
-     120     1061      330     1511   Total
+     120     1032      322     1474   Unmarked
+     120     1061      331     1512   Total
 
    Count   Missed   %Right
-     326      114    65.03   ASCII Spacing Characters
+     325      114    64.92   ASCII Spacing Characters
       52       42    19.23   ASCII Special Symbols
        1        0   100.00   ASCII Digits
       66       60     9.09   ASCII Uppercase Letters
     1246      836    32.91   ASCII Lowercase Letters
      103       75    27.18   Latin1 Special Symbols
      103       54    47.57   Latin1 Uppercase Letters
-    1897     1181    37.74   Total
+    1896     1181    37.71   Total
 
   Errors   Marked   Correct-Generated
       19        0   {• den yppighet, som}-{∂rtr√§det<\n>SR√§cken.}
@@ -232,6 +232,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        3        0   {kan}-{cll}
        3        0   {ks}-{it,}
        3        0   {l t}-{ Hi}
+       3        0   {lk}-{m-<\n>}
        3        0   {med}-{jag}
        3        0   {men}-{och}
        3        0   {min}-{har}
@@ -310,7 +311,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {j}-{i }
        2        0   {ku}-{Bo}
        2        0   {li}-{ty}
-       2        0   {lk}-{m-}
        2        0   {ll}-{gh}
        2        0   {ll}-{nm}
        2        0   {m}-{ch}
@@ -411,7 +411,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {∂}-{§}
 
    Count   Missed   %Right
-       2        1    50.00   {<\n>}
+       1        1     0.00   {<\n>}
      324      113    65.12   { }
        1        1     0.00   {!}
       32       24    25.00   {,}

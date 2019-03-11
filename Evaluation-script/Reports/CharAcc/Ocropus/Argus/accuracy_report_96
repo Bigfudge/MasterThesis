@@ -1,28 +1,28 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1779   Characters
-    1530   Errors
-   14.00%  Accuracy
+    1778   Characters
+    1531   Errors
+   13.89%  Accuracy
 
        2   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.11%  Characters Marked
-   15.18%  Accuracy After Correction
+   15.07%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        1       20        0       21   Marked
-     150      917      442     1509   Unmarked
-     151      937      442     1530   Total
+     150      917      443     1510   Unmarked
+     151      937      443     1531   Total
 
    Count   Missed   %Right
-     302      101    66.56   ASCII Spacing Characters
+     301      101    66.45   ASCII Spacing Characters
       47       37    21.28   ASCII Special Symbols
       58       52    10.34   ASCII Uppercase Letters
     1236      801    35.19   ASCII Lowercase Letters
       68       56    17.65   Latin1 Special Symbols
       68       41    39.71   Latin1 Uppercase Letters
-    1779     1088    38.84   Total
+    1778     1088    38.81   Total
 
   Errors   Marked   Correct-Generated
       22        0   {s}-{ſ}
@@ -63,6 +63,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        8        0   {menv}-{.<\n>bJolck}
        8        0   {misstän}-{Herr }
        8        0   {n Präst}-{ta}
+       8        0   {n.}-{ftilde-<\n>}
        8        0   {och tala}-{Hwadbety}
        8        0   {på Tysk}-{n bcklag}
        8        0   {r i alla}-{m-<\n>rsryg}
@@ -80,7 +81,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        7        0   {hållan}-{t<\n>}
        7        0   {ifwi}-{ up-<\n>un}
        7        0   {kelset }-{h Ben<\n>l}
-       7        0   {n.}-{ftilde-}
        7        0   {några }-{i wi}
        7        0   {någr}-{Eud, ſ}
        7        0   {och anl}-{påd}
@@ -378,7 +378,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {�}-{�}
 
    Count   Missed   %Right
-       3        2    33.33   {<\n>}
+       2        2     0.00   {<\n>}
      299       99    66.89   { }
        2        2     0.00   {!}
       28       19    32.14   {,}

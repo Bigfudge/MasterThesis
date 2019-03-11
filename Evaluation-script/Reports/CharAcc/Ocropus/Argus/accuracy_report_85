@@ -1,22 +1,22 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1570   Characters
-    1339   Errors
-   14.71%  Accuracy
+    1569   Characters
+    1340   Errors
+   14.60%  Accuracy
 
        2   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.13%  Characters Marked
-   15.54%  Accuracy After Correction
+   15.42%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0       12        1       13   Marked
-      85      935      306     1326   Unmarked
-      85      947      307     1339   Total
+      85      935      307     1327   Unmarked
+      85      947      308     1340   Total
 
    Count   Missed   %Right
-     267      112    58.05   ASCII Spacing Characters
+     266      112    57.89   ASCII Spacing Characters
       51       39    23.53   ASCII Special Symbols
        2        2     0.00   ASCII Digits
       80       77     3.75   ASCII Uppercase Letters
@@ -24,7 +24,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        1     0.00   Latin1 Control Codes
       67       45    32.84   Latin1 Special Symbols
       68       32    52.94   Latin1 Uppercase Letters
-    1570     1032    34.27   Total
+    1569     1032    34.23   Total
 
   Errors   Marked   Correct-Generated
       15        0   {}-{deticke f√∂r√∂k}
@@ -227,7 +227,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        3        0   {t}-{lle}
        3        0   {uff}-{dra}
        3        0   {wil}-{ena}
-       3        0   {}-{.}
        3        0   {}-{H}
        3        0   {}-{a}
        3        0   {§nk}-{<9F>}
@@ -291,6 +290,8 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {t}-{s}
        2        0   {t}-{}
        2        0   {}-{-<\n>}
+       2        0   {}-{.<\n>}
+       2        0   {}-{.}
        2        0   {}-{He}
        2        0   {}-{de}
        2        0   {}-{hl}
@@ -360,7 +361,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {∂}-{§}
 
    Count   Missed   %Right
-      22       12    45.45   {<\n>}
+      21       12    42.86   {<\n>}
      245      100    59.18   { }
        1        1     0.00   {'}
       29       20    31.03   {,}

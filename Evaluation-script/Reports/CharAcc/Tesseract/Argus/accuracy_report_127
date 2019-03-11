@@ -1,22 +1,22 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-    1834   Characters
-     551   Errors
-   69.96%  Accuracy
+    1833   Characters
+     552   Errors
+   69.89%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   69.96%  Accuracy After Correction
+   69.89%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-      97      296      158      551   Unmarked
-      97      296      158      551   Total
+      97      296      159      552   Unmarked
+      97      296      159      552   Total
 
    Count   Missed   %Right
-     305       85    72.13   ASCII Spacing Characters
+     304       85    72.04   ASCII Spacing Characters
       58       22    62.07   ASCII Special Symbols
        4        4     0.00   ASCII Digits
       68       10    85.29   ASCII Uppercase Letters
@@ -24,14 +24,14 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        2     0.00   Latin1 Control Codes
       86       49    43.02   Latin1 Special Symbols
       88       41    53.41   Latin1 Uppercase Letters
-    1834      393    78.57   Total
+    1833      393    78.56   Total
 
   Errors   Marked   Correct-Generated
       24        0   { }-{}
       14        0   {)}-{ . Â· - s Â» .}
       14        0   {Ã¥}-{a}
+      13        0   {x,}-{r-<\n>â<80><94> Â· ma...}
       10        0   {}-{ . . Â»- -}
-      10        0   {}-{â<80><94> Â· ma<\n>}
       10        0   {Ã¶}-{o}
        9        0   {}-{z<\n>Â·Â« me}
        8        0   {}-{<\n>â<80><94>}
@@ -151,7 +151,6 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        2        0   {t }-{s}
        2        0   {t }-{}
        2        0   {tr}-{ie}
-       2        0   {x,}-{r-}
        2        0   {}-{-<\n>}
        2        0   {}-{.}
        2        0   {}-{<\n>,}
@@ -225,7 +224,7 @@ UNLV-ISRI OCR Accuracy Report Version 5.1
        1        0   {¤}-{¶}
 
    Count   Missed   %Right
-       3        0   100.00   {<\n>}
+       2        0   100.00   {<\n>}
      302       85    71.85   { }
        2        0   100.00   {(}
        2        1    50.00   {)}
