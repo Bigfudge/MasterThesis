@@ -12,8 +12,13 @@ def lastCharNonAlfa(word):
 def prune_data(input_dir):
     for file in os.listdir(input_dir):
         input = open(input_dir+"/"+file)
-        output = remove_tags(input.read())
+        output = input.read()
+        output= output.strip()
+        output= re.sub('\t', ' ',output)
+        output= re.sub(' +', ' ',output)
+        output = remove_tags(output)
         f = open(input_dir+"/"+file, "w")
         f.write(output)
 
 prune_data("./Evaluation-script/ManuelTranscript/Grepect")
+prune_data("./Evaluation-script/ManuelTranscript/Argus")
