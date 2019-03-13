@@ -294,4 +294,4 @@ def main():
 
 #get_input("./Evaluation-script/output/OcropusArgus/argus_lb3026335_5_0002.txt","data/input.csv")
 #main()
-# add_noisy_words(constants.truthArgus,'testArgus.csv')
+add_noisy_words(constants.truthArgus,'testArgus.csv')
