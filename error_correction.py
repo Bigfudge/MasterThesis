@@ -73,3 +73,4 @@ def calc_freq():
 
 def main():
     calc_freq()
+main()
