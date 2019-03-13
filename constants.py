@@ -25,23 +25,23 @@ truthArgus="./Evaluation-script/ManuelTranscript/Argus/"
 truthGrepect="./Evaluation-script/ManuelTranscript/Grepect/"
 
 charReportOcropusArgus="./Evaluation-script/Reports/CharAcc/Ocropus/Argus/"
-charReportOcropusGrepact="./Evaluation-script/Reports/CharAcc/Ocropus/Grepect/"
+charReportOcropusGrepect="./Evaluation-script/Reports/CharAcc/Ocropus/Grepect/"
 charReportTesseractArgus="./Evaluation-script/Reports/CharAcc/Tesseract/Argus/"
 charReportTesseractGrepect="./Evaluation-script/Reports/CharAcc/Tesseract/Grepect/"
 
 outputCharReportOcropusArgus="./Evaluation-script/Reports/CharAcc/Output/Ocropus/Argus/"
-outputCharReportOcropusGrepact="./Evaluation-script/Reports/CharAcc/Output/Ocropus/Grepect/"
+outputCharReportOcropusGrepect="./Evaluation-script/Reports/CharAcc/Output/Ocropus/Grepect/"
 outputCharReportTesseractArgus="./Evaluation-script/Reports/CharAcc/Output/Tesseract/Argus/"
 outputCharReportTesseractGrepect="./Evaluation-script/Reports/CharAcc/Output/Tesseract/Grepect/"
 
 
 wordReportOcropusArgus="./Evaluation-script/Reports/WordAcc/Ocropus/Argus/"
-wordReportOcropusGrepact="./Evaluation-script/Reports/WordAcc/Ocropus/Grepect/"
+wordReportOcropusGrepect="./Evaluation-script/Reports/WordAcc/Ocropus/Grepect/"
 wordReportTesseractArgus="./Evaluation-script/Reports/WordAcc/Tesseract/Argus/"
 wordReportTesseractGrepect="./Evaluation-script/Reports/WordAcc/Tesseract/Grepect/"
 
 outputWordReportOcropusArgus="./Evaluation-script/Reports/WordAcc/Output/Ocropus/Argus/"
-outputWordReportOcropusGrepact="./Evaluation-script/Reports/WordAcc/Output/Ocropus/Grepect/"
+outputWordReportOcropusGrepect="./Evaluation-script/Reports/WordAcc/Output/Ocropus/Grepect/"
 outputWordReportTesseractArgus="./Evaluation-script/Reports/WordAcc/Output/Tesseract/Argus/"
 outputWordReportTesseractGrepect="./Evaluation-script/Reports/WordAcc/Output/Tesseract/Grepect/"
 
