@@ -60,6 +60,7 @@ def clean_run():
         os.remove(c.trigrams_db)
 
 def remove_output(path):
+    return
     files = glob.glob(path)
     for f in files:
         print(f)
@@ -72,7 +73,8 @@ def main():
     if('-c' in sys.argv):
         clean_run()
     if('-ss' in sys.argv):
-        sample_size= 1
+        sample_size= 30
+
 
     remove_output('./output/OcropusArgus/*')
     remove_output('./output/OcropusGrepect/*')
