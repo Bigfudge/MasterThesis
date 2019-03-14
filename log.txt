@@ -270,10 +270,25 @@ If I could get {errousWord, correctWord}-pairs I can train a NN to correct it as
         Move output to three different branches.
         Evaluate the different extentions of word-list.
 
-        Dalin only, 30 pages only:
+        Dalin, 30 pages only:
             TesseractArgus: WER: 36.74% CER: 62.24%
             TesseractGrepect: WER: 33.89% CER: 56.48%
             OcropusArgus: WER: 21.72% CER:  -2.17%
             OcropusGrepect: WER: 29.01% CER:  -34.16%
 
 2019-03-14:
+        Dalin, runeberg, swedberg , 30 pages only:
+            TesseractArgus: WER: 36.53% CER: 62.24%
+            TesseractGrepect: WER: 33.96% CER: 56.48%
+            OcropusArgus: WER: 21.72% CER:  -2.17%
+            OcropusGrepect: WER: 28.72% CER:  -34.16%
+
+        Todo:
+            Complete partial evaluation of extended word-list
+            Complete full evaluation of extended word-list
+
+        I should possible change to the alternative word classifier since it have
+        91.65% accuracy. With a larger network even ~95%, can it really be true?
+        Idea:
+            Set up NN that looks like word_classifiers but instead of 0/1 have the
+            correct word. Maybe can correct, some words?
