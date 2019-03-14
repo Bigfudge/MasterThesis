@@ -41,7 +41,7 @@ def extract_words_txt(txt_files):
 
 def correct_word(word):
     freq=[]
-    with open('data/word_freq.csv', 'r') as readFile:
+    with open(constants.word_freq_path, 'r') as readFile:
         reader = csv.reader(readFile)
         freq = list(reader)
     edit_dist=1
@@ -73,3 +73,4 @@ def calc_freq():
 
 def main():
     calc_freq()
+main()
