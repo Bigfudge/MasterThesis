@@ -4,6 +4,7 @@ import error_correction
 import os
 import constants
 import sys
+import glob
 
 def process_file(plain_text, svm_input, output_file):
     gen_vector.get_training_data(constants.training_data, constants.main_db)
@@ -28,8 +29,8 @@ def process_dir(input_dir, test, sample_size):
     count=1
     for file in os.listdir(input_dir):
         plain = input_dir+file
-        svm_input= constants.input
-        output_dir= "./output/%s/%s.txt"%(test,file)
+        svm_input= c.input
+        output_dir= "./output/%s/%s"%(test,file)
         print(plain)
         if(not os.path.isfile(output_dir)):
             process_file(plain, svm_input, output_dir)
@@ -38,8 +39,26 @@ def process_dir(input_dir, test, sample_size):
         # if(sample_size<count):
         #     break
 
+def remove_output(path):
+    files = glob.glob(path)
+    for f in files:
+        print(f)
+        os.remove(f)
+
 
 def main():
+    sample_size =0
+
+    if('-c' in sys.argv):
+        clean_run()
+    if('-ss' in sys.argv):
+        sample_size= 1
+
+    remove_output('./output/OcropusArgus/*')
+    remove_output('./output/OcropusGrepect/*')
+    remove_output('./output/TesseractArgus/*')
+    remove_output('./output/TesseractGrepect/*')
+
     print("Correcting text (1/4)")
     process_dir("./Evaluation-script/OCROutput/Ocropus/Argus/", "OcropusArgus",10)
     print("Correcting text (2/4)")
