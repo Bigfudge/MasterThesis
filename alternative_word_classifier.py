@@ -92,16 +92,4 @@ def predict(input, model):
     X["words"]=integer_encoded
 
     pred=model.predict(X)
-    print(pred)
-
-model = train(c.training_data)
-predict(c.input, model)
-# input = pd.read_csv("data/input.csv")
-# words = input[input.columns[0]].values.astype(str)
-# integer_encoded = label_encoder.fit_transform(words.astype(str))
-# input=input.drop(input.columns[0],axis=1)
-# input["words"]=integer_encoded
-#
-# pipeline.fit(X,y)
-# pred=pipeline.predict(input)
-# print(pred)
+    return(list(zip(values,pred)))

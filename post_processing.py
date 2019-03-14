@@ -5,12 +5,13 @@ import os
 import constants
 import sys
 import glob
+import alternative_word_classifier
 
 def process_file(plain_text, svm_input, output_file):
     gen_vector.get_training_data(constants.training_data, constants.main_db)
     gen_vector.get_input(plain_text, svm_input)
-    svclassifier = word_classifier.train(constants.svm_model, constants.training_data)
-    classified_words = word_classifier.predict(svm_input, svclassifier)
+    svclassifier = alternative_word_classifier.train('models/new_model.sav', constants.training_data)
+    classified_words = alternative_word_classifier.predict(svm_input, svclassifier)
 
     output=[]
     for word in classified_words:
