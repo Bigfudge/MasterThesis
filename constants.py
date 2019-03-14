@@ -1,11 +1,11 @@
-word_freq_path="data/word_freq.csv"
+word_freq_path="models/word_freq.csv"
 corpus_lag='data/lag1734.xml'
 corpus_tank='data/tankebok.xml'
-training_data="data/input_vector.csv"
+training_data="models/input_vector.csv"
 svm_model="models/finalized_model.sav"
-main_db='data/data_set.db'
-trigrams_db='data/tri_grams.db'
-input="data/input.csv"
+main_db='models/data_set.db'
+trigrams_db='models/tri_grams.db'
+input="models/input.csv"
 
 genOcropusArgus= "./Evaluation-script/OCROutput/Ocropus/Argus/"
 genOcropusGrepect= "./Evaluation-script/OCROutput/Ocropus/Grepect/"
