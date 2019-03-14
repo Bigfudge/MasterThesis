@@ -1,6 +1,10 @@
 word_freq_path="models/word_freq.csv"
 corpus_lag='data/lag1734.xml'
 corpus_tank='data/tankebok.xml'
+corpus_dalin='data/corpus/dalin-wl.txt'
+corpus_runeberg='data/corpus/runeberg-wl.txt'
+corpus_swedberg='data/corpus/swedberg-wl.txt'
+
 training_data="models/input_vector.csv"
 svm_model="models/finalized_model.sav"
 main_db='models/data_set.db'
