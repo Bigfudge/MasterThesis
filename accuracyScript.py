@@ -56,8 +56,10 @@ def sb_eval(genPath, truthPath, source):
 	pairOfPaths= get_pair(genPath, truthPath, source)
 	tot_cer=0
 	tot_wer=0
-	count =0
+	count =1
 	for item in pairOfPaths:
+		if(count>30):
+			break
 		if len(item)<2:
 			continue
 		print(count)
@@ -66,21 +68,29 @@ def sb_eval(genPath, truthPath, source):
 		tot_wer+=100*(1-wer)
 		count+=1
 
-	tmp = genPath.split("/")
-	return("%s_%s: CER %.2f \t WER %.2f"%(tmp[-2],tmp[-3],tot_cer/len(pairOfPaths), tot_wer/len(pairOfPaths)))
 
-def print_sb_eval(output_file):
+	tmp = genPath.split("/")
+	return("%s_%s: CER %.2f \t WER %.2f \n"%(tmp[-2],tmp[-3],tot_cer/count, tot_wer/count))
+
+def print_sb_eval_gen(output_file):
 	lines = []
 	lines.append(sb_eval(c.genOcropusArgus, c.truthArgus, "Argus"))
 	lines.append(sb_eval(c.genOcropusGrepect, c.truthGrepect, "Grepect"))
 	lines.append(sb_eval(c.genTesseractArgus, c.truthArgus, "Argus"))
 	lines.append(sb_eval(c.genTesseractGrepect, c.truthGrepect, "Grepect"))
+	with open(output_file, 'w') as fd:
+		for line in lines:
+			fd.write(line)
+
+def print_sb_eval_output(output_file):
+	lines = []
 	lines.append(sb_eval(c.outputOcropusArgus, c.truthArgus, "Argus"))
 	lines.append(sb_eval(c.outputOcropusGrepect, c.truthGrepect, "Grepect"))
 	lines.append(sb_eval(c.outputTesseractArgus, c.truthArgus, "Argus"))
 	lines.append(sb_eval(c.outputTesseractGrepect, c.truthGrepect, "Grepect"))
-	with open(outputFile, 'w') as fd:
-		fd.write(lines)
+	with open(output_file, 'w') as fd:
+		for line in lines:
+			fd.write(line)
 
 def completeEvaluation():
 	run_acc(c.genOcropusArgus, c.truthArgus, c.charReportOcropusArgus, c.frontierPath, "accuracy", "Argus")
@@ -150,7 +160,8 @@ def outputEvaluation():
 
 
 def main():
-	completeEvaluation()
-	#print_sb_eval("SB_Evaluation.txt")
+	#completeEvaluation()
+	print_sb_eval_gen("gen_SB_Evaluation.txt")
+	print_sb_eval_output("output_SB_Evaluation.txt")
 
 main()
