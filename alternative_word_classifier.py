@@ -16,6 +16,8 @@ from sklearn.model_selection import cross_val_score
 from keras.models import load_model
 import os
 import constants as c
+import pickle
+
 
 import keras as K
 def is_non_zero_file(fpath):
@@ -39,25 +41,21 @@ def get_data(training_data):
 
 def build_model():
 
-    if(not os.path.isfile("models/model.h5")):
-        X, y = get_data(c.training_data)
+    
+    X, y = get_data(c.training_data)
 
-        my_init = K.initializers.glorot_uniform(seed=1)
-        model = Sequential()
-        model.add(Dense(64, input_dim=5, kernel_initializer=my_init, activation='tanh'))
-        model.add(Dense(32, kernel_initializer=my_init, activation='tanh'))
-        model.add(Dense(32, kernel_initializer=my_init, activation='tanh'))
-        model.add(Dense(16, kernel_initializer=my_init, activation='tanh'))
+    my_init = K.initializers.glorot_uniform(seed=1)
+    model = Sequential()
+    model.add(Dense(64, input_dim=5, kernel_initializer=my_init, activation='tanh'))
+    model.add(Dense(32, kernel_initializer=my_init, activation='tanh'))
+    model.add(Dense(32, kernel_initializer=my_init, activation='tanh'))
+    model.add(Dense(16, kernel_initializer=my_init, activation='tanh'))
 
-        model.add(Dense(1, kernel_initializer=my_init, activation='sigmoid'))
-        # Compile model. We use the the logarithmic loss function, and the Adam gradient optimizer.
-        model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+    model.add(Dense(1, kernel_initializer=my_init, activation='sigmoid'))
+    # Compile model. We use the the logarithmic loss function, and the Adam gradient optimizer.
+    model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-        # model.save('models/model.h5')
-        return model
-
-    else:
-        return load_model('models/model.h5')
+    return model
 
 def train(model_path, training_data):
     if(not os.path.isfile(model_path)):
@@ -71,12 +69,12 @@ def train(model_path, training_data):
         kfold = StratifiedKFold(n_splits=10, shuffle=True)
         results = cross_val_score(pipeline, X, y, cv=kfold)
         pipeline.fit(X, y)
-        pickle.dump(svclassifier, open(path_model, 'wb'))
+        pickle.dump(pipeline, open(model_path, 'wb'))
 
         print("Results: %.2f%% (%.2f%%)" % (results.mean()*100, results.std()*100))
         return(pipeline)
     else:
-        pipeline = pickle.load(open(path_model, 'rb'))
+        pipeline = pickle.load(open(model_path, 'rb'))
         return pipeline
 
 def predict(input, model):
