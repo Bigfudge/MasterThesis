@@ -249,7 +249,7 @@ def get_training_data(input_vector, db_path):
     if(os.path.isfile(input_vector)):
         os.remove(input_vector)
 
-    if(not os.path.isfile(db_path)):
+    if(not os.path.isfile(constants.trigrams_db)):
         gen_trigram_freq(['./Evaluation-script/ManuelTranscript/Argus/', './Evaluation-script/ManuelTranscript/Grepect/'])
 
     if(not os.path.isfile(db_path)):
@@ -292,6 +292,7 @@ def get_input(file, output_filename):
 def main():
     get_training_data(constants.training_data, constants.main_db)
 
+main()
 #get_input("./Evaluation-script/output/OcropusArgus/argus_lb3026335_5_0002.txt","data/input.csv")
 #main()
 #add_noisy_words(constants.truthArgus,'testArgus.csv')

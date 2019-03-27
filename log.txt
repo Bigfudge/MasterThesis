@@ -324,3 +324,18 @@ If I could get {errousWord, correctWord}-pairs I can train a NN to correct it as
         is handed in, it will focus my development. All ideas goes in log or
         backlog.
 2019-03-18:
+        Meeting with Dana. Writing for two weeks, after that i should focus the
+        debugging on one text.
+2019-03-19:
+        Ideas:
+            Should prune the OCR-output.
+            Change get_non_alfanum to look at last character as well.
+            Should fix how the erronous word is generated
+            Should fix so swedishness is frequency-based and tri-gram is extracted correctly
+            Test with higher edit_distant_threashold
+            Add runeberg to word-list
+            Add all n-grams as features? up to n=3
+
+            !!SCALING IS VERY IMPORTANT IN SVM!!
+
+            Follow the papers guide for SVM.
