@@ -12,7 +12,9 @@ import constants
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 import noise_maker
-
+import nltk
+from nltk.util import ngrams
+import error_correction
 
 
 ############### HELPER FUNCTIONS ###############
@@ -94,33 +96,42 @@ def update_metric_trigram_freq(db_path, tri_gram_path):
 
 ############### CALCULATES METRIC FOR SINGLE WORD ###############
 def get_non_alfanum(word):
-    errors = list(filter(lambda a: not (a.isalnum() | (a in {'-','å','ä','ö'})), word[:-1]))
+    errors = list(filter(lambda a: not (a.isalnum() | (a in {'å','ä','ö'})), word))
+    return len(errors)
+def get_non_alfa(word):
+    errors = list(filter(lambda a: not (a.isalpha() | (a in {'å','ä','ö'})), word))
     return len(errors)
 
-def get_word_frequency(word, page):
-	count=1
-	for item in page:
-		if(item == word):
-			count+=1
-	return count/len(page)
+def get_word_frequency(word):
+    freq=[]
+    with open(constants.word_freq_path, 'r') as readFile:
+        reader = csv.reader(readFile)
+        freq = list(reader)
+    for item in freq:
+        if(item[0]==word):
+            return int(item[1])/len(freq)
+    return 0
 
 def get_trigram_freq(word):
-    db_tri = sqlite3.connect(constants.trigrams_db)
-    cursor_tri = db_tri.cursor()
+    tri_freq=[]
     output=1
-    for x in range(len(word)):
-        n=word[x:x+3]
-        cursor_tri.execute('''SELECT gram, freq FROM tri_grams WHERE gram=?''', (n,))
-        user = cursor_tri.fetchone()
-        if(user):
-            value = user[1]
-        else:
-            value = 0.1
-        output += value
 
-    db_tri.commit()
-    db_tri.close()
+    with open(constants.trigrams_path, 'r') as readFile:
+        reader = csv.reader(readFile)
+        tri_freq = list(reader)
+
+    chrs = [c for c in word]
+    trigrams= ngrams(chrs,3)
+
+    for gram in trigrams:
+        for freq in tri_freq:
+            if(freq[0]==tuple(gram)):
+                output*=(freq[1]/len(freq))
+            else:
+                output*=0.00001
+
     return output
+
 def get_word_length(word):
     return(len(word))
 def get_num_upper(word):
@@ -134,8 +145,8 @@ def contains_vowel(word):
 
 
 ############### ADDS WORDS TO DB ###############
-def add_ground_truth(input_dir):
-
+def add_ground_truth(input_dir, sample_size):
+    count=1
     db = sqlite3.connect(constants.main_db)
     cursor = db.cursor()
 
@@ -143,22 +154,30 @@ def add_ground_truth(input_dir):
         truth = open(input_dir+file)
         words = [word for line in truth for word in line.split()]
         for word in words:
-            if(word[-1] in {'.',',','!','?',':',';','\'','"','-','/'} and len(word)>1):
-                words.append(word[-1])
+            if(get_non_alfa(word)==len(word)==1):
+                continue
+            if(word[-1] in {'.',',','!','?',':',';','\'','"','-','/'}):
                 word= word[:-1]
+            if(get_non_alfanum(word)>1):
+                print(word)
             cursor.execute('''INSERT INTO words(word, non_alfanum, tri_grams, freq_page, vowel, valid)
             VALUES(?,?,?,?,?,?)''', (remove_tags(word),
             get_non_alfanum(word),
             get_trigram_freq(word),
-            get_word_frequency(word,words),
+            get_word_frequency(word),
             contains_vowel(word),
             1))
+            count+=1
+            if(sample_size):
+                if(sample_size<count):
+                    break
 
     db.commit()
     db.close()
     truth.close()
 
-def add_ocr_output(ocr_dir,truth_dir):
+def add_ocr_output(ocr_dir,truth_dir, sample_size):
+    count=1
     ocr_dirs=[]
     truth_dirs=[]
     tmp = ocr_dir.split("/")
@@ -177,13 +196,21 @@ def add_ocr_output(ocr_dir,truth_dir):
     ocr_errors = open(filename)
     words = [word for line in ocr_errors for word in line.split()]
     for word in words:
+        if(get_non_alfa(word)==len(word)==1):
+            continue
+        if(word[-1] in {'.',',','!','?',':',';','\'','"','-','/'}):
+            word= word[:-1]
         cursor.execute('''INSERT INTO words(word, non_alfanum, tri_grams,
         freq_page, vowel, valid)VALUES(?,?,?,?,?,?)''', (word,
         get_non_alfanum(word),
         get_trigram_freq(word),
-        get_word_frequency(word, words),
+        get_word_frequency(word),
         contains_vowel(word),
         0))
+        count+=1
+        if(sample_size):
+            if(sample_size<count):
+                break
     db.commit()
     db.close()
     ocr_errors.close()
@@ -202,7 +229,7 @@ def add_noisy_words(truth_dir,output_filename):
             input_vector.append([remove_tags(word),
                                 get_non_alfanum(word),
                                 get_trigram_freq(word),
-                                get_word_frequency(word,words),
+                                get_word_frequency(word),
                                 contains_vowel(word)])
         with open(output_filename, 'w') as csvFile:
             writer=csv.writer(csvFile)
@@ -210,62 +237,50 @@ def add_noisy_words(truth_dir,output_filename):
 
 
 def gen_trigram_freq(input_dirs):
+    tri_grams = []
+    output = {}
+    for input_dir in input_dirs:
+        for file in os.listdir(input_dir):
+            text= open(input_dir+file).read()
+            chrs = [c for c in text]
+            trigrams= ngrams(chrs,3)
+            for gram in trigrams:
+                tri_grams.append(tuple(gram))
 
-	tri_grams = []
-	output = collections.defaultdict(int)
-	for input_dir in input_dirs:
-		for file in os.listdir(input_dir):
-			text= open(input_dir+file).read()
-			for x in range(len(text)):
-				n=text[x:x+3]
-				tri_grams.append(n)
-	for gram in tri_grams:
-		output[gram] += 1
+    for gram in tri_grams:
+        if(gram not in output):
+            output[gram]=1
+        else:
+            output[gram]+=1
+    with open(constants.trigrams_path, 'w') as csvFile:
+        writer=csv.writer(csvFile)
+        writer.writerows(output.items())
 
-	#Converts dict to list of tuple
-	x = zip(output.keys(), output.values())
-
-	# print(list(x))
-	db = sqlite3.connect(constants.trigrams_db)
-	cursor = db.cursor()
-
-	#Clears previous table
-	cursor.execute('''DROP TABLE IF EXISTS tri_grams''')
-
-	#Adds table to db
-	cursor.execute('''
- 	CREATE TABLE tri_grams(id INTEGER PRIMARY KEY, gram TEXT, freq INTEGER)
-	 			   ''')
-
-	#Adds content
-	cursor.executemany(''' INSERT INTO tri_grams(gram, freq) VALUES(?,?)''',list(x))
-	db.commit()
-
-	db.close()
+    return(output)
 
 
 
-def get_training_data(input_vector, db_path):
+def get_training_data(input_vector, db_path, sample_size):
     if(os.path.isfile(input_vector)):
         os.remove(input_vector)
 
-    if(not os.path.isfile(constants.trigrams_db)):
+    if(not os.path.isfile(constants.trigrams_path)):
         gen_trigram_freq(['./Evaluation-script/ManuelTranscript/Argus/', './Evaluation-script/ManuelTranscript/Grepect/'])
 
     if(not os.path.isfile(db_path)):
         db_setup()
         print("Database initilized")
-        add_ground_truth('./Evaluation-script/ManuelTranscript/Argus/')
+        add_ground_truth('./Evaluation-script/ManuelTranscript/Argus/', sample_size)
         print("Added words (1/6)")
-        add_ground_truth('./Evaluation-script/ManuelTranscript/Grepect/')
+        add_ground_truth('./Evaluation-script/ManuelTranscript/Grepect/', sample_size)
         print("Added words (2/6)")
-        add_ocr_output("./Evaluation-script/OCROutput/Ocropus/Argus/","./Evaluation-script/ManuelTranscript/Argus/")
+        add_ocr_output("./Evaluation-script/OCROutput/Ocropus/Argus/","./Evaluation-script/ManuelTranscript/Argus/", sample_size)
         print("Added words (3/6)")
-        add_ocr_output("./Evaluation-script/OCROutput/Ocropus/Grepect/","./Evaluation-script/ManuelTranscript/Grepect/")
+        add_ocr_output("./Evaluation-script/OCROutput/Ocropus/Grepect/","./Evaluation-script/ManuelTranscript/Grepect/", sample_size)
         print("Added words (4/6)")
-        add_ocr_output("./Evaluation-script/OCROutput/Tesseract/Argus/","./Evaluation-script/ManuelTranscript/Argus/")
+        add_ocr_output("./Evaluation-script/OCROutput/Tesseract/Argus/","./Evaluation-script/ManuelTranscript/Argus/", sample_size)
         print("Added words (5/6)")
-        add_ocr_output("./Evaluation-script/OCROutput/Tesseract/Grepect/","./Evaluation-script/ManuelTranscript/Grepect/")
+        add_ocr_output("./Evaluation-script/OCROutput/Tesseract/Grepect/","./Evaluation-script/ManuelTranscript/Grepect/", sample_size)
         print("Added words (6/6)")
 
     create_output_file(db_path,input_vector)
@@ -276,13 +291,15 @@ def get_input(file, output_filename):
     input_vector=[]
 
     for word in words:
-        if(word[-1] in {'.',',','!','?',':',';','\'','"','-','/'} and len(word)>1):
-            words.append(word[-1])
+        if(get_non_alfa(word)==len(word)==1):
+            continue
+        if(word[-1] in {'.',',','!','?',':',';','\'','"','-','/'}):
             word= word[:-1]
+
         input_vector.append([remove_tags(word),
                             get_non_alfanum(word),
                             get_trigram_freq(word),
-                            get_word_frequency(word,words),
+                            get_word_frequency(word),
                             contains_vowel(word)])
     ocr_output.close()
     with open(output_filename, 'w') as csvFile:
@@ -290,9 +307,9 @@ def get_input(file, output_filename):
         writer.writerows(input_vector)
 
 def main():
-    get_training_data(constants.training_data, constants.main_db)
+    get_training_data(constants.training_data, constants.main_db,1500)
 
-main()
+
 #get_input("./Evaluation-script/output/OcropusArgus/argus_lb3026335_5_0002.txt","data/input.csv")
 #main()
 #add_noisy_words(constants.truthArgus,'testArgus.csv')

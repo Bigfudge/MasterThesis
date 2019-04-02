@@ -47,28 +47,31 @@ def correct_word(word):
     edit_dist=1
     candidates=[]
     edit_distances=[]
-
+    print(word)
     for can in freq:
         edit_distances.append([can,distance(can[0],str(word))])
+    print(len(edit_distances))
     while (edit_dist < len(str(word))+2 or edit_dist <= 8):
         for item in edit_distances:
-            if(item[0][1]==edit_dist):
+            if(item[1]==edit_dist):
                 candidates.append(item[0])
         if(len(candidates)>0):
             #Select candidate with greatest frequency
             winning_candidate=max(candidates, key=lambda x: x[1])
+            print("REPLACED %s with %s"%(word,winning_candidate))
             return winning_candidate[0]
         else:
             edit_dist+=1
     #If no candidate is found the original word is returned
+    print("NO REPLACEMENT")
     return(word)
 
 def calc_freq():
     if(not os.path.isfile(constants.word_freq_path)):
         extract_words_xml([constants.corpus_lag,constants.corpus_tank])
-        # extract_words_txt([constants.corpus_dalin])
-        # extract_words_txt([constants.corpus_runeberg])
-        # extract_words_txt([constants.corpus_swedberg])
+        extract_words_txt([constants.corpus_dalin])
+        extract_words_txt([constants.corpus_runeberg])
+        extract_words_txt([constants.corpus_swedberg])
 
 
 def main():

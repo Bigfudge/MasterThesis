@@ -5,13 +5,12 @@ import os
 import constants as c
 import sys
 import glob
-import alternative_word_classifier
 
-def process_file(plain_text, svm_input, output_file):
-    gen_vector.get_training_data(c.training_data, c.main_db)
-    gen_vector.get_input(plain_text, svm_input)
-    svclassifier = word_classifier.train(c.svm_model, c.training_data)
-    classified_words = word_classifier.predict(svm_input, svclassifier)
+def process_file(plain_text,output_file):
+    gen_vector.get_training_data(c.training_data, c.main_db,0)
+    gen_vector.get_input(plain_text, c.input)
+    svclassifier = word_classifier.train(c.svm_model, c.training_data,10000)
+    classified_words = word_classifier.predict(c.input, svclassifier)
 
     output=[]
     for word in classified_words:
@@ -35,11 +34,10 @@ def process_dir(input_dir, test, sample_size):
     count=1
     for file in os.listdir(input_dir):
         plain = input_dir+file
-        svm_input= c.input
         output_dir= "./output/%s/%s"%(test,file)
         print(plain)
         if(not os.path.isfile(output_dir)):
-            process_file(plain, svm_input, output_dir)
+            process_file(plain, output_dir)
         print("Corrected page %i out of %i)" %(count, len(os.listdir(input_dir))))
         count+=1
         if(sample_size):
@@ -89,4 +87,4 @@ def main():
     print("Correcting text (4/4)")
     process_dir("./Evaluation-script/OCROutput/Tesseract/Grepect/", "TesseractGrepect",sample_size)
 
-main()
+#process_file('./Evaluation-script/small_OCROutput/Tesseract/Argus/lb3026335_5_0007.txt','test.txt')

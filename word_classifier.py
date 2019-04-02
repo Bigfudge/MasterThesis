@@ -14,12 +14,12 @@ def is_non_zero_file(fpath):
     return True if os.path.isfile(fpath) and os.path.getsize(fpath) > 0 else False
 
 
-def train(path_model, training_data):
+def train(path_model, training_data, sample_size):
     if(not os.path.isfile(path_model)):
         label_encoder = LabelEncoder()
 
         df = pd.read_csv(training_data)
-        data = df.sample(10000)
+        data = df.sample(sample_size)
 
         values = data[data.columns[0]].values
         integer_encoded = label_encoder.fit_transform(values.astype(str))
@@ -30,7 +30,7 @@ def train(path_model, training_data):
         X["words"]=integer_encoded
 
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.20)
-        svclassifier = SVC(kernel='linear')
+        svclassifier = SVC(kernel='rbf')
         svclassifier.fit(X_train, y_train)
 
         y_pred = svclassifier.predict(X_test)
@@ -60,6 +60,7 @@ def predict(input, svclassifier):
 
     y_pred = svclassifier.predict(X)
 
+    print(list(zip(values,y_pred)))
     return list(zip(values,y_pred))
 
 
@@ -69,4 +70,4 @@ def main(input):
     predict(input, svclassifier)
 
 
-train('test.sav', constants.training_data)# main("data/input.csv")
+#train('test.sav', constants.training_data)# main("data/input.csv")

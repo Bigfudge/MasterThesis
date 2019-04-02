@@ -22,19 +22,17 @@ def main(image_dir, output_dir, source, truth_dir):
 
             if(source == 'grepect'):
                 if(os.path.splitext(item)[0]==os.path.splitext(image)[0]):
-		    print("PROCESSING IMAGE"+str(item))
+                    print("PROCESSING IMAGE"+str(item))
                     ocropyGen(imagePath, source, ocropyFolder, bookPath)
                     saveOCR(bookPath, output_dir, image)
-#                    count +=1
-                    break
+
 
             elif(source == 'argus'):
                 if(os.path.splitext(item)[0][-4:]==os.path.splitext(image)[0][-4:]):
                     print("PROCESSING IMAGE"+str(item))
-		    ocropyGen(imagePath, source, ocropyFolder, bookPath)
+                    ocropyGen(imagePath, source, ocropyFolder, bookPath)
                     saveOCR(bookPath, output_dir, image)
- #                   count +=1
-                    break
+
 
 
 def ocropyGen(imagePath, source, ocropyFolder, bookPath):
@@ -57,4 +55,4 @@ def saveOCR(bookPath, output_dir, image):
 
 #main("../Images/Grepect", "./Evaluation-script/OCROutput/Ocropus/Grepect", "grepect", "./Evaluation-script/ManuelTranscript/Grepect")
 
-main("../Images/Argus", "./Evaluation-script/OCROutput/Ocropus/Argus", "argus", "./Evaluation-script/ManuelTranscript/Argus")
+main("../Images/Argus", "./Evaluation-script/small_OCROutput/Ocropus/Argus", "argus", "./Evaluation-script/ManuelTranscript/Argus")

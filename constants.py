@@ -8,7 +8,7 @@ corpus_swedberg='data/corpus/swedberg-wl.txt'
 training_data="models/input_vector.csv"
 svm_model="models/finalized_model.sav"
 main_db='models/data_set.db'
-trigrams_db='models/tri_grams.db'
+trigrams_path='models/tri_grams.csv'
 input="models/input.csv"
 
 genOcropusArgus= "./Evaluation-script/OCROutput/Ocropus/Argus/"
