@@ -47,10 +47,8 @@ def correct_word(word):
     edit_dist=1
     candidates=[]
     edit_distances=[]
-    print(word)
     for can in freq:
         edit_distances.append([can,distance(can[0],str(word))])
-    print(len(edit_distances))
     while (edit_dist < len(str(word))+2 or edit_dist <= 8):
         for item in edit_distances:
             if(item[1]==edit_dist):
@@ -63,7 +61,6 @@ def correct_word(word):
         else:
             edit_dist+=1
     #If no candidate is found the original word is returned
-    print("NO REPLACEMENT")
     return(word)
 
 def calc_freq():

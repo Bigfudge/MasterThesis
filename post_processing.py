@@ -8,9 +8,9 @@ import glob
 
 def process_file(plain_text,output_file):
     error_correction.calc_freq()
-    gen_vector.get_training_data(c.training_data, c.main_db,0)
+    gen_vector.get_training_data(c.training_data, c.main_db,1500)
     gen_vector.get_input(plain_text, c.input)
-    svclassifier = word_classifier.train(c.svm_model, c.training_data,50000)
+    svclassifier = word_classifier.train(c.svm_model, c.training_data,8000)
     classified_words = word_classifier.predict(c.input, svclassifier)
 
     output=[]
