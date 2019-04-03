@@ -58,7 +58,7 @@ def correct_word(word):
         if(len(candidates)>0):
             #Select candidate with greatest frequency
             winning_candidate=max(candidates, key=lambda x: x[1])
-            print("REPLACED %s with %s"%(word,winning_candidate))
+            #print("REPLACED %s with %s"%(word,winning_candidate))
             return winning_candidate[0]
         else:
             edit_dist+=1
@@ -69,9 +69,9 @@ def correct_word(word):
 def calc_freq():
     if(not os.path.isfile(constants.word_freq_path)):
         extract_words_xml([constants.corpus_lag,constants.corpus_tank])
-        extract_words_txt([constants.corpus_dalin])
-        extract_words_txt([constants.corpus_runeberg])
-        extract_words_txt([constants.corpus_swedberg])
+        #extract_words_txt([constants.corpus_dalin])
+        #extract_words_txt([constants.corpus_runeberg])
+        #extract_words_txt([constants.corpus_swedberg])
 
 
 def main():
