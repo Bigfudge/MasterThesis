@@ -60,7 +60,7 @@ def clean_run():
     if(os.path.exists(c.word_freq_path)):
         os.remove(c.word_freq_path)
 
-    if(os.path.exists(c.trigrams_db)):
+    if(os.path.exists(c.trigrams_path)):
         os.remove(c.trigrams_db)
 
 
