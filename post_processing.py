@@ -9,7 +9,7 @@ import glob
 def process_file(plain_text,output_file):
     gen_vector.get_training_data(c.training_data, c.main_db,0)
     gen_vector.get_input(plain_text, c.input)
-    svclassifier = word_classifier.train(c.svm_model, c.training_data,10000)
+    svclassifier = word_classifier.train(c.svm_model, c.training_data,50000)
     classified_words = word_classifier.predict(c.input, svclassifier)
 
     output=[]
@@ -87,4 +87,5 @@ def main():
     print("Correcting text (4/4)")
     process_dir("./Evaluation-script/OCROutput/Tesseract/Grepect/", "TesseractGrepect",sample_size)
 
-#process_file('./Evaluation-script/small_OCROutput/Tesseract/Argus/lb3026335_5_0007.txt','test.txt')
+#process_file('./Evaluation-script/OCROutput/Ocropus/Argus/argus_lb3026335_5_0002.txt','post_Ocropus.txt')
+main()
