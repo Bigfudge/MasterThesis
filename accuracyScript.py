@@ -160,8 +160,8 @@ def outputEvaluation():
 
 
 def main():
-	#completeEvaluation()
-	print_sb_eval_gen("gen_SB_Evaluation.txt")
-	print_sb_eval_output("output_SB_Evaluation.txt")
+	completeEvaluation()
+	#print_sb_eval_gen("gen_SB_Evaluation.txt")
+	#print_sb_eval_output("output_SB_Evaluation.txt")
 
 main()
