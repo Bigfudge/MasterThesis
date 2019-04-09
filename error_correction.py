@@ -61,7 +61,7 @@ def correct_word(word):
         edit_distances.append([can,distance(can[0],str(word))])
     while (edit_dist < len(str(word))+2 or edit_dist <= 8):
         for item in edit_distances:
-            if(item[1]==edit_dist):
+            if(item[1]==edit_dist or item[i]==0):
                 candidates.append(item[0])
         if(len(candidates)>0):
             #Select candidate with greatest frequency

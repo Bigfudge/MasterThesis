@@ -395,11 +395,15 @@ If I could get {errousWord, correctWord}-pairs I can train a NN to correct it as
             Use np.arrange to further search for best parameters
         Construct a nice evaluationscript for PrimA
 
-rbf(C=1.1, gamma =1.4):    10 000:
+        rbf(C=1.1, gamma =1.4):    10 000:
 
-          precision    recall  f1-score   support
+                  precision    recall  f1-score   support
 
-          0       0.73      0.88      0.80      1311
-          1       0.63      0.39      0.48       689
+                  0       0.73      0.88      0.80      1311
+                  1       0.63      0.39      0.48       689
 
-avg / total       0.70      0.71      0.69      2000
+        avg / total       0.70      0.71      0.69      2000
+
+2019-04-09:
+    Evaluation-script is now updated. Primary thing to improve is the word_classifier
+    for valid words.

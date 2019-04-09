@@ -131,16 +131,15 @@ def get_trigram_freq(word):
 
     return output
 
-def get_word_length(word):
-    return(len(word))
+def word_length(word):
+    return(len(word)>13)
 def get_num_upper(word):
-    return(sum(1 for c in word if c.isupper()))
-def get_num_lower(word):
-        return(sum(1 for c in word if c.islower()))
+    return(sum(1 for c in word if c.isupper())>2)
 def contains_vowel(word):
     vowels = {"a", "e", "i", "o", "u","å","ä", "ö", "A", "E", "I", "O", "U","Å", "Ä", "Ö"}
     return any(char in vowels for char in word)
-
+def has_numbers(word):
+    return any(char.isdigit() for char in word)
 
 
 ############### ADDS WORDS TO DB ###############
@@ -157,14 +156,15 @@ def add_ground_truth(input_dir, sample_size):
                 continue
             if(word[-1] in {'.',',','!','?',':',';','\'','"','-','/'}):
                 word= word[:-1]
-            if(get_non_alfanum(word)>1):
-                print(word)
-            cursor.execute('''INSERT INTO words(word, non_alfanum, tri_grams, freq_page, vowel, valid)
-            VALUES(?,?,?,?,?,?)''', (remove_tags(word),
+            cursor.execute('''INSERT INTO words(word, non_alfanum, tri_grams, freq_page, vowel, word_length,get_num_upper,has_numbers, valid)
+            VALUES(?,?,?,?,?,?,?,?,?)''', (remove_tags(word),
             get_non_alfanum(word),
             get_trigram_freq(word),
             get_word_frequency(word),
             contains_vowel(word),
+            word_length(word),
+            get_num_upper(word),
+            has_numbers(word),
             1))
             count+=1
             if(sample_size):
@@ -199,12 +199,15 @@ def add_ocr_output(ocr_dir,truth_dir, sample_size):
             continue
         if(word[-1] in {'.',',','!','?',':',';','\'','"','-','/'}):
             word= word[:-1]
-        cursor.execute('''INSERT INTO words(word, non_alfanum, tri_grams,
-        freq_page, vowel, valid)VALUES(?,?,?,?,?,?)''', (word,
+        cursor.execute('''INSERT INTO words(word, non_alfanum, tri_grams, freq_page,
+        vowel, word_length,get_num_upper,has_numbers, valid)VALUES(?,?,?,?,?,?,?,?,?)''', (word,
         get_non_alfanum(word),
         get_trigram_freq(word),
         get_word_frequency(word),
         contains_vowel(word),
+        word_length(word),
+        get_num_upper(word),
+        has_numbers(word),
         0))
         count+=1
         if(sample_size):
@@ -235,10 +238,10 @@ def add_noisy_words(truth_dir,output_filename):
             writer.writerows(input_vector)
 
 
-def gen_trigram_freq(input_dirs):
+def gen_trigram_freq(input_files):
     tri_grams = []
     output = {}
-    for file in input_dirs:
+    for file in input_files:
         text= open(file).read()
         chrs = [c for c in text]
         trigrams= ngrams(chrs,3)
@@ -300,7 +303,10 @@ def get_input(file, output_filename):
                             get_non_alfanum(word),
                             get_trigram_freq(word),
                             get_word_frequency(word),
-                            contains_vowel(word)])
+                            contains_vowel(word),
+                            word_length(word),
+                            get_num_upper(word),
+                            has_numbers(word)])
     ocr_output.close()
     with open(output_filename, 'w') as csvFile:
         writer=csv.writer(csvFile)

@@ -82,8 +82,8 @@ def main():
     remove_output('./output/TesseractArgus/*')
     remove_output('./output/TesseractGrepect/*')
 
-    db_size=3500
-    training_size=20000
+    db_size=1500
+    training_size=8000
     svm_kernal="rbf"
     c_value=1.1
     gamma=1.3
