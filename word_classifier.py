@@ -52,11 +52,10 @@ def train(path_model, training_data, sample_size, svm_kernal, c_value,gamma):
         pickle.dump(svclassifier, open(path_model, 'wb'))
         print(confusion_matrix(y_test,y_pred))
         print(classification_report(y_test,y_pred))
-
-        return svclassifier
     else:
         svclassifier = pickle.load(open(path_model, 'rb'))
-        return svclassifier
+
+    return svclassifier
 
 
 
@@ -77,8 +76,7 @@ def predict(input, svclassifier):
     print(list(zip(values,y_pred)))
     return list(zip(values,y_pred))
 
-def get_performace_report(path_model, training_data, sample_size):
-    svclassifier = pickle.load(open(path_model, 'rb'))
+def get_performace_report(path_model, training_data, sample_size, svm_kernal, c_value,gamma):
     label_encoder = LabelEncoder()
 
     df = pd.read_csv(training_data)
@@ -94,7 +92,11 @@ def get_performace_report(path_model, training_data, sample_size):
     # params=svc_param_selection(X,y,3)
     # print(params)
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.20)
+    svclassifier = SVC(kernel=svm_kernal, C=c_value, gamma=gamma)
+    svclassifier.fit(X_train, y_train)
+
     y_pred = svclassifier.predict(X_test)
+    print(confusion_matrix(y_test,y_pred))
     print(classification_report(y_test,y_pred))
     return classification_report(y_test,y_pred)
 

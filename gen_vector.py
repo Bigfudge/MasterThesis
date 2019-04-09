@@ -41,7 +41,7 @@ def db_setup():
 def create_output_file(db_path, output_filename):
     db = sqlite3.connect(db_path)
     cursor = db.cursor()
-    cursor.execute('''SELECT word, non_alfanum, tri_grams, freq_page, vowel, valid FROM words''')
+    cursor.execute('''SELECT word, non_alfanum, tri_grams, freq_page, vowel, word_length, get_num_upper, has_numbers, valid FROM words''')
     data = cursor.fetchall()
     with open(output_filename, 'w') as csvFile:
         writer=csv.writer(csvFile)
@@ -308,7 +308,8 @@ def get_input(file, output_filename):
                             contains_vowel(word),
                             word_length(word),
                             get_num_upper(word),
-                            has_numbers(word)])
+                            has_numbers(word)
+                            ])
     ocr_output.close()
     with open(output_filename, 'w') as csvFile:
         writer=csv.writer(csvFile)

@@ -61,7 +61,7 @@ def correct_word(word):
         edit_distances.append([can,distance(can[0],str(word))])
     while (edit_dist < len(str(word))+2 or edit_dist <= 8):
         for item in edit_distances:
-            if(item[1]==edit_dist or item[i]==0):
+            if(item[1]==edit_dist or item[1]==0):
                 candidates.append(item[0])
         if(len(candidates)>0):
             #Select candidate with greatest frequency
@@ -91,6 +91,7 @@ def updated_correct_word(word):
     freq=[]
     splits=[]
     candidate=[]
+    origin_edit_distances=[]
 
     with open(constants.word_freq_path, 'r') as readFile:
         reader = csv.reader(readFile)
@@ -98,14 +99,12 @@ def updated_correct_word(word):
 
     for can in freq:
         origin_edit_distances.append([can,distance(can[0],str(word))])
-    origin_can, origin_cost = get_candidate(origin_edit_distances, word)
-    candidate.append([origin_can, origin_cost])
+    origin_can, origin_cost, origin_freq = get_candidate(origin_edit_distances, word)
+    candidate.append([origin_can, origin_cost,origin_freq])
 
     #Split words into two
-    for i in range(len(word)):
-        splits.append(word[:i])
-        splits.append(word[i:])
-
+    for i in range(1,len(word)):
+        splits.append([word[:i],word[i:]])
     for var in splits:
         first, second = var
         first_edit_distances=[]
@@ -115,25 +114,28 @@ def updated_correct_word(word):
             first_edit_distances.append([can,distance(can[0],str(first))])
             second_edit_distances.append([can,distance(can[0],str(second))])
 
-        first_can, first_cost = get_candidate(first_edit_distances, first)
-        second_can, second_cost = get_candidate(second_edit_distances, second)
+        first_can, first_cost, first_freq = get_candidate(first_edit_distances, first)
+        second_can, second_cost, second_freq = get_candidate(second_edit_distances, second)
 
-        candidates.append([var, first_cost+second_cost+1])
+        candidate.append([var, first_cost+second_cost+1, first_freq+second_freq])
+    b = sorted(candidate, key = lambda x: (-x[1], x[2]))
 
-    winning_candidate=max(candidates, key=lambda x: x[1])
-    return winning_candidate
+    print(b)
+    winning_candidate=b[-1]
+    return winning_candidate[0]
 
 
 def get_candidate(distance_list, word):
+    edit_dist=0
+    candidates=[]
     while (edit_dist < len(str(word))+2 or edit_dist <= 8):
         for item in distance_list:
             if(item[1]==edit_dist):
                 candidates.append(item[0])
         if(len(candidates)>0):
             #Select candidate with greatest frequency
-            winning_candidate=max(candidates, key=lambda x: x[1])
-            print("REPLACED %s with %s"%(word,winning_candidate))
-            return winning_candidate[0], edit_dist
+            winning_candidate=max(candidates, key=lambda x: int(x[1]))
+            return winning_candidate[0], edit_dist, int(winning_candidate[1])
         else:
             edit_dist+=1
     else:
