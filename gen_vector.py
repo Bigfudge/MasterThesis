@@ -32,7 +32,9 @@ def db_setup():
 	#Adds table to db
 	cursor.execute('''
  	CREATE TABLE words(id INTEGER PRIMARY KEY, word TEXT, non_alfanum INTEGER,
-						tri_grams INTEGER, freq_page INTEGER, vowel INTEGER, valid INTEGER)''')
+						tri_grams INTEGER, freq_page INTEGER, vowel INTEGER,
+                        word_length INTEGER, get_num_upper INTEGER,
+                        has_numbers INTEGER, valid INTEGER)''')
 	db.commit()
 	db.close()
 
