@@ -9,8 +9,8 @@ from numpy import array
 import os
 import pickle
 import constants
-# from sklearn.grid_search import GridSearchCV
-from sklearn import svm, grid_search
+from sklearn.model_selection import GridSearchCV
+from sklearn import svm
 import numpy
 
 
