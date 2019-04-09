@@ -1,0 +1,1 @@
+java -cp PrimaText.jar org.primaresearch.text.eval.gui.TextEvalTool

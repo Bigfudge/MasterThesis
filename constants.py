@@ -47,3 +47,4 @@ outputWordReportTesseractGrepect="./Evaluation-script/Reports/WordAcc/Output/Tes
 
 
 frontierPath="./Evaluation-script/ftk-1.0/bin/Linux/"
+primaPath= "./Evaluation-script/Prima/PrimaText.jar"

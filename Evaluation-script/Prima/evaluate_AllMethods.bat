@@ -1,0 +1,1 @@
+java -jar PrimaText.jar -gt-text input\gt.txt -gt-enc UTF-8 -res-text input\res.txt -res-enc UTF-8 -method BagOfWords,CharacterAccuracy,WordAccuracy,WordStatistics -toLower ENGLISH -csv-headers -csv-addinp>output.csv

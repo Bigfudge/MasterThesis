@@ -16,4 +16,4 @@ def prune_data(input_dir):
         f = open(input_dir+"/"+file, "w")
         f.write(output)
 
-prune_data("./Evaluation-script/ManuelTranscript/Grepect")
+prune_data("./data/corpus/runeberg/")

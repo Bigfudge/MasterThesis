@@ -1,0 +1,1 @@
+java -jar PrimaText.jar -gt-text input\00531076.gt.txt -gt-enc UTF-8 -res-text input\00531076.res.txt -res-enc UTF-8 -method BagOfWords -csv-headers>output.csv

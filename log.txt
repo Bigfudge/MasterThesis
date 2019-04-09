@@ -372,3 +372,34 @@ If I could get {errousWord, correctWord}-pairs I can train a NN to correct it as
     Finally handed in the half-time report. Now to programming!
 
     Added sample size option on gen_vector.
+
+2019-03-03:
+    After bug fixes 30 sampels, 8k SVM, 1500 words per work:
+        TesseractArgus: WER: 79,79% CER: 41,37%
+        TesseractGrepect: WER: 83,27% CER: 45,74%
+        OcropusArgus: WER: 86,00% CER:  87,92%
+        OcropusGrepect: WER: 83,72% CER:  118,55%
+
+2019-04-04:
+    rename 's/_ocropus_twomodel//g' *.txt
+    wget -nd -r -l 1 -A txt  -e robots=off http://demo.spraakdata.gu.se/svedd/ocrproject/data/ocred/Argus_1732_pages/
+
+2019-04-08:
+    Number of words in word_freq without runeberg:
+        1236883
+        about seven times bigger with all of runeberg
+    It becomes to slow with all those words.
+
+    Todo:
+        Conduct the grid_search for rbf
+            Use np.arrange to further search for best parameters
+        Construct a nice evaluationscript for PrimA
+
+rbf(C=1.1, gamma =1.4):    10 000:
+
+          precision    recall  f1-score   support
+
+          0       0.73      0.88      0.80      1311
+          1       0.63      0.39      0.48       689
+
+avg / total       0.70      0.71      0.69      2000

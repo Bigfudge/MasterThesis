@@ -6,6 +6,8 @@ import glob
 import subprocess
 import constants as c
 import sb_evaluation
+import datetime
+import word_classifier
 
 def get_pair(genPath, truthPath, source):
 	pairOfPaths= []
@@ -158,10 +160,97 @@ def outputEvaluation():
 	combinedAcc(c.outputWordReportTesseractArgus, c.frontierPath, "wordaccsum", "WordAcc_TesseractArgus.txt")
 	combinedAcc(c.outputWordReportTesseractGrepect, c.frontierPath, "wordaccsum", "WordAcc_TesseractGrepect.txt")
 
+def prima_evaluation(genPath, truthPath, source, outputFile):
+	pairOfPaths= get_pair(genPath, truthPath, source)
+	outputArray=[]
+	avgW=0
+	avgC=0
+	for	item in pairOfPaths:
+		if(len(item)<2):
+			continue
 
-def main():
-	completeEvaluation()
-	#print_sb_eval_gen("gen_SB_Evaluation.txt")
-	#print_sb_eval_output("output_SB_Evaluation.txt")
+		commandW = ["java","-jar",c.primaPath,"-gt-text",truthPath+item[1],"-res-text",genPath+item[0],
+				"-method", "WordAccuracy"]
+		word = subprocess.Popen(commandW,stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+		outputWord, error = word.communicate()
 
-main()
+		commandC = ["java","-jar",c.primaPath,"-gt-text",truthPath+item[1],"-res-text",genPath+item[0],
+				"-method", "CharacterAccuracy"]
+		char = subprocess.Popen(commandC,stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+		outputChar, error = char.communicate()
+
+		name = item[0]
+		wAcc= str(outputWord).split(',')[2][1:-1]
+		cAcc=str(outputChar).split(',')[2][1:-5]
+		avgW+=float(wAcc)
+		avgC+=float(cAcc)
+		outString="%s \t WordAccuracy: %s \t CharacterAccuracy: %s \n"%(name,wAcc,cAcc)
+		outputArray.append(outString)
+		if error:
+			print("ERROR", error)
+	avgW=avgW/len(pairOfPaths)
+	avgC=avgC/len(pairOfPaths)
+	avgString= "Average:\t WordAccuracy: %s \t CharacterAccuracy: %s \n"%(avgW,avgC)
+	print(avgString)
+	outputArray= [avgString]+outputArray
+	with open(outputFile, 'w') as fd:
+		for line in outputArray:
+			fd.write(line)
+	return avgW, avgC
+
+def make_conf_file(outputFile, sample_size, svm_kernal, gamma, c_value,
+					training_size, db_size, word_freq_size):
+	outputArray=[]
+	outputArray.append("Parameters")
+	outputArray.append("Sample size=%s\n"%sample_size)
+	outputArray.append("SVM parameters:\n\t Kernel: %s\n\t Gamma: %s\n\t C-value: %s\n\t Training data size: %s\n"
+			%(svm_kernal, gamma, c_value, training_size))
+	outputArray.append("SVM Performace:\n")
+	outputArray.append(word_classifier.get_performace_report(c.svm_model, c.training_data, training_size))
+	outputArray.append("Database_size: %s \n Word_frequency size: %s"%(db_size,word_freq_size))
+	with open(outputFile, 'w') as fd:
+		for line in outputArray:
+			fd.write(line)
+
+
+def main(sample_size, svm_kernal, gamma, c_value,
+		training_size, db_size, word_freq_size):
+		#completeEvaluation()
+		#print_sb_eval_gen("gen_SB_Evaluation.txt")
+		#print_sb_eval_output("output_SB_Evaluation.txt")
+	summary=[]
+	now = datetime.datetime.now()
+	folder_name= now.strftime("%Y-%m-%d %H:%M")
+	folder_path="./Evaluation-reports/%s"%(folder_name)
+
+	os.mkdir(folder_path)
+	make_conf_file(folder_path+"/configuration.txt", sample_size, svm_kernal,
+	 				gamma, c_value, training_size, db_size, word_freq_size)
+
+	summary.append("SUMMARY:\n")
+	summary.append("PrimA evaluation:\n")
+	summary.append("OCROutput:\n")
+	summary.append("OcropusArgus: WordAccuracy: %s \t CharacterAccuracy: %s \n"
+	%prima_evaluation(c.genOcropusArgus, c.truthArgus, "Argus", folder_path+"/prima_OcropusArgus.txt"))
+	summary.append("OcropusGrepect: WordAccuracy: %s \t CharacterAccuracy: %s \n"
+	%prima_evaluation(c.genOcropusGrepect, c.truthGrepect, "Grepect", folder_path+"/prima_OcropusGrepect.txt"))
+	summary.append("TesseractArgus: WordAccuracy: %s \t CharacterAccuracy: %s \n"
+	%prima_evaluation(c.genTesseractArgus, c.truthArgus, "Argus", folder_path+"/prima_TesseractArgus.txt"))
+	summary.append("TesseractGrepect: WordAccuracy: %s \t CharacterAccuracy: %s \n\n\n"
+	%prima_evaluation(c.genTesseractGrepect, c.truthGrepect, "Grepect", folder_path+"/prima_TesseractGrepect.txt"))
+
+	summary.append("Post-processed output:\n")
+	summary.append("OcropusArgus: WordAccuracy: %s \t CharacterAccuracy: %s \n"
+	%prima_evaluation(c.outputOcropusArgus, c.truthArgus, "Argus", folder_path+"/prima_Output_OcropusArgus.txt"))
+	summary.append("OcropusGrepect: WordAccuracy: %s \t CharacterAccuracy: %s \n"
+	%prima_evaluation(c.outputOcropusGrepect, c.truthGrepect, "Grepect", folder_path+"/prima_Output_OcropusGrepect.txt"))
+	summary.append("TesseractArgus: WordAccuracy: %s \t CharacterAccuracy: %s \n"
+	%prima_evaluation(c.outputTesseractArgus, c.truthArgus, "Argus", folder_path+"/prima_Output_TesseractArgus.txt"))
+	summary.append("TesseractGrepect: WordAccuracy: %s \t CharacterAccuracy: %s \n"
+	%prima_evaluation(c.outputTesseractGrepect, c.truthGrepect, "Grepect", folder_path+"/prima_Output_TesseractGrepect.txt"))
+
+	with open(folder_path+"/summary.txt", 'w') as fd:
+		for line in summary:
+			fd.write(line)
+
+# main()

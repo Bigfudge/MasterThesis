@@ -14,7 +14,6 @@ from nltk.tokenize import word_tokenize
 import noise_maker
 import nltk
 from nltk.util import ngrams
-import error_correction
 
 
 ############### HELPER FUNCTIONS ###############
@@ -109,7 +108,7 @@ def get_word_frequency(word):
         freq = list(reader)
     for item in freq:
         if(item[0]==word):
-            return int(item[1])/len(freq)
+            return int(item[1])/len(freq)*100
     return 0
 
 def get_trigram_freq(word):
@@ -154,7 +153,7 @@ def add_ground_truth(input_dir, sample_size):
         truth = open(input_dir+file)
         words = [word for line in truth for word in line.split()]
         for word in words:
-            if(get_non_alfa(word)==len(word)==1):
+            if(get_non_alfa(word)==len(word)==1 or get_non_alfa(word)==len(word)):
                 continue
             if(word[-1] in {'.',',','!','?',':',';','\'','"','-','/'}):
                 word= word[:-1]
@@ -196,7 +195,7 @@ def add_ocr_output(ocr_dir,truth_dir, sample_size):
     ocr_errors = open(filename)
     words = [word for line in ocr_errors for word in line.split()]
     for word in words:
-        if(get_non_alfa(word)==len(word)==1):
+        if(get_non_alfa(word)==len(word)==1 or get_non_alfa(word)==len(word)):
             continue
         if(word[-1] in {'.',',','!','?',':',';','\'','"','-','/'}):
             word= word[:-1]
@@ -265,7 +264,9 @@ def get_training_data(input_vector, db_path, sample_size):
         os.remove(input_vector)
 
     if(not os.path.isfile(constants.trigrams_path)):
-        gen_trigram_freq(['./Evaluation-script/ManuelTranscript/Argus/', './Evaluation-script/ManuelTranscript/Grepect/'])
+        gen_trigram_freq([ constants.corpus_dalin,
+                            constants.corpus_runeberg,
+                            constants.corpus_swedberg])
 
     if(not os.path.isfile(db_path)):
         db_setup()
@@ -291,7 +292,7 @@ def get_input(file, output_filename):
     input_vector=[]
 
     for word in words:
-        if(get_non_alfa(word)==len(word)==1):
+        if(get_non_alfa(word)==len(word)==1 or get_non_alfa(word)==len(word)):
             continue
         if(word[-1] in {'.',',','!','?',':',';','\'','"','-','/'}):
             word= word[:-1]
@@ -307,9 +308,9 @@ def get_input(file, output_filename):
         writer.writerows(input_vector)
 
 def main():
-    get_training_data(constants.training_data, constants.main_db,1500)
+    get_training_data(constants.training_data, constants.main_db,1700)
 
 
 #get_input("./Evaluation-script/output/OcropusArgus/argus_lb3026335_5_0002.txt","data/input.csv")
-#main()
+# main()
 #add_noisy_words(constants.truthArgus,'testArgus.csv')

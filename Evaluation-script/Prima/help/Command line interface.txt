@@ -1,0 +1,82 @@
+java -jar PrimaText.jar
+
+Usage:
+  ... -arg1 value1 [-arg2 value2 ...] [-option1 -option2]
+
+ Where:
+    arg:    Name of argument
+    value:  Value of argument
+    option: Command line option
+
+ Arguments and options:
+   Input files:
+    -gt-text <filePath>: Ground truth file (.txt or .xml) (required)
+    -res-text <filePath>: Result text file (.txt or .xml) (required)
+
+   For text input files:
+    -gt-enc <enc>: Encoding of ground truth text file (optional)
+    -res-enc <enc>: Encoding of result text file (optional)
+        Encoding <enc>: UTF-8, UTF-16, UTF-16BE, UTF-16LE, US-ASCII, ISO-8859-1
+
+   Text serialisation settings when using XML input (PAGE XML or ALTO XML):
+    -readingOrderOnly: Only use regions that are referenced in the reading
+                       order (optional)
+    -textTypeFilter <t1[,t3,...]>: Text region types to include (optional)
+        Supported types: paragraph, heading, caption, header, footer, page-number,
+                         drop-capital, credit, floating, signature-mark,
+                         catch-word, marginalia, footnote, footnote-continued,
+                         endnote, TOC-entry, other
+    -textContentLevel <region|line|word|glyph>: Content level to use (optional)
+                      Default: 'region' (use text content of regions)
+    -additionalBreaks: Add an additinal line break after each region (optional)
+
+   Evaluation settings:
+    -method <m1[,m2,...]>: Evaluation method(s) (required)
+        Supported methods <m>:
+            BagOfWords
+            BagOfCharacters
+            CharacterAccuracy
+            FlexCharAccuracy
+            WordAccuracy
+            WordStatistics
+
+    -stopwords <lang|file>: Stop words to use (optional for BagOfWords, 
+                                        WordAccuracy and WordStatistics)
+        Supported values for <lang>:
+            EN - English default stop words
+            DE - German default stop words
+        Usage of <file>:
+            File path to text file with stop words (one per line).
+            Encoding has to be UTF-8.
+
+    -ignore-chars <char1,[char2,...]>: List of 'ignore characters'
+                               Words containing at least one of the characters
+                               will be ignored.
+        Character format:
+            Four digit hexadecimal (e.g. 003A for colon)
+        Supported for following methods:
+            BagOfWords
+            WordAccuracy (merged into stop word measure)
+            WordStatistics
+
+    -toLower <locale>: Transforms the input texts to lower case (optional)
+        Supported <locale>:
+            DEFAULT, CHINESE, ENGLISH, FRENCH, GERMAN, ITALIAN, JAPANESE,
+            KOREAN, TAIWAN
+
+    -text-filter <XML file>   Applies filter to the text content. (optional)
+        For instructions on how to define filter rules see the user guide.
+
+ Output options:
+    -csv-addinp: Adds the filenames of the input texts as the first two columns
+                 to the CSV output.
+    -csv-headers: To output the CSV headers
+    -csv-stats[-only]: Enables CSV output for low-level statistics such as
+                       character-level OCR error details. Use -csv-stats
+                       to append the statistics to the standard evaluation
+                       output, use -csv-stats-only to only output statistics.
+                       Supported by:
+                          CharacterAccuracy
+                          BagOfCharacters
+
+    -debug: Show debug output

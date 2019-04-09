@@ -1,0 +1,1 @@
+java -jar PrimaText.jar -gt-text input\gt.xml -res-text input\res.xml -readingOrderOnly -textTypeFilter credit -method BagOfWords -csv-headers -debug>output.csv

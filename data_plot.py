@@ -3,8 +3,6 @@ import numpy
 import constants as c
 import matplotlib.pyplot as plt
 
-
-
 def main():
     valid=pd.DataFrame()
     errors=pd.DataFrame()
@@ -28,8 +26,8 @@ def main():
             errors[errors.columns[2]].mean(),
             errors[errors.columns[3]].mean()]
 
-    print(valid[valid.columns[1]].mean())
-    print(errors[errors.columns[1]].mean())
+    print(valid[valid.columns[2]].mean())
+    print(errors[errors.columns[2]].mean())
 
     index = ['alfanum', 'swedishness', 'word_freq_page','Vowel']
     df = pd.DataFrame({'Valid': meanValid,'Error': meanError}, index=index)
