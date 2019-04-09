@@ -10,7 +10,7 @@ import os
 import pickle
 import constants
 from sklearn.model_selection import GridSearchCV
-from sklearn import svm
+# from sklearn import svm
 import numpy
 
 

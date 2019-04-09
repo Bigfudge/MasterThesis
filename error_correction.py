@@ -120,7 +120,6 @@ def updated_correct_word(word):
         candidate.append([var, first_cost+second_cost+1, first_freq+second_freq])
     b = sorted(candidate, key = lambda x: (-x[1], x[2]))
 
-    print(b)
     winning_candidate=b[-1]
     return winning_candidate[0]
 
