@@ -238,13 +238,12 @@ def add_noisy_words(truth_dir,output_filename):
 def gen_trigram_freq(input_dirs):
     tri_grams = []
     output = {}
-    for input_dir in input_dirs:
-        for file in os.listdir(input_dir):
-            text= open(input_dir+file).read()
-            chrs = [c for c in text]
-            trigrams= ngrams(chrs,3)
-            for gram in trigrams:
-                tri_grams.append(tuple(gram))
+    for file in os.listdir(input_dirs):
+        text= open(input_dir+file).read()
+        chrs = [c for c in text]
+        trigrams= ngrams(chrs,3)
+        for gram in trigrams:
+            tri_grams.append(tuple(gram))
 
     for gram in tri_grams:
         if(gram not in output):
