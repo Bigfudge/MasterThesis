@@ -201,7 +201,7 @@ def prima_evaluation(genPath, truthPath, source, outputFile):
 def make_conf_file(outputFile, sample_size, svm_kernal, gamma, c_value,
 					training_size, db_size, word_freq_size):
 	outputArray=[]
-	outputArray.append("Parameters")
+	outputArray.append("Parameters:\n")
 	outputArray.append("Sample size=%s\n"%sample_size)
 	outputArray.append("SVM parameters:\n\t Kernel: %s\n\t Gamma: %s\n\t C-value: %s\n\t Training data size: %s\n"
 			%(svm_kernal, gamma, c_value, training_size))
