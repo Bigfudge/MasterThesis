@@ -35,10 +35,8 @@ def extract_words_txt(txt_files):
         text = open(file)
         words = [word for line in text for word in line.split()]
         for word in words:
-            if(gen_vector.get_non_alfa(word)==len(word)==1
-                or gen_vector.get_non_alfa(word)==len(word)):
-                continue
-            if(word[-1] in {'.',',','!','?',':',';','\'','"','-','/'}):
+            if(word[-1] in {'.',',','!','?',':',';','\'','"','-','/'} and len(word)>1):
+                words.append(word[-1])
                 word= word[:-1]
             if(word not in all_words):
                 all_words[word]=0
@@ -117,10 +115,11 @@ def updated_correct_word(word):
         first_can, first_cost, first_freq = get_candidate(first_edit_distances, first)
         second_can, second_cost, second_freq = get_candidate(second_edit_distances, second)
 
-        candidate.append([var, first_cost+second_cost+1, first_freq+second_freq])
+        candidate.append([var, first_cost+second_cost+1, (first_freq+second_freq)/2])
     b = sorted(candidate, key = lambda x: (-x[1], x[2]))
 
     winning_candidate=b[-1]
+    print("REPLACED %s with %s"%(word,winning_candidate[0]))
     return winning_candidate[0]
 
 

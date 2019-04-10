@@ -67,6 +67,7 @@ def predict(input, svclassifier):
     input_vector=pd.read_csv(input)
 
     values = input_vector[input_vector.columns[0]].values
+    print(values)
     integer_encoded = label_encoder.fit_transform(values.astype(str))
     X=input_vector.drop(input_vector.columns[0],axis=1)
     X["words"]=integer_encoded

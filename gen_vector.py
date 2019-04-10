@@ -154,7 +154,7 @@ def add_ground_truth(input_dir, sample_size):
         truth = open(input_dir+file)
         words = [word for line in truth for word in line.split()]
         for word in words:
-            if(get_non_alfa(word)==len(word)==1 or get_non_alfa(word)==len(word)):
+            if(get_non_alfa(word)==len(word)):
                 continue
             if(word[-1] in {'.',',','!','?',':',';','\'','"','-','/'}):
                 word= word[:-1]
@@ -197,7 +197,7 @@ def add_ocr_output(ocr_dir,truth_dir, sample_size):
     ocr_errors = open(filename)
     words = [word for line in ocr_errors for word in line.split()]
     for word in words:
-        if(get_non_alfa(word)==len(word)==1 or get_non_alfa(word)==len(word)):
+        if(get_non_alfa(word)==len(word)):
             continue
         if(word[-1] in {'.',',','!','?',':',';','\'','"','-','/'}):
             word= word[:-1]
@@ -293,10 +293,11 @@ def get_training_data(input_vector, db_path, sample_size):
 def get_input(file, output_filename):
     ocr_output = open(file, 'r')
     words = [word for line in ocr_output for word in line.split()]
-    input_vector=[]
+    header=["word","alfanum","trigram","word_freq","vowel","word_length","gen_num_upper","has_number"]
+    input_vector=[header]
 
     for word in words:
-        if(get_non_alfa(word)==len(word)==1 or get_non_alfa(word)==len(word)):
+        if(get_non_alfa(word)==len(word)):
             continue
         if(word[-1] in {'.',',','!','?',':',';','\'','"','-','/'}):
             word= word[:-1]

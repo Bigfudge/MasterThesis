@@ -21,7 +21,11 @@ def process_file(plain_text,output_file, db_size, training_size, svm_kernal, c_v
             corr_word =error_correction.updated_correct_word(word[0])
         else:
             corr_word= word[0]
-        output.append(corr_word)
+        if isinstance(corr_word, (list,)):
+            for word in corr_word:
+                output.append(word)
+        else:
+            output.append(corr_word)
 
     with open(output_file, 'w') as f:
         for item in output:
@@ -82,8 +86,8 @@ def main():
     remove_output('./output/TesseractArgus/*')
     remove_output('./output/TesseractGrepect/*')
 
-    db_size=1500
-    training_size=8000
+    db_size=0
+    training_size=50000
     svm_kernal="rbf"
     c_value=1.1
     gamma=1.3
