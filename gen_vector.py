@@ -103,33 +103,42 @@ def get_non_alfa(word):
     errors = list(filter(lambda a: not (a.isalpha() | (a in {'å','ä','ö'})), word))
     return len(errors)
 
-def get_word_frequency(word):
-    freq=[]
-    with open(constants.word_freq_path, 'r') as readFile:
-        reader = csv.reader(readFile)
-        freq = list(reader)
-    for item in freq:
-        if(item[0]==word):
-            return int(item[1])/len(freq)*100
+def get_word_frequency(word, freq_dict):
+    if(word in freq_dict.keys()):
+        return freq_dict[word]
     return 0
 
-def get_trigram_freq(word):
-    tri_freq=[]
-    output=1
+def get_freq_dict():
+    freq_dict = {}
+    with open(constants.word_freq_path, 'r') as readFile:
+        reader = csv.reader(readFile)
+        for line in reader:
+            k, v = line
+            freq_dict[k]=v
+        return freq_dict
 
+def get_trigram_dict():
+    freq_dict = {}
     with open(constants.trigrams_path, 'r') as readFile:
         reader = csv.reader(readFile)
-        tri_freq = list(reader)
+        for line in reader:
+            k, v = line
+            freq_dict[k]=v
+        return freq_dict
+
+
+def get_trigram_freq(word, tri_gram_dict):
+    tri_freq=[]
+    output=1
 
     chrs = [c for c in word]
     trigrams= ngrams(chrs,3)
 
     for gram in trigrams:
-        for freq in tri_freq:
-            if(freq[0]==tuple(gram)):
-                output*=(freq[1]/len(freq))
-            else:
-                output*=0.00001
+        if(gram in tri_gram_dict.keys()):
+            output*=(freq[1]/len(freq))
+        else:
+            output*=0.1
 
     return output
 
@@ -158,11 +167,15 @@ def add_ground_truth(input_dir, sample_size):
                 continue
             if(word[-1] in {'.',',','!','?',':',';','\'','"','-','/'}):
                 word= word[:-1]
+
+            freq_dict = get_freq_dict()
+            tri_gram_dict= get_trigram_dict()
             cursor.execute('''INSERT INTO words(word, non_alfanum, tri_grams, freq_page, vowel, word_length,get_num_upper,has_numbers, valid)
-            VALUES(?,?,?,?,?,?,?,?,?)''', (remove_tags(word),
+            VALUES(?,?,?,?,?,?,?,?,?)''', (
+            remove_tags(word),
             get_non_alfanum(word),
-            get_trigram_freq(word),
-            get_word_frequency(word),
+            get_trigram_freq(word, tri_gram_dict),
+            get_word_frequency(word, freq_dict),
             contains_vowel(word),
             word_length(word),
             get_num_upper(word),
@@ -197,15 +210,26 @@ def add_ocr_output(ocr_dir,truth_dir, sample_size):
     ocr_errors = open(filename)
     words = [word for line in ocr_errors for word in line.split()]
     for word in words:
+
         if(get_non_alfa(word)==len(word)):
             continue
         if(word[-1] in {'.',',','!','?',':',';','\'','"','-','/'}):
             word= word[:-1]
+        with open(constants.word_freq_path, 'r') as readFile:
+            reader = csv.reader(readFile)
+            freq = list(reader)
+        for item in freq:
+            if(item[0]==word):
+                continue
+
+        freq_dict = get_freq_dict()
+        tri_gram_dict= get_trigram_dict()
         cursor.execute('''INSERT INTO words(word, non_alfanum, tri_grams, freq_page,
-        vowel, word_length,get_num_upper,has_numbers, valid)VALUES(?,?,?,?,?,?,?,?,?)''', (word,
+        vowel, word_length,get_num_upper,has_numbers, valid)VALUES(?,?,?,?,?,?,?,?,?)''', (
+        word,
         get_non_alfanum(word),
-        get_trigram_freq(word),
-        get_word_frequency(word),
+        get_trigram_freq(word,tri_gram_dict),
+        get_word_frequency(word, freq_dict),
         contains_vowel(word),
         word_length(word),
         get_num_upper(word),
@@ -243,6 +267,10 @@ def add_noisy_words(truth_dir,output_filename):
 def gen_trigram_freq(input_files):
     tri_grams = []
     output = {}
+    sortedOutput={}
+    count=0
+    limit=15000
+
     for file in input_files:
         text= open(file).read()
         chrs = [c for c in text]
@@ -255,11 +283,17 @@ def gen_trigram_freq(input_files):
             output[gram]=1
         else:
             output[gram]+=1
+
+    for key, value in sorted(output.items(), key=lambda item: item[1], reverse=True):
+        sortedOutput[key]=value
+        count+=1
+        if(count>=limit):
+            break
     with open(constants.trigrams_path, 'w') as csvFile:
         writer=csv.writer(csvFile)
-        writer.writerows(output.items())
+        writer.writerows(sortedOutput.items())
 
-    return(output)
+    return(sortedOutput)
 
 
 
@@ -316,8 +350,6 @@ def get_input(file, output_filename):
         writer=csv.writer(csvFile)
         writer.writerows(input_vector)
 
-def main():
-    get_training_data(constants.training_data, constants.main_db,1700)
 
 
 #get_input("./Evaluation-script/output/OcropusArgus/argus_lb3026335_5_0002.txt","data/input.csv")

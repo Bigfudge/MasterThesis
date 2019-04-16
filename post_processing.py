@@ -1,5 +1,6 @@
 import gen_vector
 import word_classifier
+import alternative_word_classifier
 import error_correction
 import os
 import constants as c
@@ -86,12 +87,12 @@ def main():
     remove_output('./output/TesseractArgus/*')
     remove_output('./output/TesseractGrepect/*')
 
-    db_size=0
-    training_size=50000
+    db_size=1500
+    training_size=8000
     svm_kernal="rbf"
     c_value=1.1
     gamma=1.3
-    word_freq_size=20
+    word_freq_size=5
 
     print("Correcting text (1/4)")
     process_dir("./Evaluation-script/OCROutput/Ocropus/Argus/", "OcropusArgus",sample_size, db_size, training_size, svm_kernal, c_value, gamma,word_freq_size)

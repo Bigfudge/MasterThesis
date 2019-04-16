@@ -397,13 +397,13 @@ def score_and_print(ocrdrec,mandrec):
             elif m:
                 characters_in_mandword = True
 
-        # print the alignment with markup to the screen, with a running score counter for this page
-        #print(( ''.join(char for char in ocrdline), '\tce: %s, #c: %s, we: %s, #w: %s' % (charactererrors, characters, worderrors, words)))
-        # f= open("demofile.txt", "a")
-        # f.write(''.join(char for char in ocrdline))
-        #print(( ''.join(char for char in mandline)))
-        #print()
-        output.append(''.join(char for char in ocrdline)+'\n')
+    # print the alignment with markup to the screen, with a running score counter for this page
+    print(( ''.join(char for char in ocrdline), '\tce: %s, #c: %s, we: %s, #w: %s' % (charactererrors, characters, worderrors, words)))
+    f= open("demofile.txt", "a")
+    f.write(''.join(char for char in ocrdline))
+    print(( ''.join(char for char in mandline)))
+    print()
+    output.append(''.join(char for char in ocrdline)+'\n')
 
     if characters_in_mandword:
         words += 1
@@ -420,7 +420,7 @@ OPTstripend = False
 OPTnewlines_in_man = False
 def main(mode, ocr_paths, truth_paths, output_filename):
     output = []
-    print(zip(ocr_paths,truth_paths))
+    # print(zip(ocr_paths,truth_paths))
     if mode == '-sb':
         OPTstripbeg = True
     elif mode == '-se':
@@ -428,9 +428,6 @@ def main(mode, ocr_paths, truth_paths, output_filename):
     elif mode == '-nm':
         OPTnewlines_in_man = True
 
-    if len(ocr_paths) != len(truth_paths):
-        print(len(ocr_paths))
-        print(len(truth_paths))
     else:
         totalchrs = totalchrerrs = totalwrds = totalwrderrs = totalua_m_wh = totalua_o_wh = totala_wh = 0
         tWErrors = tWNoos = tWSubs = tWDels = tWIns = tWCount = 0
@@ -471,8 +468,8 @@ def main(mode, ocr_paths, truth_paths, output_filename):
             print("Progress: ("+str(count)+'/'+str(len(ocr_paths))+")")
             count+=1
 
-        f= open(output_filename, "w")
-        for item in output:
-            f.write(item+"\n")
+        # f= open(output_filename, "w")
+        # for item in output:
+        #     f.write(item+"\n")
 
-#main("-sb", ["/Users/simonpersson/Github/MasterThesis/Evaluation-script/OCROutput/Ocropus/Argus/ed_pg_a0002_ocropus_twomodel.txt"], ["/Users/simonpersson/Github/MasterThesis/Evaluation-script/ManuelTranscript/Argus/ed_pg_a0002.txt"], "test.txt")
+# main("test",["./Evaluation-script/OCROutput/Ocropus/Argus/argus_ed_pg_a0002.txt"], ["/Users/simonpersson/Github/MasterThesis/Evaluation-script/ManuelTranscript/Argus/ed_pg_a0002.txt"], "test.txt")

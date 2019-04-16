@@ -10,6 +10,8 @@ import os
 import pickle
 import constants
 from sklearn.model_selection import GridSearchCV
+from sklearn.preprocessing import StandardScaler
+
 # from sklearn import svm
 import numpy
 
@@ -40,10 +42,14 @@ def train(path_model, training_data, sample_size, svm_kernal, c_value,gamma):
         X=X.drop(data.columns[0],axis=1)
 
         y=data[data.columns[-1]]
+
         X["words"]=integer_encoded
-        # params=svc_param_selection(X,y,3)
-        # print(params)
+
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.20)
+
+        sc = StandardScaler()
+        X_train = sc.fit_transform(X_train)
+        X_test = sc.transform(X_test)
         svclassifier = SVC(kernel=svm_kernal, C=c_value, gamma=gamma)
         svclassifier.fit(X_train, y_train)
 
@@ -52,6 +58,7 @@ def train(path_model, training_data, sample_size, svm_kernal, c_value,gamma):
         pickle.dump(svclassifier, open(path_model, 'wb'))
         print(confusion_matrix(y_test,y_pred))
         print(classification_report(y_test,y_pred))
+        
     else:
         svclassifier = pickle.load(open(path_model, 'rb'))
 
@@ -67,10 +74,14 @@ def predict(input, svclassifier):
     input_vector=pd.read_csv(input)
 
     values = input_vector[input_vector.columns[0]].values
-    print(values)
+    # print(values)
     integer_encoded = label_encoder.fit_transform(values.astype(str))
     X=input_vector.drop(input_vector.columns[0],axis=1)
     X["words"]=integer_encoded
+    print(integer_encoded)
+    sc = StandardScaler()
+    X = sc.fit_transform(X)
+
 
     y_pred = svclassifier.predict(X)
 
