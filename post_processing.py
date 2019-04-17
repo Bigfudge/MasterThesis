@@ -80,19 +80,19 @@ def main():
     if('-c' in sys.argv):
         clean_run()
     if('-ss' in sys.argv):
-        sample_size= 1
+        sample_size= 50
 
     remove_output('./output/OcropusArgus/*')
     remove_output('./output/OcropusGrepect/*')
     remove_output('./output/TesseractArgus/*')
     remove_output('./output/TesseractGrepect/*')
 
-    db_size=1500
-    training_size=8000
+    db_size=13000
+    training_size=100000
     svm_kernal="rbf"
     c_value=1.1
     gamma=1.3
-    word_freq_size=5
+    word_freq_size=30
 
     print("Correcting text (1/4)")
     process_dir("./Evaluation-script/OCROutput/Ocropus/Argus/", "OcropusArgus",sample_size, db_size, training_size, svm_kernal, c_value, gamma,word_freq_size)

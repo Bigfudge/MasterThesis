@@ -58,7 +58,7 @@ def train(path_model, training_data, sample_size, svm_kernal, c_value,gamma):
         pickle.dump(svclassifier, open(path_model, 'wb'))
         print(confusion_matrix(y_test,y_pred))
         print(classification_report(y_test,y_pred))
-        
+
     else:
         svclassifier = pickle.load(open(path_model, 'rb'))
 
@@ -72,13 +72,14 @@ def predict(input, svclassifier):
     if( not is_non_zero_file(input)):
         return y_pred
     input_vector=pd.read_csv(input)
+    if(len(input_vector)==0):
+        return []
 
     values = input_vector[input_vector.columns[0]].values
     # print(values)
     integer_encoded = label_encoder.fit_transform(values.astype(str))
     X=input_vector.drop(input_vector.columns[0],axis=1)
     X["words"]=integer_encoded
-    print(integer_encoded)
     sc = StandardScaler()
     X = sc.fit_transform(X)
 
@@ -116,6 +117,5 @@ def get_performace_report(path_model, training_data, sample_size, svm_kernal, c_
 def main(input):
     svclassifier = train(constants.svm_model, constants.training_data)
     predict(input, svclassifier)
-
 
 # train('test.sav', constants.training_data, 10000)# main("data/input.csv")

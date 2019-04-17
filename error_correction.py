@@ -23,10 +23,6 @@ def extract_words_xml(xml_files):
                             all_words[str(word.text)]=0
                         else:
                             all_words[str(word.text)]+=1
-    with open(constants.word_freq_path, 'a') as csvFile:
-        writer=csv.writer(csvFile)
-        writer.writerows(all_words.items())
-
     return(all_words)
 
 def extract_words_txt(txt_files):
@@ -42,9 +38,6 @@ def extract_words_txt(txt_files):
                 all_words[word]=0
             else:
                 all_words[word]+=1
-    with open(constants.word_freq_path, 'a') as csvFile:
-        writer=csv.writer(csvFile)
-        writer.writerows(all_words.items())
     return(all_words)
 
 def correct_word(word):
@@ -72,24 +65,38 @@ def correct_word(word):
     return(word)
 
 def calc_freq(size):
+    all_words={}
+    sortedOutput={}
+    limit=10000
     if(not os.path.isfile(constants.word_freq_path)):
-        extract_words_xml([constants.corpus_lag,constants.corpus_tank])
-        # extract_words_txt([constants.corpus_dalin])
-        # extract_words_txt([constants.corpus_runeberg])
-        # extract_words_txt([constants.corpus_swedberg])
+        all_words.update(extract_words_xml([constants.corpus_lag,constants.corpus_tank]))
+        all_words.update(extract_words_txt([constants.corpus_dalin]))
+        all_words.update(extract_words_txt([constants.corpus_runeberg]))
+        all_words.update(extract_words_txt([constants.corpus_swedberg]))
         count=0
         for file in os.listdir("./data/corpus/runeberg/"):
-            extract_words_txt(["./data/corpus/runeberg/"+file])
+            all_words.update(extract_words_txt(["./data/corpus/runeberg/"+file]))
             count+=1
             if(size):
                 if(count==size):
                     break
+        count=0
+        for key, value in sorted(all_words.items(), key=lambda item: item[1], reverse=True):
+            sortedOutput[key]=value
+            count+=1
+            if(count>=limit):
+                break
+        # print(sortedOutput)
+        with open(constants.word_freq_path, 'w') as csvFile:
+            writer=csv.writer(csvFile)
+            writer.writerows(sortedOutput.items())
 
 def updated_correct_word(word):
     freq=[]
     splits=[]
     candidate=[]
     origin_edit_distances=[]
+    word=str(word)
 
     with open(constants.word_freq_path, 'r') as readFile:
         reader = csv.reader(readFile)

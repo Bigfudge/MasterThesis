@@ -45,8 +45,8 @@ def main():
             errors[errors.columns[6]].mean(),
             errors[errors.columns[7]].mean()]
 
-    print(valid[valid.columns[1]].mean())
-    print(errors[errors.columns[1]].mean())
+    print(valid[valid.columns[2]].mean())
+    print(errors[errors.columns[2]].mean())
 
     index = ['alfanum', 'swedishness', 'word_freq_page','Vowel', 'word_length','get_num_upper','has_numbers','next']
     df = pd.DataFrame({'Valid': meanValid,'Error': meanError}, index=index)
