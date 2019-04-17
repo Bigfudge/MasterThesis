@@ -126,7 +126,7 @@ def updated_correct_word(word):
     b = sorted(candidate, key = lambda x: (-x[1], x[2]))
 
     winning_candidate=b[-1]
-    print("REPLACED %s with %s"%(word,winning_candidate[0]))
+    # print("REPLACED %s with %s"%(word,winning_candidate[0]))
     return winning_candidate[0]
 
 

@@ -43,7 +43,7 @@ def train(path_model, training_data, sample_size, svm_kernal, c_value,gamma):
 
         y=data[data.columns[-1]]
 
-        X["words"]=integer_encoded
+        # X["words"]=integer_encoded
 
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.20)
 
@@ -79,14 +79,14 @@ def predict(input, svclassifier):
     # print(values)
     integer_encoded = label_encoder.fit_transform(values.astype(str))
     X=input_vector.drop(input_vector.columns[0],axis=1)
-    X["words"]=integer_encoded
+    # X["words"]=integer_encoded
     sc = StandardScaler()
     X = sc.fit_transform(X)
 
 
     y_pred = svclassifier.predict(X)
 
-    print(list(zip(values,y_pred)))
+    # print(list(zip(values,y_pred)))
     return list(zip(values,y_pred))
 
 def get_performace_report(path_model, training_data, sample_size, svm_kernal, c_value,gamma):
