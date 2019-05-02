@@ -1,6 +1,6 @@
 import gen_vector
 import word_classifier
-import alternative_word_classifier
+# import alternative_word_classifier
 import error_correction
 import os
 import constants as c
@@ -8,10 +8,9 @@ import sys
 import glob
 import accuracyScript
 
-def process_file(plain_text,output_file, db_size, training_size, svm_kernal, c_value, gamma,word_freq_size):
-    error_correction.calc_freq(word_freq_size)
-    gen_vector.get_training_data(c.training_data, c.main_db,db_size)
-    gen_vector.get_input(plain_text, c.input)
+def process_file(plain_text,output_file, db_size, training_size, svm_kernal, c_value, gamma,word_freq_size,tri_freq,penta_freq,word_freq):
+    gen_vector.get_training_data(c.training_data, c.main_db,db_size,tri_freq,penta_freq,word_freq)
+    gen_vector.get_input(plain_text, c.input,tri_freq,penta_freq,word_freq)
     svclassifier = word_classifier.train(c.svm_model, c.training_data,
                     training_size, svm_kernal, c_value,gamma)
     classified_words = word_classifier.predict(c.input, svclassifier)
@@ -19,7 +18,7 @@ def process_file(plain_text,output_file, db_size, training_size, svm_kernal, c_v
     output=[]
     for word in classified_words:
         if(word[1]==0):
-            corr_word =error_correction.updated_correct_word(word[0])
+            corr_word =error_correction.updated_correct_word(word[0],word_freq)
         else:
             corr_word= word[0]
         if isinstance(corr_word, (list,)):
@@ -41,13 +40,20 @@ def remove_output(path):
 def process_dir(input_dir, test, sample_size, db_size, training_size,
                 svm_kernal, c_value, gamma,word_freq_size):
     count=1
+    tri_freq=gen_vector.gen_trigram_freq([ c.corpus_dalin,
+                        c.corpus_runeberg,
+                        c.corpus_swedberg])
+    penta_freq=gen_vector.gen_word_pentagram_freq(1000,'./data/corpus/runeberg/')
+    word_freq=error_correction.calc_freq(0, word_freq_size)
+
+
     for file in os.listdir(input_dir):
         plain = input_dir+file
         output_dir= "./output/%s/%s"%(test,file)
         print(plain)
         if(not os.path.isfile(output_dir)):
             process_file(plain, output_dir, db_size, training_size,
-                            svm_kernal, c_value, gamma,word_freq_size)
+                            svm_kernal, c_value, gamma,word_freq_size,tri_freq,penta_freq,word_freq)
         print("Corrected page %i out of %i)" %(count, len(os.listdir(input_dir))))
         count+=1
         if(sample_size):
@@ -80,7 +86,7 @@ def main():
     if('-c' in sys.argv):
         clean_run()
     if('-ss' in sys.argv):
-        sample_size= 50
+        sample_size= 30
 
     remove_output('./output/OcropusArgus/*')
     remove_output('./output/OcropusGrepect/*')
@@ -92,7 +98,7 @@ def main():
     svm_kernal="rbf"
     c_value=1.1
     gamma=1.3
-    word_freq_size=30
+    word_freq_size=10000
 
     print("Correcting text (1/4)")
     process_dir("./Evaluation-script/OCROutput/Ocropus/Argus/", "OcropusArgus",sample_size, db_size, training_size, svm_kernal, c_value, gamma,word_freq_size)

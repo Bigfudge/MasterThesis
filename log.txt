@@ -407,3 +407,25 @@ If I could get {errousWord, correctWord}-pairs I can train a NN to correct it as
 2019-04-09:
     Evaluation-script is now updated. Primary thing to improve is the word_classifier
     for valid words. Completed the split-word correction and changed start edit_dist=0
+
+2019-04-17:
+    Frontier:
+    OCR-output:
+        TesseractArgus: WER: 63.14% CER: 34.99%
+        TesseractGrepect: WER: x% CER: 68.56%
+        OcropusArgus: WER: 46.39% CER:  21.97%
+        OcropusGrepect: WER: 37.60% CER:  17.59%
+
+    PP-output:
+        TesseractArgus: WER: 63.48% CER: 31.85%
+        TesseractGrepect: WER: 68.57% CER: 36.93%
+        OcropusArgus: WER: 49.16% CER:  23.49%
+        OcropusGrepect: WER: 39.08% CER:  21.19%
+
+2019-04-29:
+    Evaluation for report (Baseline):
+    Frontier:
+        TesseractArgus: WER: 63.14% CER: 34.99%
+        TesseractGrepect: WER: 67.63% CER: 68.56%
+        OcropusArgus: WER: 46.39% CER:  21.97%
+        OcropusGrepect: WER: 37.60% CER:  17.59%

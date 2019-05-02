@@ -1,4 +1,4 @@
-word_freq_path="models/word_freq.csv"
+word_freq_path="models/word_freq.pkl"
 corpus_lag='data/lag1734.xml'
 corpus_tank='data/tankebok.xml'
 corpus_dalin='data/corpus/dalin-wl.txt'
@@ -8,7 +8,8 @@ corpus_swedberg='data/corpus/swedberg-wl.txt'
 training_data="models/input_vector.csv"
 svm_model="models/finalized_model.sav"
 main_db='models/data_set.db'
-trigrams_path='models/tri_grams.csv'
+trigrams_path='models/tri_grams.pkl'
+pentagrams_path='models/penta_gram.pkl'
 input="models/input.csv"
 
 genOcropusArgus= "./Evaluation-script/OCROutput/Ocropus/Argus/"
