@@ -72,14 +72,22 @@ def word_length(word):
     return(len(word)>13)
 
 def get_num_upper(word):
-    return(sum(1 for c in word if c.isupper())>2)
+    count=0
+    for char in word:
+        if(char.isupper()):
+            count+=1
+    return count
 
 def contains_vowel(word):
     vowels = {"a", "e", "i", "o", "u","å","ä", "ö", "A", "E", "I", "O", "U","Å", "Ä", "Ö"}
     return any(char in vowels for char in word)
 
 def has_numbers(word):
-    return any(char.isdigit() for char in word)
+    count=0
+    for char in word:
+        if(char.isdigit()):
+            count+=1
+    return count
 
 def get_context(count, words):
     if(count==0):
@@ -107,7 +115,6 @@ def add_ground_truth(input_dir, sample_size,tri_gram_dict,penta_freq,word_freq):
                 continue
             if(word[-1] in {'.',',','!','?',':',';','\'','"','-','/'}):
                 word= word[:-1]
-            context = get_context(i,words)
 
             output.append([
                         remove_tags(word),
@@ -118,7 +125,6 @@ def add_ground_truth(input_dir, sample_size,tri_gram_dict,penta_freq,word_freq):
                         word_length(word),
                         get_num_upper(word),
                         has_numbers(word),
-                        get_pentagram_freq(context,penta_freq),
                         1])
             i+=1
             if(sample_size):
@@ -154,7 +160,6 @@ def add_ocr_output(ocr_dir,truth_dir, sample_size,tri_gram_dict,penta_freq,word_
             continue
         if(word[-1] in {'.',',','!','?',':',';','\'','"','-','/'}):
             word= word[:-1]
-        context = get_context(i,words)
 
         output.append([
                     word,
@@ -165,7 +170,6 @@ def add_ocr_output(ocr_dir,truth_dir, sample_size,tri_gram_dict,penta_freq,word_
                     word_length(word),
                     get_num_upper(word),
                     has_numbers(word),
-                    get_pentagram_freq(context,penta_freq),
                     0])
         i+=1
         if(sample_size):
@@ -175,13 +179,12 @@ def add_ocr_output(ocr_dir,truth_dir, sample_size,tri_gram_dict,penta_freq,word_
 
     return output
 
-def gen_trigram_freq(input_files):
+def gen_trigram_freq(input_files, limit):
     if(not os.path.isfile(constants.trigrams_path)):
         tri_grams = []
         output = {}
         sortedOutput={}
         count=0
-        limit=10000
         for file in input_files:
             text= open(file).read()
             chrs = [c for c in text]
@@ -272,17 +275,15 @@ def get_training_data(input_vector, db_path, sample_size,tri_freq,penta_freq,wor
 def get_input(file, output_filename,tri_freq_dict,penta_freq,word_freq):
     ocr_output = open(file, 'r')
     words = [word for line in ocr_output for word in line.split()]
-    header=["word","alfanum","trigram","word_freq","vowel","word_length","gen_num_upper","has_number", "penta_freq"]
+    header=["word","alfanum","trigram","word_freq","vowel","word_length","gen_num_upper","has_number"]
     input_vector=[header]
 
     i=0
     for word in words:
-        # if(get_non_alfa(word)==len(word)):
-        #     continue
+        if(get_non_alfa(word)==len(word)):
+            continue
         if(word[-1] in {'.',',','!','?',':',';','\'','"','-','/'}):
             word= word[:-1]
-
-        context = get_context(i,words)
         input_vector.append([remove_tags(word),
                             get_non_alfanum(word),
                             get_trigram_freq(word, tri_freq_dict),
@@ -290,8 +291,7 @@ def get_input(file, output_filename,tri_freq_dict,penta_freq,word_freq):
                             contains_vowel(word),
                             word_length(word),
                             get_num_upper(word),
-                            has_numbers(word),
-                            get_pentagram_freq(context,penta_freq)
+                            has_numbers(word)
                             ])
         i+=1
     ocr_output.close()

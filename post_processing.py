@@ -38,11 +38,11 @@ def remove_output(path):
         os.remove(f)
 
 def process_dir(input_dir, test, sample_size, db_size, training_size,
-                svm_kernal, c_value, gamma,word_freq_size):
+                svm_kernal, c_value, gamma,word_freq_size, tri_freq_size):
     count=1
     tri_freq=gen_vector.gen_trigram_freq([ c.corpus_dalin,
                         c.corpus_runeberg,
-                        c.corpus_swedberg])
+                        c.corpus_swedberg], tri_freq_size)
     penta_freq=gen_vector.gen_word_pentagram_freq(1000,'./data/corpus/runeberg/')
     word_freq=error_correction.calc_freq(0, word_freq_size)
 
@@ -96,18 +96,19 @@ def main():
     db_size=13000
     training_size=100000
     svm_kernal="rbf"
-    c_value=1.1
-    gamma=1.3
+    c_value=1 #1.1
+    gamma='auto'#1.3
     word_freq_size=10000
+    tri_freq_size= 1000
 
     print("Correcting text (1/4)")
-    process_dir("./Evaluation-script/OCROutput/Ocropus/Argus/", "OcropusArgus",sample_size, db_size, training_size, svm_kernal, c_value, gamma,word_freq_size)
+    process_dir("./Evaluation-script/OCROutput/Ocropus/Argus/", "OcropusArgus",sample_size, db_size, training_size, svm_kernal, c_value, gamma,word_freq_size, tri_freq_size)
     print("Correcting text (2/4)")
-    process_dir("./Evaluation-script/OCROutput/Ocropus/Grepect/", "OcropusGrepect",sample_size, db_size, training_size, svm_kernal, c_value, gamma,word_freq_size)
+    process_dir("./Evaluation-script/OCROutput/Ocropus/Grepect/", "OcropusGrepect",sample_size, db_size, training_size, svm_kernal, c_value, gamma,word_freq_size, tri_freq_size)
     print("Correcting text (3/4)")
-    process_dir("./Evaluation-script/OCROutput/Tesseract/Argus/", "TesseractArgus",sample_size, db_size, training_size, svm_kernal, c_value, gamma,word_freq_size)
+    process_dir("./Evaluation-script/OCROutput/Tesseract/Argus/", "TesseractArgus",sample_size, db_size, training_size, svm_kernal, c_value, gamma,word_freq_size, tri_freq_size)
     print("Correcting text (4/4)")
-    process_dir("./Evaluation-script/OCROutput/Tesseract/Grepect/", "TesseractGrepect",sample_size, db_size, training_size, svm_kernal, c_value, gamma,word_freq_size)
+    process_dir("./Evaluation-script/OCROutput/Tesseract/Grepect/", "TesseractGrepect",sample_size, db_size, training_size, svm_kernal, c_value, gamma,word_freq_size, tri_freq_size)
 
     accuracyScript.main(sample_size, svm_kernal, gamma, c_value,
     		training_size, db_size, word_freq_size)

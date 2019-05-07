@@ -26,8 +26,7 @@ def extract_words_xml(xml_files):
             for paragraph in text:
                 for sentence in paragraph:
                     for word in sentence:
-                        if(gen_vector.get_non_alfa(word)==len(word)==1
-                            or gen_vector.get_non_alfa(word)==len(word)):
+                        if(gen_vector.get_non_alfa(word)==len(word)):
                             continue
                         if(word[-1] in {'.',',','!','?',':',';','\'','"','-','/'}):
                             word= word[:-1]
@@ -35,6 +34,7 @@ def extract_words_xml(xml_files):
                             all_words[str(word.text)]=0
                         else:
                             all_words[str(word.text)]+=1
+
     return(all_words)
 
 def extract_words_txt(txt_files):
@@ -43,13 +43,15 @@ def extract_words_txt(txt_files):
         text = open(file)
         words = [word for line in text for word in line.split()]
         for word in words:
-            if(word[-1] in {'.',',','!','?',':',';','\'','"','-','/'} and len(word)>1):
-                words.append(word[-1])
+            if(gen_vector.get_non_alfa(word)==len(word)):
+                continue
+            if(word[-1] in {'.',',','!','?',':',';','\'','"','-','/'}):
                 word= word[:-1]
             if(word not in all_words):
                 all_words[word]=0
             else:
                 all_words[word]+=1
+
     return(all_words)
 
 def correct_word(word,freq_dict):
@@ -60,6 +62,7 @@ def correct_word(word,freq_dict):
     for candidate,freq in freq_dict.items():
         edit_distances.append([[candidate,freq],distance(word,candidate)])
     can, cost, freq = get_candidate(edit_distances, word)
+    print("REPLACED %s with %s"%(word,can))
 
     return(can)
 
@@ -67,7 +70,6 @@ def updated_correct_word(word,freq_dict):
     splits=[]
     candidates=[]
     origin_edit_distances=[]
-    word=str(word)
     for candidate,freq in freq_dict.items():
         origin_edit_distances.append([[candidate,freq],distance(word,candidate)])
     origin_can, origin_cost, origin_freq = get_candidate(origin_edit_distances, word)
@@ -76,14 +78,15 @@ def updated_correct_word(word,freq_dict):
     #Split words into two
     for i in range(1,len(word)):
         splits.append([word[:i],word[i:]])
+
     for var in splits:
         first, second = var
         first_edit_distances=[]
         second_edit_distances=[]
 
-        for word,freq in freq_dict.items():
-            first_edit_distances.append([[word,freq],distance(word,str(first))])
-            second_edit_distances.append([[word,freq],distance(word,str(second))])
+        for can,freq in freq_dict.items():
+            first_edit_distances.append([[can,freq],distance(first,str(can))])
+            second_edit_distances.append([[can,freq],distance(second,str(can))])
 
         first_can, first_cost, first_freq = get_candidate(first_edit_distances, first)
         second_can, second_cost, second_freq = get_candidate(second_edit_distances, second)
@@ -91,9 +94,9 @@ def updated_correct_word(word,freq_dict):
         candidates.append([var, first_cost+second_cost+1, (first_freq+second_freq)/2])
 
     b = sorted(candidates, key = lambda x: (-x[1], x[2]))
-
+    # print(b)
     winning_candidate=b[-1]
-    # print("REPLACED %s with %s"%(word,winning_candidate[0]))
+    print("REPLACED %s with %s"%(word,winning_candidate[0]))
     return winning_candidate[0]
 
 def calc_freq(size, limit):
@@ -105,7 +108,7 @@ def calc_freq(size, limit):
         all_words.update(extract_words_txt([constants.corpus_runeberg]))
         all_words.update(extract_words_txt([constants.corpus_swedberg]))
         count=0
-        for file in os.listdir("./data/corpus/runeberg/"):
+        for file in os.listdir("./data/corpus/runeberg"):
             all_words.update(extract_words_txt(["./data/corpus/runeberg/"+file]))
             count+=1
             if(size):
@@ -125,7 +128,7 @@ def calc_freq(size, limit):
 
 
 def get_candidate(distance_list, word):
-    edit_dist=1
+    edit_dist=0
     candidates=[]
     while (edit_dist < len(str(word))+2 or edit_dist <= 8):
         for item in distance_list:
@@ -138,4 +141,4 @@ def get_candidate(distance_list, word):
         else:
             edit_dist+=1
     else:
-        return word, 100
+        return word, 100, 0
