@@ -179,12 +179,18 @@ def add_ocr_output(ocr_dir,truth_dir, sample_size,tri_gram_dict,penta_freq,word_
 
     return output
 
-def gen_trigram_freq(input_files, limit):
+def gen_trigram_freq(limit):
     if(not os.path.isfile(constants.trigrams_path)):
         tri_grams = []
         output = {}
         sortedOutput={}
         count=0
+        input_files= [  constants.corpus_dalin,
+                        constants.corpus_runeberg,
+                        constants.corpus_swedberg]
+        for file in os.listdir("./data/corpus/runeberg"):
+            input_files.append("./data/corpus/runeberg/"+file)
+
         for file in input_files:
             text= open(file).read()
             chrs = [c for c in text]

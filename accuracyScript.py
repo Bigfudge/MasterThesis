@@ -236,8 +236,12 @@ def main(sample_size, svm_kernal, gamma, c_value,
 	%prima_evaluation(c.genOcropusGrepect, c.truthGrepect, "Grepect", folder_path+"/prima_OcropusGrepect.txt"))
 	summary.append("TesseractArgus: WordAccuracy: %s \t CharacterAccuracy: %s \n"
 	%prima_evaluation(c.genTesseractArgus, c.truthArgus, "Argus", folder_path+"/prima_TesseractArgus.txt"))
-	summary.append("TesseractGrepect: WordAccuracy: %s \t CharacterAccuracy: %s \n\n\n"
+	summary.append("TesseractGrepect: WordAccuracy: %s \t CharacterAccuracy: %s \n"
 	%prima_evaluation(c.genTesseractGrepect, c.truthGrepect, "Grepect", folder_path+"/prima_TesseractGrepect.txt"))
+	summary.append("ABBYYArgus: WordAccuracy: %s \t CharacterAccuracy: %s \n"
+	%prima_evaluation(c.genTesseractArgus, c.truthArgus, "Argus", folder_path+"/prima_ABBYYArgus.txt"))
+	summary.append("ABBYYGrepect: WordAccuracy: %s \t CharacterAccuracy: %s \n\n\n"
+	%prima_evaluation(c.genABBYYGrepect, c.truthGrepect, "Grepect", folder_path+"/prima_ABBYYGrepect.txt"))
 
 	summary.append("Post-processed output:\n")
 	summary.append("OcropusArgus: WordAccuracy: %s \t CharacterAccuracy: %s \n"
@@ -248,6 +252,11 @@ def main(sample_size, svm_kernal, gamma, c_value,
 	%prima_evaluation(c.outputTesseractArgus, c.truthArgus, "Argus", folder_path+"/prima_Output_TesseractArgus.txt"))
 	summary.append("TesseractGrepect: WordAccuracy: %s \t CharacterAccuracy: %s \n"
 	%prima_evaluation(c.outputTesseractGrepect, c.truthGrepect, "Grepect", folder_path+"/prima_Output_TesseractGrepect.txt"))
+	summary.append("ABBYYArgus: WordAccuracy: %s \t CharacterAccuracy: %s \n"
+	%prima_evaluation(c.outputABBYYArgus, c.truthArgus, "Argus", folder_path+"/prima_Output_ABBYYArgus.txt"))
+	summary.append("ABBYYGrepect: WordAccuracy: %s \t CharacterAccuracy: %s \n"
+	%prima_evaluation(c.outputABBYYGrepect, c.truthGrepect, "Grepect", folder_path+"/prima_Output_ABBYYGrepect.txt"))
+
 
 	with open(folder_path+"/summary.txt", 'w') as fd:
 		for line in summary:

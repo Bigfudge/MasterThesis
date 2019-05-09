@@ -20,9 +20,7 @@ def tri_freq_test():
         if(os.path.exists(c.trigrams_path)):
             os.remove(c.trigrams_path)
 
-        tri_freq=gen_vector.gen_trigram_freq([ c.corpus_dalin,
-                            c.corpus_runeberg,
-                            c.corpus_swedberg], size)
+        tri_freq=gen_vector.gen_trigram_freq(size)
         gen_vector.get_training_data(c.training_data, c.main_db,13000,tri_freq,penta_freq,word_freq)
         values.append(main())
         print(values)
@@ -31,11 +29,9 @@ def tri_freq_test():
 def word_freq_test():
     penta_freq=gen_vector.gen_word_pentagram_freq(1000,'./data/corpus/runeberg/')
     values=[]
-    tri_freq=gen_vector.gen_trigram_freq([ c.corpus_dalin,
-                        c.corpus_runeberg,
-                        c.corpus_swedberg], 1000)
+    tri_freq=gen_vector.gen_trigram_freq(1000)
     size =0
-    while(size <= 5000):
+    while(size <= 20000):
         if(os.path.exists(c.training_data)):
             os.remove(c.training_data)
         if(os.path.exists(c.word_freq_path)):
@@ -46,7 +42,7 @@ def word_freq_test():
         gen_vector.get_training_data(c.training_data, c.main_db,13000,tri_freq,penta_freq,word_freq)
         values.append(main())
         print(values)
-        size+=50
+        size+=500
 
 def main():
     valid=pd.DataFrame()
@@ -84,7 +80,7 @@ def main():
     test=[]
     for i in range(len(meanError)):
         test.append(scaled_different_mean(meanValid[i],meanError[i]))
-    return(test[2])
+    return(test[1])
     #
     # index = ['#Alfanumeric', 'Swedishness', 'Word Frequency','#Vowel', 'Word length','#Uppercase','#Numbers']
     # # df = pd.DataFrame({'Valid': meanValid,'Error': meanError}, index=index)
@@ -105,4 +101,4 @@ def scaled_different_mean(a, b):
         return 0
     return abs(a-b)/avg
 
-word_freq_test()
+tri_freq_test()

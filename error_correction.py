@@ -34,7 +34,6 @@ def extract_words_xml(xml_files):
                             all_words[str(word.text)]=0
                         else:
                             all_words[str(word.text)]+=1
-
     return(all_words)
 
 def extract_words_txt(txt_files):
@@ -51,13 +50,13 @@ def extract_words_txt(txt_files):
                 all_words[word]=0
             else:
                 all_words[word]+=1
-
     return(all_words)
 
 def correct_word(word,freq_dict):
     edit_dist=0
     candidates=[]
     edit_distances=[]
+    word=str(word)
 
     for candidate,freq in freq_dict.items():
         edit_distances.append([[candidate,freq],distance(word,candidate)])
@@ -70,8 +69,9 @@ def updated_correct_word(word,freq_dict):
     splits=[]
     candidates=[]
     origin_edit_distances=[]
+    word=str(word)
     for candidate,freq in freq_dict.items():
-        origin_edit_distances.append([[candidate,freq],distance(word,candidate)])
+        origin_edit_distances.append([[candidate,freq],distance(word,str(candidate))])
     origin_can, origin_cost, origin_freq = get_candidate(origin_edit_distances, word)
     candidates.append([origin_can, origin_cost,origin_freq])
 
@@ -141,4 +141,4 @@ def get_candidate(distance_list, word):
         else:
             edit_dist+=1
     else:
-        return word, 100, 0
+        return word, 10, 0
