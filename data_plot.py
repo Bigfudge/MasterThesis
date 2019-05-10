@@ -38,11 +38,23 @@ def word_freq_test():
             os.remove(c.word_freq_path)
 
         word_freq=error_correction.calc_freq(0, size)
-        print(word_freq.items())
+        # print(word_freq.items())
         gen_vector.get_training_data(c.training_data, c.main_db,13000,tri_freq,penta_freq,word_freq)
         values.append(main())
         print(values)
         size+=500
+def filter_test():
+    values=[]
+    penta_freq=gen_vector.gen_word_pentagram_freq(1000,'./data/corpus/runeberg/')
+    tri_freq=gen_vector.gen_trigram_freq(1000)
+    word_freq=error_correction.calc_freq(0, 1000)
+    if(os.path.exists(c.training_data)):
+        os.remove(c.training_data)
+    gen_vector.get_training_data(c.training_data, c.main_db,13000,tri_freq,penta_freq,word_freq)
+    values.append(main())
+
+
+
 
 def main():
     valid=pd.DataFrame()
@@ -79,21 +91,23 @@ def main():
 
     test=[]
     for i in range(len(meanError)):
-        test.append(scaled_different_mean(meanValid[i],meanError[i]))
-    return(test[1])
+        test.append(perc_diff(meanValid[i],meanError[i]))
+
+    # index = ['#Alfanumeric', 'Swedishness', 'Word Frequency','#Vowel', 'Word length','#Uppercase','#Numbers']
+    # df = pd.DataFrame({'Percent difference metric': test}, index=index)
+    # ax = df.plot.bar(rot=0, color=['grey'])
+    # y_pos = range(len(index))
+    # plt.xticks(y_pos, index, rotation=45, ha="right" )
+    # plt.subplots_adjust(bottom=0.25)
+    # plt.show()
+    return(test[2])
     #
     # index = ['#Alfanumeric', 'Swedishness', 'Word Frequency','#Vowel', 'Word length','#Uppercase','#Numbers']
     # # df = pd.DataFrame({'Valid': meanValid,'Error': meanError}, index=index)
     # # ax = df.plot.bar(rot=0, color=['green', 'red'])
     # # y_pos = range(len(index))
     # # plt.xticks(y_pos, index, rotation=45, ha="right" )
-    # df = pd.DataFrame({'Scaled difference in mean': test}, index=index)
-    # ax = df.plot.bar(rot=0, color=['grey'])
-    # y_pos = range(len(index))
-    # plt.xticks(y_pos, index, rotation=45, ha="right" )
-    # plt.subplots_adjust(bottom=0.25)
     #
-    # # plt.show()
 
 def scaled_different_mean(a, b):
     avg= (a+b)/2
@@ -101,4 +115,11 @@ def scaled_different_mean(a, b):
         return 0
     return abs(a-b)/avg
 
-tri_freq_test()
+def perc_diff(avg_valid, avg_error):
+    if(avg_valid ==0 or avg_error==0):
+        return 0
+    if(avg_valid>avg_error):
+        return 1-(avg_error/avg_valid)
+    return 1-(avg_valid/avg_error)
+
+word_freq_test()

@@ -94,10 +94,10 @@ def main():
     remove_output('./output/ABBYYArgus/*')
 
     db_size=13000
-    training_size=100000
+    training_size=10000
     svm_kernal="rbf"
-    c_value=1 #1.1
-    gamma='auto'#1.3
+    c_value=100 #1.1
+    gamma=1000#1.3
     word_freq_size=10000
     tri_freq_size= 1000
 
