@@ -16,6 +16,7 @@ import nltk
 from nltk.util import ngrams
 import math
 import pickle
+import accuracyScript
 
 
 ############### HELPER FUNCTIONS ###############
@@ -134,33 +135,34 @@ def add_ground_truth(input_dir, sample_size,tri_gram_dict,penta_freq,word_freq):
 
     return output
 
-def add_ocr_output(ocr_dir,truth_dir, sample_size,tri_gram_dict,penta_freq,word_freq):
+def add_ocr_output(ocr_dir,truth_dir, sample_size,tri_gram_dict,penta_freq,word_freq, error_words, source):
     count=1
     ocr_dirs=[]
     truth_dirs=[]
     output=[]
 
-    tmp = ocr_dir.split("/")
-    filename = "data/"+tmp[-2]+"_"+tmp[-3]+ ".txt"
+    if(not os.path.isfile("models/"+error_words+".pkl")):
+        pairs=accuracyScript.get_pair(ocr_dir, truth_dir, source)
+        for pair in pairs:
+            if(len(pair)!=2):
+                continue
+            ocr_file, truth_file = pair
+            ocr_dirs.append(ocr_dir+ocr_file)
+            truth_dirs.append(truth_dir+truth_file)
+        words=align.main("-sb",ocr_dirs,truth_dirs, error_words)
+    else:
+        words=load_obj(error_words)
 
-    if(not os.path.isfile(filename)):
-        for file in os.listdir(ocr_dir):
-            ocr_dirs.append(ocr_dir+file)
-        for file in os.listdir(truth_dir):
-            truth_dirs.append(truth_dir+file)
-        align.main("-sb",ocr_dirs,truth_dirs, filename)
-
-    ocr_errors = open(filename)
-
-
-    words = [word for line in ocr_errors for word in line.split()]
     i=0
+    print(len(words))
+
     for word in words:
         if(get_non_alfa(word)==len(word)):
             continue
         if(word[-1] in {'.',',','!','?',':',';','\'','"','-','/'}):
             word= word[:-1]
-
+        if(word in word_freq):
+            i+=1
         output.append([
                     word,
                     get_non_alfanum(word),
@@ -171,12 +173,12 @@ def add_ocr_output(ocr_dir,truth_dir, sample_size,tri_gram_dict,penta_freq,word_
                     get_num_upper(word),
                     has_numbers(word),
                     0])
-        i+=1
         if(sample_size):
             if(sample_size<count):
+                print(i)
+
                 return output
         count+=1
-
     return output
 
 def gen_trigram_freq(limit):
@@ -266,13 +268,13 @@ def get_training_data(input_vector, db_path, sample_size,tri_freq,penta_freq,wor
         print("Added words (3/8)")
         training_data.extend(add_ground_truth('./Evaluation-script/ManuelTranscript/Grepect/', sample_size,tri_freq,penta_freq,word_freq))
         print("Added words (4/8)")
-        training_data.extend(add_ocr_output("./Evaluation-script/OCROutput/Ocropus/Argus/","./Evaluation-script/ManuelTranscript/Argus/", sample_size,tri_freq,penta_freq,word_freq))
+        training_data.extend(add_ocr_output("./Evaluation-script/OCROutput/Ocropus/Argus/","./Evaluation-script/ManuelTranscript/Argus/", sample_size,tri_freq,penta_freq,word_freq, constants.error_words_OcropusArgus, 'Argus'))
         print("Added words (5/8)")
-        training_data.extend(add_ocr_output("./Evaluation-script/OCROutput/Ocropus/Grepect/","./Evaluation-script/ManuelTranscript/Grepect/", sample_size,tri_freq,penta_freq,word_freq))
+        training_data.extend(add_ocr_output("./Evaluation-script/OCROutput/Ocropus/Grepect/","./Evaluation-script/ManuelTranscript/Grepect/", sample_size,tri_freq,penta_freq,word_freq, constants.error_words_OcropusGrepect, 'Grepect'))
         print("Added words (6/8)")
-        training_data.extend(add_ocr_output("./Evaluation-script/OCROutput/Tesseract/Argus/","./Evaluation-script/ManuelTranscript/Argus/", sample_size,tri_freq,penta_freq,word_freq))
+        training_data.extend(add_ocr_output("./Evaluation-script/OCROutput/Tesseract/Argus/","./Evaluation-script/ManuelTranscript/Argus/", sample_size,tri_freq,penta_freq,word_freq, constants.error_words_TesseractArgus, 'Argus'))
         print("Added words (7/8)")
-        training_data.extend(add_ocr_output("./Evaluation-script/OCROutput/Tesseract/Grepect/","./Evaluation-script/ManuelTranscript/Grepect/", sample_size,tri_freq,penta_freq,word_freq))
+        training_data.extend(add_ocr_output("./Evaluation-script/OCROutput/Tesseract/Grepect/","./Evaluation-script/ManuelTranscript/Grepect/", sample_size,tri_freq,penta_freq,word_freq, constants.error_words_TesseractGrepect, 'Grepect'))
         print("Added words (8/8)")
         with open(input_vector, 'w') as csvFile:
             writer=csv.writer(csvFile)
@@ -301,6 +303,7 @@ def get_input(file, output_filename,tri_freq_dict,penta_freq,word_freq):
                             ])
         i+=1
     ocr_output.close()
+
     with open(output_filename, 'w') as csvFile:
         writer=csv.writer(csvFile)
         writer.writerows(input_vector)

@@ -25,6 +25,15 @@ punct = ('.',',','!','?',':',';','\'','"','-','/')
 
 import sys
 import codecs
+import pickle
+
+def save_obj(obj, name ):
+    with open('models/'+ name + '.pkl', 'wb') as f:
+        pickle.dump(obj, f, pickle.HIGHEST_PROTOCOL)
+
+def load_obj(name ):
+    with open('models/' + name + '.pkl', 'rb') as f:
+        return pickle.load(f)
 
 def worderrors(ocrdrec,mandrec):
 
@@ -265,7 +274,7 @@ def markerror(listofstrings,index):
     # Mark the character(s) at location index as an error, to give some visual feedback
     # '\x1b[44;1m' and '\x1b[0m' are ANSI escape codes that change the color and fontstyle
     # See e.g. https://en.wikipedia.org/wiki/ANSI_escape_code
-    listofstrings[index] = '\x1b[44;1m'+listofstrings[index]+'\x1b[0m'
+    listofstrings[index] = '°°'+listofstrings[index]+'°°'
 
 
 
@@ -290,7 +299,7 @@ def score_and_print(ocrdrec,mandrec):
     unaligned_ocr_whitespaces = 0
     unaligned_man_whitespaces = 0
     aligned_whitespaces = 0
-
+    output=''
 
     errors_in_current_word = False
     characters_in_mandword = False
@@ -389,8 +398,9 @@ def score_and_print(ocrdrec,mandrec):
             elif m:
                 characters_in_mandword = True
 
-        ##print the alignment with markup to the screen, with a running score counter for this page
-        # print(''.join(char for char in ocrdline), '\tce: %s, #c: %s, we: %s, #w: %s' % (charactererrors, characters, worderrors, words))
+        output+=''.join(char for char in ocrdline)
+        #print the alignment with markup to the screen, with a running score counter for this page
+        # print(''.join(char for char in ocrdline))#, '\tce: %s, #c: %s, we: %s, #w: %s' % (charactererrors, characters, worderrors, words))
         # print(''.join(char for char in mandline))
         # print()
 
@@ -399,7 +409,7 @@ def score_and_print(ocrdrec,mandrec):
     if errors_in_current_word:
         worderrors += 1
 
-    return charactererrors, characters, worderrors, words, unaligned_ocr_whitespaces, unaligned_man_whitespaces, aligned_whitespaces
+    return charactererrors, characters, worderrors, words, unaligned_ocr_whitespaces, unaligned_man_whitespaces, aligned_whitespaces,output
 
 
 
@@ -409,7 +419,7 @@ OPTstripbeg = False
 OPTstripend = False
 OPTnewlines_in_man = False
 def main(mode, ocr_paths, truth_paths):
-    output = []
+    error_words = []
     if mode == '-sb':
         OPTstripbeg = True
     elif mode == '-se':
@@ -431,9 +441,13 @@ def main(mode, ocr_paths, truth_paths):
                 mand = f.read().replace('\r\n','\n').replace('\r','\n').strip()
 
             ocrdrec,mandrec = charalign(ocrd,mand)
-            chrerrs, chrs, wrderrs, wrds, ua_o_wh, ua_m_wh, a_wh = score_and_print(ocrdrec,mandrec)
+            chrerrs, chrs, wrderrs, wrds, ua_o_wh, ua_m_wh, a_wh, ocr = score_and_print(ocrdrec,mandrec)
             WErrors, WNoos, WSubs, WDels, WIns, WCount = worderrors(ocrdrec,mandrec)
 
+            for word in ocr.split():
+                if('°°' in word):
+                    word=word.replace('␤','')
+                    error_words.append(word.replace('°°',''))
             totalchrerrs += chrerrs
             totalchrs += chrs
             totalwrderrs += wrderrs
@@ -451,9 +465,10 @@ def main(mode, ocr_paths, truth_paths):
             if(totalchrs == 0 or tWCount == 0):
                 return(0,0)
 
+    save_obj(error_words, 'error_words')
+    print('TOTALS\tCharacter errors: %s (%s%%), Number of characters: %s, Words containing an error: %s, Number of words: %s, Whitepaces (oerr,merr,corr): %s, %s, %s' % (totalchrerrs, repr(float(totalchrerrs)/totalchrs),totalchrs, totalwrderrs, totalwrds, totalua_o_wh, totalua_m_wh, totala_wh))
+    print('\tWord errors: %s (%s%%), Per type (noops,subs,dels,ins): %s,%s,%s,%s, Number of words: %s' % (tWErrors, repr(float(tWErrors)/tWCount), tWNoos, tWSubs, tWDels, tWIns, tWCount))
 
-        return(float(totalchrerrs/totalchrs), tWErrors/tWCount)
+    return(float(totalchrerrs/totalchrs), tWErrors/tWCount)
 
-       #print('TOTALS\tCharacter errors: %s (%s%%), Number of characters: %s, Words containing an error: %s, Number of words: %s, Whitepaces (oerr,merr,corr): %s, %s, %s' % (totalchrerrs, repr(float(totalchrerrs)/totalchrs),totalchrs, totalwrderrs, totalwrds, totalua_o_wh, totalua_m_wh, totala_wh))
-       #print('\tWord errors: %s (%s%%), Per type (noops,subs,dels,ins): %s,%s,%s,%s, Number of words: %s' % (tWErrors, repr(float(tWErrors)/tWCount), tWNoos, tWSubs, tWDels, tWIns, tWCount))
-       #print()
+# main('-sb',['./Evaluation-script/OCROutput/Ocropus/Argus/argus_ed_pg_a0002.txt'], ['./Evaluation-script/ManuelTranscript/Argus/ed_pg_a0002.txt'])

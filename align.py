@@ -25,18 +25,20 @@ punct = ('.',',','!','?',':',';','\'','"','-','/')
 
 import sys
 import codecs
-import csv
-import re
+import pickle
 
-def remove_tags(word):
-  cleanr = re.compile('<.*?>')
-  cleantext = re.sub(cleanr, '', word)
-  return cleantext
+def save_obj(obj, name ):
+    with open('models/'+ name + '.pkl', 'wb') as f:
+        pickle.dump(obj, f, pickle.HIGHEST_PROTOCOL)
+
+def load_obj(name ):
+    with open('models/' + name + '.pkl', 'rb') as f:
+        return pickle.load(f)
 
 def worderrors(ocrdrec,mandrec):
 
-#    print ocrdrec
-#    print mandrec
+#   #print ocrdrec
+#   #print mandrec
 
     def ocrdwordgenerator(ocrd):
         ocrdlines = ocrd.split('\n')
@@ -68,8 +70,8 @@ def worderrors(ocrdrec,mandrec):
     Ins = [0 for _ in range(x*y)]
     Del = [0 for _ in range(x*y)]
 
-#    print ocrdwords
-#    print mandwords
+#   #print ocrdwords
+#   #print mandwords
 
     for i in range(1,x):
         Del[i] = Del[i-1]+1
@@ -263,7 +265,7 @@ def charalign(ocrd,mand):
             j -= 1
 
 #    for p in zip(reversed(mandrec),reversed(ocrdrec)):
-#        print "[%s]\t[%s]" % p
+#       #print "[%s]\t[%s]" % p
 
     return list(reversed(ocrdrec)),list(reversed(mandrec))
 
@@ -280,15 +282,15 @@ def markerror(listofstrings,index):
 
 def score_and_print(ocrdrec,mandrec):
     # With the alignment, go through line by line, character by character to count errors, characters, words, etc.
-    # Also marks the errors in a printable way and prints the alignment and scores to the screen
-    output=[]
+    # Also marks the errors in a#printable way and#prints the alignment and scores to the screen
+
     if ocrdrec == []:
         return 0, 0, 0, 0, 0, 0, 0
 #        return charactererrors, characters, worderrors, words, unaligned_ocr_whitespaces, unaligned_man_whitespaces, aligned_whitespaces
 
     newlines = [i for i,char in enumerate(ocrdrec) if char=='\n']
-#    if not newlines or not newlines[-1] == len(ocrdrec)-1:
- #       newlines.append(len(ocrdrec)-1)
+    if not newlines or not newlines[-1] == len(ocrdrec)-1:
+        newlines.append(len(ocrdrec)-1)
     i0 = 0
     charactererrors = 0
     characters = 0
@@ -297,7 +299,7 @@ def score_and_print(ocrdrec,mandrec):
     unaligned_ocr_whitespaces = 0
     unaligned_man_whitespaces = 0
     aligned_whitespaces = 0
-
+    output=''
 
     errors_in_current_word = False
     characters_in_mandword = False
@@ -321,25 +323,25 @@ def score_and_print(ocrdrec,mandrec):
         except StopIteration:
             ignorable_suffix = 0
 
-        # for i,o in enumerate(ocrdline):
-        #     if o == '\n':
-        #         ocrdline[i] = '\u2424' # unicode ␤  (newline)
-        #     elif o == '\t':
-        #         ocrdline[i] = '\u2409' # unicode ␉  ([horizontal] tab)
-        #
-        # for i,m in enumerate(mandline):
-        #     if m == '\n':
-        #         mandline[i] = '\u2424'
-        #     elif m == '\t':
-        #         mandline[i] = '\u2409'
+        for i,o in enumerate(ocrdline):
+            if o == '\n':
+                ocrdline[i] = '\u2424' # unicode ␤  (newline)
+            elif o == '\t':
+                ocrdline[i] = '\u2409' # unicode ␉  ([horizontal] tab)
+
+        for i,m in enumerate(mandline):
+            if m == '\n':
+                mandline[i] = '\u2424'
+            elif m == '\t':
+                mandline[i] = '\u2409'
 
         # compare line on character basis
         for i,(o,m) in enumerate(zip(ocrdline,mandline)):
 
             # All the `pass' cases are considered correct
             if ignorable_suffix <= i or i < ignorable_prefix:
-                # if not o:
-                #     ocrdline[i] = '\u03F5' # unicode epsilon
+                if not o:
+                    ocrdline[i] = '\u03F5' # unicode epsilon
                 if not m:
                     mandline[i] = '\u03F5'
                 pass
@@ -359,17 +361,17 @@ def score_and_print(ocrdrec,mandrec):
 #            elif m and m in u'åöäÅÖÄëË':
 #                characters -= 1
             elif o==m:
+
                 pass
 
             # The rest constitutes an error case
             else:
                 charactererrors += 1
 
-                # if not o:
-                #     ocrdline[i] = '\u03F5' # unicode epsilon
+                if not o:
+                    ocrdline[i] = '\u03F5' # unicode epsilon
                 if not m:
                     mandline[i] = '\u03F5'
-
 
                 markerror(ocrdline,i)
                 markerror(mandline,i)
@@ -381,7 +383,6 @@ def score_and_print(ocrdrec,mandrec):
                     unaligned_man_whitespaces += 1
                 else:
                     errors_in_current_word = True
-
 
             if m:
                 characters +=1
@@ -397,30 +398,28 @@ def score_and_print(ocrdrec,mandrec):
             elif m:
                 characters_in_mandword = True
 
-    # print the alignment with markup to the screen, with a running score counter for this page
-    print(( ''.join(char for char in ocrdline), '\tce: %s, #c: %s, we: %s, #w: %s' % (charactererrors, characters, worderrors, words)))
-    f= open("demofile.txt", "a")
-    f.write(''.join(char for char in ocrdline))
-    print(( ''.join(char for char in mandline)))
-    print()
-    output.append(''.join(char for char in ocrdline)+'\n')
+        output+=''.join(char for char in ocrdline)
+        #print the alignment with markup to the screen, with a running score counter for this page
+        # print(''.join(char for char in ocrdline))#, '\tce: %s, #c: %s, we: %s, #w: %s' % (charactererrors, characters, worderrors, words))
+        # print(''.join(char for char in mandline))
+        # print()
 
     if characters_in_mandword:
         words += 1
     if errors_in_current_word:
         worderrors += 1
 
-    return charactererrors, characters, worderrors, words, unaligned_ocr_whitespaces, unaligned_man_whitespaces, aligned_whitespaces, output
+    return charactererrors, characters, worderrors, words, unaligned_ocr_whitespaces, unaligned_man_whitespaces, aligned_whitespaces,output
 
 
 
 # Options to control the stripping of lines at the beginning resp end
+# Options to control the stripping of lines at the beginning resp end
 OPTstripbeg = False
 OPTstripend = False
 OPTnewlines_in_man = False
-def main(mode, ocr_paths, truth_paths, output_filename):
-    output = []
-    # print(zip(ocr_paths,truth_paths))
+def main(mode, ocr_paths, truth_paths, error_words_path):
+    error_words = []
     if mode == '-sb':
         OPTstripbeg = True
     elif mode == '-se':
@@ -428,24 +427,29 @@ def main(mode, ocr_paths, truth_paths, output_filename):
     elif mode == '-nm':
         OPTnewlines_in_man = True
 
+    if len(ocr_paths) != len(truth_paths):
+        print("Number of OCR-output is not the same as ground  truth")
     else:
         totalchrs = totalchrerrs = totalwrds = totalwrderrs = totalua_m_wh = totalua_o_wh = totala_wh = 0
         tWErrors = tWNoos = tWSubs = tWDels = tWIns = tWCount = 0
-        count=1
+
         for ocrdfile, mandfile in zip(ocr_paths,truth_paths):
+            print(ocrdfile)
+            print(mandfile)
             with codecs.open(ocrdfile,'r','utf8') as f:
                 # codecs.open('utf8') no gusto universal newlines???
                 ocrd = f.read().replace('\r\n','\n').replace('\r','\n').strip()
             with codecs.open(mandfile,'r','utf8') as f:
                 mand = f.read().replace('\r\n','\n').replace('\r','\n').strip()
 
-            ocr_words = [word for line in ocrd for word in line.split()]
-            for word in ocr_words:
-                word = remove_tags(word)
             ocrdrec,mandrec = charalign(ocrd,mand)
-            chrerrs, chrs, wrderrs, wrds, ua_o_wh, ua_m_wh, a_wh, ocrdlines = score_and_print(ocrdrec,mandrec)
+            chrerrs, chrs, wrderrs, wrds, ua_o_wh, ua_m_wh, a_wh, ocr = score_and_print(ocrdrec,mandrec)
             WErrors, WNoos, WSubs, WDels, WIns, WCount = worderrors(ocrdrec,mandrec)
 
+            for word in ocr.split():
+                if('°°' in word):
+                    word=word.replace('␤','')
+                    error_words.append(word.replace('°°',''))
             totalchrerrs += chrerrs
             totalchrs += chrs
             totalwrderrs += wrderrs
@@ -460,16 +464,13 @@ def main(mode, ocr_paths, truth_paths, output_filename):
             tWDels += WDels
             tWIns += WIns
             tWCount += WCount
-            words = [word for line in ocrdlines for word in line.split()]
-            for word in words:
-                if('°°'in word):
-                    word = word.replace('°','')
-                    output.append(word)
-            print("Progress: ("+str(count)+'/'+str(len(ocr_paths))+")")
-            count+=1
+            if(totalchrs == 0 or tWCount == 0):
+                return(0,0)
 
-        # f= open(output_filename, "w")
-        # for item in output:
-        #     f.write(item+"\n")
+    save_obj(error_words, error_words_path)
+    # print('TOTALS\tCharacter errors: %s (%s%%), Number of characters: %s, Words containing an error: %s, Number of words: %s, Whitepaces (oerr,merr,corr): %s, %s, %s' % (totalchrerrs, repr(float(totalchrerrs)/totalchrs),totalchrs, totalwrderrs, totalwrds, totalua_o_wh, totalua_m_wh, totala_wh))
+    # print('\tWord errors: %s (%s%%), Per type (noops,subs,dels,ins): %s,%s,%s,%s, Number of words: %s' % (tWErrors, repr(float(tWErrors)/tWCount), tWNoos, tWSubs, tWDels, tWIns, tWCount))
 
-# main("test",["./Evaluation-script/OCROutput/Ocropus/Argus/argus_ed_pg_a0002.txt"], ["/Users/simonpersson/Github/MasterThesis/Evaluation-script/ManuelTranscript/Argus/ed_pg_a0002.txt"], "test.txt")
+    return(error_words)
+
+# main('-sb',['./Evaluation-script/OCROutput/Ocropus/Argus/argus_ed_pg_a0002.txt'], ['./Evaluation-script/ManuelTranscript/Argus/ed_pg_a0002.txt'])

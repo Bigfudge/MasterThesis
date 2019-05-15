@@ -44,7 +44,6 @@ def process_dir(input_dir, test, sample_size, db_size, training_size,
     penta_freq=gen_vector.gen_word_pentagram_freq(1000,'./data/corpus/runeberg/')
     word_freq=error_correction.calc_freq(0, word_freq_size)
 
-
     for file in os.listdir(input_dir):
         plain = input_dir+file
         output_dir= "./output/%s/%s"%(test,file)
@@ -84,7 +83,7 @@ def main():
     if('-c' in sys.argv):
         clean_run()
     if('-ss' in sys.argv):
-        sample_size= 1
+        sample_size= 30
 
     remove_output('./output/OcropusArgus/*')
     remove_output('./output/OcropusGrepect/*')
@@ -94,10 +93,10 @@ def main():
     remove_output('./output/ABBYYArgus/*')
 
     db_size=13000
-    training_size=10000
+    training_size=100000
     svm_kernal="rbf"
-    c_value=100 #1.1
-    gamma=1000#1.3
+    c_value=1 #1.1
+    gamma='auto'#1.3
     word_freq_size=10000
     tri_freq_size= 1000
 

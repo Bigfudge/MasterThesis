@@ -91,7 +91,7 @@ def updated_correct_word(word,freq_dict):
         first_can, first_cost, first_freq = get_candidate(first_edit_distances, first)
         second_can, second_cost, second_freq = get_candidate(second_edit_distances, second)
 
-        candidates.append([var, first_cost+second_cost+1, (first_freq+second_freq)/2])
+        candidates.append([[first_can, second_can], first_cost+second_cost+1, (first_freq+second_freq)/2])
 
     b = sorted(candidates, key = lambda x: (-x[1], x[2]))
     # print(b)
