@@ -95,10 +95,10 @@ def main():
     db_size=13000
     training_size=100000
     svm_kernal="rbf"
-    c_value=1 #1.1
-    gamma='auto'#1.3
-    word_freq_size=10000
-    tri_freq_size= 1000
+    c_value=1
+    gamma='auto'
+    word_freq_size=30000
+    tri_freq_size= 15000
 
     print("Correcting text (1/6)")
     process_dir("./Evaluation-script/OCROutput/Ocropus/Argus/", "OcropusArgus",sample_size, db_size, training_size, svm_kernal, c_value, gamma,word_freq_size, tri_freq_size)

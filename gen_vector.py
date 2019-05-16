@@ -48,17 +48,14 @@ def get_word_frequency(word, freq_dict):
     return 0
 
 def get_trigram_freq(word, tri_gram_dict):
-    tri_freq=[]
     output=1
-
     chrs = [c for c in word]
     trigrams= ngrams(chrs,3)
-
     for gram in trigrams:
         if(gram in tri_gram_dict):
             output*=tri_gram_dict[gram]/len(tri_gram_dict)
         else:
-            output*=0.1
+            output*=0.001
     return output
 
 def get_pentagram_freq(context, penta_gram_dict):
@@ -154,15 +151,15 @@ def add_ocr_output(ocr_dir,truth_dir, sample_size,tri_gram_dict,penta_freq,word_
         words=load_obj(error_words)
 
     i=0
-    print(len(words))
-
     for word in words:
+
+        if len(word)==0:
+            continue
         if(get_non_alfa(word)==len(word)):
             continue
         if(word[-1] in {'.',',','!','?',':',';','\'','"','-','/'}):
             word= word[:-1]
-        if(word in word_freq):
-            i+=1
+
         output.append([
                     word,
                     get_non_alfanum(word),
@@ -175,8 +172,6 @@ def add_ocr_output(ocr_dir,truth_dir, sample_size,tri_gram_dict,penta_freq,word_
                     0])
         if(sample_size):
             if(sample_size<count):
-                print(i)
-
                 return output
         count+=1
     return output
@@ -195,6 +190,7 @@ def gen_trigram_freq(limit):
 
         for file in input_files:
             text= open(file).read()
+            # text =text.replace('\n','')
             chrs = [c for c in text]
             trigrams= ngrams(chrs,3)
             for gram in trigrams:
@@ -207,10 +203,11 @@ def gen_trigram_freq(limit):
                 output[gram]+=1
 
         for key, value in sorted(output.items(), key=lambda item: item[1], reverse=True):
-            sortedOutput[key]=value
-            count+=1
             if(count>=limit):
                 break
+            sortedOutput[key]=value
+            count+=1
+
         save_obj(sortedOutput, "tri_gram")
     else:
         sortedOutput=load_obj("tri_gram")
@@ -288,10 +285,10 @@ def get_input(file, output_filename,tri_freq_dict,penta_freq,word_freq):
 
     i=0
     for word in words:
-        if(get_non_alfa(word)==len(word)):
-            continue
-        if(word[-1] in {'.',',','!','?',':',';','\'','"','-','/'}):
-            word= word[:-1]
+        # if(get_non_alfa(word)==len(word)):
+        #     continue
+        # if(word[-1] in {'.',',','!','?',':',';','\'','"','-','/'}):
+        #     word= word[:-1]
         input_vector.append([remove_tags(word),
                             get_non_alfanum(word),
                             get_trigram_freq(word, tri_freq_dict),

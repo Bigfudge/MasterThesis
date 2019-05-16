@@ -116,10 +116,11 @@ def calc_freq(size, limit):
                     break
         count=0
         for key, value in sorted(all_words.items(), key=lambda item: item[1], reverse=True):
-            sortedOutput[key]=value
-            count+=1
             if(count>=limit):
                 break
+            sortedOutput[key]=value
+            count+=1
+
         save_obj(sortedOutput, "word_freq")
     else:
         sortedOutput=load_obj("word_freq")

@@ -21,8 +21,8 @@ def is_non_zero_file(fpath):
 
 
 def svc_param_selection(X, y, nfolds):
-    Cs=     [100, 1000, 10000, 1000000]
-    gammas =[1000, 10000, 100000]
+    Cs=     [0.0001, 0.01, 1, 100, 1000, 10000]
+    gammas =[0.0001, 0.01, 1, 100, 1000, 10000]
     param_grid = {'C': Cs, 'gamma' : gammas}
     grid_search = GridSearchCV(SVC(kernel='rbf'), param_grid, cv=nfolds)
     grid_search.fit(X, y)
@@ -50,7 +50,7 @@ def train(path_model, training_data, sample_size, svm_kernal, c_value,gamma):
         sc = StandardScaler()
         X_train = sc.fit_transform(X_train)
         X_test = sc.transform(X_test)
-        svclassifier = SVC(kernel=svm_kernal, C=c_value, gamma=gamma)
+        svclassifier = SVC(kernel=svm_kernal, C=c_value, gamma=gamma, verbose=1)
         svclassifier.fit(X_train, y_train)
 
         y_pred = svclassifier.predict(X_test)

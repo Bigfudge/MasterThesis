@@ -14,40 +14,61 @@ def tri_freq_test():
     word_freq=error_correction.calc_freq(0, 10000)
     values=[]
     size =0
-    while(size <= 20000):
+    max_size=50000
+
+    if(os.path.exists(c.trigrams_path)):
+        os.remove(c.trigrams_path)
+
+    tri_freq=gen_vector.gen_trigram_freq(max_size)
+
+    while(size <= max_size):
         if(os.path.exists(c.training_data)):
             os.remove(c.training_data)
-        if(os.path.exists(c.trigrams_path)):
-            os.remove(c.trigrams_path)
-
-        tri_freq=gen_vector.gen_trigram_freq(size)
-        gen_vector.get_training_data(c.training_data, c.main_db,13000,tri_freq,penta_freq,word_freq)
+        sortedOutput={}
+        count=0
+        for key, value in sorted(tri_freq.items(), key=lambda item: item[1], reverse=True):
+            if(count>=size):
+                break
+            sortedOutput[key]=value
+            count+=1
+        gen_vector.get_training_data(c.training_data, c.main_db,13000,sortedOutput,penta_freq,word_freq)
         values.append(main())
         print(values)
         size+=500
 
 def word_freq_test():
     penta_freq=gen_vector.gen_word_pentagram_freq(1000,'./data/corpus/runeberg/')
+    tri_freq=gen_vector.gen_trigram_freq(15000)
     values=[]
-    tri_freq=gen_vector.gen_trigram_freq(1000)
     size =0
-    while(size <= 500):
+    max_size=20000
+
+    if(os.path.exists(c.word_freq_path)):
+        os.remove(c.word_freq_path)
+
+    word_freq=error_correction.calc_freq(0, max_size)
+
+    while(size <= max_size):
         if(os.path.exists(c.training_data)):
             os.remove(c.training_data)
-        if(os.path.exists(c.word_freq_path)):
-            os.remove(c.word_freq_path)
-
-        word_freq=error_correction.calc_freq(0, size)
-        # print(word_freq.items())
-        gen_vector.get_training_data(c.training_data, c.main_db,13000,tri_freq,penta_freq,word_freq)
+        sortedOutput={}
+        count=0
+        for key, value in sorted(word_freq.items(), key=lambda item: item[1], reverse=True):
+            if(count>=size):
+                break
+            sortedOutput[key]=value
+            count+=1
+        # print(sortedOutput)
+        gen_vector.get_training_data(c.training_data, c.main_db,13000,tri_freq,penta_freq,sortedOutput)
         values.append(main())
         print(values)
-        size+=10
+        size+=500
+
 def filter_test():
     values=[]
     penta_freq=gen_vector.gen_word_pentagram_freq(1000,'./data/corpus/runeberg/')
-    tri_freq=gen_vector.gen_trigram_freq(1000)
-    word_freq=error_correction.calc_freq(0, 1000)
+    tri_freq=gen_vector.gen_trigram_freq(10000)
+    word_freq=error_correction.calc_freq(0, 10000)
     if(os.path.exists(c.training_data)):
         os.remove(c.training_data)
     gen_vector.get_training_data(c.training_data, c.main_db,13000,tri_freq,penta_freq,word_freq)
@@ -70,11 +91,10 @@ def main():
     integer_encoded = label_encoder.fit_transform(values.astype(str))
 
     X=data.drop(data.columns[0],axis=1)
-    X["words"]=integer_encoded
-    valid=X.loc[X[X.columns[-2]] == 1]
-    errors=X.loc[X[X.columns[-2]] == 0]
-    valid=valid.drop(valid.columns[-2],axis=1)
-    errors=errors.drop(errors.columns[-2],axis=1)
+    valid=X.loc[X[X.columns[-1]] == 1]
+    errors=X.loc[X[X.columns[-1]] == 0]
+    valid=valid.drop(valid.columns[-1],axis=1)
+    errors=errors.drop(errors.columns[-1],axis=1)
 
     meanValid = [valid[valid.columns[0]].mean(),
             valid[valid.columns[1]].mean(),
@@ -92,11 +112,14 @@ def main():
             errors[errors.columns[6]].mean()]
 
     test=[]
+    # print(valid[valid.columns[2]].mean())
+    # print(errors[errors.columns[2]].mean())
     for i in range(len(meanError)):
         test.append(perc_diff(meanValid[i],meanError[i]))
-
+    print(valid[valid.columns[2]].mean())
+    print(errors[errors.columns[2]].mean())
+    return test[2]
     index = ['#Alfanumeric', 'Swedishness', 'Word Frequency','#Vowel', 'Word length','#Uppercase','#Numbers']
-    print(test)
     df = pd.DataFrame({'Percent difference metric': test}, index=index)
     ax = df.plot.bar(rot=0, color=['grey'])
     y_pos = range(len(index))
@@ -132,4 +155,4 @@ def perc_diff(avg_valid, avg_error):
         return 0
     return 1-(avg_valid/avg_error)
 
-main()
+word_freq_test()
