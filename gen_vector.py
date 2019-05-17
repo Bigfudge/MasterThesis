@@ -285,8 +285,8 @@ def get_input(file, output_filename,tri_freq_dict,penta_freq,word_freq):
 
     i=0
     for word in words:
-        # if(get_non_alfa(word)==len(word)):
-        #     continue
+        if(get_non_alfa(word)==len(word)):
+            continue
         # if(word[-1] in {'.',',','!','?',':',';','\'','"','-','/'}):
         #     word= word[:-1]
         input_vector.append([remove_tags(word),
