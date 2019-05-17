@@ -112,8 +112,38 @@ def main():
     # process_dir("./Evaluation-script/OCROutput/ABBYY/Grepect/", "ABBYYGrepect",sample_size, db_size, training_size, svm_kernal, c_value, gamma,word_freq_size, tri_freq_size)
     # print("Correcting text (6/6)")
     # process_dir("./Evaluation-script/OCROutput/ABBYY/Argus/", "ABBYYArgus",sample_size, db_size, training_size, svm_kernal, c_value, gamma,word_freq_size, tri_freq_size)
-
+    c.outputOcropusArgus="./output_no_filter/OcropusArgus/"
+    c.outputOcropusGrepect="./output_no_filter/OcropusGrepect/"
+    c.outputTesseractArgus="./output_no_filter/TesseractArgus/"
+    c.outputTesseractGrepect="./output_no_filter/TesseractGrepect/"
+    c.outputABBYYArgus="./output_no_filter/ABBYYArgus/"
+    c.outputABBYYGrepect="./output_no_filter/ABBYYGrepect/"
     accuracyScript.main(sample_size, svm_kernal, gamma, c_value,
     		training_size, db_size, word_freq_size)
+    c.outputOcropusArgus="./output_last_char/OcropusArgus/"
+    c.outputOcropusGrepect="./output_last_char/OcropusGrepect/"
+    c.outputTesseractArgus="./output_last_char/TesseractArgus/"
+    c.outputTesseractGrepect="./output_last_char/TesseractGrepect/"
+    c.outputABBYYArgus="./output_last_char/ABBYYArgus/"
+    c.outputABBYYGrepect="./output_last_char/ABBYYGrepect/"
+    accuracyScript.main(sample_size, svm_kernal, gamma, c_value,
+    		training_size, db_size, word_freq_size)
+    c.outputOcropusArgus="./output_non_alfa/OcropusArgus/"
+    c.outputOcropusGrepect="./output_non_alfa/OcropusGrepect/"
+    c.outputTesseractArgus="./output_non_alfa/TesseractArgus/"
+    c.outputTesseractGrepect="./output_non_alfa/TesseractGrepect/"
+    c.outputABBYYArgus="./output_non_alfa/ABBYYArgus/"
+    c.outputABBYYGrepect="./output_non_alfa/ABBYYGrepect/"
+    accuracyScript.main(sample_size, svm_kernal, gamma, c_value,
+    		training_size, db_size, word_freq_size)
+    c.outputOcropusArgus="./output_all_filters/OcropusArgus/"
+    c.outputOcropusGrepect="./output_all_filters/OcropusGrepect/"
+    c.outputTesseractArgus="./output_all_filters/TesseractArgus/"
+    c.outputTesseractGrepect="./output_all_filters/TesseractGrepect/"
+    c.outputABBYYArgus="./output_all_filters/ABBYYArgus/"
+    c.outputABBYYGrepect="./output_all_filters/ABBYYGrepect/"
+    accuracyScript.main(sample_size, svm_kernal, gamma, c_value,
+    		training_size, db_size, word_freq_size)
+
 
 main()
