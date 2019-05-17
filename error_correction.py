@@ -129,7 +129,7 @@ def calc_freq(size, limit):
 
 
 def get_candidate(distance_list, word):
-    edit_dist=0
+    edit_dist=1
     candidates=[]
     while (edit_dist < len(str(word))+2 or edit_dist <= 8):
         for item in distance_list:
