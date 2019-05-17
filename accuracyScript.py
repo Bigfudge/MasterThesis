@@ -7,7 +7,7 @@ import subprocess
 import constants as c
 import sb_evaluation
 import datetime
-import word_classifier
+#import word_classifier
 
 def get_pair(genPath, truthPath, source):
 	pairOfPaths= []
@@ -156,7 +156,7 @@ def completeEvaluation():
 	combinedAcc(c.outputWordReportABBYYArgus, c.frontierPath, "wordaccsum", "Output_WordAcc_ABBYYArgus.txt")
 	combinedAcc(c.outputWordReportABBYYGrepect, c.frontierPath, "wordaccsum", "Output_WordAcc_ABBYYGrepect.txt")
 
-	print_sb_eval("SB_Evaluation.txt")
+	#print_sb_eval("SB_Evaluation.txt")
 
 def outputEvaluation():
 	run_acc(c.outputOcropusArgus, c.truthArgus, c.outputCharReportOcropusArgus, c.frontierPath, "accuracy", "Argus")
@@ -282,3 +282,4 @@ def main(sample_size, svm_kernal, gamma, c_value,
 			fd.write(line)
 
 # main(10,'rbf',1000, 10000, 100000, 13000, 10000)
+completeEvaluation()

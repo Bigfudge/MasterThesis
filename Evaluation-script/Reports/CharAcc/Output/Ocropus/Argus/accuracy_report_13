@@ -1,22 +1,177 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-       0   Characters
-    1854   Errors
-  ------%  Accuracy
+    1255   Characters
+     310   Errors
+   75.30%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
-  ------%  Characters Marked
-  ------%  Accuracy After Correction
+    0.00%  Characters Marked
+   75.30%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-       0        0     1854     1854   Unmarked
-       0        0     1854     1854   Total
+     155      117       38      310   Unmarked
+     155      117       38      310   Total
 
    Count   Missed   %Right
-       0        0   ------   Total
+     210       55    73.81   ASCII Spacing Characters
+      37       37     0.00   ASCII Special Symbols
+      31       22    29.03   ASCII Uppercase Letters
+     857      136    84.13   ASCII Lowercase Letters
+       1        1     0.00   Latin1 Control Codes
+      59       11    81.36   Latin1 Special Symbols
+      60       10    83.33   Latin1 Uppercase Letters
+    1255      272    78.33   Total
 
   Errors   Marked   Correct-Generated
-    1854        0   {}-{härleda Kom fördt utha...}
+      20        0   {s}-{ſ}
+      18        0   {, s}-{ ſ}
+      14        0   { }-{}
+      13        0   {,}-{}
+      11        0   { sticka und}-{}
+       9        0   {heter, ut}-{}
+       8        0   {.}-{}
+       6        0   { jag w}-{}
+       6        0   {, ty j}-{g}
+       6        0   {<\n>}-{ Så a}
+       6        0   {E}-{}
+       6        0   {I s}-{ſ}
+       6        0   {s}-{ ſ}
+       5        0   { mig }-{de C}
+       5        0   {Græs}-{m. ra}
+       5        0   {cke i}-{}
+       5        0   {g sä}-{m}
+       5        0   {och o}-{}
+       5        0   {änck}-{id}
+       4        0   { I b}-{}
+       4        0   { liu}-{der}
+       4        0   { och}-{er}
+       4        0   {-wä}-{ns e}
+       4        0   {I }-{}
+       4        0   {och }-{}
+       4        0   {säg}-{Ob}
+       4        0   {öfw}-{Be}
+       4        0   {ögt}-{dg k}
+       3        0   { I }-{}
+       3        0   { af}-{ah }
+       3        0   {-k}-{n f}
+       3        0   {E}-{ö }
+       3        0   {I, }-{}
+       3        0   {fw}-{n v}
+       3        0   {och}-{på}
+       3        0   {s}-{ſi}
+       3        0   {så}-{i}
+       3        0   {}-{ }
+       2        0   { d}-{}
+       2        0   { j}-{i}
+       2        0   { j}-{}
+       2        0   { m}-{t}
+       2        0   { s}-{ſ}
+       2        0   { w}-{h}
+       2        0   {N}-{}
+       2        0   {a }-{}
+       2        0   {e-}-{}
+       2        0   {f}-{ſ}
+       2        0   {g }-{m}
+       2        0   {je}-{}
+       2        0   {j}-{}
+       2        0   {p}-{r }
+       2        0   {ss}-{}
+       2        0   {s}-{}
+       2        0   {te}-{}
+       2        0   {v}-{ w}
+       2        0   {w}-{v}
+       2        0   {xo}-{rg}
+       2        0   {y,}-{n}
+       2        0   {�}-{�}
+       2        0   {�<84>}-{}
+       2        0   {æ}-{a}
+       1        0   { }-{l}
+       1        0   {!}-{}
+       1        0   {,}-{r}
+       1        0   {:}-{}
+       1        0   {C}-{h}
+       1        0   {K}-{C}
+       1        0   {N}-{M}
+       1        0   {N}-{d}
+       1        0   {S}-{s}
+       1        0   {a}-{g}
+       1        0   {a}-{}
+       1        0   {d}-{g}
+       1        0   {d}-{v}
+       1        0   {e}-{}
+       1        0   {g}-{u}
+       1        0   {h}-{}
+       1        0   {i}-{j}
+       1        0   {i}-{l}
+       1        0   {k}-{v}
+       1        0   {k}-{}
+       1        0   {n}-{r}
+       1        0   {n}-{}
+       1        0   {o}-{s}
+       1        0   {r}-{l}
+       1        0   {r}-{x}
+       1        0   {s}-{R}
+       1        0   {u}-{y}
+       1        0   {u}-{}
+       1        0   {w}-{s}
+       1        0   {y}-{e}
+       1        0   {}-{d}
+       1        0   {}-{i}
+       1        0   {}-{j}
+       1        0   {}-{l}
+       1        0   {}-{m}
+       1        0   {}-{o}
+       1        0   {}-{p}
+
+   Count   Missed   %Right
+       1        1     0.00   {<\n>}
+     209       54    74.16   { }
+       1        1     0.00   {!}
+      24       24     0.00   {,}
+       3        3     0.00   {-}
+       8        8     0.00   {.}
+       1        1     0.00   {:}
+       1        0   100.00   {A}
+       1        1     0.00   {C}
+      10        7    30.00   {E}
+       1        1     0.00   {G}
+       8        7    12.50   {I}
+       1        0   100.00   {J}
+       1        1     0.00   {K}
+       4        4     0.00   {N}
+       1        0   100.00   {P}
+       2        1    50.00   {S}
+       1        0   100.00   {T}
+      89        6    93.26   {a}
+      11        1    90.91   {b}
+      19        7    63.16   {c}
+      40        4    90.00   {d}
+      89        7    92.13   {e}
+      23        4    82.61   {f}
+      48        7    85.42   {g}
+      23        6    73.91   {h}
+      56        6    89.29   {i}
+      14        7    50.00   {j}
+      35        6    82.86   {k}
+      53        1    98.11   {l}
+      34        2    94.12   {m}
+      59        4    93.22   {n}
+      35        7    80.00   {o}
+      12        1    91.67   {p}
+      80        4    95.00   {r}
+      42       32    23.81   {s}
+      50        6    88.00   {t}
+      13        5    61.54   {u}
+       1        1     0.00   {v}
+      23        8    65.22   {w}
+       1        1     0.00   {x}
+       7        3    57.14   {y}
+       1        1     0.00   {<84>}
+      24        4    83.33   {�}
+      16        3    81.25   {�}
+       2        2     0.00   {�}
+      17        2    88.24   {�}
+      60       10    83.33   {�}
