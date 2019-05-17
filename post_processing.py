@@ -18,7 +18,7 @@ def process_file(plain_text,output_file, db_size, training_size, svm_kernal, c_v
     output=[]
     for word in classified_words:
         if(word[1]==0):
-            corr_word =error_correction.updated_correct_word(word[0],word_freq)
+            corr_word =error_correction.correct_word(word[0],word_freq)
         else:
             corr_word= word[0]
         if isinstance(corr_word, (list,)):
