@@ -54,49 +54,22 @@ def	combinedAcc(reportPath, frontierPath, command, outputFile):
 	with open(outputFile, 'w') as fd:
 		fd.write(output)
 
-def sb_eval(genPath, truthPath, source):
-	pairOfPaths= get_pair(genPath, truthPath, source)
-	tot_cer=0
-	tot_wer=0
-	count =1
-	for item in pairOfPaths:
-		if(count>30):
-			break
-		if len(item)<2:
+def sb_eval(ocr_dir, truth_dir, source):
+	pairs= get_pair(ocr_dir, truth_dir, source)
+	ocr_dirs=[]
+	truth_dirs=[]
+	for pair in pairs:
+		if(len(pair)!=2):
 			continue
-		print(count)
-		cer, wer = sb_evaluation.main("-sb",[genPath+item[0]],[truthPath+item[1]])
-		tot_cer+=100*(1-cer)
-		tot_wer+=100*(1-wer)
-		count+=1
+		ocr_file, truth_file = pair
+		ocr_dirs.append(ocr_dir+ocr_file)
+		truth_dirs.append(truth_dir+truth_file)
+	cer, wer = sb_evaluation.main("-sb",ocr_dirs,truth_dirs)
+	tot_cer=100*cer
+	tot_wer=100*wer
 
-
-	tmp = genPath.split("/")
-	return("%s_%s: CER %.2f \t WER %.2f \n"%(tmp[-2],tmp[-3],tot_cer/count, tot_wer/count))
-
-def print_sb_eval_gen(output_file):
-	lines = []
-	lines.append(sb_eval(c.genOcropusArgus, c.truthArgus, "Argus"))
-	lines.append(sb_eval(c.genOcropusGrepect, c.truthGrepect, "Grepect"))
-	lines.append(sb_eval(c.genTesseractArgus, c.truthArgus, "Argus"))
-	lines.append(sb_eval(c.genTesseractGrepect, c.truthGrepect, "Grepect"))
-	lines.append(sb_eval(c.genABBYYArgus, c.truthArgus, "Argus"))
-	lines.append(sb_eval(c.genABBYYGrepect, c.truthGrepect, "Grepect"))
-	with open(output_file, 'w') as fd:
-		for line in lines:
-			fd.write(line)
-
-def print_sb_eval_output(output_file):
-	lines = []
-	lines.append(sb_eval(c.outputOcropusArgus, c.truthArgus, "Argus"))
-	lines.append(sb_eval(c.outputOcropusGrepect, c.truthGrepect, "Grepect"))
-	lines.append(sb_eval(c.outputTesseractArgus, c.truthArgus, "Argus"))
-	lines.append(sb_eval(c.outputTesseractGrepect, c.truthGrepect, "Grepect"))
-	lines.append(sb_eval(c.outputABBYYArgus, c.truthArgus, "Argus"))
-	lines.append(sb_eval(c.outputABBYYGrepect, c.truthGrepect, "Grepect"))
-	with open(output_file, 'w') as fd:
-		for line in lines:
-			fd.write(line)
+	tmp = ocr_dir.split("/")
+	return("%s_%s: CER %.2f \t WER %.2f \n"%(tmp[-2],tmp[-3],tot_cer, tot_wer))
 
 def completeEvaluation():
 	run_acc(c.genOcropusArgus, c.truthArgus, c.charReportOcropusArgus, c.frontierPath, "accuracy", "Argus")
@@ -156,38 +129,16 @@ def completeEvaluation():
 	combinedAcc(c.outputWordReportABBYYArgus, c.frontierPath, "wordaccsum", "Output_WordAcc_ABBYYArgus.txt")
 	combinedAcc(c.outputWordReportABBYYGrepect, c.frontierPath, "wordaccsum", "Output_WordAcc_ABBYYGrepect.txt")
 
-	print_sb_eval("SB_Evaluation.txt")
-
-def outputEvaluation():
-	run_acc(c.outputOcropusArgus, c.truthArgus, c.outputCharReportOcropusArgus, c.frontierPath, "accuracy", "Argus")
-	run_acc(c.outputOcropusGrepect, c.truthGrepect, c.outputCharReportOcropusGrepact, c.frontierPath, "accuracy", "Grepect")
-	run_acc(c.outputTesseractArgus, c.truthArgus, c.outputCharReportTesseractArgus, c.frontierPath, "accuracy", "Argus")
-	run_acc(c.outputTesseractGrepect, c.truthGrepect, c.outputCharReportTesseractGrepect, c.frontierPath, "accuracy","Grepect")
-
-	combinedAcc(c.outputCharReportOcropusArgus, c.frontierPath, "accsum", "Output_CharAcc_OcropusArgus.txt")
-	combinedAcc(c.outputCharReportOcropusGrepact, c.frontierPath, "accsum", "Output_CharAcc_OcropusGrepect.txt")
-	combinedAcc(c.outputCharReportTesseractArgus, c.frontierPath, "accsum", "Output_CharAcc_TesseractArgus.txt")
-	combinedAcc(c.outputCharReportTesseractGrepect, c.frontierPath, "accsum", "Output_CharAcc_TesseractGrepect.txt")
-
-	run_acc(c.outputOcropusArgus, c.truthArgus, c.outputWordReportOcropusArgus, c.frontierPath, "wordacc", "Argus")
-	run_acc(c.outputOcropusGrepect, c.truthGrepect, c.outputWordReportOcropusGrepact, c.frontierPath, "wordacc", "Grepect")
-	run_acc(c.outputTesseractArgus, c.truthArgus, c.outputWordReportTesseractArgus, c.frontierPath, "wordacc", "Argus")
-	run_acc(c.outputTesseractGrepect, c.truthGrepect, c.outputWordReportTesseractGrepect, c.frontierPath, "wordacc","Grepect")
-
-	combinedAcc(c.outputWordReportOcropusArgus, c.frontierPath, "wordaccsum", "WordAcc_OcropusArgus.txt")
-	combinedAcc(c.outputWordReportOcropusGrepact, c.frontierPath, "wordaccsum", "WordAcc_OcropusGrepect.txt")
-	combinedAcc(c.outputWordReportTesseractArgus, c.frontierPath, "wordaccsum", "WordAcc_TesseractArgus.txt")
-	combinedAcc(c.outputWordReportTesseractGrepect, c.frontierPath, "wordaccsum", "WordAcc_TesseractGrepect.txt")
-
 def prima_evaluation(genPath, truthPath, source, outputFile):
 	pairOfPaths= get_pair(genPath, truthPath, source)
 	outputArray=[]
 	avgW=0
 	avgC=0
+	count=0
 	for	item in pairOfPaths:
 		if(len(item)<2):
 			continue
-
+		count+=1
 		commandW = ["java","-jar",c.primaPath,"-gt-text",truthPath+item[1],"-res-text",genPath+item[0],
 				"-method", "WordAccuracy"]
 		word = subprocess.Popen(commandW,stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -207,8 +158,8 @@ def prima_evaluation(genPath, truthPath, source, outputFile):
 		outputArray.append(outString)
 		if error:
 			print("ERROR", error)
-	avgW=avgW/len(pairOfPaths)
-	avgC=avgC/len(pairOfPaths)
+	avgW=avgW/count
+	avgC=avgC/count
 	avgString= "Average:\t WordAccuracy: %s \t CharacterAccuracy: %s \n"%(avgW,avgC)
 	print(avgString)
 	outputArray= [avgString]+outputArray
@@ -247,8 +198,8 @@ def main(sample_size, svm_kernal, gamma, c_value,
 	 				gamma, c_value, training_size, db_size, word_freq_size)
 
 	summary.append("SUMMARY:\n")
-	# summary.append("PrimA evaluation:\n")
-	# summary.append("OCROutput:\n")
+	summary.append("PrimA evaluation:\n")
+	summary.append("OCROutput:\n")
 	# summary.append("OcropusArgus: WordAccuracy: %s \t CharacterAccuracy: %s \n"
 	# %prima_evaluation(c.genOcropusArgus, c.truthArgus, "Argus", folder_path+"/prima_OcropusArgus.txt"))
 	# summary.append("OcropusGrepect: WordAccuracy: %s \t CharacterAccuracy: %s \n"
@@ -261,20 +212,39 @@ def main(sample_size, svm_kernal, gamma, c_value,
 	# %prima_evaluation(c.genTesseractArgus, c.truthArgus, "Argus", folder_path+"/prima_ABBYYArgus.txt"))
 	# summary.append("ABBYYGrepect: WordAccuracy: %s \t CharacterAccuracy: %s \n\n\n"
 	# %prima_evaluation(c.genABBYYGrepect, c.truthGrepect, "Grepect", folder_path+"/prima_ABBYYGrepect.txt"))
+	#
+	# summary.append("Post-processed output:\n")
+	# summary.append("OcropusArgus: WordAccuracy: %s \t CharacterAccuracy: %s \n"
+	# %prima_evaluation(c.outputOcropusArgus, c.truthArgus, "Argus", folder_path+"/prima_Output_OcropusArgus.txt"))
+	# summary.append("OcropusGrepect: WordAccuracy: %s \t CharacterAccuracy: %s \n"
+	# %prima_evaluation(c.outputOcropusGrepect, c.truthGrepect, "Grepect", folder_path+"/prima_Output_OcropusGrepect.txt"))
+	# summary.append("TesseractArgus: WordAccuracy: %s \t CharacterAccuracy: %s \n"
+	# %prima_evaluation(c.outputTesseractArgus, c.truthArgus, "Argus", folder_path+"/prima_Output_TesseractArgus.txt"))
+	# summary.append("TesseractGrepect: WordAccuracy: %s \t CharacterAccuracy: %s \n"
+	# %prima_evaluation(c.outputTesseractGrepect, c.truthGrepect, "Grepect", folder_path+"/prima_Output_TesseractGrepect.txt"))
+	# summary.append("ABBYYArgus: WordAccuracy: %s \t CharacterAccuracy: %s \n"
+	# %prima_evaluation(c.outputABBYYArgus, c.truthArgus, "Argus", folder_path+"/prima_Output_ABBYYArgus.txt"))
+	# summary.append("ABBYYGrepect: WordAccuracy: %s \t CharacterAccuracy: %s \n \n"
+	# %prima_evaluation(c.outputABBYYGrepect, c.truthGrepect, "Grepect", folder_path+"/prima_Output_ABBYYGrepect.txt"))
+
+	summary.append("SB evaluation:\n")
+	summary.append("OCROutput:\n")
+	# summary.append(sb_eval(c.genOcropusArgus, c.truthArgus, "Argus"))
+	# summary.append(sb_eval(c.genOcropusGrepect, c.truthGrepect, "Grepect"))
+	# summary.append(sb_eval(c.genTesseractArgus, c.truthArgus, "Argus"))
+	# summary.append(sb_eval(c.genTesseractGrepect, c.truthGrepect, "Grepect"))
+	# summary.append(sb_eval(c.genABBYYArgus, c.truthArgus, "Argus"))
+	# summary.append(sb_eval(c.genABBYYGrepect, c.truthGrepect, "Grepect"))
+
 
 	summary.append("Post-processed output:\n")
-	summary.append("OcropusArgus: WordAccuracy: %s \t CharacterAccuracy: %s \n"
-	%prima_evaluation(c.outputOcropusArgus, c.truthArgus, "Argus", folder_path+"/prima_Output_OcropusArgus.txt"))
-	summary.append("OcropusGrepect: WordAccuracy: %s \t CharacterAccuracy: %s \n"
-	%prima_evaluation(c.outputOcropusGrepect, c.truthGrepect, "Grepect", folder_path+"/prima_Output_OcropusGrepect.txt"))
-	summary.append("TesseractArgus: WordAccuracy: %s \t CharacterAccuracy: %s \n"
-	%prima_evaluation(c.outputTesseractArgus, c.truthArgus, "Argus", folder_path+"/prima_Output_TesseractArgus.txt"))
-	summary.append("TesseractGrepect: WordAccuracy: %s \t CharacterAccuracy: %s \n"
-	%prima_evaluation(c.outputTesseractGrepect, c.truthGrepect, "Grepect", folder_path+"/prima_Output_TesseractGrepect.txt"))
-	summary.append("ABBYYArgus: WordAccuracy: %s \t CharacterAccuracy: %s \n"
-	%prima_evaluation(c.outputABBYYArgus, c.truthArgus, "Argus", folder_path+"/prima_Output_ABBYYArgus.txt"))
-	summary.append("ABBYYGrepect: WordAccuracy: %s \t CharacterAccuracy: %s \n"
-	%prima_evaluation(c.outputABBYYGrepect, c.truthGrepect, "Grepect", folder_path+"/prima_Output_ABBYYGrepect.txt"))
+	summary.append(sb_eval(c.outputOcropusArgus, c.truthArgus, "Argus"))
+	summary.append(sb_eval(c.outputOcropusGrepect, c.truthGrepect, "Grepect"))
+	summary.append(sb_eval(c.outputTesseractArgus, c.truthArgus, "Argus"))
+	summary.append(sb_eval(c.outputTesseractGrepect, c.truthGrepect, "Grepect"))
+	summary.append(sb_eval(c.outputABBYYArgus, c.truthArgus, "Argus"))
+	summary.append(sb_eval(c.outputABBYYGrepect, c.truthGrepect, "Grepect"))
+
 
 
 	with open(folder_path+"/summary.txt", 'w') as fd:

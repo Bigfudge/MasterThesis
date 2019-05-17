@@ -444,10 +444,6 @@ def main(mode, ocr_paths, truth_paths):
             chrerrs, chrs, wrderrs, wrds, ua_o_wh, ua_m_wh, a_wh, ocr = score_and_print(ocrdrec,mandrec)
             WErrors, WNoos, WSubs, WDels, WIns, WCount = worderrors(ocrdrec,mandrec)
 
-            for word in ocr.split():
-                if('°°' in word):
-                    word=word.replace('␤','')
-                    error_words.append(word.replace('°°',''))
             totalchrerrs += chrerrs
             totalchrs += chrs
             totalwrderrs += wrderrs
@@ -465,9 +461,9 @@ def main(mode, ocr_paths, truth_paths):
             if(totalchrs == 0 or tWCount == 0):
                 return(0,0)
 
-    save_obj(error_words, 'error_words')
-    print('TOTALS\tCharacter errors: %s (%s%%), Number of characters: %s, Words containing an error: %s, Number of words: %s, Whitepaces (oerr,merr,corr): %s, %s, %s' % (totalchrerrs, repr(float(totalchrerrs)/totalchrs),totalchrs, totalwrderrs, totalwrds, totalua_o_wh, totalua_m_wh, totala_wh))
-    print('\tWord errors: %s (%s%%), Per type (noops,subs,dels,ins): %s,%s,%s,%s, Number of words: %s' % (tWErrors, repr(float(tWErrors)/tWCount), tWNoos, tWSubs, tWDels, tWIns, tWCount))
+    # save_obj(error_words, 'error_words')
+    # print('TOTALS\tCharacter errors: %s (%s%%), Number of characters: %s, Words containing an error: %s, Number of words: %s, Whitepaces (oerr,merr,corr): %s, %s, %s' % (totalchrerrs, repr(float(totalchrerrs)/totalchrs),totalchrs, totalwrderrs, totalwrds, totalua_o_wh, totalua_m_wh, totala_wh))
+    # print('\tWord errors: %s (%s%%), Per type (noops,subs,dels,ins): %s,%s,%s,%s, Number of words: %s' % (tWErrors, repr(float(tWErrors)/tWCount), tWNoos, tWSubs, tWDels, tWIns, tWCount))
 
     return(float(totalchrerrs/totalchrs), tWErrors/tWCount)
 
