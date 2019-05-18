@@ -97,7 +97,7 @@ def main():
     svm_kernal="rbf"
     c_value=1
     gamma='auto'
-    word_freq_size=100
+    word_freq_size=1000
     tri_freq_size= 15000
 
     print("Correcting text (1/6)")
