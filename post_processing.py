@@ -112,36 +112,36 @@ def main():
     # process_dir("./Evaluation-script/OCROutput/ABBYY/Grepect/", "ABBYYGrepect",sample_size, db_size, training_size, svm_kernal, c_value, gamma,word_freq_size, tri_freq_size)
     # print("Correcting text (6/6)")
     # process_dir("./Evaluation-script/OCROutput/ABBYY/Argus/", "ABBYYArgus",sample_size, db_size, training_size, svm_kernal, c_value, gamma,word_freq_size, tri_freq_size)
-    c.outputOcropusArgus="./output_no_filter/OcropusArgus/"
-    c.outputOcropusGrepect="./output_no_filter/OcropusGrepect/"
-    c.outputTesseractArgus="./output_no_filter/TesseractArgus/"
-    c.outputTesseractGrepect="./output_no_filter/TesseractGrepect/"
-    c.outputABBYYArgus="./output_no_filter/ABBYYArgus/"
-    c.outputABBYYGrepect="./output_no_filter/ABBYYGrepect/"
+    c.outputOcropusArgus="./output_nosplit_ED0/OcropusArgus/"
+    c.outputOcropusGrepect="./output_nosplit_ED0/OcropusGrepect/"
+    c.outputTesseractArgus="./output_nosplit_ED0/TesseractArgus/"
+    c.outputTesseractGrepect="./output_nosplit_ED0/TesseractGrepect/"
+    c.outputABBYYArgus="./output_nosplit_ED0/ABBYYArgus/"
+    c.outputABBYYGrepect="./output_nosplit_ED0/ABBYYGrepect/"
     accuracyScript.main(sample_size, svm_kernal, gamma, c_value,
     		training_size, db_size, word_freq_size)
-    c.outputOcropusArgus="./output_last_char/OcropusArgus/"
-    c.outputOcropusGrepect="./output_last_char/OcropusGrepect/"
-    c.outputTesseractArgus="./output_last_char/TesseractArgus/"
-    c.outputTesseractGrepect="./output_last_char/TesseractGrepect/"
-    c.outputABBYYArgus="./output_last_char/ABBYYArgus/"
-    c.outputABBYYGrepect="./output_last_char/ABBYYGrepect/"
+    c.outputOcropusArgus="./output_nosplit_ED1/OcropusArgus/"
+    c.outputOcropusGrepect="./output_nosplit_ED1/OcropusGrepect/"
+    c.outputTesseractArgus="./output_nosplit_ED1/TesseractArgus/"
+    c.outputTesseractGrepect="./output_nosplit_ED1/TesseractGrepect/"
+    c.outputABBYYArgus="./output_nosplit_ED1/ABBYYArgus/"
+    c.outputABBYYGrepect="./output_nosplit_ED1/ABBYYGrepect/"
     accuracyScript.main(sample_size, svm_kernal, gamma, c_value,
     		training_size, db_size, word_freq_size)
-    c.outputOcropusArgus="./output_non_alfa/OcropusArgus/"
-    c.outputOcropusGrepect="./output_non_alfa/OcropusGrepect/"
-    c.outputTesseractArgus="./output_non_alfa/TesseractArgus/"
-    c.outputTesseractGrepect="./output_non_alfa/TesseractGrepect/"
-    c.outputABBYYArgus="./output_non_alfa/ABBYYArgus/"
-    c.outputABBYYGrepect="./output_non_alfa/ABBYYGrepect/"
+    c.outputOcropusArgus="./output_split_ED0/OcropusArgus/"
+    c.outputOcropusGrepect="./output_split_ED0/OcropusGrepect/"
+    c.outputTesseractArgus="./output_split_ED0/TesseractArgus/"
+    c.outputTesseractGrepect="./output_split_ED0/TesseractGrepect/"
+    c.outputABBYYArgus="./output_split_ED0/ABBYYArgus/"
+    c.outputABBYYGrepect="./output_split_ED0/ABBYYGrepect/"
     accuracyScript.main(sample_size, svm_kernal, gamma, c_value,
     		training_size, db_size, word_freq_size)
-    c.outputOcropusArgus="./output_all_filters/OcropusArgus/"
-    c.outputOcropusGrepect="./output_all_filters/OcropusGrepect/"
-    c.outputTesseractArgus="./output_all_filters/TesseractArgus/"
-    c.outputTesseractGrepect="./output_all_filters/TesseractGrepect/"
-    c.outputABBYYArgus="./output_all_filters/ABBYYArgus/"
-    c.outputABBYYGrepect="./output_all_filters/ABBYYGrepect/"
+    c.outputOcropusArgus="./output_split_ED1/OcropusArgus/"
+    c.outputOcropusGrepect="./output_split_ED1/OcropusGrepect/"
+    c.outputTesseractArgus="./output_split_ED1/TesseractArgus/"
+    c.outputTesseractGrepect="./output_split_ED1/TesseractGrepect/"
+    c.outputABBYYArgus="./output_split_ED1/ABBYYArgus/"
+    c.outputABBYYGrepect="./output_split_ED1/ABBYYGrepect/"
     accuracyScript.main(sample_size, svm_kernal, gamma, c_value,
     		training_size, db_size, word_freq_size)
 
