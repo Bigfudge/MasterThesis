@@ -200,41 +200,41 @@ def main(sample_size, svm_kernal, gamma, c_value,
 	summary.append("SUMMARY:\n")
 	summary.append("PrimA evaluation:\n")
 	summary.append("OCROutput:\n")
-	# summary.append("OcropusArgus: WordAccuracy: %s \t CharacterAccuracy: %s \n"
-	# %prima_evaluation(c.genOcropusArgus, c.truthArgus, "Argus", folder_path+"/prima_OcropusArgus.txt"))
-	# summary.append("OcropusGrepect: WordAccuracy: %s \t CharacterAccuracy: %s \n"
-	# %prima_evaluation(c.genOcropusGrepect, c.truthGrepect, "Grepect", folder_path+"/prima_OcropusGrepect.txt"))
-	# summary.append("TesseractArgus: WordAccuracy: %s \t CharacterAccuracy: %s \n"
-	# %prima_evaluation(c.genTesseractArgus, c.truthArgus, "Argus", folder_path+"/prima_TesseractArgus.txt"))
-	# summary.append("TesseractGrepect: WordAccuracy: %s \t CharacterAccuracy: %s \n"
-	# %prima_evaluation(c.genTesseractGrepect, c.truthGrepect, "Grepect", folder_path+"/prima_TesseractGrepect.txt"))
-	# summary.append("ABBYYArgus: WordAccuracy: %s \t CharacterAccuracy: %s \n"
-	# %prima_evaluation(c.genTesseractArgus, c.truthArgus, "Argus", folder_path+"/prima_ABBYYArgus.txt"))
-	# summary.append("ABBYYGrepect: WordAccuracy: %s \t CharacterAccuracy: %s \n\n\n"
-	# %prima_evaluation(c.genABBYYGrepect, c.truthGrepect, "Grepect", folder_path+"/prima_ABBYYGrepect.txt"))
-	#
-	# summary.append("Post-processed output:\n")
-	# summary.append("OcropusArgus: WordAccuracy: %s \t CharacterAccuracy: %s \n"
-	# %prima_evaluation(c.outputOcropusArgus, c.truthArgus, "Argus", folder_path+"/prima_Output_OcropusArgus.txt"))
-	# summary.append("OcropusGrepect: WordAccuracy: %s \t CharacterAccuracy: %s \n"
-	# %prima_evaluation(c.outputOcropusGrepect, c.truthGrepect, "Grepect", folder_path+"/prima_Output_OcropusGrepect.txt"))
-	# summary.append("TesseractArgus: WordAccuracy: %s \t CharacterAccuracy: %s \n"
-	# %prima_evaluation(c.outputTesseractArgus, c.truthArgus, "Argus", folder_path+"/prima_Output_TesseractArgus.txt"))
-	# summary.append("TesseractGrepect: WordAccuracy: %s \t CharacterAccuracy: %s \n"
-	# %prima_evaluation(c.outputTesseractGrepect, c.truthGrepect, "Grepect", folder_path+"/prima_Output_TesseractGrepect.txt"))
-	# summary.append("ABBYYArgus: WordAccuracy: %s \t CharacterAccuracy: %s \n"
-	# %prima_evaluation(c.outputABBYYArgus, c.truthArgus, "Argus", folder_path+"/prima_Output_ABBYYArgus.txt"))
-	# summary.append("ABBYYGrepect: WordAccuracy: %s \t CharacterAccuracy: %s \n \n"
-	# %prima_evaluation(c.outputABBYYGrepect, c.truthGrepect, "Grepect", folder_path+"/prima_Output_ABBYYGrepect.txt"))
+	summary.append("OcropusArgus: WordAccuracy: %s \t CharacterAccuracy: %s \n"
+	%prima_evaluation(c.genOcropusArgus, c.truthArgus, "Argus", folder_path+"/prima_OcropusArgus.txt"))
+	summary.append("OcropusGrepect: WordAccuracy: %s \t CharacterAccuracy: %s \n"
+	%prima_evaluation(c.genOcropusGrepect, c.truthGrepect, "Grepect", folder_path+"/prima_OcropusGrepect.txt"))
+	summary.append("TesseractArgus: WordAccuracy: %s \t CharacterAccuracy: %s \n"
+	%prima_evaluation(c.genTesseractArgus, c.truthArgus, "Argus", folder_path+"/prima_TesseractArgus.txt"))
+	summary.append("TesseractGrepect: WordAccuracy: %s \t CharacterAccuracy: %s \n"
+	%prima_evaluation(c.genTesseractGrepect, c.truthGrepect, "Grepect", folder_path+"/prima_TesseractGrepect.txt"))
+	summary.append("ABBYYArgus: WordAccuracy: %s \t CharacterAccuracy: %s \n"
+	%prima_evaluation(c.genTesseractArgus, c.truthArgus, "Argus", folder_path+"/prima_ABBYYArgus.txt"))
+	summary.append("ABBYYGrepect: WordAccuracy: %s \t CharacterAccuracy: %s \n\n\n"
+	%prima_evaluation(c.genABBYYGrepect, c.truthGrepect, "Grepect", folder_path+"/prima_ABBYYGrepect.txt"))
+
+	summary.append("Post-processed output:\n")
+	summary.append("OcropusArgus: WordAccuracy: %s \t CharacterAccuracy: %s \n"
+	%prima_evaluation(c.outputOcropusArgus, c.truthArgus, "Argus", folder_path+"/prima_Output_OcropusArgus.txt"))
+	summary.append("OcropusGrepect: WordAccuracy: %s \t CharacterAccuracy: %s \n"
+	%prima_evaluation(c.outputOcropusGrepect, c.truthGrepect, "Grepect", folder_path+"/prima_Output_OcropusGrepect.txt"))
+	summary.append("TesseractArgus: WordAccuracy: %s \t CharacterAccuracy: %s \n"
+	%prima_evaluation(c.outputTesseractArgus, c.truthArgus, "Argus", folder_path+"/prima_Output_TesseractArgus.txt"))
+	summary.append("TesseractGrepect: WordAccuracy: %s \t CharacterAccuracy: %s \n"
+	%prima_evaluation(c.outputTesseractGrepect, c.truthGrepect, "Grepect", folder_path+"/prima_Output_TesseractGrepect.txt"))
+	summary.append("ABBYYArgus: WordAccuracy: %s \t CharacterAccuracy: %s \n"
+	%prima_evaluation(c.outputABBYYArgus, c.truthArgus, "Argus", folder_path+"/prima_Output_ABBYYArgus.txt"))
+	summary.append("ABBYYGrepect: WordAccuracy: %s \t CharacterAccuracy: %s \n \n"
+	%prima_evaluation(c.outputABBYYGrepect, c.truthGrepect, "Grepect", folder_path+"/prima_Output_ABBYYGrepect.txt"))
 
 	summary.append("SB evaluation:\n")
 	summary.append("OCROutput:\n")
-	# summary.append(sb_eval(c.genOcropusArgus, c.truthArgus, "Argus"))
-	# summary.append(sb_eval(c.genOcropusGrepect, c.truthGrepect, "Grepect"))
-	# summary.append(sb_eval(c.genTesseractArgus, c.truthArgus, "Argus"))
-	# summary.append(sb_eval(c.genTesseractGrepect, c.truthGrepect, "Grepect"))
-	# summary.append(sb_eval(c.genABBYYArgus, c.truthArgus, "Argus"))
-	# summary.append(sb_eval(c.genABBYYGrepect, c.truthGrepect, "Grepect"))
+	summary.append(sb_eval(c.genOcropusArgus, c.truthArgus, "Argus"))
+	summary.append(sb_eval(c.genOcropusGrepect, c.truthGrepect, "Grepect"))
+	summary.append(sb_eval(c.genTesseractArgus, c.truthArgus, "Argus"))
+	summary.append(sb_eval(c.genTesseractGrepect, c.truthGrepect, "Grepect"))
+	summary.append(sb_eval(c.genABBYYArgus, c.truthArgus, "Argus"))
+	summary.append(sb_eval(c.genABBYYGrepect, c.truthGrepect, "Grepect"))
 
 
 	summary.append("Post-processed output:\n")
