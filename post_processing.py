@@ -83,7 +83,7 @@ def main():
     if('-c' in sys.argv):
         clean_run()
     if('-ss' in sys.argv):
-        sample_size= 30
+        sample_size= 10
 
     remove_output('./output/OcropusArgus/*')
     remove_output('./output/OcropusGrepect/*')
