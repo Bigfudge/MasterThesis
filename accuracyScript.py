@@ -7,7 +7,7 @@ import subprocess
 import constants as c
 import sb_evaluation
 import datetime
-import word_classifier
+#import word_classifier
 
 def get_pair(genPath, truthPath, source):
 	pairOfPaths= []
@@ -252,3 +252,4 @@ def main(sample_size, svm_kernal, gamma, c_value,
 			fd.write(line)
 
 # main(10,'rbf',1000, 10000, 100000, 13000, 10000)
+completeEvaluation()
