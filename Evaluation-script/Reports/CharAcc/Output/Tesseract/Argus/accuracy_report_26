@@ -1,19 +1,192 @@
 UNLV-ISRI OCR Accuracy Report Version 5.1
 -----------------------------------------
-       0   Characters
-       0   Errors
-  ------%  Accuracy
+     966   Characters
+     286   Errors
+   70.39%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
-  ------%  Characters Marked
-  ------%  Accuracy After Correction
+    0.00%  Characters Marked
+   70.39%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-       0        0        0        0   Unmarked
-       0        0        0        0   Total
+      81      168       37      286   Unmarked
+      81      168       37      286   Total
 
    Count   Missed   %Right
-       0        0   ------   Total
+     170       36    78.82   ASCII Spacing Characters
+      34       34     0.00   ASCII Special Symbols
+      37        8    78.38   ASCII Uppercase Letters
+     613      129    78.96   ASCII Lowercase Letters
+       2        1    50.00   Latin1 Control Codes
+      54       22    59.26   Latin1 Special Symbols
+      56       19    66.07   Latin1 Uppercase Letters
+     966      249    74.22   Total
+
+  Errors   Marked   Correct-Generated
+      12        0   {,}-{}
+       8        0   {,<\n>}-{ }
+       7        0   {s√• har}-{I Visby}
+       7        0   {√•tt,<\n>E}-{ad y}
+       6        0   {us.<\n>Ho}-{ O}
+       6        0   {•tt,<\n>}-{§kjsh }
+       6        0   {√•}-{a}
+       5        0   { }-{}
+       5        0   {,<\n>Han}-{ och}
+       5        0   {.<\n>}-{ Hwad}
+       5        0   {?<\n>Han}-{ och}
+       5        0   {f√∂r}-{Fox d}
+       5        0   {r.<\n>}-{ s√• }
+       5        0   {tc.<\n>I}-{}
+       5        0   {yna}-{t√§de}
+       5        0   {}-{jk Jo}
+       4        0   {,<\n>√<84>}-{ s A}
+       4        0   {full}-{syst}
+       4        0   {in}-{}
+       4        0   {j√§m}-{Haw}
+       4        0   {nn,}-{g,¬ª}
+       4        0   {nyss}-{vi}
+       4        0   {s√• }-{}
+       4        0   {}-{ Nu }
+       4        0   {√∂ns}-{duc}
+       3        0   { wa}-{}
+       3        0   { √•}-{a}
+       3        0   {d d}-{lt}
+       3        0   {f√∂}-{}
+       3        0   {ick}-{ sl}
+       3        0   {i√∂}-{dt}
+       3        0   {la }-{m}
+       3        0   {l}-{t}
+       3        0   {n,<\n>}-{m }
+       3        0   {n.<\n>}-{m }
+       3        0   {p√•}-{va}
+       3        0   {ski}-{M}
+       3        0   {st,}-{fd}
+       3        0   {s√•}-{fa}
+       3        0   {t√•}-{m}
+       3        0   {√§r}-{u i}
+       2        0   { H}-{gl}
+       2        0   { i}-{fl}
+       2        0   {, }-{ o}
+       2        0   {; }-{z}
+       2        0   {<\n>}-{ }
+       2        0   {a }-{be}
+       2        0   {an}-{cm}
+       2        0   {an}-{gu}
+       2        0   {de}-{√<84>}
+       2        0   {e,}-{q}
+       2        0   {ig}-{s}
+       2        0   {ja}-{si}
+       2        0   {la}-{ke}
+       2        0   {ll}-{ }
+       2        0   {ls}-{ki}
+       2        0   {mi}-{no}
+       2        0   {n,}-{rt}
+       2        0   {n}-{ts}
+       2        0   {n}-{tt}
+       2        0   {rr}-{ss}
+       2        0   {so}-{id}
+       2        0   {s}-{k}
+       2        0   {t }-{ss}
+       2        0   {ta}-{Eg}
+       2        0   {ti}-{}
+       2        0   {w}-{fv}
+       2        0   {w}-{sv}
+       2        0   {w}-{tv}
+       2        0   {}-{H }
+       2        0   {}-{gs}
+       2        0   {}-{s}
+       2        0   {}-{t}
+       2        0   {•}-{§}
+       2        0   {√§}-{a}
+       2        0   {√•}-{xi}
+       1        0   { }-{r}
+       1        0   { }-{s}
+       1        0   {:}-{}
+       1        0   {H}-{d}
+       1        0   {M}-{W}
+       1        0   {a}-{p}
+       1        0   {d}-{p}
+       1        0   {e}-{k}
+       1        0   {e}-{s}
+       1        0   {e}-{x}
+       1        0   {f}-{s}
+       1        0   {g}-{ }
+       1        0   {g}-{n}
+       1        0   {o}-{a}
+       1        0   {o}-{e}
+       1        0   {p}-{v}
+       1        0   {r}-{s}
+       1        0   {r}-{x}
+       1        0   {s}-{f}
+       1        0   {s}-{j}
+       1        0   {s}-{}
+       1        0   {t}-{c}
+       1        0   {t}-{k}
+       1        0   {t}-{x}
+       1        0   {t}-{}
+       1        0   {v}-{w}
+       1        0   {w}-{m}
+       1        0   {w}-{v}
+       1        0   {z}-{s}
+       1        0   {}-{ }
+       1        0   {}-{H}
+       1        0   {}-{k}
+       1        0   {}-{n}
+       1        0   {}-{o}
+       1        0   {§}-{º}
+
+   Count   Missed   %Right
+      17       17     0.00   {<\n>}
+     153       19    87.58   { }
+      26       26     0.00   {,}
+       5        5     0.00   {.}
+       1        1     0.00   {:}
+       1        1     0.00   {;}
+       1        1     0.00   {?}
+       1        0   100.00   {A}
+       1        0   100.00   {B}
+       2        0   100.00   {D}
+       4        1    75.00   {E}
+       1        0   100.00   {F}
+      11        5    54.55   {H}
+       1        1     0.00   {I}
+       1        0   100.00   {J}
+       1        0   100.00   {K}
+       3        1    66.67   {M}
+       1        0   100.00   {O}
+       2        0   100.00   {P}
+       1        0   100.00   {R}
+       6        0   100.00   {S}
+       1        0   100.00   {V}
+      69       13    81.16   {a}
+       5        0   100.00   {b}
+      16        2    87.50   {c}
+      27        4    85.19   {d}
+      50        5    90.00   {e}
+      19        4    78.95   {f}
+      28        3    89.29   {g}
+      18        1    94.44   {h}
+      34        9    73.53   {i}
+       6        2    66.67   {j}
+      19        2    89.47   {k}
+      42       10    76.19   {l}
+      25        2    92.00   {m}
+      65       16    75.38   {n}
+      19        4    78.95   {o}
+       7        2    71.43   {p}
+      44        8    81.82   {r}
+      50       16    68.00   {s}
+      50       14    72.00   {t}
+       6        2    66.67   {u}
+       1        1     0.00   {v}
+       9        6    33.33   {w}
+       3        2    33.33   {y}
+       1        1     0.00   {z}
+       2        1    50.00   {<84>}
+      26        4    84.62   {§}
+      16       14    12.50   {•}
+      12        4    66.67   {∂}
+      56       19    66.07   {√}
